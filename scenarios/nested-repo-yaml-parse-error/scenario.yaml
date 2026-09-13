@@ -1,0 +1,7 @@
+title: "A nested repo.yaml that will not parse names itself instead of vanishing"
+spec_ref: "[[spec - diagnostic codes::au-type-system^repo-registry-parse-error]]"
+command: validate
+expected:
+  codes:
+    - { code: repo-registry-parse-error, severity: error }
+    - { code: undeclared-nested-repo, severity: warning }

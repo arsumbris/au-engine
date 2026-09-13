@@ -1,0 +1,35 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "required-meta-bad-shape",
+      "message": "`required:` must be a meta type name or a non-empty list of names",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/required-meta-bad-shape/type/base.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 17,
+            "line": 2
+          },
+          "start": {
+            "col": 15,
+            "line": 2
+          }
+        },
+        "range": {
+          "end": 22,
+          "start": 20
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": true,
+    "count": 0,
+    "entries": []
+  }
+}

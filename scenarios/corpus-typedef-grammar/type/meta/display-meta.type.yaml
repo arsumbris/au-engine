@@ -1,0 +1,7 @@
+extends: au.engine.meta::au-engine
+# Used by `decision`'s `meta:` block. Meta-body validation against this
+# type-def isn't wired up yet, but the type-def must exist for the repo to
+# be self-consistent.
+fields:
+  tldr: String
+  icon?: String

@@ -1,0 +1,6 @@
+title: "The peer gate: a `::repo` type claim into a mounted member that is not a declared dep is type-repo-not-a-dependency"
+spec_ref: "[[repo yaml::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: type-repo-not-a-dependency, severity: error }

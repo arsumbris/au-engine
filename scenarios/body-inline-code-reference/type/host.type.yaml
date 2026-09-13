@@ -1,0 +1,3 @@
+fields:
+  #: a typed-reference slot filled from the body via an inline-code marker
+  ref: target*

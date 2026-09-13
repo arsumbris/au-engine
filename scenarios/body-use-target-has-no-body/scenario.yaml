@@ -1,0 +1,6 @@
+title: "Child `use: T` where T has no body fires body-use-target-has-no-body (warning)"
+spec_ref: "[[type-def body use::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: body-use-target-has-no-body, severity: warning }

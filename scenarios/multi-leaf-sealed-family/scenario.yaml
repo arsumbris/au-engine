@@ -1,0 +1,6 @@
+title: "Instance claims two leaves of the same sealed family — discriminated-union violation"
+spec_ref: "[[type-def sealed::au-type-system]], [[type-instance type::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: multi-leaf-in-sealed-family, severity: error }

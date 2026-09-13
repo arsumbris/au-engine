@@ -1,0 +1,299 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "body-fence-read-as-record",
+      "fix": {
+        "description": "reword the content so it does not parse as a yaml mapping, or correct the record"
+      },
+      "message": "marked fence for 'detail' read as the record branch of its union slot, because the content parses as a mapping declaring `type: production`; if it was meant as text, reword it so the content does not parse as a yaml mapping",
+      "severity": "hint",
+      "span": {
+        "file": "<root>/scenarios/fence-claim-unknown-type/note.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 10
+          },
+          "start": {
+            "col": 1,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 77,
+          "start": 31
+        }
+      }
+    },
+    {
+      "code": "unknown-type-claim",
+      "message": "marked fence claims type 'production' which is not present in the type graph",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/fence-claim-unknown-type/note.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 10
+          },
+          "start": {
+            "col": 1,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 77,
+          "start": 31
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 30,
+                        "line_col": {
+                          "end": {
+                            "col": 31,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/fence-claim-unknown-type/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "fence-claim-unknown-type"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "fence-claim-unknown-type"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/fence-claim-unknown-type/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "body": "type: production\nreplicas: 3\n",
+            "info": "[:detail]",
+            "kind": "fenced_block",
+            "span": {
+              "end": 77,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 10
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 31
+            }
+          },
+          {
+            "content": "production",
+            "kind": "inline_code",
+            "span": {
+              "end": 182,
+              "line_col": {
+                "end": {
+                  "col": 28,
+                  "line": 12
+                },
+                "start": {
+                  "col": 16,
+                  "line": 12
+                }
+              },
+              "start": 170
+            }
+          }
+        ],
+        "claim": [
+          "capture"
+        ],
+        "closure": [
+          "capture"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "detail",
+            "origins": [
+              {
+                "name": "capture",
+                "origin_path": "<root>/scenarios/fence-claim-unknown-type/type/capture.type.yaml",
+                "required": true,
+                "shape": "<String | point>"
+              }
+            ],
+            "required": true,
+            "shape": "<String | point>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 77,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 10
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 6
+                          }
+                        },
+                        "start": 31
+                      },
+                      "file": "<root>/scenarios/fence-claim-unknown-type/note.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_fence",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "replicas",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": 3
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "replicas",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": 3
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "detail"
+          }
+        ],
+        "file": "<root>/scenarios/fence-claim-unknown-type/note.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

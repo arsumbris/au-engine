@@ -1,0 +1,3 @@
+# a record slot pinned to c, whose inline value carries the divergent `title`.
+fields:
+  slot: c

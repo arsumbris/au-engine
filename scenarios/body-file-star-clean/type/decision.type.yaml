@@ -1,0 +1,6 @@
+fields:
+  description: String
+  notes?: file*[+]
+body:
+  - section: Why
+    fills: notes

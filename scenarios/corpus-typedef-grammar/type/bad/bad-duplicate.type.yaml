@@ -1,0 +1,3 @@
+# intentional: paired with `dup/bad-duplicate.type.yaml` (same basename, nested
+# subdir) — both derive the type name `bad-duplicate` → duplicate-type-def.
+fields: {}

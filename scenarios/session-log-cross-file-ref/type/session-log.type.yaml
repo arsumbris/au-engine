@@ -1,0 +1,4 @@
+fields:
+  session: String
+  started: String
+  events?: sessionEvent[]

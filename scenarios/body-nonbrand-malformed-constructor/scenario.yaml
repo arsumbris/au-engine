@@ -1,0 +1,6 @@
+title: "Body malformed constructor at a NON-brand reference slot — reads as an invalid reference (as the frontmatter surface does), never `malformed-constructor` which fires only at a brand slot"
+spec_ref: "[[spec - value model - one typed value produced once in effective_values and consumed by validation and reads]]"
+command: validate
+expected:
+  codes:
+    - { code: field-shape-mismatch, severity: error }

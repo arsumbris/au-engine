@@ -1,0 +1,5 @@
+title: "Section `fills: f` satisfied by an in-section contribution"
+spec_ref: "[[type-def body fills::au-type-system]]"
+command: validate
+expected:
+  clean: true

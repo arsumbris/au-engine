@@ -1,0 +1,5 @@
+title: "Named-union brand — `evidence-kind` is a structural union over record types, a slot discriminates an inline member by its `type:` and resolves a reference to a member"
+spec_ref: "[[spec - branded types - the shape key names a reusable scalar, enum, union, or tuple]]"
+command: validate
+expected:
+  clean: true

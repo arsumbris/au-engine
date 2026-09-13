@@ -1,0 +1,7 @@
+# intentional: `weight` is declared twice → duplicate-field (saphyr keeps the
+# last, so `Number` wins and the earlier `String` is silently dropped without
+# the diagnostic)
+fields:
+  label: String
+  weight: String
+  weight: Number

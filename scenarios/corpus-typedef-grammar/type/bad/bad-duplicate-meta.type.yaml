@@ -1,0 +1,7 @@
+# intentional: two `display-meta` sub-regions on the same host → duplicate-meta-block
+fields: {}
+meta:
+  - type: display-meta
+    tldr: "first"
+  - type: display-meta
+    tldr: "duplicate — should be flagged"

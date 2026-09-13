@@ -1,0 +1,5 @@
+edit:
+  - cross-repo-same-name-divergence
+  - base
+  - app
+type: au.engine.workspace::au-engine

@@ -1,0 +1,4 @@
+# c inherits the auto-unified `desc` from a and b.
+extends:
+  - a
+  - b

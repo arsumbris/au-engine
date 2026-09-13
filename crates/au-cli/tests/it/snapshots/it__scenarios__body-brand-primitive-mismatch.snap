@@ -1,0 +1,310 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "brand-constructor-mismatch",
+      "message": "field 'length' constructor names brand 'Number', but the slot demands 'meter'",
+      "related": [
+        {
+          "file": "<root>/scenarios/body-brand-primitive-mismatch/type/measurement.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 16,
+              "line": 2
+            },
+            "start": {
+              "col": 11,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 23,
+            "start": 18
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/body-brand-primitive-mismatch/beam.md",
+        "line_col": {
+          "end": {
+            "col": 34,
+            "line": 6
+          },
+          "start": {
+            "col": 13,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 68,
+          "start": 47
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 35,
+                        "line_col": {
+                          "end": {
+                            "col": 36,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/body-brand-primitive-mismatch/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "body-brand-primitive-mismatch"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "body-brand-primitive-mismatch"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/body-brand-primitive-mismatch/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "[:length] Number(5)",
+            "kind": "inline_code",
+            "span": {
+              "end": 68,
+              "line_col": {
+                "end": {
+                  "col": 34,
+                  "line": 6
+                },
+                "start": {
+                  "col": 13,
+                  "line": 6
+                }
+              },
+              "start": 47
+            }
+          },
+          {
+            "content": "Number(...)",
+            "kind": "inline_code",
+            "span": {
+              "end": 143,
+              "line_col": {
+                "end": {
+                  "col": 31,
+                  "line": 7
+                },
+                "start": {
+                  "col": 18,
+                  "line": 7
+                }
+              },
+              "start": 130
+            }
+          },
+          {
+            "content": "meter",
+            "kind": "inline_code",
+            "span": {
+              "end": 163,
+              "line_col": {
+                "end": {
+                  "col": 51,
+                  "line": 7
+                },
+                "start": {
+                  "col": 44,
+                  "line": 7
+                }
+              },
+              "start": 156
+            }
+          },
+          {
+            "content": "5",
+            "kind": "inline_code",
+            "span": {
+              "end": 197,
+              "line_col": {
+                "end": {
+                  "col": 4,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 194
+            }
+          }
+        ],
+        "claim": [
+          "measurement"
+        ],
+        "closure": [
+          "measurement"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "length",
+            "origins": [
+              {
+                "name": "measurement",
+                "origin_path": "<root>/scenarios/body-brand-primitive-mismatch/type/measurement.type.yaml",
+                "required": true,
+                "shape": "meter"
+              }
+            ],
+            "required": true,
+            "shape": "meter"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 68,
+                        "line_col": {
+                          "end": {
+                            "col": 34,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 13,
+                            "line": 6
+                          }
+                        },
+                        "start": 47
+                      },
+                      "file": "<root>/scenarios/body-brand-primitive-mismatch/beam.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "brand": "Number",
+                      "kind": "scalar",
+                      "value": 5
+                    }
+                  }
+                ],
+                "value": {
+                  "brand": "Number",
+                  "kind": "scalar",
+                  "value": 5
+                }
+              }
+            ],
+            "field": "length"
+          }
+        ],
+        "file": "<root>/scenarios/body-brand-primitive-mismatch/beam.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+fields:
+  evidence: evidence-kind
+  source: evidence-kind*

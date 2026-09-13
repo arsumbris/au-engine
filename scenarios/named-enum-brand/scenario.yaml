@@ -1,0 +1,5 @@
+title: "Named-enum brand — a shared icon-role vocabulary, a slot uses it by bare name, a member validates"
+spec_ref: "[[spec - branded types - the shape key names a reusable scalar, enum, union, or tuple]]"
+command: validate
+expected:
+  clean: true

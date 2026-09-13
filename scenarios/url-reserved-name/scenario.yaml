@@ -1,0 +1,6 @@
+title: "Type-def named `Url` — load error: reserved built-in name"
+spec_ref: "[[type-def legal names::au-type-system]], [[type-def shape primitive::au-type-system]]"
+command: graph
+expected:
+  codes:
+    - { code: reserved-type-name, severity: error }

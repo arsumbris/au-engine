@@ -1,0 +1,6 @@
+title: "A nested repo under a folder-repo entry that is not a declared member is skipped, contributing nothing, and reported undeclared-nested-repo"
+spec_ref: "[[spec - workspace as a folder-repo - an optional workspace.yaml composes edit and discover members]]"
+command: validate
+expected:
+  codes:
+    - { code: undeclared-nested-repo, severity: warning }

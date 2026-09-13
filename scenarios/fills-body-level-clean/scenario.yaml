@@ -1,0 +1,5 @@
+title: "Body-level `fills: f` satisfied by a contribution anywhere in the body"
+spec_ref: "[[type-def body fills::au-type-system]]"
+command: validate
+expected:
+  clean: true

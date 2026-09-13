@@ -1,0 +1,5 @@
+title: "A body wikilink to an `any*` slot binds by existence — no closure check, so it validates clean"
+spec_ref: "[[type-def shape any::au-type-system]], [[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  clean: true

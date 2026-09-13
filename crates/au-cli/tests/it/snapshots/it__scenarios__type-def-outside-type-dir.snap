@@ -1,0 +1,219 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "type-def-outside-type-dir",
+      "fix": {
+        "description": "move this file under the repo's `type/` directory"
+      },
+      "message": "type-def does not live under a `type/` directory; by convention every type-def sits under the repo's `type/`",
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/type-def-outside-type-dir/widget.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 1
+          },
+          "start": {
+            "col": 1,
+            "line": 1
+          }
+        },
+        "range": {
+          "end": 0,
+          "start": 0
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 31,
+                        "line_col": {
+                          "end": {
+                            "col": 32,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/type-def-outside-type-dir/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "type-def-outside-type-dir"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "type-def-outside-type-dir"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/type-def-outside-type-dir/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "widget"
+        ],
+        "closure": [
+          "widget"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "label",
+            "origins": [
+              {
+                "name": "widget",
+                "origin_path": "<root>/scenarios/type-def-outside-type-dir/widget.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 29,
+                        "line_col": {
+                          "end": {
+                            "col": 13,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 3
+                          }
+                        },
+                        "start": 24
+                      },
+                      "file": "<root>/scenarios/type-def-outside-type-dir/w.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "hello"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "hello"
+                }
+              }
+            ],
+            "field": "label"
+          }
+        ],
+        "file": "<root>/scenarios/type-def-outside-type-dir/w.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

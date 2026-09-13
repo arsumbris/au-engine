@@ -1,0 +1,30 @@
+# Nextest config for the au-engine workspace.
+#
+# The daemon-socket integration tests spin up an FSEvents watcher plus a unix
+# socket over a fresh tempdir repo. Each test is isolated (its own tempdir, its
+# own socket), so running them in parallel is safe; the only risk is CPU /
+# file-watch contention, bounded by `slow-timeout`. au-engine's integration
+# tests are one binary (`it`); nextest still parallelizes its tests by process.
+
+[profile.default]
+# Don't stop at the first failure: one flaky daemon test must not mask the rest.
+fail-fast = false
+# Re-print failures at the end, so the tail of the log is the failure summary.
+final-status-level = "fail"
+# A daemon test can legitimately take tens of seconds (a 10s watcher poll plus
+# 3-5s idle-reconcile windows). Mark SLOW at 30s; kill a genuinely-wedged test
+# after 3 periods (90s), so a hang is reaped instead of crawling forever at the
+# 30s client read-timeout.
+slow-timeout = { period = "30s", terminate-after = 3 }
+
+# The gate script (`.claude/scripts/run-tests.sh`) runs `--profile ci`.
+[profile.ci]
+fail-fast = false
+final-status-level = "fail"
+failure-output = "immediate-final"
+slow-timeout = { period = "30s", terminate-after = 3 }
+
+# If a clean single-invocation run is still contention-bound (many watchers
+# oversubscribing the cores), cap parallelism with a concrete integer, e.g.
+#   test-threads = 6
+# Left at the nextest default (logical CPUs) until a clean run shows it is needed.

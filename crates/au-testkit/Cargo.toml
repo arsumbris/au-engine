@@ -1,0 +1,26 @@
+[package]
+name = "au-testkit"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+# The proptest invariants are one linked binary, not one per file, so the crate
+# compiles proptest once and links once. Submodules live under tests/it/.
+autotests = false
+
+[[test]]
+name = "it"
+path = "tests/it/main.rs"
+
+[dependencies]
+au-core = { workspace = true }
+au-diagnostics = { workspace = true }
+au-grammar = { workspace = true }
+au-parser = { workspace = true }
+au-references = { workspace = true }
+proptest = { workspace = true }
+fs4 = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }

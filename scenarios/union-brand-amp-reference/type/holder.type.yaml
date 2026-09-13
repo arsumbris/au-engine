@@ -1,0 +1,3 @@
+fields:
+  #: an inline-or-reference union brand slot
+  ev: evidence-kind&

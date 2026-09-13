@@ -1,0 +1,224 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "undeclared-nested-repo",
+      "fix": {
+        "description": "declare 'nested' as an 'edit' / 'discover' member in workspace.yaml, or as a 'dep' in repo.yaml"
+      },
+      "message": "nested repo 'nested' is not a declared member; its subtree is skipped and contributes nothing",
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/nested-repo-yaml-parse-error/nested/.arsumbris/repo.yaml",
+        "range": {
+          "end": 0,
+          "start": 0
+        }
+      }
+    },
+    {
+      "code": "repo-registry-parse-error",
+      "fix": {
+        "description": "an unquoted `:` in a value is not valid YAML; quote it, write `description: \"broken: colon\"`"
+      },
+      "message": "repo registry is not valid YAML: mapping values are not allowed in this context at byte 32 line 2 column 20",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/nested-repo-yaml-parse-error/nested/.arsumbris/repo.yaml",
+        "range": {
+          "end": 32,
+          "start": 32
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 34,
+                        "line_col": {
+                          "end": {
+                            "col": 35,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/nested-repo-yaml-parse-error/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "nested-repo-yaml-parse-error"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "nested-repo-yaml-parse-error"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/nested-repo-yaml-parse-error/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "a",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/nested-repo-yaml-parse-error/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 20,
+                        "line_col": {
+                          "end": {
+                            "col": 6,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 4,
+                            "line": 3
+                          }
+                        },
+                        "start": 18
+                      },
+                      "file": "<root>/scenarios/nested-repo-yaml-parse-error/doc.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "hi"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "hi"
+                }
+              }
+            ],
+            "field": "a"
+          }
+        ],
+        "file": "<root>/scenarios/nested-repo-yaml-parse-error/doc.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

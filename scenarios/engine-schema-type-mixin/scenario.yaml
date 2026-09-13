@@ -1,0 +1,5 @@
+title: "A repo.yaml mixes the floor with a consumer type, the extra validates open-world"
+spec_ref: "[[spec - engine-schema file claims - the kind assigns a floor, a written type self-describes and mixes in more]]"
+command: validate
+expected:
+  clean: true

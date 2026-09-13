@@ -1,0 +1,5 @@
+title: "Inline value at a record-typed slot — `type:` defaults to slot demand"
+spec_ref: "[[type-def shape record::au-type-system]]"
+command: validate
+expected:
+  clean: true

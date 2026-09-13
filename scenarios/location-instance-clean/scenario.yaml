@@ -1,0 +1,5 @@
+title: "An instance placed per its type's `location:` (name template, path glob, fileType) validates clean"
+spec_ref: "[[spec - location constraints - a name template and path predicate as an advisory placement meet]]"
+command: validate
+expected:
+  clean: true

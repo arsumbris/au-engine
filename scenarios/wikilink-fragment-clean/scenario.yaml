@@ -1,0 +1,5 @@
+title: "[[target:field]] resolves the target and contributes to the named field"
+spec_ref: "[[type reference::au-type-system]], [[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  clean: true

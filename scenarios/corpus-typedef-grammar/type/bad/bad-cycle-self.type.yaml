@@ -1,0 +1,3 @@
+# intentional: self-loop in `type:` chain → cycle-in-type-chain
+extends: bad-cycle-self
+fields: {}

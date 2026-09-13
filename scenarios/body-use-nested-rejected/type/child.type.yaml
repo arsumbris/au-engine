@@ -1,0 +1,7 @@
+extends: parent
+fields:
+  x: String
+body:
+  - section: Outer
+    body:
+      - use: parent

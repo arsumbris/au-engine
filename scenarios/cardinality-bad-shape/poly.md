@@ -1,0 +1,4 @@
+---
+type: poly
+verts: ["a"]
+---

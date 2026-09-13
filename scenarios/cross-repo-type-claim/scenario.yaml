@@ -1,0 +1,7 @@
+title: "A `::repo` type claim is gated against declared peers: a present peer resolves silently, a missing type-def is peer-type-not-found, an undeclared repo is type-repo-unknown"
+spec_ref: "[[design - cross-repo type vocabulary - reference import and vendor as one spectrum over the repo qualifier]]"
+command: validate
+expected:
+  codes:
+    - { code: peer-type-not-found, severity: error }
+    - { code: type-repo-unknown, severity: error }

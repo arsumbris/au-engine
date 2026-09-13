@@ -1,0 +1,5 @@
+title: "A cross-repo closure DIAMOND surfaces both identities: an instance mixing `type: [note, note::base]` (its own `note` plus base's divergent `note`) has closure `[note, note::base]`, the two distinct identities kept apart, not collapsed to one bare `note`"
+spec_ref: "[[spec - cross-repo identity on the wire - a name conflates, a qualifier scopes to identity, every result carries owner and hash]]"
+command: validate
+expected:
+  clean: true

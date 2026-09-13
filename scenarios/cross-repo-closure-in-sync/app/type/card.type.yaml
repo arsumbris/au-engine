@@ -1,0 +1,3 @@
+# Imports note::base into the fold, so the shared in-sync node is reached from
+# the peer edge and could retain the peer origin.
+extends: note::base

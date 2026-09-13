@@ -1,0 +1,22 @@
+title: "Load-time type-def grammar — corpus of every diagnostic emitted by the graph builder"
+spec_ref: "[[type-def::au-type-system]], [[type-def legal names::au-type-system]], [[type-def sealed::au-type-system]], [[type-def shape primitive::au-type-system]], [[type closure::au-type-system]], [[type-def fields collision - auto-unify and qualified field::au-type-system]], [[type-def meta::au-type-system]]"
+command: graph
+expected:
+  codes:
+    - { code: reserved-type-name,         severity: error }
+    - { code: cycle-in-type-chain,        severity: error }
+    - { code: duplicate-meta-block,       severity: error }
+    - { code: duplicate-type-def,         severity: error }
+    - { code: field-decl-bad-shape,       severity: error }
+    - { code: fields-not-a-map,          severity: error }
+    - { code: meta-block-bad-shape,       severity: error }
+    - { code: meta-mixin-not-supported,   severity: error }
+    - { code: meta-not-a-list,            severity: error }
+    - { code: type-name-violates-regex,   severity: error }
+    - { code: type-def-not-a-mapping,     severity: error }
+    - { code: parent-claim-bad-shape,     severity: error }
+    - { code: field-redeclaration,        severity: error }
+    - { code: sealed-no-surprise-children, severity: error }
+    - { code: sealed-bad-shape,           severity: error }
+    - { code: duplicate-claim,            severity: warning }
+    - { code: subsumption-in-mixin,       severity: warning }

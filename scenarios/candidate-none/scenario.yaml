@@ -1,0 +1,5 @@
+title: "No implicit candidates — extras align with the claimed type"
+spec_ref: "[[type candidate scan::au-type-system]]"
+command: candidates
+expected:
+  clean: true

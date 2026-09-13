@@ -1,0 +1,88 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "type-key-on-type-def",
+      "message": "`type:` on a type-def is not a parent claim; did you mean `extends:`?",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/type-key-on-type-def/type/widget.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 5,
+            "line": 1
+          },
+          "start": {
+            "col": 1,
+            "line": 1
+          }
+        },
+        "range": {
+          "end": 4,
+          "start": 0
+        }
+      }
+    }
+  ],
+  "graph": {
+    "types": [
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 26,
+              "line_col": {
+                "end": {
+                  "col": 8,
+                  "line": 3
+                },
+                "start": {
+                  "col": 3,
+                  "line": 3
+                }
+              },
+              "start": 21
+            },
+            "name": "label",
+            "required": true,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          }
+        ],
+        "hash": "cbbde3f643c4c840",
+        "meta_blocks": null,
+        "name": "widget",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/type-key-on-type-def/type/widget.type.yaml",
+          "span": {
+            "end": 35,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+#: semantic icon roles, set-independent, mapped to glyphs by a component set
+shape:
+  - save        #: persist the current state
+  - delete      #: remove the target
+  - open        #: reveal or expand

@@ -1,0 +1,3 @@
+#: an inline-or-reference compound: the slot cannot supply one identity
+fields:
+  shape: <point | circle>&

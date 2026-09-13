@@ -1,0 +1,10 @@
+# Extends note and re-declares display-meta with its own values. `lookup_meta`
+# starting at `decision` returns this block; querying for `runtime-meta` walks
+# up to `note`, finds nothing there, returns None.
+extends: note
+fields:
+  status: [made, pending]
+meta:
+  - type: display-meta
+    tldr: "A decision made at a point in time"
+    icon: "📋"

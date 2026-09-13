@@ -1,0 +1,5 @@
+title: "A `^^` block-referent body-fill into an `any*` slot binds by existence — the block's type is not closure-checked"
+spec_ref: "[[type-def shape any::au-type-system]], [[type block-id::au-type-system]], [[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  clean: true

@@ -1,0 +1,6 @@
+title: "A raw mixin of two divergent `strict` locations is uninhabitable — every instance is a location-strict-violation"
+spec_ref: "[[spec - location constraints - a name template and path predicate as an advisory placement meet]]"
+command: validate
+expected:
+  codes:
+    - { code: location-strict-violation, severity: error }

@@ -1,0 +1,634 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "readme-misplaced",
+      "fix": {
+        "description": "move this to the repo root as README.md, or drop the `au.engine.readme` claim"
+      },
+      "message": "file claims `au.engine.readme` but is not the repo's root README.md; the readme type is a singleton at `<root>/README.md`",
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/readme-misplaced/docs/overview.md",
+        "line_col": {
+          "end": {
+            "col": 34,
+            "line": 2
+          },
+          "start": {
+            "col": 7,
+            "line": 2
+          }
+        },
+        "range": {
+          "end": 37,
+          "start": 10
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 22,
+                        "line_col": {
+                          "end": {
+                            "col": 23,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/readme-misplaced/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "readme-misplaced"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "readme-misplaced"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/readme-misplaced/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 110,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 94
+            },
+            "text": "Repo Overview"
+          },
+          {
+            "kind": "heading",
+            "level": 2,
+            "span": {
+              "end": 127,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 111
+            },
+            "text": "What this is"
+          },
+          {
+            "kind": "heading",
+            "level": 2,
+            "span": {
+              "end": 209,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 13
+                },
+                "start": {
+                  "col": 1,
+                  "line": 12
+                }
+              },
+              "start": 190
+            },
+            "text": "How to use this"
+          },
+          {
+            "kind": "heading",
+            "level": 2,
+            "span": {
+              "end": 242,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 17
+                },
+                "start": {
+                  "col": 1,
+                  "line": 16
+                }
+              },
+              "start": 220
+            },
+            "text": "How to extend this"
+          }
+        ],
+        "claim": [
+          "au.engine.readme::au-engine"
+        ],
+        "closure": [
+          "au.engine.readme::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "tldr",
+            "origins": [
+              {
+                "name": "au.engine.readme",
+                "origin_path": "<au-engine-builtin>/au.engine.readme.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 88,
+                        "line_col": {
+                          "end": {
+                            "col": 51,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 3
+                          }
+                        },
+                        "start": 44
+                      },
+                      "file": "<root>/scenarios/readme-misplaced/README.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "The canonical root README. Read it. Fork it."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "The canonical root README. Read it. Fork it."
+                }
+              }
+            ],
+            "field": "tldr"
+          }
+        ],
+        "file": "<root>/scenarios/readme-misplaced/README.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Repo Overview",
+            "optional": false,
+            "path": [
+              "Repo Overview"
+            ],
+            "present": true,
+            "span": {
+              "end": 110,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 94
+            }
+          },
+          {
+            "depth": 2,
+            "name": "What this is",
+            "optional": false,
+            "path": [
+              "Repo Overview",
+              "What this is"
+            ],
+            "present": true,
+            "span": {
+              "end": 127,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 111
+            }
+          },
+          {
+            "depth": 2,
+            "name": "How to use this",
+            "optional": false,
+            "path": [
+              "Repo Overview",
+              "How to use this"
+            ],
+            "present": true,
+            "span": {
+              "end": 209,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 13
+                },
+                "start": {
+                  "col": 1,
+                  "line": 12
+                }
+              },
+              "start": 190
+            }
+          },
+          {
+            "depth": 2,
+            "name": "How to extend this",
+            "optional": false,
+            "path": [
+              "Repo Overview",
+              "How to extend this"
+            ],
+            "present": true,
+            "span": {
+              "end": 242,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 17
+                },
+                "start": {
+                  "col": 1,
+                  "line": 16
+                }
+              },
+              "start": 220
+            }
+          }
+        ]
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 150,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 134
+            },
+            "text": "Repo Overview"
+          },
+          {
+            "kind": "heading",
+            "level": 2,
+            "span": {
+              "end": 167,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 151
+            },
+            "text": "What this is"
+          },
+          {
+            "kind": "heading",
+            "level": 2,
+            "span": {
+              "end": 249,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 13
+                },
+                "start": {
+                  "col": 1,
+                  "line": 12
+                }
+              },
+              "start": 230
+            },
+            "text": "How to use this"
+          },
+          {
+            "kind": "heading",
+            "level": 2,
+            "span": {
+              "end": 322,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 17
+                },
+                "start": {
+                  "col": 1,
+                  "line": 16
+                }
+              },
+              "start": 300
+            },
+            "text": "How to extend this"
+          }
+        ],
+        "claim": [
+          "au.engine.readme::au-engine"
+        ],
+        "closure": [
+          "au.engine.readme::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "tldr",
+            "origins": [
+              {
+                "name": "au.engine.readme",
+                "origin_path": "<au-engine-builtin>/au.engine.readme.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 128,
+                        "line_col": {
+                          "end": {
+                            "col": 91,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 3
+                          }
+                        },
+                        "start": 44
+                      },
+                      "file": "<root>/scenarios/readme-misplaced/docs/overview.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "A second README claim off the root. The readme type is a singleton. Move or drop it."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "A second README claim off the root. The readme type is a singleton. Move or drop it."
+                }
+              }
+            ],
+            "field": "tldr"
+          }
+        ],
+        "file": "<root>/scenarios/readme-misplaced/docs/overview.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Repo Overview",
+            "optional": false,
+            "path": [
+              "Repo Overview"
+            ],
+            "present": true,
+            "span": {
+              "end": 150,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 134
+            }
+          },
+          {
+            "depth": 2,
+            "name": "What this is",
+            "optional": false,
+            "path": [
+              "Repo Overview",
+              "What this is"
+            ],
+            "present": true,
+            "span": {
+              "end": 167,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 151
+            }
+          },
+          {
+            "depth": 2,
+            "name": "How to use this",
+            "optional": false,
+            "path": [
+              "Repo Overview",
+              "How to use this"
+            ],
+            "present": true,
+            "span": {
+              "end": 249,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 13
+                },
+                "start": {
+                  "col": 1,
+                  "line": 12
+                }
+              },
+              "start": 230
+            }
+          },
+          {
+            "depth": 2,
+            "name": "How to extend this",
+            "optional": false,
+            "path": [
+              "Repo Overview",
+              "How to extend this"
+            ],
+            "present": true,
+            "span": {
+              "end": 322,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 17
+                },
+                "start": {
+                  "col": 1,
+                  "line": 16
+                }
+              },
+              "start": 300
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

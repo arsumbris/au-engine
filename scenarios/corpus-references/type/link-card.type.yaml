@@ -1,0 +1,4 @@
+fields:
+  target: note*
+  tags: String[]
+  description: String

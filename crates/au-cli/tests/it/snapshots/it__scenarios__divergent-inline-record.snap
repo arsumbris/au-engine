@@ -1,0 +1,459 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "mixin-collision",
+      "message": "field 'title' is declared with non-token-equal shapes across mixin origins: 'a' (String), 'b' (Number) — a bare use is ambiguous; qualify each use as `title{type}`",
+      "related": [
+        {
+          "file": "<root>/scenarios/divergent-inline-record/type/a.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 16,
+              "line": 2
+            },
+            "start": {
+              "col": 10,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 23,
+            "start": 17
+          }
+        },
+        {
+          "file": "<root>/scenarios/divergent-inline-record/type/b.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 16,
+              "line": 2
+            },
+            "start": {
+              "col": 10,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 23,
+            "start": 17
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/divergent-inline-record/bare.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 7
+          },
+          "start": {
+            "col": 3,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 152,
+          "start": 135
+        }
+      }
+    },
+    {
+      "code": "required-field-absent",
+      "message": "field 'slot': inline value is missing required field 'title' (declared on 'a') — qualify it as 'title{a}'",
+      "related": [
+        {
+          "file": "<root>/scenarios/divergent-inline-record/type/a.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 8,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 15,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/divergent-inline-record/bare.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 7
+          },
+          "start": {
+            "col": 3,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 152,
+          "start": 135
+        }
+      }
+    },
+    {
+      "code": "required-field-absent",
+      "message": "field 'slot': inline value is missing required field 'title' (declared on 'b') — qualify it as 'title{b}'",
+      "related": [
+        {
+          "file": "<root>/scenarios/divergent-inline-record/type/b.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 8,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 15,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/divergent-inline-record/bare.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 7
+          },
+          "start": {
+            "col": 3,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 152,
+          "start": 135
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 29,
+                        "line_col": {
+                          "end": {
+                            "col": 30,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/divergent-inline-record/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "divergent-inline-record"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "divergent-inline-record"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/divergent-inline-record/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "host"
+        ],
+        "closure": [
+          "host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "slot",
+            "origins": [
+              {
+                "name": "host",
+                "origin_path": "<root>/scenarios/divergent-inline-record/type/host.type.yaml",
+                "required": true,
+                "shape": "c"
+              }
+            ],
+            "required": true,
+            "shape": "c"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 152,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 6
+                          }
+                        },
+                        "start": 135
+                      },
+                      "file": "<root>/scenarios/divergent-inline-record/bare.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "title",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "ambiguous"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "title",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "ambiguous"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "slot"
+          }
+        ],
+        "file": "<root>/scenarios/divergent-inline-record/bare.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "host"
+        ],
+        "closure": [
+          "host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "slot",
+            "origins": [
+              {
+                "name": "host",
+                "origin_path": "<root>/scenarios/divergent-inline-record/type/host.type.yaml",
+                "required": true,
+                "shape": "c"
+              }
+            ],
+            "required": true,
+            "shape": "c"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 139,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 5
+                          }
+                        },
+                        "start": 103
+                      },
+                      "file": "<root>/scenarios/divergent-inline-record/resolved.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "title{a}",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "a string"
+                            }
+                          ]
+                        },
+                        {
+                          "field": "title{b}",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": 42
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "title{a}",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "a string"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "title{b}",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": 42
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "slot"
+          }
+        ],
+        "file": "<root>/scenarios/divergent-inline-record/resolved.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

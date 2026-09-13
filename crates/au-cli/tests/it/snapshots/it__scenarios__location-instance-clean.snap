@@ -1,0 +1,230 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 29,
+                        "line_col": {
+                          "end": {
+                            "col": 30,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/location-instance-clean/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "location-instance-clean"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "location-instance-clean"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/location-instance-clean/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "plans/plan - hello.md",
+            "kind": "inline_code",
+            "span": {
+              "end": 71,
+              "line_col": {
+                "end": {
+                  "col": 40,
+                  "line": 6
+                },
+                "start": {
+                  "col": 17,
+                  "line": 6
+                }
+              },
+              "start": 48
+            }
+          },
+          {
+            "content": "location:",
+            "kind": "inline_code",
+            "span": {
+              "end": 104,
+              "line_col": {
+                "end": {
+                  "col": 73,
+                  "line": 6
+                },
+                "start": {
+                  "col": 62,
+                  "line": 6
+                }
+              },
+              "start": 93
+            }
+          }
+        ],
+        "claim": [
+          "plan"
+        ],
+        "closure": [
+          "plan"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "slug",
+            "origins": [
+              {
+                "name": "plan",
+                "origin_path": "<root>/scenarios/location-instance-clean/type/plan.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 26,
+                        "line_col": {
+                          "end": {
+                            "col": 12,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 3
+                          }
+                        },
+                        "start": 21
+                      },
+                      "file": "<root>/scenarios/location-instance-clean/plans/plan - hello.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "hello"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "hello"
+                }
+              }
+            ],
+            "field": "slug"
+          }
+        ],
+        "file": "<root>/scenarios/location-instance-clean/plans/plan - hello.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

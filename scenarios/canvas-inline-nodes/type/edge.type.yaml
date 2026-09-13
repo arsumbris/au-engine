@@ -1,0 +1,4 @@
+fields:
+  from: node*
+  to: node*
+  kind?: [tree, cross]

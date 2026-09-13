@@ -1,0 +1,10 @@
+{
+	"gian comment": {
+		"scope": "md,markdown",
+		"prefix": ";gian",
+		"body": [
+			"{{@gian: $0}}"
+		],
+		"description": "Comment by gian"
+	}
+}

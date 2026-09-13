@@ -1,0 +1,4 @@
+#: semantic icon roles, shared across consumers
+shape:
+  - save        #: persist current state
+  - delete      #: remove the target

@@ -1,0 +1,5 @@
+fields:
+  at: String
+sealed:
+  - sessionEvent.userPrompt
+  - sessionEvent.toolCall

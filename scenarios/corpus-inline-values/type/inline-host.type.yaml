@@ -1,0 +1,4 @@
+# non-sealed record slot. Bare-name `rationale` parses
+# to Shape::Record; the value must be an inline YAML map.
+fields:
+  rationale: rationale

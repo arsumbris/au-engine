@@ -1,0 +1,123 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "types": [
+    {
+      "abstract": false,
+      "body": null,
+      "effective_body": null,
+      "fields": [
+        {
+          "key_span": {
+            "end": 31,
+            "line_col": {
+              "end": {
+                "col": 4,
+                "line": 3
+              },
+              "start": {
+                "col": 3,
+                "line": 3
+              }
+            },
+            "start": 30
+          },
+          "name": "n",
+          "required": true,
+          "shape": "Number",
+          "shape_ast": {
+            "kind": "primitive",
+            "name": "Number"
+          }
+        }
+      ],
+      "hash": "128530c01b25bdea",
+      "meta_blocks": null,
+      "name": "card",
+      "parents": [
+        "note::base"
+      ],
+      "repo": "app",
+      "required_meta": [],
+      "sealed": null,
+      "source": {
+        "file": "<root>/scenarios/cross-repo-extends-parents/app/type/card.type.yaml",
+        "span": {
+          "end": 40,
+          "line_col": {
+            "end": {
+              "col": 1,
+              "line": 4
+            },
+            "start": {
+              "col": 1,
+              "line": 1
+            }
+          },
+          "start": 0
+        }
+      },
+      "unmet_required_meta": []
+    },
+    {
+      "abstract": false,
+      "body": null,
+      "effective_body": null,
+      "fields": [
+        {
+          "key_span": {
+            "end": 30,
+            "line_col": {
+              "end": {
+                "col": 9,
+                "line": 3
+              },
+              "start": {
+                "col": 3,
+                "line": 3
+              }
+            },
+            "start": 24
+          },
+          "name": "detail",
+          "required": true,
+          "shape": "String",
+          "shape_ast": {
+            "kind": "primitive",
+            "name": "String"
+          }
+        }
+      ],
+      "hash": "77a0161af99e2c2a",
+      "meta_blocks": null,
+      "name": "card-detail",
+      "parents": [
+        "card"
+      ],
+      "repo": "app",
+      "required_meta": [],
+      "sealed": null,
+      "source": {
+        "file": "<root>/scenarios/cross-repo-extends-parents/app/type/card-detail.type.yaml",
+        "span": {
+          "end": 39,
+          "line_col": {
+            "end": {
+              "col": 1,
+              "line": 4
+            },
+            "start": {
+              "col": 1,
+              "line": 1
+            }
+          },
+          "start": 0
+        }
+      },
+      "unmet_required_meta": []
+    }
+  ]
+}

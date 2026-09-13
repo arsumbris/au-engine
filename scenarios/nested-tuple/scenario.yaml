@@ -1,0 +1,5 @@
+title: "Nested tuple — a `box` tuple of two `point` tuples, recursively elaborated and validated positionally at each depth"
+spec_ref: "[[spec - value model - one typed value produced once in effective_values and consumed by validation and reads]]"
+command: validate
+expected:
+  clean: true

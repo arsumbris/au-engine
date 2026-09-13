@@ -1,0 +1,5 @@
+title: "Slot-level union — `<rationale* | thesis*>` reference accepts either"
+spec_ref: "[[type-def shape compound::au-type-system]], [[type-def shape suffixes::au-type-system]]"
+command: validate
+expected:
+  clean: true

@@ -1,0 +1,6 @@
+title: "`<T[] & T[+]>` slot — intersection collapses to the stricter `T[+]`"
+spec_ref: "[[type-def shape compound::au-type-system]]"
+command: graph
+expected:
+  codes:
+    - { code: subsumption-in-slot-intersection, severity: warning }

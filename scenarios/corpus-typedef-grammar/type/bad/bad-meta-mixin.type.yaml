@@ -1,0 +1,5 @@
+# intentional: meta sub-region uses mixin form for `type:` (forbidden)
+# → meta-mixin-not-supported fires at parse time
+fields: {}
+meta:
+  - type: [display-meta, runtime-meta]

@@ -1,0 +1,15 @@
+{
+  "algorithm": "FNV-1a, 64-bit, over the raw bytes of the UTF-8-encoded `input`",
+  "offset_basis": "cbf29ce484222325",
+  "prime": "100000001b3",
+  "note": "Each `hash` is the FNV-1a-64 of `input`'s UTF-8 bytes, 16 lowercase hex digits. This is a declared au-engine-sdk contract: a mirror must reproduce every pair exactly, and the engine may not change the algorithm without updating this file and coordinating the SDK mirror. See crates/au-engine/WIRE.md.",
+  "vectors": [
+    { "input": "", "hash": "cbf29ce484222325" },
+    { "input": "a", "hash": "af63dc4c8601ec8c" },
+    { "input": "hello", "hash": "a430d84680aabd0b" },
+    { "input": "hello\n", "hash": "a9bc80cca21f28b3" },
+    { "input": "au-engine", "hash": "ddeb7c9ba0248838" },
+    { "input": "café", "hash": "48e8823acfa40d89" },
+    { "input": "---\ntype: note\n---\n# Note\n", "hash": "90973579ac91b6fc" }
+  ]
+}

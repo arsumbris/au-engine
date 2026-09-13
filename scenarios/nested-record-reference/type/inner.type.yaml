@@ -1,0 +1,3 @@
+fields:
+  #: a typed-reference slot inside a nested record
+  link: target*

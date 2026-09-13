@@ -1,0 +1,3 @@
+fields:
+  content: String
+  position: vec2

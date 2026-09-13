@@ -1,0 +1,713 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 5,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 22,
+                        "line_col": {
+                          "end": {
+                            "col": 23,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/cross-repo-brand/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "cross-repo-brand"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "cross-repo-brand"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-brand/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.workspace::au-engine"
+        ],
+        "closure": [
+          "au.engine.workspace::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "disabled",
+            "origins": [
+              {
+                "name": "au.engine.workspace",
+                "origin_path": "<au-engine-builtin>/au.engine.workspace.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String[]"
+              }
+            ],
+            "required": false,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "discover",
+            "origins": [
+              {
+                "name": "au.engine.workspace",
+                "origin_path": "<au-engine-builtin>/au.engine.workspace.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String[]"
+              }
+            ],
+            "required": false,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "edit",
+            "origins": [
+              {
+                "name": "au.engine.workspace",
+                "origin_path": "<au-engine-builtin>/au.engine.workspace.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String[]"
+              }
+            ],
+            "required": false,
+            "shape": "String[]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 26,
+                        "line_col": {
+                          "end": {
+                            "col": 21,
+                            "line": 2
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 2
+                          }
+                        },
+                        "start": 10
+                      },
+                      "file": "<root>/scenarios/cross-repo-brand/.arsumbris/workspace.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "cross-repo-brand"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "cross-repo-brand"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 34,
+                        "line_col": {
+                          "end": {
+                            "col": 8,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 3
+                          }
+                        },
+                        "start": 31
+                      },
+                      "file": "<root>/scenarios/cross-repo-brand/.arsumbris/workspace.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "sdk"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "sdk"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 42,
+                        "line_col": {
+                          "end": {
+                            "col": 8,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 4
+                          }
+                        },
+                        "start": 39
+                      },
+                      "file": "<root>/scenarios/cross-repo-brand/.arsumbris/workspace.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "app"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "app"
+                }
+              }
+            ],
+            "field": "edit"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-brand/.arsumbris/workspace.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 30,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 3
+                          }
+                        },
+                        "start": 20
+                      },
+                      "file": "<root>/scenarios/cross-repo-brand/app/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "name",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "sdk"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "name",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "sdk"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "deps"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 9,
+                        "line_col": {
+                          "end": {
+                            "col": 10,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/cross-repo-brand/app/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "app"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "app"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-brand/app/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "command"
+        ],
+        "closure": [
+          "command"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "evidence",
+            "origins": [
+              {
+                "name": "command",
+                "origin_path": "<root>/scenarios/cross-repo-brand/app/type/command.type.yaml",
+                "required": true,
+                "shape": "evidence-kind::sdk"
+              }
+            ],
+            "required": true,
+            "shape": "evidence-kind::sdk"
+          },
+          {
+            "divergent": false,
+            "field": "icon",
+            "origins": [
+              {
+                "name": "command",
+                "origin_path": "<root>/scenarios/cross-repo-brand/app/type/command.type.yaml",
+                "required": true,
+                "shape": "icon-role::sdk"
+              }
+            ],
+            "required": true,
+            "shape": "icon-role::sdk"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 112,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 5
+                          }
+                        },
+                        "start": 41
+                      },
+                      "file": "<root>/scenarios/cross-repo-brand/app/save-cmd.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "t",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "the peer union discriminates across the boundary"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "t",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "the peer union discriminates across the boundary"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "evidence"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 28,
+                        "line_col": {
+                          "end": {
+                            "col": 11,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 3
+                          }
+                        },
+                        "start": 24
+                      },
+                      "file": "<root>/scenarios/cross-repo-brand/app/save-cmd.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "save"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "save"
+                }
+              }
+            ],
+            "field": "icon"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-brand/app/save-cmd.md",
+        "section_presence": null
+      },
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 9,
+                        "line_col": {
+                          "end": {
+                            "col": 10,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/cross-repo-brand/sdk/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "sdk"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "sdk"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-brand/sdk/.arsumbris/repo.yaml",
+        "section_presence": null
+      }
+    ]
+  }
+}

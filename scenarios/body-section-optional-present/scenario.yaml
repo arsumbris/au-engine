@@ -1,0 +1,5 @@
+title: "Optional `section?:` present at templated position is clean"
+spec_ref: "[[type-def body section::au-type-system]]"
+command: validate
+expected:
+  clean: true

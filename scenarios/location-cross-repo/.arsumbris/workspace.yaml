@@ -1,0 +1,5 @@
+edit:
+  - location-cross-repo
+  - base
+  - app
+type: au.engine.workspace::au-engine

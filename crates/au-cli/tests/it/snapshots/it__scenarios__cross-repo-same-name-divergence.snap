@@ -1,0 +1,1090 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "mixin-collision",
+      "message": "field 'title' is declared with non-token-equal shapes across mixin origins: 'note' (String), 'note::base' (Number) — a bare use is ambiguous; qualify each use as `title{type}`",
+      "related": [
+        {
+          "file": "<root>/scenarios/cross-repo-same-name-divergence/app/type/note.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 16,
+              "line": 2
+            },
+            "start": {
+              "col": 10,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 23,
+            "start": 17
+          }
+        },
+        {
+          "file": "<root>/scenarios/cross-repo-same-name-divergence/base/type/note.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 16,
+              "line": 2
+            },
+            "start": {
+              "col": 10,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 23,
+            "start": 17
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/cross-repo-same-name-divergence/app/diamond.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 5
+          },
+          "start": {
+            "col": 3,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 34,
+          "start": 12
+        }
+      }
+    },
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'title' (declared on 'note') — qualify it as 'title{note}'",
+      "related": [
+        {
+          "file": "<root>/scenarios/cross-repo-same-name-divergence/app/type/note.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 8,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 15,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/cross-repo-same-name-divergence/app/diamond.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 5
+          },
+          "start": {
+            "col": 3,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 34,
+          "start": 12
+        }
+      }
+    },
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'title' (declared on 'note::base') — qualify it as 'title{note::base}'",
+      "related": [
+        {
+          "file": "<root>/scenarios/cross-repo-same-name-divergence/base/type/note.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 8,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 15,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/cross-repo-same-name-divergence/app/diamond.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 5
+          },
+          "start": {
+            "col": 3,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 34,
+          "start": 12
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 6,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 37,
+                        "line_col": {
+                          "end": {
+                            "col": 38,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/cross-repo-same-name-divergence/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "cross-repo-same-name-divergence"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "cross-repo-same-name-divergence"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-same-name-divergence/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.workspace::au-engine"
+        ],
+        "closure": [
+          "au.engine.workspace::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "disabled",
+            "origins": [
+              {
+                "name": "au.engine.workspace",
+                "origin_path": "<au-engine-builtin>/au.engine.workspace.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String[]"
+              }
+            ],
+            "required": false,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "discover",
+            "origins": [
+              {
+                "name": "au.engine.workspace",
+                "origin_path": "<au-engine-builtin>/au.engine.workspace.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String[]"
+              }
+            ],
+            "required": false,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "edit",
+            "origins": [
+              {
+                "name": "au.engine.workspace",
+                "origin_path": "<au-engine-builtin>/au.engine.workspace.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String[]"
+              }
+            ],
+            "required": false,
+            "shape": "String[]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 41,
+                        "line_col": {
+                          "end": {
+                            "col": 36,
+                            "line": 2
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 2
+                          }
+                        },
+                        "start": 10
+                      },
+                      "file": "<root>/scenarios/cross-repo-same-name-divergence/.arsumbris/workspace.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "cross-repo-same-name-divergence"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "cross-repo-same-name-divergence"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 50,
+                        "line_col": {
+                          "end": {
+                            "col": 9,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 3
+                          }
+                        },
+                        "start": 46
+                      },
+                      "file": "<root>/scenarios/cross-repo-same-name-divergence/.arsumbris/workspace.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "base"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "base"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 8,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 4
+                          }
+                        },
+                        "start": 55
+                      },
+                      "file": "<root>/scenarios/cross-repo-same-name-divergence/.arsumbris/workspace.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "app"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "app"
+                }
+              }
+            ],
+            "field": "edit"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-same-name-divergence/.arsumbris/workspace.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 110,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 4
+                          }
+                        },
+                        "start": 57
+                      },
+                      "file": "<root>/scenarios/cross-repo-same-name-divergence/app/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "name",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "base"
+                            }
+                          ]
+                        },
+                        {
+                          "field": "remote",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "git@example.com:acme/base.git"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "name",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "base"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "remote",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "git@example.com:acme/base.git"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "deps"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 9,
+                        "line_col": {
+                          "end": {
+                            "col": 10,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/cross-repo-same-name-divergence/app/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "app"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "app"
+                }
+              }
+            ],
+            "field": "name"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 46,
+                        "line_col": {
+                          "end": {
+                            "col": 37,
+                            "line": 2
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 2
+                          }
+                        },
+                        "start": 18
+                      },
+                      "file": "<root>/scenarios/cross-repo-same-name-divergence/app/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "git@example.com:acme/app.git"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "git@example.com:acme/app.git"
+                }
+              }
+            ],
+            "field": "remote"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-same-name-divergence/app/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "note",
+            "kind": "inline_code",
+            "span": {
+              "end": 67,
+              "line_col": {
+                "end": {
+                  "col": 17,
+                  "line": 8
+                },
+                "start": {
+                  "col": 11,
+                  "line": 8
+                }
+              },
+              "start": 61
+            }
+          },
+          {
+            "content": "note",
+            "kind": "inline_code",
+            "span": {
+              "end": 104,
+              "line_col": {
+                "end": {
+                  "col": 54,
+                  "line": 8
+                },
+                "start": {
+                  "col": 48,
+                  "line": 8
+                }
+              },
+              "start": 98
+            }
+          },
+          {
+            "content": "title",
+            "kind": "inline_code",
+            "span": {
+              "end": 203,
+              "line_col": {
+                "end": {
+                  "col": 75,
+                  "line": 9
+                },
+                "start": {
+                  "col": 68,
+                  "line": 9
+                }
+              },
+              "start": 196
+            }
+          },
+          {
+            "content": "title{note}",
+            "kind": "inline_code",
+            "span": {
+              "end": 330,
+              "line_col": {
+                "end": {
+                  "col": 36,
+                  "line": 11
+                },
+                "start": {
+                  "col": 23,
+                  "line": 11
+                }
+              },
+              "start": 317
+            }
+          },
+          {
+            "content": "title{note::base}",
+            "kind": "inline_code",
+            "span": {
+              "end": 354,
+              "line_col": {
+                "end": {
+                  "col": 60,
+                  "line": 11
+                },
+                "start": {
+                  "col": 41,
+                  "line": 11
+                }
+              },
+              "start": 335
+            }
+          }
+        ],
+        "claim": [
+          "note",
+          "note::base"
+        ],
+        "closure": [
+          "note",
+          "note::base"
+        ],
+        "effective_shape": [
+          {
+            "divergent": true,
+            "field": "title",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/cross-repo-same-name-divergence/app/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              },
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/cross-repo-same-name-divergence/base/type/note.type.yaml",
+                "repo": "base",
+                "required": true,
+                "shape": "Number"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 45,
+                        "line_col": {
+                          "end": {
+                            "col": 12,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 5
+                          }
+                        },
+                        "start": 41
+                      },
+                      "file": "<root>/scenarios/cross-repo-same-name-divergence/app/diamond.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "bare"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "bare"
+                }
+              }
+            ],
+            "field": "title"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-same-name-divergence/app/diamond.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note",
+          "note::base"
+        ],
+        "closure": [
+          "note",
+          "note::base"
+        ],
+        "effective_shape": [
+          {
+            "divergent": true,
+            "field": "title",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/cross-repo-same-name-divergence/app/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              },
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/cross-repo-same-name-divergence/base/type/note.type.yaml",
+                "repo": "base",
+                "required": true,
+                "shape": "Number"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 296,
+                        "line_col": {
+                          "end": {
+                            "col": 22,
+                            "line": 9
+                          },
+                          "start": {
+                            "col": 20,
+                            "line": 9
+                          }
+                        },
+                        "start": 294
+                      },
+                      "file": "<root>/scenarios/cross-repo-same-name-divergence/app/resolved.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": 42
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": 42
+                }
+              }
+            ],
+            "field": "title{note::base}"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 274,
+                        "line_col": {
+                          "end": {
+                            "col": 24,
+                            "line": 8
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 8
+                          }
+                        },
+                        "start": 264
+                      },
+                      "file": "<root>/scenarios/cross-repo-same-name-divergence/app/resolved.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "a string"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "a string"
+                }
+              }
+            ],
+            "field": "title{note}"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-same-name-divergence/app/resolved.md",
+        "section_presence": null
+      },
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 10,
+                        "line_col": {
+                          "end": {
+                            "col": 11,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/cross-repo-same-name-divergence/base/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "base"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "base"
+                }
+              }
+            ],
+            "field": "name"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 48,
+                        "line_col": {
+                          "end": {
+                            "col": 38,
+                            "line": 2
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 2
+                          }
+                        },
+                        "start": 19
+                      },
+                      "file": "<root>/scenarios/cross-repo-same-name-divergence/base/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "git@example.com:acme/base.git"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "git@example.com:acme/base.git"
+                }
+              }
+            ],
+            "field": "remote"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-same-name-divergence/base/.arsumbris/repo.yaml",
+        "section_presence": null
+      }
+    ]
+  }
+}

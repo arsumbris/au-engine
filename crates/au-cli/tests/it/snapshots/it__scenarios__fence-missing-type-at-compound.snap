@@ -1,0 +1,256 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "inline-value-missing-type",
+      "message": "marked fence for 'shape' must declare `type:` identifying which branch of slot '<point | circle>&' the record satisfies",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/fence-missing-type-at-compound/note.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 9
+          },
+          "start": {
+            "col": 1,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 51,
+          "start": 30
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 36,
+                        "line_col": {
+                          "end": {
+                            "col": 37,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/fence-missing-type-at-compound/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "fence-missing-type-at-compound"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "fence-missing-type-at-compound"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/fence-missing-type-at-compound/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "body": "x: 1\n",
+            "info": "[:shape]",
+            "kind": "fenced_block",
+            "span": {
+              "end": 51,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 30
+            }
+          }
+        ],
+        "claim": [
+          "capture"
+        ],
+        "closure": [
+          "capture"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "shape",
+            "origins": [
+              {
+                "name": "capture",
+                "origin_path": "<root>/scenarios/fence-missing-type-at-compound/type/capture.type.yaml",
+                "required": true,
+                "shape": "<point* | circle*>&"
+              }
+            ],
+            "required": true,
+            "shape": "<point* | circle*>&"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 51,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 9
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 6
+                          }
+                        },
+                        "start": 30
+                      },
+                      "file": "<root>/scenarios/fence-missing-type-at-compound/note.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_fence",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "x",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "x",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "shape"
+          }
+        ],
+        "file": "<root>/scenarios/fence-missing-type-at-compound/note.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

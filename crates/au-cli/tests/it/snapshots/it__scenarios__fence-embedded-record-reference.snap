@@ -1,0 +1,372 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 37,
+                        "line_col": {
+                          "end": {
+                            "col": 38,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/fence-embedded-record-reference/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "fence-embedded-record-reference"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "fence-embedded-record-reference"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/fence-embedded-record-reference/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 39,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 30
+            },
+            "text": "Detail"
+          },
+          {
+            "body": "type: withref\nlink: \"[[the-target]]\"\n",
+            "info": "[:detail]",
+            "kind": "fenced_block",
+            "span": {
+              "end": 94,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 12
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 40
+            }
+          }
+        ],
+        "claim": [
+          "holder"
+        ],
+        "closure": [
+          "holder"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "detail",
+            "origins": [
+              {
+                "name": "holder",
+                "origin_path": "<root>/scenarios/fence-embedded-record-reference/type/holder.type.yaml",
+                "required": true,
+                "shape": "withref"
+              }
+            ],
+            "required": true,
+            "shape": "withref"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 94,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 12
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 8
+                          }
+                        },
+                        "start": 40
+                      },
+                      "file": "<root>/scenarios/fence-embedded-record-reference/note.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Detail"
+                      }
+                    ],
+                    "surface": "body_fence",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "link",
+                          "values": [
+                            {
+                              "anchor": null,
+                              "block_id": null,
+                              "kind": "reference",
+                              "target": "the-target"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "link",
+                      "values": [
+                        {
+                          "anchor": null,
+                          "block_id": null,
+                          "kind": "reference",
+                          "target": "the-target"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "detail"
+          }
+        ],
+        "file": "<root>/scenarios/fence-embedded-record-reference/note.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Detail",
+            "optional": false,
+            "path": [
+              "Detail"
+            ],
+            "present": true,
+            "span": {
+              "end": 39,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 30
+            }
+          }
+        ]
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 49,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 6
+                },
+                "start": {
+                  "col": 1,
+                  "line": 5
+                }
+              },
+              "start": 40
+            },
+            "text": "Target"
+          }
+        ],
+        "claim": [
+          "target"
+        ],
+        "closure": [
+          "target"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "target",
+                "origin_path": "<root>/scenarios/fence-embedded-record-reference/type/target.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 35,
+                        "line_col": {
+                          "end": {
+                            "col": 19,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 3
+                          }
+                        },
+                        "start": 23
+                      },
+                      "file": "<root>/scenarios/fence-embedded-record-reference/the-target.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "the target"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "the target"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/fence-embedded-record-reference/the-target.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,307 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "undeclared-nested-repo",
+      "fix": {
+        "description": "declare 'pkg' as an 'edit' / 'discover' member in workspace.yaml, or as a 'dep' in repo.yaml"
+      },
+      "message": "nested repo 'pkg' is not a declared member; its subtree is skipped and contributes nothing",
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/undeclared-nested-repo/pkg/.arsumbris/repo.yaml",
+        "range": {
+          "end": 0,
+          "start": 0
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 28,
+                        "line_col": {
+                          "end": {
+                            "col": 29,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/undeclared-nested-repo/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "undeclared-nested-repo"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "undeclared-nested-repo"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/undeclared-nested-repo/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.workspace::au-engine"
+        ],
+        "closure": [
+          "au.engine.workspace::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "disabled",
+            "origins": [
+              {
+                "name": "au.engine.workspace",
+                "origin_path": "<au-engine-builtin>/au.engine.workspace.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String[]"
+              }
+            ],
+            "required": false,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "discover",
+            "origins": [
+              {
+                "name": "au.engine.workspace",
+                "origin_path": "<au-engine-builtin>/au.engine.workspace.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String[]"
+              }
+            ],
+            "required": false,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "edit",
+            "origins": [
+              {
+                "name": "au.engine.workspace",
+                "origin_path": "<au-engine-builtin>/au.engine.workspace.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String[]"
+              }
+            ],
+            "required": false,
+            "shape": "String[]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 32,
+                        "line_col": {
+                          "end": {
+                            "col": 27,
+                            "line": 2
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 2
+                          }
+                        },
+                        "start": 10
+                      },
+                      "file": "<root>/scenarios/undeclared-nested-repo/.arsumbris/workspace.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "undeclared-nested-repo"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "undeclared-nested-repo"
+                }
+              }
+            ],
+            "field": "edit"
+          }
+        ],
+        "file": "<root>/scenarios/undeclared-nested-repo/.arsumbris/workspace.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "a",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/undeclared-nested-repo/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 20,
+                        "line_col": {
+                          "end": {
+                            "col": 6,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 4,
+                            "line": 3
+                          }
+                        },
+                        "start": 18
+                      },
+                      "file": "<root>/scenarios/undeclared-nested-repo/doc.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "hi"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "hi"
+                }
+              }
+            ],
+            "field": "a"
+          }
+        ],
+        "file": "<root>/scenarios/undeclared-nested-repo/doc.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

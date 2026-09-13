@@ -1,0 +1,372 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "wikilink-fragment-order",
+      "message": "wikilink `[[my-rationale:rationale#Anchor]]` violates the strict `name / #head / ^block-id / :field` order",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/wikilink-fragment-order/decision.md",
+        "line_col": {
+          "end": {
+            "col": 39,
+            "line": 7
+          },
+          "start": {
+            "col": 6,
+            "line": 7
+          }
+        },
+        "range": {
+          "end": 113,
+          "start": 80
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 29,
+                        "line_col": {
+                          "end": {
+                            "col": 30,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/wikilink-fragment-order/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "wikilink-fragment-order"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "wikilink-fragment-order"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/wikilink-fragment-order/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "wikilink",
+            "raw": "my-rationale:rationale#Anchor",
+            "span": {
+              "end": 113,
+              "line_col": {
+                "end": {
+                  "col": 39,
+                  "line": 7
+                },
+                "start": {
+                  "col": 6,
+                  "line": 7
+                }
+              },
+              "start": 80
+            }
+          },
+          {
+            "content": ":rationale",
+            "kind": "inline_code",
+            "span": {
+              "end": 139,
+              "line_col": {
+                "end": {
+                  "col": 65,
+                  "line": 7
+                },
+                "start": {
+                  "col": 53,
+                  "line": 7
+                }
+              },
+              "start": 127
+            }
+          },
+          {
+            "content": "#Anchor",
+            "kind": "inline_code",
+            "span": {
+              "end": 163,
+              "line_col": {
+                "end": {
+                  "col": 17,
+                  "line": 8
+                },
+                "start": {
+                  "col": 8,
+                  "line": 8
+                }
+              },
+              "start": 154
+            }
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/wikilink-fragment-order/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "rationale",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/wikilink-fragment-order/type/decision.type.yaml",
+                "required": false,
+                "shape": "rationale*"
+              }
+            ],
+            "required": false,
+            "shape": "rationale*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/wikilink-fragment-order/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/wikilink-fragment-order/decision.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 2,
+            "span": {
+              "end": 85,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 75
+            },
+            "text": "Anchor"
+          }
+        ],
+        "claim": [
+          "rationale"
+        ],
+        "closure": [
+          "rationale"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "rationale",
+                "origin_path": "<root>/scenarios/wikilink-fragment-order/type/rationale.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 69,
+                        "line_col": {
+                          "end": {
+                            "col": 50,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 33
+                      },
+                      "file": "<root>/scenarios/wikilink-fragment-order/my-rationale.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Shared-volume contention dominates"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Shared-volume contention dominates"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/wikilink-fragment-order/my-rationale.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

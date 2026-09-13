@@ -1,0 +1,5 @@
+title: "Brand primitive escape — `String(...)` at a `<String | label>` union is the literal escape, and a nominal member is branded by its constructor"
+spec_ref: "[[spec - branded types - the shape key names a reusable scalar, enum, union, or tuple]]"
+command: validate
+expected:
+  clean: true

@@ -1,0 +1,5 @@
+title: "The instance `closure` field renders a cross-repo ancestor owner-qualified: an app-owned `card` extending `note::base` claims bare, its closure is `[card, note::base]`, the peer ancestor keeps its `::repo`"
+spec_ref: "[[spec - cross-repo identity on the wire - a name conflates, a qualifier scopes to identity, every result carries owner and hash]]"
+command: validate
+expected:
+  clean: true

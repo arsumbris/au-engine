@@ -1,0 +1,6 @@
+title: "The workspace `types` read carries a def's `parents[]` verbatim: a peer-extending subtype (`extends: note::base`) reads its parent qualified `note::base`, while its own same-repo child reads the bare `card`, across the repo boundary"
+spec_ref: "[[cross repo typed graph::au-type-system]]"
+command: types
+repo: app
+expected:
+  clean: true

@@ -1,0 +1,6 @@
+title: "Slot-intersection subsumption — `<note* & decision*>` redundant (decision extends note)"
+spec_ref: "[[type-def shape compound::au-type-system]]"
+command: graph
+expected:
+  codes:
+    - { code: subsumption-in-slot-intersection, severity: warning }

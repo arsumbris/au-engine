@@ -1,0 +1,105 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "subsumption-in-slot-intersection",
+      "message": "field 'tags' on type-def 'cataloguer': slot-intersection branch 'String[]' adds nothing — 'String[+]' is stricter and the intersection collapses to 'String[+]'",
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/cardinality-intersection-subsumption/type/cataloguer.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 31,
+            "line": 6
+          },
+          "start": {
+            "col": 9,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 259,
+          "start": 237
+        }
+      }
+    }
+  ],
+  "graph": {
+    "types": [
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 235,
+              "line_col": {
+                "end": {
+                  "col": 7,
+                  "line": 6
+                },
+                "start": {
+                  "col": 3,
+                  "line": 6
+                }
+              },
+              "start": 231
+            },
+            "name": "tags",
+            "required": true,
+            "shape": "<String[] & String[+]>",
+            "shape_ast": {
+              "branches": [
+                {
+                  "inner": {
+                    "kind": "primitive",
+                    "name": "String"
+                  },
+                  "kind": "list",
+                  "min": 0
+                },
+                {
+                  "inner": {
+                    "kind": "primitive",
+                    "name": "String"
+                  },
+                  "kind": "list",
+                  "min": 1
+                }
+              ],
+              "kind": "intersection"
+            }
+          }
+        ],
+        "hash": "70fc522566d5f71c",
+        "meta_blocks": null,
+        "name": "cataloguer",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/cardinality-intersection-subsumption/type/cataloguer.type.yaml",
+          "span": {
+            "end": 260,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 7
+              },
+              "start": {
+                "col": 1,
+                "line": 5
+              }
+            },
+            "start": 221
+          }
+        },
+        "unmet_required_meta": []
+      }
+    ]
+  }
+}

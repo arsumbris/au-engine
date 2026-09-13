@@ -1,0 +1,548 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 4,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 30,
+                        "line_col": {
+                          "end": {
+                            "col": 31,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/list-multi-surface-clean/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "list-multi-surface-clean"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "list-multi-surface-clean"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/list-multi-surface-clean/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 101,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 91
+            },
+            "text": "Sources"
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": null,
+              "commit": null,
+              "field": "sources",
+              "repo": null,
+              "target": "paper-b"
+            },
+            "raw": "paper-b:sources",
+            "span": {
+              "end": 125,
+              "line_col": {
+                "end": {
+                  "col": 24,
+                  "line": 10
+                },
+                "start": {
+                  "col": 5,
+                  "line": 10
+                }
+              },
+              "start": 106
+            }
+          },
+          {
+            "body": "type: source\ndescription: \"Inline source, contributed via yaml block\"\n",
+            "info": "yaml [:sources]",
+            "kind": "fenced_block",
+            "span": {
+              "end": 243,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 16
+                },
+                "start": {
+                  "col": 1,
+                  "line": 12
+                }
+              },
+              "start": 150
+            }
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/list-multi-surface-clean/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "sources",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/list-multi-surface-clean/type/decision.type.yaml",
+                "required": false,
+                "shape": "source&[]"
+              }
+            ],
+            "required": false,
+            "shape": "source&[]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/list-multi-surface-clean/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 85,
+                        "line_col": {
+                          "end": {
+                            "col": 18,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 5
+                          }
+                        },
+                        "start": 72
+                      },
+                      "file": "<root>/scenarios/list-multi-surface-clean/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "paper-a"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "paper-a"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 125,
+                        "line_col": {
+                          "end": {
+                            "col": 24,
+                            "line": 10
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 10
+                          }
+                        },
+                        "start": 106
+                      },
+                      "file": "<root>/scenarios/list-multi-surface-clean/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Sources"
+                      }
+                    ],
+                    "surface": "body_wikilink",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "paper-b"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "paper-b"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 243,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 16
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 12
+                          }
+                        },
+                        "start": 150
+                      },
+                      "file": "<root>/scenarios/list-multi-surface-clean/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Sources"
+                      }
+                    ],
+                    "surface": "body_fence",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "Inline source, contributed via yaml block"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "Inline source, contributed via yaml block"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "sources"
+          }
+        ],
+        "file": "<root>/scenarios/list-multi-surface-clean/decision.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "source"
+        ],
+        "closure": [
+          "source"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "source",
+                "origin_path": "<root>/scenarios/list-multi-surface-clean/type/source.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 39,
+                        "line_col": {
+                          "end": {
+                            "col": 23,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 30
+                      },
+                      "file": "<root>/scenarios/list-multi-surface-clean/paper-a.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Paper A"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Paper A"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/list-multi-surface-clean/paper-a.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "source"
+        ],
+        "closure": [
+          "source"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "source",
+                "origin_path": "<root>/scenarios/list-multi-surface-clean/type/source.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 39,
+                        "line_col": {
+                          "end": {
+                            "col": 23,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 30
+                      },
+                      "file": "<root>/scenarios/list-multi-surface-clean/paper-b.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Paper B"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Paper B"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/list-multi-surface-clean/paper-b.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

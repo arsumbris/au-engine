@@ -1,0 +1,5 @@
+# `meta: []` is a stop signal for the canonical lookup walk.
+# A query for display-meta starting at suppressed-host returns None even
+# though note (the parent) declares display-meta.
+extends: note
+meta: []

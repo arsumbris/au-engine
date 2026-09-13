@@ -1,0 +1,247 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 20,
+                        "line_col": {
+                          "end": {
+                            "col": 21,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/branded-scalar/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "branded-scalar"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "branded-scalar"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/branded-scalar/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "measurement"
+        ],
+        "closure": [
+          "measurement"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "height",
+            "origins": [
+              {
+                "name": "measurement",
+                "origin_path": "<root>/scenarios/branded-scalar/type/measurement.type.yaml",
+                "required": true,
+                "shape": "meter"
+              }
+            ],
+            "required": true,
+            "shape": "meter"
+          },
+          {
+            "divergent": false,
+            "field": "width",
+            "origins": [
+              {
+                "name": "measurement",
+                "origin_path": "<root>/scenarios/branded-scalar/type/measurement.type.yaml",
+                "required": true,
+                "shape": "meter"
+              }
+            ],
+            "required": true,
+            "shape": "meter"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 49,
+                        "line_col": {
+                          "end": {
+                            "col": 18,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 4
+                          }
+                        },
+                        "start": 40
+                      },
+                      "file": "<root>/scenarios/branded-scalar/beam.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "brand": "meter",
+                      "kind": "scalar",
+                      "value": 30
+                    }
+                  }
+                ],
+                "value": {
+                  "brand": "meter",
+                  "kind": "scalar",
+                  "value": 30
+                }
+              }
+            ],
+            "field": "height"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 31,
+                        "line_col": {
+                          "end": {
+                            "col": 10,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 3
+                          }
+                        },
+                        "start": 29
+                      },
+                      "file": "<root>/scenarios/branded-scalar/beam.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": 42
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": 42
+                }
+              }
+            ],
+            "field": "width"
+          }
+        ],
+        "file": "<root>/scenarios/branded-scalar/beam.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

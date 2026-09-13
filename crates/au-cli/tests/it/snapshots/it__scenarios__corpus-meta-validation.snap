@@ -1,0 +1,180 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "required-field-absent",
+      "message": "meta sub-region 'display-meta' on type-def 'bad-required-host' is missing required field 'tldr' (declared on 'display-meta')",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-meta-validation/type/meta/display-meta.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 7,
+              "line": 3
+            },
+            "start": {
+              "col": 3,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 49,
+            "start": 45
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-meta-validation/type/bad/bad-required-host.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 6
+          },
+          "start": {
+            "col": 5,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 161,
+          "start": 128
+        }
+      }
+    },
+    {
+      "code": "sealed-parent-claimed",
+      "message": "type-def 'sealed-meta' is sealed; claims must drill to a non-sealed descendant",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-meta-validation/type/bad/bad-sealed-meta-host.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 22,
+            "line": 5
+          },
+          "start": {
+            "col": 11,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 209,
+          "start": 198
+        }
+      }
+    },
+    {
+      "code": "unknown-type-claim",
+      "message": "meta sub-region on type-def 'bad-unknown-meta-host' names type-def 'nonexistent-meta' which is not present in the type graph",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-meta-validation/type/bad/bad-unknown-meta-host.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 27,
+            "line": 4
+          },
+          "start": {
+            "col": 11,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 171,
+          "start": 155
+        }
+      }
+    },
+    {
+      "code": "reference-target-missing",
+      "message": "field 'validator' references 'nonexistent-validator' which does not exist in the repo",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-meta-validation/type/meta/runtime-meta.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 20,
+              "line": 4
+            },
+            "start": {
+              "col": 15,
+              "line": 4
+            }
+          },
+          "range": {
+            "end": 80,
+            "start": 75
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/corpus-meta-validation/type/bad/bad-validator-host.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 43,
+            "line": 7
+          },
+          "start": {
+            "col": 16,
+            "line": 7
+          }
+        },
+        "range": {
+          "end": 283,
+          "start": 256
+        }
+      }
+    },
+    {
+      "code": "reference-target-missing",
+      "message": "field 'validator' references 'README' which does not exist in the repo",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-meta-validation/type/meta/runtime-meta.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 20,
+              "line": 4
+            },
+            "start": {
+              "col": 15,
+              "line": 4
+            }
+          },
+          "range": {
+            "end": 80,
+            "start": 75
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/corpus-meta-validation/type/validator-host.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 28,
+            "line": 9
+          },
+          "start": {
+            "col": 16,
+            "line": 9
+          }
+        },
+        "range": {
+          "end": 375,
+          "start": 363
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": true,
+    "count": 0,
+    "entries": []
+  }
+}

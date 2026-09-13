@@ -1,0 +1,5 @@
+title: "Frontmatter `key:` with null value plus body contribution to that field is clean"
+spec_ref: "[[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  clean: true

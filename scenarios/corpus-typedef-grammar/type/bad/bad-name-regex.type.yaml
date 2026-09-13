@@ -1,0 +1,3 @@
+# intentional: parent claim names a type with a forbidden char → type-name-violates-regex
+extends: foo*bar
+fields: {}

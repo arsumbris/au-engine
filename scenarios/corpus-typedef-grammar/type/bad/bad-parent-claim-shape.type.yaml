@@ -1,0 +1,3 @@
+# intentional: `type:` value is neither string nor list of strings → parent-claim-bad-shape
+extends: 42
+fields: {}

@@ -1,0 +1,6 @@
+title: "A sealed type also declaring `abstract: true` — the marker is redundant"
+spec_ref: "[[spec - abstract type-defs - a non-claimable open type-def, sealed is abstract plus closed]], [[type-def sealed::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: redundant-abstract-on-sealed, severity: hint }

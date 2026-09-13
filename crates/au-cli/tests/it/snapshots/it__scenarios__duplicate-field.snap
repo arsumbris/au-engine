@@ -1,0 +1,168 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "duplicate-field",
+      "message": "field 'weight' is declared more than once in this type-def",
+      "related": [
+        {
+          "file": "<root>/scenarios/duplicate-field/type/thing.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 9,
+              "line": 6
+            },
+            "start": {
+              "col": 3,
+              "line": 6
+            }
+          },
+          "range": {
+            "end": 208,
+            "start": 202
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/duplicate-field/type/thing.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 9,
+            "line": 7
+          },
+          "start": {
+            "col": 3,
+            "line": 7
+          }
+        },
+        "range": {
+          "end": 225,
+          "start": 219
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 1,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 21,
+                        "line_col": {
+                          "end": {
+                            "col": 22,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/duplicate-field/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "duplicate-field"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "duplicate-field"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/duplicate-field/.arsumbris/repo.yaml",
+        "section_presence": null
+      }
+    ]
+  }
+}

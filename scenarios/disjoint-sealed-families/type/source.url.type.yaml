@@ -1,0 +1,3 @@
+extends: source
+fields:
+  external_url: String

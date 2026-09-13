@@ -1,0 +1,5 @@
+# intentional: meta block for display-meta missing the required `tldr` field
+# → required-field-absent at meta site
+meta:
+  - type: display-meta
+    icon: "?"

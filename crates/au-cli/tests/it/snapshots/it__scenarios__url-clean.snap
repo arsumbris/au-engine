@@ -1,0 +1,390 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 15,
+                        "line_col": {
+                          "end": {
+                            "col": 16,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/url-clean/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "url-clean"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "url-clean"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/url-clean/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 96,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 74
+            },
+            "text": "Plain-string source"
+          },
+          {
+            "content": "^https?://",
+            "kind": "inline_code",
+            "span": {
+              "end": 112,
+              "line_col": {
+                "end": {
+                  "col": 16,
+                  "line": 8
+                },
+                "start": {
+                  "col": 4,
+                  "line": 8
+                }
+              },
+              "start": 100
+            }
+          },
+          {
+            "content": "[[wikilink]]",
+            "kind": "inline_code",
+            "span": {
+              "end": 141,
+              "line_col": {
+                "end": {
+                  "col": 45,
+                  "line": 8
+                },
+                "start": {
+                  "col": 31,
+                  "line": 8
+                }
+              },
+              "start": 127
+            }
+          },
+          {
+            "content": "String",
+            "kind": "inline_code",
+            "span": {
+              "end": 191,
+              "line_col": {
+                "end": {
+                  "col": 24,
+                  "line": 9
+                },
+                "start": {
+                  "col": 16,
+                  "line": 9
+                }
+              },
+              "start": 183
+            }
+          }
+        ],
+        "claim": [
+          "citation"
+        ],
+        "closure": [
+          "citation"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "source",
+            "origins": [
+              {
+                "name": "citation",
+                "origin_path": "<root>/scenarios/url-clean/type/citation.type.yaml",
+                "required": true,
+                "shape": "<String | Url>"
+              }
+            ],
+            "required": true,
+            "shape": "<String | Url>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 68,
+                        "line_col": {
+                          "end": {
+                            "col": 50,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/url-clean/string-source.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Bowman & Williamson, 2024, Proc. of XYZ"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Bowman & Williamson, 2024, Proc. of XYZ"
+                }
+              }
+            ],
+            "field": "source"
+          }
+        ],
+        "file": "<root>/scenarios/url-clean/string-source.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 87,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 67
+            },
+            "text": "URL-shaped source"
+          },
+          {
+            "content": "^https?://",
+            "kind": "inline_code",
+            "span": {
+              "end": 104,
+              "line_col": {
+                "end": {
+                  "col": 17,
+                  "line": 8
+                },
+                "start": {
+                  "col": 5,
+                  "line": 8
+                }
+              },
+              "start": 92
+            }
+          },
+          {
+            "content": "Url",
+            "kind": "inline_code",
+            "span": {
+              "end": 142,
+              "line_col": {
+                "end": {
+                  "col": 55,
+                  "line": 8
+                },
+                "start": {
+                  "col": 50,
+                  "line": 8
+                }
+              },
+              "start": 137
+            }
+          }
+        ],
+        "claim": [
+          "citation"
+        ],
+        "closure": [
+          "citation"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "source",
+            "origins": [
+              {
+                "name": "citation",
+                "origin_path": "<root>/scenarios/url-clean/type/citation.type.yaml",
+                "required": true,
+                "shape": "<String | Url>"
+              }
+            ],
+            "required": true,
+            "shape": "<String | Url>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 61,
+                        "line_col": {
+                          "end": {
+                            "col": 43,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/url-clean/url-source.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "https://arxiv.org/abs/2401.12345"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "https://arxiv.org/abs/2401.12345"
+                }
+              }
+            ],
+            "field": "source"
+          }
+        ],
+        "file": "<root>/scenarios/url-clean/url-source.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+title: "Type-def declares itself as parent (self-cycle)"
+spec_ref: "[[type closure::au-type-system]]"
+command: graph
+expected:
+  codes:
+    - { code: cycle-in-type-chain, severity: error }

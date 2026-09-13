@@ -1,0 +1,20 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "candidates": {
+    "aborted_at_load": false,
+    "files": [
+      {
+        "candidates": [],
+        "file": "<root>/scenarios/candidate-none/.arsumbris/repo.yaml"
+      },
+      {
+        "candidates": [],
+        "file": "<root>/scenarios/candidate-none/clean.md"
+      }
+    ]
+  },
+  "diagnostics": []
+}

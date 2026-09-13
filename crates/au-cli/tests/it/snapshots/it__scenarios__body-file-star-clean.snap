@@ -1,0 +1,410 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 26,
+                        "line_col": {
+                          "end": {
+                            "col": 27,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/body-file-star-clean/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "body-file-star-clean"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "body-file-star-clean"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/body-file-star-clean/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 77,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 71
+            },
+            "text": "Why"
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": null,
+              "commit": null,
+              "field": "notes",
+              "repo": null,
+              "target": "engine-project"
+            },
+            "raw": "engine-project:notes",
+            "span": {
+              "end": 111,
+              "line_col": {
+                "end": {
+                  "col": 34,
+                  "line": 9
+                },
+                "start": {
+                  "col": 10,
+                  "line": 9
+                }
+              },
+              "start": 87
+            }
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": null,
+              "commit": null,
+              "field": "notes",
+              "repo": null,
+              "target": "sqlite-followup"
+            },
+            "raw": "sqlite-followup:notes",
+            "span": {
+              "end": 141,
+              "line_col": {
+                "end": {
+                  "col": 64,
+                  "line": 9
+                },
+                "start": {
+                  "col": 39,
+                  "line": 9
+                }
+              },
+              "start": 116
+            }
+          },
+          {
+            "content": "file*",
+            "kind": "inline_code",
+            "span": {
+              "end": 188,
+              "line_col": {
+                "end": {
+                  "col": 38,
+                  "line": 10
+                },
+                "start": {
+                  "col": 31,
+                  "line": 10
+                }
+              },
+              "start": 181
+            }
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/body-file-star-clean/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "notes",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/body-file-star-clean/type/decision.type.yaml",
+                "required": false,
+                "shape": "file*[+]"
+              }
+            ],
+            "required": false,
+            "shape": "file*[+]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/body-file-star-clean/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 111,
+                        "line_col": {
+                          "end": {
+                            "col": 34,
+                            "line": 9
+                          },
+                          "start": {
+                            "col": 10,
+                            "line": 9
+                          }
+                        },
+                        "start": 87
+                      },
+                      "file": "<root>/scenarios/body-file-star-clean/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Why"
+                      }
+                    ],
+                    "surface": "body_wikilink",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "engine-project"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "engine-project"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 141,
+                        "line_col": {
+                          "end": {
+                            "col": 64,
+                            "line": 9
+                          },
+                          "start": {
+                            "col": 39,
+                            "line": 9
+                          }
+                        },
+                        "start": 116
+                      },
+                      "file": "<root>/scenarios/body-file-star-clean/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Why"
+                      }
+                    ],
+                    "surface": "body_wikilink",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "sqlite-followup"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "sqlite-followup"
+                }
+              }
+            ],
+            "field": "notes"
+          }
+        ],
+        "file": "<root>/scenarios/body-file-star-clean/decision.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Why",
+            "optional": false,
+            "path": [
+              "Why"
+            ],
+            "present": true,
+            "span": {
+              "end": 77,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 71
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

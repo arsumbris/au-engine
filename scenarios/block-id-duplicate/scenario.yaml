@@ -1,0 +1,6 @@
+title: "Two blocks with the same `^id` in one file fires block-id-duplicate"
+spec_ref: "[[type block-id::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: block-id-duplicate, severity: error }

@@ -1,0 +1,5 @@
+# intentional: `wide` is implied by `narrow` (which extends it)
+# → subsumption-in-mixin warning (symmetric to the slot-union case).
+extends:
+  - wide
+  - narrow

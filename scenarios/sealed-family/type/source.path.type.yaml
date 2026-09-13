@@ -1,0 +1,3 @@
+extends: source
+fields:
+  internal_path: String

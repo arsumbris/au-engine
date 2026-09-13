@@ -1,0 +1,3 @@
+# helper for bad-subsumed-parent-claim: extends `wide`.
+# Valid on its own; mixing alongside `wide` produces a subsumption warning.
+extends: wide

@@ -1,0 +1,4 @@
+# intentional: not in source's sealed list → sealed-no-surprise-children
+extends: source
+fields:
+  bad_field: String

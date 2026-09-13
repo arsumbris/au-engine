@@ -1,0 +1,6 @@
+title: "A concrete subtype of a base obligating a required meta, declaring no satisfying block, fires subtype-missing-required-meta"
+spec_ref: "[[spec - required subtype meta - a base obligates every concrete subtype to carry a named meta]]"
+command: validate
+expected:
+  codes:
+    - { code: subtype-missing-required-meta, severity: warning }

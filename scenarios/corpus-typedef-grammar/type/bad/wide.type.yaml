@@ -1,0 +1,4 @@
+# helper for bad-subsumed-parent-claim: a non-sealed root type-def.
+# Valid on its own; mixing it alongside `narrow` (which extends it) is
+# the redundancy case.
+fields: {}

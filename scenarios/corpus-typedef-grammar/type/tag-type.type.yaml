@@ -1,0 +1,2 @@
+# Tag-only type-def: identity without fields.
+fields: {}

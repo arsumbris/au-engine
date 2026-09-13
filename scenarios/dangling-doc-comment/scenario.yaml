@@ -1,0 +1,6 @@
+title: "A `#:` comment attached to no declaration warns"
+spec_ref: "[[type docstring::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: dangling-doc-comment, severity: warning }

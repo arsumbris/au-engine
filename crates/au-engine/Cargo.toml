@@ -1,0 +1,36 @@
+[package]
+name = "au-engine"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+# The integration suite is one linked binary, not one per file, so a
+# core/engine edit relinks once. Submodules live under tests/it/.
+autotests = false
+
+[[test]]
+name = "it"
+path = "tests/it/main.rs"
+
+[dependencies]
+au-core = { workspace = true }
+au-diagnostics = { workspace = true }
+au-grammar = { workspace = true }
+au-parser = { workspace = true }
+au-references = { workspace = true, features = ["serde"] }
+notify = { workspace = true }
+fs4 = { workspace = true }
+rpds = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+
+[dev-dependencies]
+au-testkit = { workspace = true }
+tempfile = { workspace = true }
+# The operation harness (`examples/op_bench.rs`) installs its own collecting
+# subscriber to read per-phase busy times in process. The daemon's own
+# subscriber lives in au-cli; this is a dev target only.
+tracing-subscriber = { workspace = true }

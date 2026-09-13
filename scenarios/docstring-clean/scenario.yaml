@@ -1,0 +1,5 @@
+title: "`#:` docstrings on a type-def and its fields parse cleanly"
+spec_ref: "[[type docstring::au-type-system]]"
+command: validate
+expected:
+  clean: true

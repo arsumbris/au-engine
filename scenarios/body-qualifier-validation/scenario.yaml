@@ -1,0 +1,6 @@
+title: "A body contribution's `field{type}` qualifier is validated exactly like a frontmatter key — a bogus qualifier on an auto-unified field fires `qualifier-not-in-closure` where it was once silently ignored, a qualifier naming a real declaring origin is clean"
+spec_ref: "[[type-def fields collision - auto-unify and qualified field::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: qualifier-not-in-closure, severity: error }

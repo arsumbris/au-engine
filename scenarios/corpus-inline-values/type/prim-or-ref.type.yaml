@@ -1,0 +1,5 @@
+# primitive-vs-reference union. Wikilink-pattern strings
+# (`"[[...]]"`) route to the rationale* branch; non-wikilink strings
+# pass via the String branch.
+fields:
+  src: <String | rationale*>

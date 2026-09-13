@@ -1,0 +1,4 @@
+# intersection of records. Inline `type:` is REQUIRED and
+# must satisfy all branches (typically via mixin `type: [a, b]`).
+fields:
+  joint: <rationale & thesis>

@@ -1,0 +1,9 @@
+title: "Brand value-time errors — a foreign constructor, an undiscriminable union value, a wrong tuple arity, and a malformed constructor"
+spec_ref: "[[spec - branded types - the shape key names a reusable scalar, enum, union, or tuple]]"
+command: validate
+expected:
+  codes:
+    - { code: brand-constructor-mismatch, severity: error }
+    - { code: brand-constructor-required, severity: error }
+    - { code: tuple-arity-mismatch, severity: error }
+    - { code: malformed-constructor, severity: warning }

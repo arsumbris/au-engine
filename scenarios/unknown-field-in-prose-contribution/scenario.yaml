@@ -1,0 +1,6 @@
+title: "Inline `[:field]` for a field absent from closure is advisory (warning)"
+spec_ref: "[[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: unknown-field-in-prose-contribution, severity: warning }

@@ -1,0 +1,403 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 23,
+                        "line_col": {
+                          "end": {
+                            "col": 24,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/opaque-body-block/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "opaque-body-block"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "opaque-body-block"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/opaque-body-block/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 75,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 68
+            },
+            "text": "Data"
+          },
+          {
+            "body": "type: point\nnote: opaque, no x or y here\n",
+            "info": "yaml [:data]",
+            "kind": "fenced_block",
+            "span": {
+              "end": 137,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 13
+                },
+                "start": {
+                  "col": 1,
+                  "line": 9
+                }
+              },
+              "start": 76
+            }
+          },
+          {
+            "content": "point",
+            "kind": "inline_code",
+            "span": {
+              "end": 168,
+              "line_col": {
+                "end": {
+                  "col": 31,
+                  "line": 14
+                },
+                "start": {
+                  "col": 24,
+                  "line": 14
+                }
+              },
+              "start": 161
+            }
+          },
+          {
+            "content": "x",
+            "kind": "inline_code",
+            "span": {
+              "end": 195,
+              "line_col": {
+                "end": {
+                  "col": 58,
+                  "line": 14
+                },
+                "start": {
+                  "col": 55,
+                  "line": 14
+                }
+              },
+              "start": 192
+            }
+          },
+          {
+            "content": "y",
+            "kind": "inline_code",
+            "span": {
+              "end": 201,
+              "line_col": {
+                "end": {
+                  "col": 64,
+                  "line": 14
+                },
+                "start": {
+                  "col": 61,
+                  "line": 14
+                }
+              },
+              "start": 198
+            }
+          },
+          {
+            "content": "data",
+            "kind": "inline_code",
+            "span": {
+              "end": 217,
+              "line_col": {
+                "end": {
+                  "col": 15,
+                  "line": 15
+                },
+                "start": {
+                  "col": 9,
+                  "line": 15
+                }
+              },
+              "start": 211
+            }
+          },
+          {
+            "content": "opaque",
+            "kind": "inline_code",
+            "span": {
+              "end": 229,
+              "line_col": {
+                "end": {
+                  "col": 27,
+                  "line": 15
+                },
+                "start": {
+                  "col": 19,
+                  "line": 15
+                }
+              },
+              "start": 221
+            }
+          }
+        ],
+        "claim": [
+          "captured"
+        ],
+        "closure": [
+          "captured"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "data",
+            "origins": [
+              {
+                "name": "captured",
+                "origin_path": "<root>/scenarios/opaque-body-block/type/captured.type.yaml",
+                "required": true,
+                "shape": "opaque"
+              }
+            ],
+            "required": true,
+            "shape": "opaque"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "captured",
+                "origin_path": "<root>/scenarios/opaque-body-block/type/captured.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 137,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 13
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 9
+                          }
+                        },
+                        "start": 76
+                      },
+                      "file": "<root>/scenarios/opaque-body-block/capture.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Data"
+                      }
+                    ],
+                    "surface": "body_fence",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "type: point\nnote: opaque, no x or y here"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "type: point\nnote: opaque, no x or y here"
+                }
+              }
+            ],
+            "field": "data"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 56,
+                        "line_col": {
+                          "end": {
+                            "col": 38,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/opaque-body-block/capture.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "A captured trace event"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "A captured trace event"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/opaque-body-block/capture.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Data",
+            "optional": false,
+            "path": [
+              "Data"
+            ],
+            "present": true,
+            "span": {
+              "end": 75,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 68
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

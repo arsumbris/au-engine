@@ -1,0 +1,2 @@
+#: a segment, a fixed-arity product of two metre distances
+shape: (meter, meter)

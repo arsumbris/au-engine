@@ -1,0 +1,5 @@
+edit:
+  - cross-repo-brand
+  - sdk
+  - app
+type: au.engine.workspace::au-engine

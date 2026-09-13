@@ -1,0 +1,6 @@
+title: "`type<T>*` pointed at a type-def outside the bound's subtree is a mismatch"
+spec_ref: "[[type-def shape def-ref::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: def-ref-closure-mismatch, severity: error }

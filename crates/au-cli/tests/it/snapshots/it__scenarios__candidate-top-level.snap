@@ -1,0 +1,46 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "candidates": {
+    "aborted_at_load": false,
+    "files": [
+      {
+        "candidates": [],
+        "file": "<root>/scenarios/candidate-top-level/.arsumbris/repo.yaml"
+      },
+      {
+        "candidates": [
+          {
+            "also_satisfied_optional": 0,
+            "satisfied_required": [
+              "audience",
+              "description"
+            ],
+            "scope": {
+              "file_path": "<root>/scenarios/candidate-top-level/extras-fit-deliverable.md",
+              "inline_path": ""
+            },
+            "supersedes": [],
+            "type_name": "deliverable"
+          },
+          {
+            "also_satisfied_optional": 0,
+            "satisfied_required": [
+              "description"
+            ],
+            "scope": {
+              "file_path": "<root>/scenarios/candidate-top-level/extras-fit-deliverable.md",
+              "inline_path": ""
+            },
+            "supersedes": [],
+            "type_name": "summary"
+          }
+        ],
+        "file": "<root>/scenarios/candidate-top-level/extras-fit-deliverable.md"
+      }
+    ]
+  },
+  "diagnostics": []
+}

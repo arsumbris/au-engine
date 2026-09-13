@@ -1,0 +1,2 @@
+type: decision
+description: "Migrate dev DB to SQLite"

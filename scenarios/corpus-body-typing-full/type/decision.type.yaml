@@ -1,0 +1,14 @@
+fields:
+  description: String
+  status?: [made, superseded]
+  rationale?: rationale&
+  causes?: String
+  sources?: source*[]
+body:
+  - section: Why
+    fills:
+      - rationale
+      - causes
+    body:
+      - section: Decision
+  - section: Sources

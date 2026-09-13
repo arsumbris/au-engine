@@ -1,0 +1,4 @@
+name: app
+deps:
+  - name: sdk
+type: au.engine.repo::au-engine

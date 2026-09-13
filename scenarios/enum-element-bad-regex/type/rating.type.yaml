@@ -1,0 +1,4 @@
+# Enum element `1abc` starts with a digit — violates the type-name
+# regex which enum elements must follow. Load error.
+fields:
+  level: [1abc, high]

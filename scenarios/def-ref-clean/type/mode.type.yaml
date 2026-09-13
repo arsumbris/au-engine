@@ -1,0 +1,3 @@
+#: an agent mode that names the tool triggering its propose-confirm ask
+fields:
+  propose-tool: type<mcp.tool>*

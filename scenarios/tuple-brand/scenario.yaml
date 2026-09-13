@@ -1,0 +1,5 @@
+title: "Tuple brand — `point` is a fixed-arity `(Number, Number)` product, an instance supplies it by the `point(...)` constructor and an anonymous tuple slot by a bare sequence"
+spec_ref: "[[spec - branded types - the shape key names a reusable scalar, enum, union, or tuple]]"
+command: validate
+expected:
+  clean: true

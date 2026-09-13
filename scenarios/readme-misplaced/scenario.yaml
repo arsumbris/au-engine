@@ -1,0 +1,6 @@
+title: "A file claiming au.engine.readme off the repo root fires readme-misplaced"
+spec_ref: "[[spec - repo readme - an engine-owned self-declaring node at the repo root with a required body template]]"
+command: validate
+expected:
+  codes:
+    - { code: readme-misplaced, severity: warning }

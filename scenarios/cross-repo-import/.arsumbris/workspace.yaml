@@ -1,0 +1,5 @@
+edit:
+  - cross-repo-import
+  - base
+  - app
+type: au.engine.workspace::au-engine

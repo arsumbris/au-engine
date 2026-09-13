@@ -1,0 +1,5 @@
+title: "A sealed required meta is satisfied by a block naming a non-sealed leaf of it, by closure"
+spec_ref: "[[spec - required subtype meta - a base obligates every concrete subtype to carry a named meta]], [[type-def sealed::au-type-system]]"
+command: validate
+expected:
+  clean: true

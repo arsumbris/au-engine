@@ -1,0 +1,342 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 29,
+                        "line_col": {
+                          "end": {
+                            "col": 30,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/nested-record-reference/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "nested-record-reference"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "nested-record-reference"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/nested-record-reference/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 74,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 65
+            },
+            "text": "Holder"
+          },
+          {
+            "content": "link",
+            "kind": "inline_code",
+            "span": {
+              "end": 101,
+              "line_col": {
+                "end": {
+                  "col": 27,
+                  "line": 10
+                },
+                "start": {
+                  "col": 21,
+                  "line": 10
+                }
+              },
+              "start": 95
+            }
+          }
+        ],
+        "claim": [
+          "outer"
+        ],
+        "closure": [
+          "outer"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "box",
+            "origins": [
+              {
+                "name": "outer",
+                "origin_path": "<root>/scenarios/nested-record-reference/type/outer.type.yaml",
+                "required": true,
+                "shape": "inner"
+              }
+            ],
+            "required": true,
+            "shape": "inner"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 60,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 4
+                          }
+                        },
+                        "start": 23
+                      },
+                      "file": "<root>/scenarios/nested-record-reference/holder.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "link",
+                          "values": [
+                            {
+                              "anchor": null,
+                              "block_id": null,
+                              "kind": "reference",
+                              "target": "the-target"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "link",
+                      "values": [
+                        {
+                          "anchor": null,
+                          "block_id": null,
+                          "kind": "reference",
+                          "target": "the-target"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "box"
+          }
+        ],
+        "file": "<root>/scenarios/nested-record-reference/holder.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 49,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 6
+                },
+                "start": {
+                  "col": 1,
+                  "line": 5
+                }
+              },
+              "start": 40
+            },
+            "text": "Target"
+          }
+        ],
+        "claim": [
+          "target"
+        ],
+        "closure": [
+          "target"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "target",
+                "origin_path": "<root>/scenarios/nested-record-reference/type/target.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 35,
+                        "line_col": {
+                          "end": {
+                            "col": 19,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 3
+                          }
+                        },
+                        "start": 23
+                      },
+                      "file": "<root>/scenarios/nested-record-reference/the-target.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "the target"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "the target"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/nested-record-reference/the-target.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,241 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "unexpected-commit-pin",
+      "message": "field 'rel' value is commit-pinned — declared shape file* admits no pin; use a '*@' slot or a '< T* | T*@ >' union",
+      "related": [
+        {
+          "file": "<root>/scenarios/unexpected-commit-pin/type/note.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 13,
+              "line": 3
+            },
+            "start": {
+              "col": 8,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 84,
+            "start": 79
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/unexpected-commit-pin/a-note.md",
+        "line_col": {
+          "end": {
+            "col": 27,
+            "line": 3
+          },
+          "start": {
+            "col": 6,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 41,
+          "start": 20
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 27,
+                        "line_col": {
+                          "end": {
+                            "col": 28,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/unexpected-commit-pin/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "unexpected-commit-pin"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "unexpected-commit-pin"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/unexpected-commit-pin/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "rel",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/unexpected-commit-pin/type/note.type.yaml",
+                "required": true,
+                "shape": "file*"
+              }
+            ],
+            "required": true,
+            "shape": "file*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 41,
+                        "line_col": {
+                          "end": {
+                            "col": 27,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 6,
+                            "line": 3
+                          }
+                        },
+                        "start": 20
+                      },
+                      "file": "<root>/scenarios/unexpected-commit-pin/a-note.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "commit": "a1b2c3d",
+                      "kind": "reference",
+                      "target": "other"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "commit": "a1b2c3d",
+                  "kind": "reference",
+                  "target": "other"
+                }
+              }
+            ],
+            "field": "rel"
+          }
+        ],
+        "file": "<root>/scenarios/unexpected-commit-pin/a-note.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

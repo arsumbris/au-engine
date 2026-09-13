@@ -1,0 +1,5 @@
+title: "An in-sync same-name identity renders `closure` relative to the instance's own repo: `app` owns a `note` byte-identical to `base`'s and imports `note::base`, so the shared identity is bare in an own claim's closure (`[note]`), matching the claim, not the fold node's peer origin"
+spec_ref: "[[spec - cross-repo identity on the wire - a name conflates, a qualifier scopes to identity, every result carries owner and hash]]"
+command: validate
+expected:
+  clean: true

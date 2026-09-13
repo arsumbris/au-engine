@@ -1,0 +1,7 @@
+fields:
+  description: String
+  assumptions?: String
+  rationale?: String
+body:
+  - section: Assumptions
+    fills!: assumptions

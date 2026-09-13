@@ -1,0 +1,5 @@
+title: "`type<T>*` references a type-def under the bound and resolves cleanly"
+spec_ref: "[[type-def shape def-ref::au-type-system]], [[type reference::au-type-system]]"
+command: validate
+expected:
+  clean: true

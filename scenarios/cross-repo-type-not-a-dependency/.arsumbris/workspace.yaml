@@ -1,0 +1,5 @@
+edit:
+  - cross-repo-type-not-a-dependency
+  - base
+  - app
+type: au.engine.workspace::au-engine

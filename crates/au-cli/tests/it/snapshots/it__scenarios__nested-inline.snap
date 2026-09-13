@@ -1,0 +1,395 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 19,
+                        "line_col": {
+                          "end": {
+                            "col": 20,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/nested-inline/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "nested-inline"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "nested-inline"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/nested-inline/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 237,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 11
+                },
+                "start": {
+                  "col": 1,
+                  "line": 10
+                }
+              },
+              "start": 190
+            },
+            "text": "A decision, two levels of inline values deep"
+          },
+          {
+            "content": "rationale",
+            "kind": "inline_code",
+            "span": {
+              "end": 249,
+              "line_col": {
+                "end": {
+                  "col": 12,
+                  "line": 12
+                },
+                "start": {
+                  "col": 1,
+                  "line": 12
+                }
+              },
+              "start": 238
+            }
+          },
+          {
+            "content": "rationale.evidence",
+            "kind": "inline_code",
+            "span": {
+              "end": 294,
+              "line_col": {
+                "end": {
+                  "col": 21,
+                  "line": 13
+                },
+                "start": {
+                  "col": 1,
+                  "line": 13
+                }
+              },
+              "start": 274
+            }
+          },
+          {
+            "content": "evidence-item",
+            "kind": "inline_code",
+            "span": {
+              "end": 313,
+              "line_col": {
+                "end": {
+                  "col": 40,
+                  "line": 13
+                },
+                "start": {
+                  "col": 25,
+                  "line": 13
+                }
+              },
+              "start": 298
+            }
+          },
+          {
+            "content": "[[wikilink]]",
+            "kind": "inline_code",
+            "span": {
+              "end": 467,
+              "line_col": {
+                "end": {
+                  "col": 142,
+                  "line": 14
+                },
+                "start": {
+                  "col": 128,
+                  "line": 14
+                }
+              },
+              "start": 453
+            }
+          }
+        ],
+        "claim": [
+          "decision-with-rationale"
+        ],
+        "closure": [
+          "decision-with-rationale"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "rationale",
+            "origins": [
+              {
+                "name": "decision-with-rationale",
+                "origin_path": "<root>/scenarios/nested-inline/type/decision-with-rationale.type.yaml",
+                "required": true,
+                "shape": "rationale"
+              }
+            ],
+            "required": true,
+            "shape": "rationale"
+          },
+          {
+            "divergent": false,
+            "field": "summary",
+            "origins": [
+              {
+                "name": "decision-with-rationale",
+                "origin_path": "<root>/scenarios/nested-inline/type/decision-with-rationale.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 185,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 8
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 5
+                          }
+                        },
+                        "start": 76
+                      },
+                      "file": "<root>/scenarios/nested-inline/migration-decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "Performance gains over the existing layer."
+                            }
+                          ]
+                        },
+                        {
+                          "field": "evidence",
+                          "values": [
+                            {
+                              "fields": [
+                                {
+                                  "field": "source",
+                                  "values": [
+                                    {
+                                      "kind": "scalar",
+                                      "value": "Benchmark report 2026-Q1"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "kind": "inline_record"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "Performance gains over the existing layer."
+                        }
+                      ]
+                    },
+                    {
+                      "field": "evidence",
+                      "values": [
+                        {
+                          "fields": [
+                            {
+                              "field": "source",
+                              "values": [
+                                {
+                                  "kind": "scalar",
+                                  "value": "Benchmark report 2026-Q1"
+                                }
+                              ]
+                            }
+                          ],
+                          "kind": "inline_record"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "rationale"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 62,
+                        "line_col": {
+                          "end": {
+                            "col": 29,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 10,
+                            "line": 3
+                          }
+                        },
+                        "start": 43
+                      },
+                      "file": "<root>/scenarios/nested-inline/migration-decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate to SQLite"
+                }
+              }
+            ],
+            "field": "summary"
+          }
+        ],
+        "file": "<root>/scenarios/nested-inline/migration-decision.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

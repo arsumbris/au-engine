@@ -1,0 +1,7 @@
+# intentional: validator wikilink targets a file that doesn't exist in
+# the repo → reference-target-missing fires from the meta-body path
+# (end-to-end lock for repo-aware meta-body validation)
+meta:
+  - type: runtime-meta
+    version: 1
+    validator: "[[nonexistent-validator]]"

@@ -1,0 +1,313 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 26,
+                        "line_col": {
+                          "end": {
+                            "col": 27,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/fence-multiline-text/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "fence-multiline-text"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "fence-multiline-text"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/fence-multiline-text/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 61,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 51
+            },
+            "text": "Summary"
+          },
+          {
+            "body": "The slot is a String, so this fence is read verbatim.\n\nBlank lines survive, and so does every other character.\n  Indentation is not stripped.\n",
+            "info": "[:summary]",
+            "kind": "fenced_block",
+            "span": {
+              "end": 222,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 15
+                },
+                "start": {
+                  "col": 1,
+                  "line": 9
+                }
+              },
+              "start": 62
+            }
+          }
+        ],
+        "claim": [
+          "article"
+        ],
+        "closure": [
+          "article"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "summary",
+            "origins": [
+              {
+                "name": "article",
+                "origin_path": "<root>/scenarios/fence-multiline-text/type/article.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "title",
+            "origins": [
+              {
+                "name": "article",
+                "origin_path": "<root>/scenarios/fence-multiline-text/type/article.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 222,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 15
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 9
+                          }
+                        },
+                        "start": 62
+                      },
+                      "file": "<root>/scenarios/fence-multiline-text/piece.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Summary"
+                      }
+                    ],
+                    "surface": "body_fence",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "The slot is a String, so this fence is read verbatim.\n\nBlank lines survive, and so does every other character.\n  Indentation is not stripped."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "The slot is a String, so this fence is read verbatim.\n\nBlank lines survive, and so does every other character.\n  Indentation is not stripped."
+                }
+              }
+            ],
+            "field": "summary"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 36,
+                        "line_col": {
+                          "end": {
+                            "col": 19,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 3
+                          }
+                        },
+                        "start": 25
+                      },
+                      "file": "<root>/scenarios/fence-multiline-text/piece.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "On fences"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "On fences"
+                }
+              }
+            ],
+            "field": "title"
+          }
+        ],
+        "file": "<root>/scenarios/fence-multiline-text/piece.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Summary",
+            "optional": false,
+            "path": [
+              "Summary"
+            ],
+            "present": true,
+            "span": {
+              "end": 61,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 51
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

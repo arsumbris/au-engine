@@ -1,0 +1,5 @@
+title: "A wrapper subtype mixing a peer type and au.engine.meta is meta-legal, the block validates clean"
+spec_ref: "[[spec - meta type marker - the meta position admits only types that mix in the engine meta base]]"
+command: validate
+expected:
+  clean: true

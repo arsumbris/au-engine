@@ -1,0 +1,45 @@
+[package]
+name = "au-cli"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+# The integration suite is one linked binary, not one per file, so a workspace
+# edit relinks once. Submodules live under tests/it/.
+autotests = false
+
+[lib]
+name = "au_cli"
+path = "src/lib.rs"
+
+[[bin]]
+name = "au"
+path = "src/main.rs"
+
+[[test]]
+name = "it"
+path = "tests/it/main.rs"
+
+[dependencies]
+au-core = { workspace = true }
+au-diagnostics = { workspace = true }
+au-engine = { workspace = true }
+au-grammar = { workspace = true }
+au-parser = { workspace = true }
+au-references = { workspace = true, features = ["serde"] }
+clap = { workspace = true }
+# Signal a booting/wedged daemon's recorded pid (SIGTERM/SIGKILL) and probe its
+# liveness (kill(pid, 0)) for `daemon stop --force` / `status`. Already in the
+# tree transitively; the daemon is Unix-only (it serves over a Unix socket).
+libc = "0.2"
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+tracing-chrome = { workspace = true }
+tracing-appender = { workspace = true }
+
+[dev-dependencies]
+insta = { workspace = true }
+tempfile = { workspace = true }

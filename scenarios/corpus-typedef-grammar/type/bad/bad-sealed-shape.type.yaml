@@ -1,0 +1,3 @@
+# intentional: `sealed:` isn't a list → sealed-bad-shape
+fields: {}
+sealed: oops

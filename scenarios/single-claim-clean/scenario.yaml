@@ -1,0 +1,5 @@
+title: "Single-claim instance, all required fields present"
+spec_ref: "[[type-instance type::au-type-system]]"
+command: validate
+expected:
+  clean: true

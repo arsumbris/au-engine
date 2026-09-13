@@ -1,0 +1,5 @@
+# app's OWN note, byte-identical to base's, so the two fold to ONE in-sync
+# identity (same closure-hash). The instance's own repo defines it, so its
+# closure renders bare regardless of the fold node's retained origin.
+fields:
+  detail?: any

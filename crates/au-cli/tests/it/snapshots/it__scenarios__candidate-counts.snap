@@ -1,0 +1,16 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "candidate_counts": {
+    "aborted_at_load": false,
+    "by_type": {
+      "article": 1,
+      "note": 1
+    },
+    "files_with_candidates": 2,
+    "total_files": 4
+  },
+  "diagnostics": []
+}

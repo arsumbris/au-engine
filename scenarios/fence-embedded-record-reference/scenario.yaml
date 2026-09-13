@@ -1,0 +1,5 @@
+title: "A typed reference inside a body fence embedded record validates against its slot (not misread as not-a-wikilink)"
+spec_ref: "[[spec - value model - one typed value produced once in effective_values and consumed by validation and reads]], [[type reference::au-type-system]]"
+command: validate
+expected:
+  clean: true

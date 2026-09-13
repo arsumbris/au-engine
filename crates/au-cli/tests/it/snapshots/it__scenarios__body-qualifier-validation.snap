@@ -1,0 +1,638 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "qualifier-not-in-closure",
+      "message": "qualifier 'bogus' is not in the instance's closure — a valid qualifier must be a claimed type or one of its ancestors",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/body-qualifier-validation/bad-body-qualifier-repeated.md",
+        "line_col": {
+          "end": {
+            "col": 23,
+            "line": 10
+          },
+          "start": {
+            "col": 1,
+            "line": 10
+          }
+        },
+        "range": {
+          "end": 280,
+          "start": 258
+        }
+      }
+    },
+    {
+      "code": "qualifier-not-in-closure",
+      "message": "qualifier 'bogus' is not in the instance's closure — a valid qualifier must be a claimed type or one of its ancestors",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/body-qualifier-validation/bad-body-qualifier-repeated.md",
+        "line_col": {
+          "end": {
+            "col": 23,
+            "line": 12
+          },
+          "start": {
+            "col": 1,
+            "line": 12
+          }
+        },
+        "range": {
+          "end": 304,
+          "start": 282
+        }
+      }
+    },
+    {
+      "code": "qualifier-not-in-closure",
+      "message": "qualifier 'bogus' is not in the instance's closure — a valid qualifier must be a claimed type or one of its ancestors",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/body-qualifier-validation/bad-body-qualifier.md",
+        "line_col": {
+          "end": {
+            "col": 23,
+            "line": 11
+          },
+          "start": {
+            "col": 1,
+            "line": 11
+          }
+        },
+        "range": {
+          "end": 356,
+          "start": 334
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 4,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 31,
+                        "line_col": {
+                          "end": {
+                            "col": 32,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/body-qualifier-validation/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "body-qualifier-validation"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "body-qualifier-validation"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/body-qualifier-validation/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "qualifier-not-in-closure",
+            "kind": "inline_code",
+            "span": {
+              "end": 141,
+              "line_col": {
+                "end": {
+                  "col": 38,
+                  "line": 7
+                },
+                "start": {
+                  "col": 12,
+                  "line": 7
+                }
+              },
+              "start": 115
+            }
+          },
+          {
+            "content": "[:desc{bogus}] hello",
+            "kind": "inline_code",
+            "span": {
+              "end": 280,
+              "line_col": {
+                "end": {
+                  "col": 23,
+                  "line": 10
+                },
+                "start": {
+                  "col": 1,
+                  "line": 10
+                }
+              },
+              "start": 258
+            }
+          },
+          {
+            "content": "[:desc{bogus}] hello",
+            "kind": "inline_code",
+            "span": {
+              "end": 304,
+              "line_col": {
+                "end": {
+                  "col": 23,
+                  "line": 12
+                },
+                "start": {
+                  "col": 1,
+                  "line": 12
+                }
+              },
+              "start": 282
+            }
+          }
+        ],
+        "claim": [
+          "c"
+        ],
+        "closure": [
+          "a",
+          "b",
+          "c"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "desc",
+            "origins": [
+              {
+                "name": "a",
+                "origin_path": "<root>/scenarios/body-qualifier-validation/type/a.type.yaml",
+                "required": false,
+                "shape": "String"
+              },
+              {
+                "name": "b",
+                "origin_path": "<root>/scenarios/body-qualifier-validation/type/b.type.yaml",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 280,
+                        "line_col": {
+                          "end": {
+                            "col": 23,
+                            "line": 10
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 10
+                          }
+                        },
+                        "start": 258
+                      },
+                      "file": "<root>/scenarios/body-qualifier-validation/bad-body-qualifier-repeated.md"
+                    },
+                    "qualifier": {
+                      "type_name": "bogus"
+                    },
+                    "section_path": [],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "hello"
+                    }
+                  },
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 304,
+                        "line_col": {
+                          "end": {
+                            "col": 23,
+                            "line": 12
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 12
+                          }
+                        },
+                        "start": 282
+                      },
+                      "file": "<root>/scenarios/body-qualifier-validation/bad-body-qualifier-repeated.md"
+                    },
+                    "qualifier": {
+                      "type_name": "bogus"
+                    },
+                    "section_path": [],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "hello"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "hello"
+                }
+              }
+            ],
+            "field": "desc"
+          }
+        ],
+        "file": "<root>/scenarios/body-qualifier-validation/bad-body-qualifier-repeated.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "desc",
+            "kind": "inline_code",
+            "span": {
+              "end": 91,
+              "line_col": {
+                "end": {
+                  "col": 69,
+                  "line": 6
+                },
+                "start": {
+                  "col": 63,
+                  "line": 6
+                }
+              },
+              "start": 85
+            }
+          },
+          {
+            "content": "bogus",
+            "kind": "inline_code",
+            "span": {
+              "end": 124,
+              "line_col": {
+                "end": {
+                  "col": 24,
+                  "line": 7
+                },
+                "start": {
+                  "col": 17,
+                  "line": 7
+                }
+              },
+              "start": 117
+            }
+          },
+          {
+            "content": "qualifier-not-in-closure",
+            "kind": "inline_code",
+            "span": {
+              "end": 286,
+              "line_col": {
+                "end": {
+                  "col": 33,
+                  "line": 9
+                },
+                "start": {
+                  "col": 7,
+                  "line": 9
+                }
+              },
+              "start": 260
+            }
+          },
+          {
+            "content": "[:desc{bogus}] hello",
+            "kind": "inline_code",
+            "span": {
+              "end": 356,
+              "line_col": {
+                "end": {
+                  "col": 23,
+                  "line": 11
+                },
+                "start": {
+                  "col": 1,
+                  "line": 11
+                }
+              },
+              "start": 334
+            }
+          }
+        ],
+        "claim": [
+          "c"
+        ],
+        "closure": [
+          "a",
+          "b",
+          "c"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "desc",
+            "origins": [
+              {
+                "name": "a",
+                "origin_path": "<root>/scenarios/body-qualifier-validation/type/a.type.yaml",
+                "required": false,
+                "shape": "String"
+              },
+              {
+                "name": "b",
+                "origin_path": "<root>/scenarios/body-qualifier-validation/type/b.type.yaml",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 356,
+                        "line_col": {
+                          "end": {
+                            "col": 23,
+                            "line": 11
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 11
+                          }
+                        },
+                        "start": 334
+                      },
+                      "file": "<root>/scenarios/body-qualifier-validation/bad-body-qualifier.md"
+                    },
+                    "qualifier": {
+                      "type_name": "bogus"
+                    },
+                    "section_path": [],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "hello"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "hello"
+                }
+              }
+            ],
+            "field": "desc"
+          }
+        ],
+        "file": "<root>/scenarios/body-qualifier-validation/bad-body-qualifier.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "a",
+            "kind": "inline_code",
+            "span": {
+              "end": 92,
+              "line_col": {
+                "end": {
+                  "col": 70,
+                  "line": 6
+                },
+                "start": {
+                  "col": 67,
+                  "line": 6
+                }
+              },
+              "start": 89
+            }
+          },
+          {
+            "content": "desc",
+            "kind": "inline_code",
+            "span": {
+              "end": 130,
+              "line_col": {
+                "end": {
+                  "col": 28,
+                  "line": 7
+                },
+                "start": {
+                  "col": 22,
+                  "line": 7
+                }
+              },
+              "start": 124
+            }
+          },
+          {
+            "content": "[:desc{a}] hello",
+            "kind": "inline_code",
+            "span": {
+              "end": 187,
+              "line_col": {
+                "end": {
+                  "col": 19,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 9
+                }
+              },
+              "start": 169
+            }
+          }
+        ],
+        "claim": [
+          "c"
+        ],
+        "closure": [
+          "a",
+          "b",
+          "c"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "desc",
+            "origins": [
+              {
+                "name": "a",
+                "origin_path": "<root>/scenarios/body-qualifier-validation/type/a.type.yaml",
+                "required": false,
+                "shape": "String"
+              },
+              {
+                "name": "b",
+                "origin_path": "<root>/scenarios/body-qualifier-validation/type/b.type.yaml",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 187,
+                        "line_col": {
+                          "end": {
+                            "col": 19,
+                            "line": 9
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 9
+                          }
+                        },
+                        "start": 169
+                      },
+                      "file": "<root>/scenarios/body-qualifier-validation/good-body-qualifier.md"
+                    },
+                    "qualifier": {
+                      "type_name": "a"
+                    },
+                    "section_path": [],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "hello"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "hello"
+                }
+              }
+            ],
+            "field": "desc"
+          }
+        ],
+        "file": "<root>/scenarios/body-qualifier-validation/good-body-qualifier.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

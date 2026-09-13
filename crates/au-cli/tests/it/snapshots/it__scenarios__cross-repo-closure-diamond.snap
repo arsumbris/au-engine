@@ -1,0 +1,751 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 5,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 32,
+                        "line_col": {
+                          "end": {
+                            "col": 33,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/cross-repo-closure-diamond/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "cross-repo-closure-diamond"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "cross-repo-closure-diamond"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-closure-diamond/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.workspace::au-engine"
+        ],
+        "closure": [
+          "au.engine.workspace::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "disabled",
+            "origins": [
+              {
+                "name": "au.engine.workspace",
+                "origin_path": "<au-engine-builtin>/au.engine.workspace.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String[]"
+              }
+            ],
+            "required": false,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "discover",
+            "origins": [
+              {
+                "name": "au.engine.workspace",
+                "origin_path": "<au-engine-builtin>/au.engine.workspace.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String[]"
+              }
+            ],
+            "required": false,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "edit",
+            "origins": [
+              {
+                "name": "au.engine.workspace",
+                "origin_path": "<au-engine-builtin>/au.engine.workspace.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String[]"
+              }
+            ],
+            "required": false,
+            "shape": "String[]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 36,
+                        "line_col": {
+                          "end": {
+                            "col": 31,
+                            "line": 2
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 2
+                          }
+                        },
+                        "start": 10
+                      },
+                      "file": "<root>/scenarios/cross-repo-closure-diamond/.arsumbris/workspace.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "cross-repo-closure-diamond"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "cross-repo-closure-diamond"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 45,
+                        "line_col": {
+                          "end": {
+                            "col": 9,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 3
+                          }
+                        },
+                        "start": 41
+                      },
+                      "file": "<root>/scenarios/cross-repo-closure-diamond/.arsumbris/workspace.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "base"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "base"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 53,
+                        "line_col": {
+                          "end": {
+                            "col": 8,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 4
+                          }
+                        },
+                        "start": 50
+                      },
+                      "file": "<root>/scenarios/cross-repo-closure-diamond/.arsumbris/workspace.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "app"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "app"
+                }
+              }
+            ],
+            "field": "edit"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-closure-diamond/.arsumbris/workspace.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 110,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 4
+                          }
+                        },
+                        "start": 57
+                      },
+                      "file": "<root>/scenarios/cross-repo-closure-diamond/app/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "name",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "base"
+                            }
+                          ]
+                        },
+                        {
+                          "field": "remote",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "git@example.com:acme/base.git"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "name",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "base"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "remote",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "git@example.com:acme/base.git"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "deps"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 9,
+                        "line_col": {
+                          "end": {
+                            "col": 10,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/cross-repo-closure-diamond/app/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "app"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "app"
+                }
+              }
+            ],
+            "field": "name"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 46,
+                        "line_col": {
+                          "end": {
+                            "col": 37,
+                            "line": 2
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 2
+                          }
+                        },
+                        "start": 18
+                      },
+                      "file": "<root>/scenarios/cross-repo-closure-diamond/app/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "git@example.com:acme/app.git"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "git@example.com:acme/app.git"
+                }
+              }
+            ],
+            "field": "remote"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-closure-diamond/app/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note",
+          "note::base"
+        ],
+        "closure": [
+          "note",
+          "note::base"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "detail",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/cross-repo-closure-diamond/app/type/note.type.yaml",
+                "required": false,
+                "shape": "any"
+              }
+            ],
+            "required": false,
+            "shape": "any"
+          },
+          {
+            "divergent": false,
+            "field": "extra",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/cross-repo-closure-diamond/app/type/note.type.yaml",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 73,
+                        "line_col": {
+                          "end": {
+                            "col": 45,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 37
+                      },
+                      "file": "<root>/scenarios/cross-repo-closure-diamond/app/item.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "mixes app's own note and base's note"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "mixes app's own note and base's note"
+                }
+              }
+            ],
+            "field": "detail"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-closure-diamond/app/item.md",
+        "section_presence": null
+      },
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 10,
+                        "line_col": {
+                          "end": {
+                            "col": 11,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/cross-repo-closure-diamond/base/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "base"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "base"
+                }
+              }
+            ],
+            "field": "name"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 48,
+                        "line_col": {
+                          "end": {
+                            "col": 38,
+                            "line": 2
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 2
+                          }
+                        },
+                        "start": 19
+                      },
+                      "file": "<root>/scenarios/cross-repo-closure-diamond/base/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "git@example.com:acme/base.git"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "git@example.com:acme/base.git"
+                }
+              }
+            ],
+            "field": "remote"
+          }
+        ],
+        "file": "<root>/scenarios/cross-repo-closure-diamond/base/.arsumbris/repo.yaml",
+        "section_presence": null
+      }
+    ]
+  }
+}

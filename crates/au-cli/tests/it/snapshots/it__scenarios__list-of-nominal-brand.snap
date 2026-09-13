@@ -1,0 +1,261 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 27,
+                        "line_col": {
+                          "end": {
+                            "col": 28,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/list-of-nominal-brand/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "list-of-nominal-brand"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "list-of-nominal-brand"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/list-of-nominal-brand/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "course"
+        ],
+        "closure": [
+          "course"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "legs",
+            "origins": [
+              {
+                "name": "course",
+                "origin_path": "<root>/scenarios/list-of-nominal-brand/type/course.type.yaml",
+                "required": true,
+                "shape": "meter[]"
+              }
+            ],
+            "required": true,
+            "shape": "meter[]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 29,
+                        "line_col": {
+                          "end": {
+                            "col": 7,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 4
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/list-of-nominal-brand/route.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": 42
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": 42
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 43,
+                        "line_col": {
+                          "end": {
+                            "col": 14,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 5
+                          }
+                        },
+                        "start": 34
+                      },
+                      "file": "<root>/scenarios/list-of-nominal-brand/route.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "brand": "meter",
+                      "kind": "scalar",
+                      "value": 30
+                    }
+                  }
+                ],
+                "value": {
+                  "brand": "meter",
+                  "kind": "scalar",
+                  "value": 30
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 50,
+                        "line_col": {
+                          "end": {
+                            "col": 7,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 6
+                          }
+                        },
+                        "start": 48
+                      },
+                      "file": "<root>/scenarios/list-of-nominal-brand/route.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": 18
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": 18
+                }
+              }
+            ],
+            "field": "legs"
+          }
+        ],
+        "file": "<root>/scenarios/list-of-nominal-brand/route.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

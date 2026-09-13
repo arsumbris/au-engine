@@ -1,0 +1,6 @@
+title: "A `file*@` pin whose commit is a branch, not an oid, is rejected"
+spec_ref: "[[spec - diagnostic codes::au-type-system^pinned-commit-not-oid]]"
+command: validate
+expected:
+  codes:
+    - { code: pinned-commit-not-oid, severity: error }

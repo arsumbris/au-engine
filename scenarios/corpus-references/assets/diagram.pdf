@@ -1,0 +1,4 @@
+%PDF-1.0
+% Placeholder asset for dogfood-4. Not a real PDF; only the existence matters
+% for `file*` resolution. The repo walker indexes every regular file regardless
+% of extension.

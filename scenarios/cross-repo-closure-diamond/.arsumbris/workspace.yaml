@@ -1,0 +1,5 @@
+edit:
+  - cross-repo-closure-diamond
+  - base
+  - app
+type: au.engine.workspace::au-engine

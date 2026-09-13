@@ -1,0 +1,336 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "field-shape-mismatch",
+      "message": "field 'asset' references '[[doc.md^section]]' with a sub-file fragment — `file*` references a whole file; use `any*` to address a `^block-id` or `#head`",
+      "related": [
+        {
+          "file": "<root>/scenarios/file-star-rejects-fragment/type/card.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 15,
+              "line": 2
+            },
+            "start": {
+              "col": 10,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 22,
+            "start": 17
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/file-star-rejects-fragment/card.md",
+        "line_col": {
+          "end": {
+            "col": 28,
+            "line": 3
+          },
+          "start": {
+            "col": 8,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 42,
+          "start": 22
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 32,
+                        "line_col": {
+                          "end": {
+                            "col": 33,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/file-star-rejects-fragment/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "file-star-rejects-fragment"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "file-star-rejects-fragment"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/file-star-rejects-fragment/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "asset",
+            "kind": "inline_code",
+            "span": {
+              "end": 55,
+              "line_col": {
+                "end": {
+                  "col": 8,
+                  "line": 6
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 48
+            }
+          },
+          {
+            "content": "file*",
+            "kind": "inline_code",
+            "span": {
+              "end": 66,
+              "line_col": {
+                "end": {
+                  "col": 19,
+                  "line": 6
+                },
+                "start": {
+                  "col": 12,
+                  "line": 6
+                }
+              },
+              "start": 59
+            }
+          },
+          {
+            "content": "^section",
+            "kind": "inline_code",
+            "span": {
+              "end": 113,
+              "line_col": {
+                "end": {
+                  "col": 15,
+                  "line": 7
+                },
+                "start": {
+                  "col": 5,
+                  "line": 7
+                }
+              },
+              "start": 103
+            }
+          },
+          {
+            "content": "any*",
+            "kind": "inline_code",
+            "span": {
+              "end": 182,
+              "line_col": {
+                "end": {
+                  "col": 11,
+                  "line": 8
+                },
+                "start": {
+                  "col": 5,
+                  "line": 8
+                }
+              },
+              "start": 176
+            }
+          },
+          {
+            "content": "^block-id",
+            "kind": "inline_code",
+            "span": {
+              "end": 207,
+              "line_col": {
+                "end": {
+                  "col": 36,
+                  "line": 8
+                },
+                "start": {
+                  "col": 25,
+                  "line": 8
+                }
+              },
+              "start": 196
+            }
+          }
+        ],
+        "claim": [
+          "card"
+        ],
+        "closure": [
+          "card"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "asset",
+            "origins": [
+              {
+                "name": "card",
+                "origin_path": "<root>/scenarios/file-star-rejects-fragment/type/card.type.yaml",
+                "required": true,
+                "shape": "file*"
+              }
+            ],
+            "required": true,
+            "shape": "file*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 42,
+                        "line_col": {
+                          "end": {
+                            "col": 28,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 3
+                          }
+                        },
+                        "start": 22
+                      },
+                      "file": "<root>/scenarios/file-star-rejects-fragment/card.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": {
+                        "id": "section",
+                        "referent": false
+                      },
+                      "kind": "reference",
+                      "target": "doc.md"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": {
+                    "id": "section",
+                    "referent": false
+                  },
+                  "kind": "reference",
+                  "target": "doc.md"
+                }
+              }
+            ],
+            "field": "asset"
+          }
+        ],
+        "file": "<root>/scenarios/file-star-rejects-fragment/card.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

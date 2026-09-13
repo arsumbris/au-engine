@@ -1,0 +1,2 @@
+#: an x/y coordinate, a fixed-arity product
+shape: (Number, Number)

@@ -1,0 +1,6 @@
+title: "A non-boolean `abstract:` marker is a bad-shape error, the def stays concrete"
+spec_ref: "[[spec - abstract type-defs - a non-claimable open type-def, sealed is abstract plus closed]]"
+command: validate
+expected:
+  codes:
+    - { code: abstract-marker-bad-shape, severity: error }

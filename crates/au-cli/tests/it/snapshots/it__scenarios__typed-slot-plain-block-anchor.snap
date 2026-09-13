@@ -1,0 +1,575 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "navigational-block-id-not-found",
+      "message": "field 'evidence' element 2 wikilink `[[rival-post^gone]]` — block-id `gone` not found in rival-post",
+      "related": [
+        {
+          "file": "<root>/scenarios/typed-slot-plain-block-anchor/type/claim.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 21,
+              "line": 2
+            },
+            "start": {
+              "col": 14,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 28,
+            "start": 21
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/typed-slot-plain-block-anchor/citing-claim.md",
+        "line_col": {
+          "end": {
+            "col": 26,
+            "line": 5
+          },
+          "start": {
+            "col": 5,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 80,
+          "start": 59
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 35,
+                        "line_col": {
+                          "end": {
+                            "col": 36,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/typed-slot-plain-block-anchor/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "typed-slot-plain-block-anchor"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "typed-slot-plain-block-anchor"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/typed-slot-plain-block-anchor/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 120,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 86
+            },
+            "text": "A claim citing an exact passage"
+          },
+          {
+            "content": "[[rival-post^passage]]",
+            "kind": "inline_code",
+            "span": {
+              "end": 145,
+              "line_col": {
+                "end": {
+                  "col": 25,
+                  "line": 10
+                },
+                "start": {
+                  "col": 1,
+                  "line": 10
+                }
+              },
+              "start": 121
+            }
+          },
+          {
+            "content": "passage",
+            "kind": "inline_code",
+            "span": {
+              "end": 184,
+              "line_col": {
+                "end": {
+                  "col": 64,
+                  "line": 10
+                },
+                "start": {
+                  "col": 55,
+                  "line": 10
+                }
+              },
+              "start": 175
+            }
+          },
+          {
+            "content": "rival-post",
+            "kind": "inline_code",
+            "span": {
+              "end": 251,
+              "line_col": {
+                "end": {
+                  "col": 131,
+                  "line": 10
+                },
+                "start": {
+                  "col": 119,
+                  "line": 10
+                }
+              },
+              "start": 239
+            }
+          },
+          {
+            "content": "post",
+            "kind": "inline_code",
+            "span": {
+              "end": 263,
+              "line_col": {
+                "end": {
+                  "col": 143,
+                  "line": 10
+                },
+                "start": {
+                  "col": 137,
+                  "line": 10
+                }
+              },
+              "start": 257
+            }
+          },
+          {
+            "content": "post*",
+            "kind": "inline_code",
+            "span": {
+              "end": 288,
+              "line_col": {
+                "end": {
+                  "col": 168,
+                  "line": 10
+                },
+                "start": {
+                  "col": 161,
+                  "line": 10
+                }
+              },
+              "start": 281
+            }
+          },
+          {
+            "content": "^passage",
+            "kind": "inline_code",
+            "span": {
+              "end": 307,
+              "line_col": {
+                "end": {
+                  "col": 187,
+                  "line": 10
+                },
+                "start": {
+                  "col": 177,
+                  "line": 10
+                }
+              },
+              "start": 297
+            }
+          },
+          {
+            "content": "block-id-not-typed",
+            "kind": "inline_code",
+            "span": {
+              "end": 371,
+              "line_col": {
+                "end": {
+                  "col": 251,
+                  "line": 10
+                },
+                "start": {
+                  "col": 231,
+                  "line": 10
+                }
+              },
+              "start": 351
+            }
+          },
+          {
+            "content": "[[rival-post^gone]]",
+            "kind": "inline_code",
+            "span": {
+              "end": 395,
+              "line_col": {
+                "end": {
+                  "col": 22,
+                  "line": 12
+                },
+                "start": {
+                  "col": 1,
+                  "line": 12
+                }
+              },
+              "start": 374
+            }
+          },
+          {
+            "content": "post",
+            "kind": "inline_code",
+            "span": {
+              "end": 468,
+              "line_col": {
+                "end": {
+                  "col": 95,
+                  "line": 12
+                },
+                "start": {
+                  "col": 89,
+                  "line": 12
+                }
+              },
+              "start": 462
+            }
+          }
+        ],
+        "claim": [
+          "claim"
+        ],
+        "closure": [
+          "claim"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "evidence",
+            "origins": [
+              {
+                "name": "claim",
+                "origin_path": "<root>/scenarios/typed-slot-plain-block-anchor/type/claim.type.yaml",
+                "required": false,
+                "shape": "post*[]"
+              }
+            ],
+            "required": false,
+            "shape": "post*[]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 54,
+                        "line_col": {
+                          "end": {
+                            "col": 29,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 4
+                          }
+                        },
+                        "start": 30
+                      },
+                      "file": "<root>/scenarios/typed-slot-plain-block-anchor/citing-claim.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": {
+                        "id": "passage",
+                        "referent": false
+                      },
+                      "kind": "reference",
+                      "target": "rival-post"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": {
+                    "id": "passage",
+                    "referent": false
+                  },
+                  "kind": "reference",
+                  "target": "rival-post"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 80,
+                        "line_col": {
+                          "end": {
+                            "col": 26,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 5
+                          }
+                        },
+                        "start": 59
+                      },
+                      "file": "<root>/scenarios/typed-slot-plain-block-anchor/citing-claim.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": {
+                        "id": "gone",
+                        "referent": false
+                      },
+                      "kind": "reference",
+                      "target": "rival-post"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": {
+                    "id": "gone",
+                    "referent": false
+                  },
+                  "kind": "reference",
+                  "target": "rival-post"
+                }
+              }
+            ],
+            "field": "evidence"
+          }
+        ],
+        "file": "<root>/scenarios/typed-slot-plain-block-anchor/citing-claim.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 55,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 44
+            },
+            "text": "The post"
+          },
+          {
+            "id": "passage",
+            "kind": "block_id_marker",
+            "span": {
+              "end": 97,
+              "line_col": {
+                "end": {
+                  "col": 42,
+                  "line": 8
+                },
+                "start": {
+                  "col": 34,
+                  "line": 8
+                }
+              },
+              "start": 89
+            }
+          }
+        ],
+        "claim": [
+          "post"
+        ],
+        "closure": [
+          "post"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "text",
+            "origins": [
+              {
+                "name": "post",
+                "origin_path": "<root>/scenarios/typed-slot-plain-block-anchor/type/post.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 38,
+                        "line_col": {
+                          "end": {
+                            "col": 24,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 3
+                          }
+                        },
+                        "start": 21
+                      },
+                      "file": "<root>/scenarios/typed-slot-plain-block-anchor/rival-post.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "A rival's post."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "A rival's post."
+                }
+              }
+            ],
+            "field": "text"
+          }
+        ],
+        "file": "<root>/scenarios/typed-slot-plain-block-anchor/rival-post.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

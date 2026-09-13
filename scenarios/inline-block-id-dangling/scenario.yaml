@@ -1,0 +1,6 @@
+title: "A `[[^^id]]` block-referent to no record or marker fires block-id-not-found"
+spec_ref: "[[type block-id::au-type-system]], [[type reference::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: block-id-not-found, severity: error }

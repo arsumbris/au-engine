@@ -1,0 +1,240 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "repo-folder-name-mismatch",
+      "message": "repo 'app' lives in a folder named 'self-repo-qualifier'; the declared name wins",
+      "severity": "drift",
+      "span": {
+        "file": "<root>/scenarios/self-repo-qualifier/.arsumbris/repo.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 1
+          },
+          "start": {
+            "col": 1,
+            "line": 1
+          }
+        },
+        "range": {
+          "end": 0,
+          "start": 0
+        }
+      }
+    },
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'title' (declared on 'note')",
+      "related": [
+        {
+          "file": "<root>/scenarios/self-repo-qualifier/type/note.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 8,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 15,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/self-repo-qualifier/note-self.md",
+        "line_col": {
+          "end": {
+            "col": 16,
+            "line": 2
+          },
+          "start": {
+            "col": 7,
+            "line": 2
+          }
+        },
+        "range": {
+          "end": 19,
+          "start": 10
+        }
+      }
+    },
+    {
+      "code": "type-repo-self",
+      "message": "type 'note::app' qualifies the own repo; bare 'note' is the own form",
+      "severity": "hint",
+      "span": {
+        "file": "<root>/scenarios/self-repo-qualifier/note-self.md",
+        "line_col": {
+          "end": {
+            "col": 16,
+            "line": 2
+          },
+          "start": {
+            "col": 7,
+            "line": 2
+          }
+        },
+        "range": {
+          "end": 19,
+          "start": 10
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 9,
+                        "line_col": {
+                          "end": {
+                            "col": 10,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/self-repo-qualifier/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "app"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "app"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/self-repo-qualifier/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note::app"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "title",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/self-repo-qualifier/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [],
+        "file": "<root>/scenarios/self-repo-qualifier/note-self.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

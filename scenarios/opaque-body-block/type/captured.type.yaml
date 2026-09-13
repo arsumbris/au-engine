@@ -1,0 +1,6 @@
+fields:
+  description: String
+  data: opaque
+body:
+  - section: Data
+    fills: data

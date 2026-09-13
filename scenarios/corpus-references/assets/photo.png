@@ -1,0 +1,5 @@
+PNG-PLACEHOLDER
+
+This is not a real PNG; it's a text placeholder for the file* / file*[] dogfood
+case. The validator only checks existence for file* slots — content is not
+inspected.

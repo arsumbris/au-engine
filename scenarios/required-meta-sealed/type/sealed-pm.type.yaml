@@ -1,0 +1,5 @@
+extends: au.engine.meta::au-engine
+fields:
+  text?: String
+sealed:
+  - sealed-pm.leaf

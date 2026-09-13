@@ -1,0 +1,6 @@
+title: "Body reserved-primitive constructor — `Number(5)` at a nominal `meter` slot, contributed from the body, is a mismatch like the frontmatter case"
+spec_ref: "[[spec - value model - one typed value produced once in effective_values and consumed by validation and reads]]"
+command: validate
+expected:
+  codes:
+    - { code: brand-constructor-mismatch, severity: error }

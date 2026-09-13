@@ -1,0 +1,6 @@
+title: "A `name` template over a `Url` field is location-bad-shape — a Url renders no safe path component"
+spec_ref: "[[spec - location constraints - a name template and path predicate as an advisory placement meet]]"
+command: validate
+expected:
+  codes:
+    - { code: location-bad-shape, severity: error }

@@ -1,0 +1,5 @@
+fields:
+  description: String
+body:
+  - section: Why
+  - section?: Assumptions

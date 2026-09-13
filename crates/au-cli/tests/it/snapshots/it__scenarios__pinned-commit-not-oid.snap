@@ -1,0 +1,235 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "pinned-commit-not-oid",
+      "message": "field 'touched' value '[[note::@main]]': wikilink pins a non-oid commit; a pin's commit must be an immutable oid, not a branch, tag, or relative rev",
+      "related": [
+        {
+          "file": "<root>/scenarios/pinned-commit-not-oid/type/touched-log.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 18,
+              "line": 3
+            },
+            "start": {
+              "col": 12,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 98,
+            "start": 92
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/pinned-commit-not-oid/a-log-entry.md",
+        "line_col": {
+          "end": {
+            "col": 27,
+            "line": 3
+          },
+          "start": {
+            "col": 10,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 48,
+          "start": 31
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 27,
+                        "line_col": {
+                          "end": {
+                            "col": 28,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/pinned-commit-not-oid/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "pinned-commit-not-oid"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "pinned-commit-not-oid"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/pinned-commit-not-oid/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "touched-log"
+        ],
+        "closure": [
+          "touched-log"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "touched",
+            "origins": [
+              {
+                "name": "touched-log",
+                "origin_path": "<root>/scenarios/pinned-commit-not-oid/type/touched-log.type.yaml",
+                "required": true,
+                "shape": "file*@"
+              }
+            ],
+            "required": true,
+            "shape": "file*@"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 48,
+                        "line_col": {
+                          "end": {
+                            "col": 27,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 10,
+                            "line": 3
+                          }
+                        },
+                        "start": 31
+                      },
+                      "file": "<root>/scenarios/pinned-commit-not-oid/a-log-entry.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "malformed_reference",
+                      "raw": "[[note::@main]]"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "malformed_reference",
+                  "raw": "[[note::@main]]"
+                }
+              }
+            ],
+            "field": "touched"
+          }
+        ],
+        "file": "<root>/scenarios/pinned-commit-not-oid/a-log-entry.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,272 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "required-field-absent",
+      "message": "field 'detail': inline value is missing required field 'description' (declared on 'rationale') — did you mean 'descriptn'?",
+      "related": [
+        {
+          "file": "<root>/scenarios/inline-required-field-near-miss/type/rationale.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 14,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 21,
+            "start": 10
+          }
+        },
+        {
+          "file": "<root>/scenarios/inline-required-field-near-miss/host-typo.md",
+          "line_col": {
+            "end": {
+              "col": 12,
+              "line": 6
+            },
+            "start": {
+              "col": 3,
+              "line": 6
+            }
+          },
+          "range": {
+            "end": 185,
+            "start": 176
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/inline-required-field-near-miss/host-typo.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 7
+          },
+          "start": {
+            "col": 3,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 209,
+          "start": 176
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 37,
+                        "line_col": {
+                          "end": {
+                            "col": 38,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/inline-required-field-near-miss/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "inline-required-field-near-miss"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "inline-required-field-near-miss"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/inline-required-field-near-miss/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "host"
+        ],
+        "closure": [
+          "host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "detail",
+            "origins": [
+              {
+                "name": "host",
+                "origin_path": "<root>/scenarios/inline-required-field-near-miss/type/host.type.yaml",
+                "required": true,
+                "shape": "rationale"
+              }
+            ],
+            "required": true,
+            "shape": "rationale"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 209,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 6
+                          }
+                        },
+                        "start": 176
+                      },
+                      "file": "<root>/scenarios/inline-required-field-near-miss/host-typo.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "descriptn",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "typo of description"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "descriptn",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "typo of description"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "detail"
+          }
+        ],
+        "file": "<root>/scenarios/inline-required-field-near-miss/host-typo.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "reserved-type-name",
+      "message": "type-def name 'Url' is reserved by the engine (primitive shape)",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/url-reserved-name/type/Url.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 5
+          },
+          "start": {
+            "col": 1,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 180,
+          "start": 169
+        }
+      }
+    }
+  ],
+  "graph": {
+    "types": [
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "26118b945ea3f24d",
+        "meta_blocks": null,
+        "name": "Url",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/url-reserved-name/type/Url.type.yaml",
+          "span": {
+            "end": 180,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 5
+              },
+              "start": {
+                "col": 1,
+                "line": 4
+              }
+            },
+            "start": 169
+          }
+        },
+        "unmet_required_meta": []
+      }
+    ]
+  }
+}

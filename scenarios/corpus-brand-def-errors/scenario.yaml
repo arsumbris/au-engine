@@ -1,0 +1,8 @@
+title: "Brand def-time errors — a brand-plus-fields def, a malformed `shape:`, and a `*` on a nominal brand slot"
+spec_ref: "[[spec - branded types - the shape key names a reusable scalar, enum, union, or tuple]]"
+command: validate
+expected:
+  codes:
+    - { code: brand-with-record-keys, severity: error }
+    - { code: malformed-brand-shape, severity: error }
+    - { code: brand-not-referenceable, severity: error }

@@ -1,0 +1,321 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "body-section-out-of-order",
+      "message": "body section '# Outcome' appears before '# Why', but 'Why' is declared earlier in the template",
+      "related": [
+        {
+          "file": "<root>/scenarios/body-section-out-of-order/swapped.md",
+          "line_col": {
+            "end": {
+              "col": 1,
+              "line": 11
+            },
+            "start": {
+              "col": 1,
+              "line": 10
+            }
+          },
+          "range": {
+            "end": 131,
+            "start": 125
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/body-section-out-of-order/swapped.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 7
+          },
+          "start": {
+            "col": 1,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 74,
+          "start": 64
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 31,
+                        "line_col": {
+                          "end": {
+                            "col": 32,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/body-section-out-of-order/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "body-section-out-of-order"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "body-section-out-of-order"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/body-section-out-of-order/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 74,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 64
+            },
+            "text": "Outcome"
+          },
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 131,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 11
+                },
+                "start": {
+                  "col": 1,
+                  "line": 10
+                }
+              },
+              "start": 125
+            },
+            "text": "Why"
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/body-section-out-of-order/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/body-section-out-of-order/swapped.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/body-section-out-of-order/swapped.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Why",
+            "optional": false,
+            "path": [
+              "Why"
+            ],
+            "present": true,
+            "span": {
+              "end": 131,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 11
+                },
+                "start": {
+                  "col": 1,
+                  "line": 10
+                }
+              },
+              "start": 125
+            }
+          },
+          {
+            "depth": 1,
+            "name": "Outcome",
+            "optional": false,
+            "path": [
+              "Outcome"
+            ],
+            "present": true,
+            "span": {
+              "end": 74,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 64
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

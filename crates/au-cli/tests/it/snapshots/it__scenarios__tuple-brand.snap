@@ -1,0 +1,323 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 17,
+                        "line_col": {
+                          "end": {
+                            "col": 18,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/tuple-brand/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "tuple-brand"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "tuple-brand"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/tuple-brand/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "sprite"
+        ],
+        "closure": [
+          "sprite"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "box",
+            "origins": [
+              {
+                "name": "sprite",
+                "origin_path": "<root>/scenarios/tuple-brand/type/sprite.type.yaml",
+                "required": true,
+                "shape": "(Number, Number, Number, Number)"
+              }
+            ],
+            "required": true,
+            "shape": "(Number, Number, Number, Number)"
+          },
+          {
+            "divergent": false,
+            "field": "pos",
+            "origins": [
+              {
+                "name": "sprite",
+                "origin_path": "<root>/scenarios/tuple-brand/type/sprite.type.yaml",
+                "required": true,
+                "shape": "point"
+              }
+            ],
+            "required": true,
+            "shape": "point"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 56,
+                        "line_col": {
+                          "end": {
+                            "col": 21,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 6,
+                            "line": 4
+                          }
+                        },
+                        "start": 41
+                      },
+                      "file": "<root>/scenarios/tuple-brand/hero.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "elements": [
+                        {
+                          "value": {
+                            "kind": "scalar",
+                            "value": 0
+                          }
+                        },
+                        {
+                          "value": {
+                            "kind": "scalar",
+                            "value": 0
+                          }
+                        },
+                        {
+                          "value": {
+                            "kind": "scalar",
+                            "value": 100
+                          }
+                        },
+                        {
+                          "value": {
+                            "kind": "scalar",
+                            "value": 50
+                          }
+                        }
+                      ],
+                      "kind": "tuple"
+                    }
+                  }
+                ],
+                "value": {
+                  "elements": [
+                    {
+                      "value": {
+                        "kind": "scalar",
+                        "value": 0
+                      }
+                    },
+                    {
+                      "value": {
+                        "kind": "scalar",
+                        "value": 0
+                      }
+                    },
+                    {
+                      "value": {
+                        "kind": "scalar",
+                        "value": 100
+                      }
+                    },
+                    {
+                      "value": {
+                        "kind": "scalar",
+                        "value": 50
+                      }
+                    }
+                  ],
+                  "kind": "tuple"
+                }
+              }
+            ],
+            "field": "box"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 35,
+                        "line_col": {
+                          "end": {
+                            "col": 19,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 6,
+                            "line": 3
+                          }
+                        },
+                        "start": 22
+                      },
+                      "file": "<root>/scenarios/tuple-brand/hero.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "brand": "point",
+                      "elements": [
+                        {
+                          "value": {
+                            "kind": "scalar",
+                            "value": 20
+                          }
+                        },
+                        {
+                          "value": {
+                            "kind": "scalar",
+                            "value": 30
+                          }
+                        }
+                      ],
+                      "kind": "tuple"
+                    }
+                  }
+                ],
+                "value": {
+                  "brand": "point",
+                  "elements": [
+                    {
+                      "value": {
+                        "kind": "scalar",
+                        "value": 20
+                      }
+                    },
+                    {
+                      "value": {
+                        "kind": "scalar",
+                        "value": 30
+                      }
+                    }
+                  ],
+                  "kind": "tuple"
+                }
+              }
+            ],
+            "field": "pos"
+          }
+        ],
+        "file": "<root>/scenarios/tuple-brand/hero.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

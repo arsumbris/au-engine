@@ -1,0 +1,5 @@
+title: "Multi-claim mixin with token-equal auto-unify"
+spec_ref: "[[type-instance type::au-type-system]], [[type-def fields collision - auto-unify and qualified field::au-type-system]]"
+command: validate
+expected:
+  clean: true

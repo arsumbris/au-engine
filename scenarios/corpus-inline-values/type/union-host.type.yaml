@@ -1,0 +1,4 @@
+# union of records. Inline `type:` is REQUIRED, identifies
+# which branch the value satisfies.
+fields:
+  claim: <rationale | thesis>

@@ -1,0 +1,626 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "navigational-target-not-found",
+      "message": "wikilink `[[no-such-file]]` resolves to no repo file",
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/prose-dangling-links/notes.md",
+        "line_col": {
+          "end": {
+            "col": 17,
+            "line": 12
+          },
+          "start": {
+            "col": 1,
+            "line": 12
+          }
+        },
+        "range": {
+          "end": 244,
+          "start": 228
+        }
+      }
+    },
+    {
+      "code": "navigational-block-id-not-found",
+      "message": "wikilink `[[target^missing-id]]` — block-id `missing-id` not found in target",
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/prose-dangling-links/notes.md",
+        "line_col": {
+          "end": {
+            "col": 22,
+            "line": 13
+          },
+          "start": {
+            "col": 1,
+            "line": 13
+          }
+        },
+        "range": {
+          "end": 283,
+          "start": 262
+        }
+      }
+    },
+    {
+      "code": "navigational-block-id-not-found",
+      "message": "wikilink `[[^missing-local]]` — block-id `missing-local` not found in this file",
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/prose-dangling-links/notes.md",
+        "line_col": {
+          "end": {
+            "col": 19,
+            "line": 14
+          },
+          "start": {
+            "col": 1,
+            "line": 14
+          }
+        },
+        "range": {
+          "end": 331,
+          "start": 313
+        }
+      }
+    },
+    {
+      "code": "anchor-not-found",
+      "message": "wikilink `[[target#No Such Heading]]` — heading `No Such Heading` not found in target",
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/prose-dangling-links/notes.md",
+        "line_col": {
+          "end": {
+            "col": 27,
+            "line": 15
+          },
+          "start": {
+            "col": 1,
+            "line": 15
+          }
+        },
+        "range": {
+          "end": 386,
+          "start": 360
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 26,
+                        "line_col": {
+                          "end": {
+                            "col": 27,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/prose-dangling-links/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "prose-dangling-links"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "prose-dangling-links"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/prose-dangling-links/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 97,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 89
+            },
+            "text": "Links"
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": null,
+              "commit": null,
+              "field": null,
+              "repo": null,
+              "target": "target"
+            },
+            "raw": "target",
+            "span": {
+              "end": 139,
+              "line_col": {
+                "end": {
+                  "col": 11,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 9
+                }
+              },
+              "start": 129
+            }
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": {
+                "id": "known",
+                "referent": false
+              },
+              "commit": null,
+              "field": null,
+              "repo": null,
+              "target": "target"
+            },
+            "raw": "target^known",
+            "span": {
+              "end": 160,
+              "line_col": {
+                "end": {
+                  "col": 32,
+                  "line": 9
+                },
+                "start": {
+                  "col": 16,
+                  "line": 9
+                }
+              },
+              "start": 144
+            }
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": {
+                "id": "own-marker",
+                "referent": false
+              },
+              "commit": null,
+              "field": null,
+              "repo": null,
+              "target": ""
+            },
+            "raw": "^own-marker",
+            "span": {
+              "end": 180,
+              "line_col": {
+                "end": {
+                  "col": 52,
+                  "line": 9
+                },
+                "start": {
+                  "col": 37,
+                  "line": 9
+                }
+              },
+              "start": 165
+            }
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": "links",
+              "block_id": null,
+              "commit": null,
+              "field": null,
+              "repo": null,
+              "target": ""
+            },
+            "raw": "#links",
+            "span": {
+              "end": 195,
+              "line_col": {
+                "end": {
+                  "col": 67,
+                  "line": 9
+                },
+                "start": {
+                  "col": 57,
+                  "line": 9
+                }
+              },
+              "start": 185
+            }
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": null,
+              "commit": null,
+              "field": null,
+              "repo": null,
+              "target": "no-such-file"
+            },
+            "raw": "no-such-file",
+            "span": {
+              "end": 244,
+              "line_col": {
+                "end": {
+                  "col": 17,
+                  "line": 12
+                },
+                "start": {
+                  "col": 1,
+                  "line": 12
+                }
+              },
+              "start": 228
+            }
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": {
+                "id": "missing-id",
+                "referent": false
+              },
+              "commit": null,
+              "field": null,
+              "repo": null,
+              "target": "target"
+            },
+            "raw": "target^missing-id",
+            "span": {
+              "end": 283,
+              "line_col": {
+                "end": {
+                  "col": 22,
+                  "line": 13
+                },
+                "start": {
+                  "col": 1,
+                  "line": 13
+                }
+              },
+              "start": 262
+            }
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": {
+                "id": "missing-local",
+                "referent": false
+              },
+              "commit": null,
+              "field": null,
+              "repo": null,
+              "target": ""
+            },
+            "raw": "^missing-local",
+            "span": {
+              "end": 331,
+              "line_col": {
+                "end": {
+                  "col": 19,
+                  "line": 14
+                },
+                "start": {
+                  "col": 1,
+                  "line": 14
+                }
+              },
+              "start": 313
+            }
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": "No Such Heading",
+              "block_id": null,
+              "commit": null,
+              "field": null,
+              "repo": null,
+              "target": "target"
+            },
+            "raw": "target#No Such Heading",
+            "span": {
+              "end": 386,
+              "line_col": {
+                "end": {
+                  "col": 27,
+                  "line": 15
+                },
+                "start": {
+                  "col": 1,
+                  "line": 15
+                }
+              },
+              "start": 360
+            }
+          },
+          {
+            "id": "own-marker",
+            "kind": "block_id_marker",
+            "span": {
+              "end": 460,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 19
+                },
+                "start": {
+                  "col": 1,
+                  "line": 18
+                }
+              },
+              "start": 448
+            }
+          }
+        ],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/prose-dangling-links/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 83,
+                        "line_col": {
+                          "end": {
+                            "col": 69,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/prose-dangling-links/notes.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Prose with resolvable and dangling navigational links"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Prose with resolvable and dangling navigational links"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/prose-dangling-links/notes.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "id": "known",
+            "kind": "block_id_marker",
+            "span": {
+              "end": 106,
+              "line_col": {
+                "end": {
+                  "col": 38,
+                  "line": 6
+                },
+                "start": {
+                  "col": 32,
+                  "line": 6
+                }
+              },
+              "start": 100
+            }
+          }
+        ],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/prose-dangling-links/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 63,
+                        "line_col": {
+                          "end": {
+                            "col": 49,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/prose-dangling-links/target.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Link target with one known marker"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Link target with one known marker"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/prose-dangling-links/target.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

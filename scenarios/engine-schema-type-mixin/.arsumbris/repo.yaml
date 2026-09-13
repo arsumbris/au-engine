@@ -1,0 +1,5 @@
+name: engine-schema-type-mixin
+type:
+  - au.engine.repo::au-engine
+  - my-config
+flavor: spicy

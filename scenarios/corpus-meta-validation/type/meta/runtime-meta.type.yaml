@@ -1,0 +1,4 @@
+extends: au.engine.meta::au-engine
+fields:
+  version: Number
+  validator?: file*

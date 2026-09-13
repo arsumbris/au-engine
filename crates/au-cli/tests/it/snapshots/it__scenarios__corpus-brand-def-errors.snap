@@ -1,0 +1,107 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "brand-with-record-keys",
+      "fix": {
+        "description": "keep `shape:` for a brand, or the record keys for a record, not both"
+      },
+      "message": "type-def 'bad-record' declares both `shape:` (a brand) and record key(s) (`fields:`); a def is a brand XOR a record",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-brand-def-errors/type/bad-record.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 4
+          },
+          "start": {
+            "col": 1,
+            "line": 1
+          }
+        },
+        "range": {
+          "end": 34,
+          "start": 0
+        }
+      }
+    },
+    {
+      "code": "malformed-brand-shape",
+      "message": "`shape:` is 'note*', not a brand form; a brand names a scalar, a named enum, a `<A | B>` union, or a `(A, B)` tuple",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-brand-def-errors/type/bad-ref.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 13,
+            "line": 1
+          },
+          "start": {
+            "col": 8,
+            "line": 1
+          }
+        },
+        "range": {
+          "end": 12,
+          "start": 7
+        }
+      }
+    },
+    {
+      "code": "malformed-brand-shape",
+      "message": "`shape:` must be a scalar shape, a `<A | B>` union, a `(A, B)` tuple, or a list of enum members",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-brand-def-errors/type/bad-shape.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 3
+          },
+          "start": {
+            "col": 3,
+            "line": 2
+          }
+        },
+        "range": {
+          "end": 14,
+          "start": 9
+        }
+      }
+    },
+    {
+      "code": "brand-not-referenceable",
+      "fix": {
+        "description": "drop the '*' suffix, write the slot as 'ir'"
+      },
+      "message": "field 'icon' on type-def 'host': slot references nominal brand 'ir' with '*'; a nominal brand (scalar / enum / tuple) is inline-only, use it by bare name 'ir'",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-brand-def-errors/type/host.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 12,
+            "line": 2
+          },
+          "start": {
+            "col": 9,
+            "line": 2
+          }
+        },
+        "range": {
+          "end": 19,
+          "start": 16
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": true,
+    "count": 0,
+    "entries": []
+  }
+}

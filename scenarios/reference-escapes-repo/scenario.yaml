@@ -1,0 +1,7 @@
+title: "A path target that leaves its repo is impossible, not merely missing"
+spec_ref: "[[type reference::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: reference-path-escapes-repo, severity: warning }
+    - { code: reference-target-missing, severity: warning }

@@ -1,0 +1,336 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 17,
+                        "line_col": {
+                          "end": {
+                            "col": 18,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/union-brand/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "union-brand"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "union-brand"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/union-brand/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "claim"
+        ],
+        "closure": [
+          "claim"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "evidence",
+            "origins": [
+              {
+                "name": "claim",
+                "origin_path": "<root>/scenarios/union-brand/type/claim.type.yaml",
+                "required": true,
+                "shape": "evidence-kind"
+              }
+            ],
+            "required": true,
+            "shape": "evidence-kind"
+          },
+          {
+            "divergent": false,
+            "field": "source",
+            "origins": [
+              {
+                "name": "claim",
+                "origin_path": "<root>/scenarios/union-brand/type/claim.type.yaml",
+                "required": true,
+                "shape": "evidence-kind*"
+              }
+            ],
+            "required": true,
+            "shape": "evidence-kind*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 65,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 4
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/union-brand/c.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "t",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "cited in the review"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "t",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "cited in the review"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "evidence"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 84,
+                        "line_col": {
+                          "end": {
+                            "col": 20,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 6
+                          }
+                        },
+                        "start": 73
+                      },
+                      "file": "<root>/scenarios/union-brand/c.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "obs-a"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "obs-a"
+                }
+              }
+            ],
+            "field": "source"
+          }
+        ],
+        "file": "<root>/scenarios/union-brand/c.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "observation"
+        ],
+        "closure": [
+          "observation"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "t",
+            "origins": [
+              {
+                "name": "observation",
+                "origin_path": "<root>/scenarios/union-brand/type/observation.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 41,
+                        "line_col": {
+                          "end": {
+                            "col": 20,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 4,
+                            "line": 3
+                          }
+                        },
+                        "start": 25
+                      },
+                      "file": "<root>/scenarios/union-brand/obs-a.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "measured at dawn"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "measured at dawn"
+                }
+              }
+            ],
+            "field": "t"
+          }
+        ],
+        "file": "<root>/scenarios/union-brand/obs-a.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

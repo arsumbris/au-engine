@@ -1,0 +1,37 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instance_counts": {
+    "aborted_at_load": false,
+    "by_type": [
+      {
+        "count": 2,
+        "hash": "99974d5f48c1fde3",
+        "name": "article",
+        "type_owners": [
+          "instance-counts"
+        ]
+      },
+      {
+        "count": 1,
+        "hash": "a6b6604679d2eeaf",
+        "name": "au.engine.repo",
+        "type_owners": [
+          "au-engine"
+        ]
+      },
+      {
+        "count": 3,
+        "hash": "5e0e7832792eff4c",
+        "name": "note",
+        "type_owners": [
+          "instance-counts"
+        ]
+      }
+    ],
+    "total": 4
+  }
+}

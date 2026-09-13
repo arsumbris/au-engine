@@ -1,0 +1,4 @@
+title: "Binary asset (PDF) in repo — parser never decodes it, validation stays clean"
+command: validate
+expected:
+  clean: true

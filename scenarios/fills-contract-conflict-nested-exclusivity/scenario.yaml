@@ -1,0 +1,6 @@
+title: "Nested `fills:` requires a field forbidden by ancestor `fills!:` (load error)"
+spec_ref: "[[type-def body fills::au-type-system]]"
+command: graph
+expected:
+  codes:
+    - { code: fills-contract-conflict-nested-exclusivity, severity: error }

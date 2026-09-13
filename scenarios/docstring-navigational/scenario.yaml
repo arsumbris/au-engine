@@ -1,0 +1,6 @@
+title: "A `[[...]]` in a `#:` docstring is a navigational edge; a dangling one warns"
+spec_ref: "[[spec - docstring navigational links - a docstring's wikilinks resolve as navigational edges tagged to their declaration]]"
+command: validate
+expected:
+  codes:
+    - { code: navigational-target-not-found, severity: warning }

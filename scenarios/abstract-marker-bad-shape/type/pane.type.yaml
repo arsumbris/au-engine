@@ -1,0 +1,3 @@
+abstract: maybe
+fields:
+  title: String

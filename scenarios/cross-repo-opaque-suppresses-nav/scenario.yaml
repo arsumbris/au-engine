@@ -1,0 +1,5 @@
+title: "An imported instance's `opaque` field suppresses navigational wikilink scanning: the body scan reads the folded effective shape, not the empty own-graph shape, so a peer-owned `opaque` behaves the same as a local copy"
+spec_ref: "[[type-def shape opaque::au-type-system]], [[design - cross-repo type vocabulary - reference import and vendor as one spectrum over the repo qualifier]]"
+command: validate
+expected:
+  clean: true

@@ -1,0 +1,65 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "graph": {
+    "types": [
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 15,
+              "line_col": {
+                "end": {
+                  "col": 8,
+                  "line": 2
+                },
+                "start": {
+                  "col": 3,
+                  "line": 2
+                }
+              },
+              "start": 10
+            },
+            "name": "title",
+            "required": true,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          }
+        ],
+        "hash": "5e0e7832792eff4c",
+        "meta_blocks": null,
+        "name": "note",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/disabled-member/type/note.type.yaml",
+          "span": {
+            "end": 24,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 3
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      }
+    ]
+  }
+}

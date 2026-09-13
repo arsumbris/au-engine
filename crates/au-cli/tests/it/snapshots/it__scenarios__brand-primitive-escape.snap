@@ -1,0 +1,249 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 28,
+                        "line_col": {
+                          "end": {
+                            "col": 29,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/brand-primitive-escape/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "brand-primitive-escape"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "brand-primitive-escape"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/brand-primitive-escape/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "raw",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/brand-primitive-escape/type/note.type.yaml",
+                "required": true,
+                "shape": "stringy"
+              }
+            ],
+            "required": true,
+            "shape": "stringy"
+          },
+          {
+            "divergent": false,
+            "field": "tagged",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/brand-primitive-escape/type/note.type.yaml",
+                "required": true,
+                "shape": "stringy"
+              }
+            ],
+            "required": true,
+            "shape": "stringy"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 40,
+                        "line_col": {
+                          "end": {
+                            "col": 26,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 6,
+                            "line": 3
+                          }
+                        },
+                        "start": 20
+                      },
+                      "file": "<root>/scenarios/brand-primitive-escape/note.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "brand": "String",
+                      "kind": "scalar",
+                      "value": "looks(foo)"
+                    }
+                  }
+                ],
+                "value": {
+                  "brand": "String",
+                  "kind": "scalar",
+                  "value": "looks(foo)"
+                }
+              }
+            ],
+            "field": "raw"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 67,
+                        "line_col": {
+                          "end": {
+                            "col": 27,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 4
+                          }
+                        },
+                        "start": 49
+                      },
+                      "file": "<root>/scenarios/brand-primitive-escape/note.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "brand": "label",
+                      "kind": "scalar",
+                      "value": "important"
+                    }
+                  }
+                ],
+                "value": {
+                  "brand": "label",
+                  "kind": "scalar",
+                  "value": "important"
+                }
+              }
+            ],
+            "field": "tagged"
+          }
+        ],
+        "file": "<root>/scenarios/brand-primitive-escape/note.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

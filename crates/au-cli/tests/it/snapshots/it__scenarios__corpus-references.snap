@@ -1,0 +1,2358 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "navigational-target-ambiguous",
+      "fix": {
+        "description": "resolve by explicit extension, explicit path, or rename"
+      },
+      "message": "wikilink `[[ambig-note]]` resolves ambiguously to 2 repo files",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-references/ambig/a/ambig-note.md",
+          "line_col": {
+            "end": {
+              "col": 1,
+              "line": 1
+            },
+            "start": {
+              "col": 1,
+              "line": 1
+            }
+          },
+          "range": {
+            "end": 0,
+            "start": 0
+          }
+        },
+        {
+          "file": "<root>/scenarios/corpus-references/ambig/b/ambig-note.md",
+          "line_col": {
+            "end": {
+              "col": 1,
+              "line": 1
+            },
+            "start": {
+              "col": 1,
+              "line": 1
+            }
+          },
+          "range": {
+            "end": 0,
+            "start": 0
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/corpus-references/ambig/b/ambig-note.md",
+        "line_col": {
+          "end": {
+            "col": 101,
+            "line": 3
+          },
+          "start": {
+            "col": 87,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 115,
+          "start": 101
+        }
+      }
+    },
+    {
+      "code": "reference-target-missing",
+      "message": "field 'blob' references 'ghost.pdf' which does not exist in the repo",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-references/type/attachment.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 14,
+              "line": 2
+            },
+            "start": {
+              "col": 9,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 21,
+            "start": 16
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/corpus-references/bad/bad-attachment-missing.md",
+        "line_col": {
+          "end": {
+            "col": 22,
+            "line": 3
+          },
+          "start": {
+            "col": 7,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 42,
+          "start": 27
+        }
+      }
+    },
+    {
+      "code": "field-shape-mismatch",
+      "message": "field 'tags' element 2 value does not match declared shape String",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 17,
+              "line": 3
+            },
+            "start": {
+              "col": 9,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 40,
+            "start": 32
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-references/bad/bad-list-element.md",
+        "line_col": {
+          "end": {
+            "col": 7,
+            "line": 6
+          },
+          "start": {
+            "col": 5,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 67,
+          "start": 65
+        }
+      }
+    },
+    {
+      "code": "reference-target-ambiguous",
+      "message": "field 'target' reference 'ambig-note' is ambiguous: 2 files share the basename — use a repo-relative path",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-references/ambig/a/ambig-note.md",
+          "line_col": {
+            "end": {
+              "col": 1,
+              "line": 1
+            },
+            "start": {
+              "col": 1,
+              "line": 1
+            }
+          },
+          "range": {
+            "end": 0,
+            "start": 0
+          }
+        },
+        {
+          "file": "<root>/scenarios/corpus-references/ambig/b/ambig-note.md",
+          "line_col": {
+            "end": {
+              "col": 1,
+              "line": 1
+            },
+            "start": {
+              "col": 1,
+              "line": 1
+            }
+          },
+          "range": {
+            "end": 0,
+            "start": 0
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-references/bad/bad-ref-ambiguous.md",
+        "line_col": {
+          "end": {
+            "col": 25,
+            "line": 3
+          },
+          "start": {
+            "col": 9,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 44,
+          "start": 28
+        }
+      }
+    },
+    {
+      "code": "reference-target-missing",
+      "message": "field 'target' references 'ghost' which does not exist in the repo",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 16,
+              "line": 2
+            },
+            "start": {
+              "col": 11,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 23,
+            "start": 18
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/corpus-references/bad/bad-ref-missing.md",
+        "line_col": {
+          "end": {
+            "col": 20,
+            "line": 3
+          },
+          "start": {
+            "col": 9,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 39,
+          "start": 28
+        }
+      }
+    },
+    {
+      "code": "field-shape-mismatch",
+      "message": "field 'target' value 'note-target' is not a wikilink — typed reference shape 'note*' needs a '[[target]]' value",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 16,
+              "line": 2
+            },
+            "start": {
+              "col": 11,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 23,
+            "start": 18
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-references/bad/bad-ref-not-wikilink.md",
+        "line_col": {
+          "end": {
+            "col": 22,
+            "line": 3
+          },
+          "start": {
+            "col": 9,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 41,
+          "start": 28
+        }
+      }
+    },
+    {
+      "code": "reference-target-type-mismatch",
+      "message": "field 'target' references 'decision-target' (claims: decision) but its `type:` closure does not include 'note'",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 16,
+              "line": 2
+            },
+            "start": {
+              "col": 11,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 23,
+            "start": 18
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-references/bad/bad-ref-wrong-type.md",
+        "line_col": {
+          "end": {
+            "col": 30,
+            "line": 3
+          },
+          "start": {
+            "col": 9,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 49,
+          "start": 28
+        }
+      }
+    },
+    {
+      "code": "field-shape-mismatch",
+      "message": "field 'tags' value is not a list — declared shape is String[]",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 17,
+              "line": 3
+            },
+            "start": {
+              "col": 9,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 40,
+            "start": 32
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-references/bad/bad-tags-not-sequence.md",
+        "line_col": {
+          "end": {
+            "col": 35,
+            "line": 4
+          },
+          "start": {
+            "col": 7,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 80,
+          "start": 52
+        }
+      }
+    },
+    {
+      "code": "case-collision-basename",
+      "message": "basename 'foo.md' collides under case-insensitive comparison with 'Foo.md' — references to either are ambiguous on case-insensitive filesystems (macOS APFS default)",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-references/case-a/Foo.md",
+          "line_col": {
+            "end": {
+              "col": 1,
+              "line": 1
+            },
+            "start": {
+              "col": 1,
+              "line": 1
+            }
+          },
+          "range": {
+            "end": 0,
+            "start": 0
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/corpus-references/case-b/foo.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 1
+          },
+          "start": {
+            "col": 1,
+            "line": 1
+          }
+        },
+        "range": {
+          "end": 0,
+          "start": 0
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 15,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 23,
+                        "line_col": {
+                          "end": {
+                            "col": 24,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/corpus-references/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "corpus-references"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "corpus-references"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/corpus-references/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 181,
+                        "line_col": {
+                          "end": {
+                            "col": 167,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/corpus-references/ambig/a/ambig-note.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "First of two files sharing the basename `ambig-note.md` in different directories. Used to trigger reference-target-ambiguous from bad-ref-ambiguous.md."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "First of two files sharing the basename `ambig-note.md` in different directories. Used to trigger reference-target-ambiguous from bad-ref-ambiguous.md."
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/ambig/a/ambig-note.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/corpus-references/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 141,
+                        "line_col": {
+                          "end": {
+                            "col": 127,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/corpus-references/ambig/b/ambig-note.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Second of two files sharing the basename `ambig-note.md`. Resolution of [[ambig-note]] returns Ambiguous(both)."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Second of two files sharing the basename `ambig-note.md`. Resolution of [[ambig-note]] returns Ambiguous(both)."
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/ambig/b/ambig-note.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "attachment"
+        ],
+        "closure": [
+          "attachment"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "blob",
+            "origins": [
+              {
+                "name": "attachment",
+                "origin_path": "<root>/scenarios/corpus-references/type/attachment.type.yaml",
+                "required": true,
+                "shape": "file*"
+              }
+            ],
+            "required": true,
+            "shape": "file*"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "attachment",
+                "origin_path": "<root>/scenarios/corpus-references/type/attachment.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 42,
+                        "line_col": {
+                          "end": {
+                            "col": 22,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 3
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-attachment-missing.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "ghost.pdf"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "ghost.pdf"
+                }
+              }
+            ],
+            "field": "blob"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 160,
+                        "line_col": {
+                          "end": {
+                            "col": 118,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 4
+                          }
+                        },
+                        "start": 56
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-attachment-missing.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "file* resolves any repo file by existence; ghost.pdf doesn't exist — fires reference-target-missing."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "file* resolves any repo file by existence; ghost.pdf doesn't exist — fires reference-target-missing."
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/bad/bad-attachment-missing.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "link-card"
+        ],
+        "closure": [
+          "link-card"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "tags",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "String[]"
+              }
+            ],
+            "required": true,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "target",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "note*"
+              }
+            ],
+            "required": true,
+            "shape": "note*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 180,
+                        "line_col": {
+                          "end": {
+                            "col": 113,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 7
+                          }
+                        },
+                        "start": 81
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-list-element.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "tags has an integer where String[] is required — fires field-shape-mismatch on the bad element."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "tags has an integer where String[] is required — fires field-shape-mismatch on the bad element."
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 60,
+                        "line_col": {
+                          "end": {
+                            "col": 9,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 5
+                          }
+                        },
+                        "start": 56
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-list-element.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "ok"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "ok"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 67,
+                        "line_col": {
+                          "end": {
+                            "col": 7,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 6
+                          }
+                        },
+                        "start": 65
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-list-element.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": 42
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": 42
+                }
+              }
+            ],
+            "field": "tags"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 45,
+                        "line_col": {
+                          "end": {
+                            "col": 26,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-list-element.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "note-target"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "note-target"
+                }
+              }
+            ],
+            "field": "target"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/bad/bad-list-element.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "link-card"
+        ],
+        "closure": [
+          "link-card"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "tags",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "String[]"
+              }
+            ],
+            "required": true,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "target",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "note*"
+              }
+            ],
+            "required": true,
+            "shape": "note*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 168,
+                        "line_col": {
+                          "end": {
+                            "col": 115,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 5
+                          }
+                        },
+                        "start": 67
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-ref-ambiguous.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Two files share the basename `ambig-note.md` (different dirs) — fires reference-target-ambiguous."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Two files share the basename `ambig-note.md` (different dirs) — fires reference-target-ambiguous."
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [],
+            "field": "tags"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 44,
+                        "line_col": {
+                          "end": {
+                            "col": 25,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-ref-ambiguous.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "ambig-note"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "ambig-note"
+                }
+              }
+            ],
+            "field": "target"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/bad/bad-ref-ambiguous.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "link-card"
+        ],
+        "closure": [
+          "link-card"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "tags",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "String[]"
+              }
+            ],
+            "required": true,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "target",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "note*"
+              }
+            ],
+            "required": true,
+            "shape": "note*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 135,
+                        "line_col": {
+                          "end": {
+                            "col": 87,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 5
+                          }
+                        },
+                        "start": 62
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-ref-missing.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Target wikilink resolves to nothing — fires reference-target-missing."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Target wikilink resolves to nothing — fires reference-target-missing."
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [],
+            "field": "tags"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 39,
+                        "line_col": {
+                          "end": {
+                            "col": 20,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-ref-missing.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "ghost"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "ghost"
+                }
+              }
+            ],
+            "field": "target"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/bad/bad-ref-missing.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "link-card"
+        ],
+        "closure": [
+          "link-card"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "tags",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "String[]"
+              }
+            ],
+            "required": true,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "target",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "note*"
+              }
+            ],
+            "required": true,
+            "shape": "note*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 138,
+                        "line_col": {
+                          "end": {
+                            "col": 88,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 5
+                          }
+                        },
+                        "start": 64
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-ref-not-wikilink.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "target is a plain string, not a wikilink — fires field-shape-mismatch."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "target is a plain string, not a wikilink — fires field-shape-mismatch."
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [],
+            "field": "tags"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 41,
+                        "line_col": {
+                          "end": {
+                            "col": 22,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-ref-not-wikilink.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "note-target"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "note-target"
+                }
+              }
+            ],
+            "field": "target"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/bad/bad-ref-not-wikilink.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "link-card"
+        ],
+        "closure": [
+          "link-card"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "tags",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "String[]"
+              }
+            ],
+            "required": true,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "target",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "note*"
+              }
+            ],
+            "required": true,
+            "shape": "note*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 165,
+                        "line_col": {
+                          "end": {
+                            "col": 107,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 5
+                          }
+                        },
+                        "start": 72
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-ref-wrong-type.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Target file claims `decision`; slot wants `note*` — fires reference-target-type-mismatch."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Target file claims `decision`; slot wants `note*` — fires reference-target-type-mismatch."
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [],
+            "field": "tags"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 49,
+                        "line_col": {
+                          "end": {
+                            "col": 30,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-ref-wrong-type.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "decision-target"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "decision-target"
+                }
+              }
+            ],
+            "field": "target"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/bad/bad-ref-wrong-type.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "link-card"
+        ],
+        "closure": [
+          "link-card"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "tags",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "String[]"
+              }
+            ],
+            "required": true,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "target",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "note*"
+              }
+            ],
+            "required": true,
+            "shape": "note*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 167,
+                        "line_col": {
+                          "end": {
+                            "col": 87,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 5
+                          }
+                        },
+                        "start": 94
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-tags-not-sequence.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "tags is a scalar string, not a sequence — fires field-shape-mismatch."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "tags is a scalar string, not a sequence — fires field-shape-mismatch."
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 80,
+                        "line_col": {
+                          "end": {
+                            "col": 35,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 4
+                          }
+                        },
+                        "start": 52
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-tags-not-sequence.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "scalar where list expected"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "scalar where list expected"
+                }
+              }
+            ],
+            "field": "tags"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 45,
+                        "line_col": {
+                          "end": {
+                            "col": 26,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/corpus-references/bad/bad-tags-not-sequence.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "note-target"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "note-target"
+                }
+              }
+            ],
+            "field": "target"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/bad/bad-tags-not-sequence.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "reason",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/corpus-references/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 164,
+                        "line_col": {
+                          "end": {
+                            "col": 146,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/corpus-references/good/decision-target.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "A typed decision. Referenced by bad-ref-wrong-type to fire reference-target-type-mismatch (link-card.target wants note, gets decision)."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "A typed decision. Referenced by bad-ref-wrong-type to fire reference-target-type-mismatch (link-card.target wants note, gets decision)."
+                }
+              }
+            ],
+            "field": "reason"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/good/decision-target.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/corpus-references/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 86,
+                        "line_col": {
+                          "end": {
+                            "col": 72,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/corpus-references/good/note-target.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "A typed note. Used as a valid target by valid-link-card."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "A typed note. Used as a valid target by valid-link-card."
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/good/note-target.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "attachment"
+        ],
+        "closure": [
+          "attachment"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "blob",
+            "origins": [
+              {
+                "name": "attachment",
+                "origin_path": "<root>/scenarios/corpus-references/type/attachment.type.yaml",
+                "required": true,
+                "shape": "file*"
+              }
+            ],
+            "required": true,
+            "shape": "file*"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "attachment",
+                "origin_path": "<root>/scenarios/corpus-references/type/attachment.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 44,
+                        "line_col": {
+                          "end": {
+                            "col": 24,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 3
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/corpus-references/good/valid-attachment.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "diagram.pdf"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "diagram.pdf"
+                }
+              }
+            ],
+            "field": "blob"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 132,
+                        "line_col": {
+                          "end": {
+                            "col": 88,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 4
+                          }
+                        },
+                        "start": 58
+                      },
+                      "file": "<root>/scenarios/corpus-references/good/valid-attachment.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "An attachment to a PDF asset. file* resolves any repo file by existence."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "An attachment to a PDF asset. file* resolves any repo file by existence."
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/good/valid-attachment.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "gallery"
+        ],
+        "closure": [
+          "gallery"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "gallery",
+                "origin_path": "<root>/scenarios/corpus-references/type/gallery.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "images",
+            "origins": [
+              {
+                "name": "gallery",
+                "origin_path": "<root>/scenarios/corpus-references/type/gallery.type.yaml",
+                "required": true,
+                "shape": "file*[]"
+              }
+            ],
+            "required": true,
+            "shape": "file*[]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 159,
+                        "line_col": {
+                          "end": {
+                            "col": 92,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 6
+                          }
+                        },
+                        "start": 81
+                      },
+                      "file": "<root>/scenarios/corpus-references/good/valid-gallery.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "A gallery using file*[]. Both PNG and PDF assets are valid (existence-only)."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "A gallery using file*[]. Both PNG and PDF assets are valid (existence-only)."
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 47,
+                        "line_col": {
+                          "end": {
+                            "col": 22,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 4
+                          }
+                        },
+                        "start": 30
+                      },
+                      "file": "<root>/scenarios/corpus-references/good/valid-gallery.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "diagram.pdf"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "diagram.pdf"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 67,
+                        "line_col": {
+                          "end": {
+                            "col": 20,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 5
+                          }
+                        },
+                        "start": 52
+                      },
+                      "file": "<root>/scenarios/corpus-references/good/valid-gallery.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "photo.png"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "photo.png"
+                }
+              }
+            ],
+            "field": "images"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/good/valid-gallery.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "link-card"
+        ],
+        "closure": [
+          "link-card"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "tags",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "String[]"
+              }
+            ],
+            "required": true,
+            "shape": "String[]"
+          },
+          {
+            "divergent": false,
+            "field": "target",
+            "origins": [
+              {
+                "name": "link-card",
+                "origin_path": "<root>/scenarios/corpus-references/type/link-card.type.yaml",
+                "required": true,
+                "shape": "note*"
+              }
+            ],
+            "required": true,
+            "shape": "note*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 179,
+                        "line_col": {
+                          "end": {
+                            "col": 99,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 7
+                          }
+                        },
+                        "start": 94
+                      },
+                      "file": "<root>/scenarios/corpus-references/good/valid-link-card.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "A valid link-card. target is a wikilink to a typed note; tags is a list of strings."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "A valid link-card. target is a wikilink to a typed note; tags is a list of strings."
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 62,
+                        "line_col": {
+                          "end": {
+                            "col": 11,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 5
+                          }
+                        },
+                        "start": 56
+                      },
+                      "file": "<root>/scenarios/corpus-references/good/valid-link-card.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "rust"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "rust"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 80,
+                        "line_col": {
+                          "end": {
+                            "col": 18,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 6
+                          }
+                        },
+                        "start": 67
+                      },
+                      "file": "<root>/scenarios/corpus-references/good/valid-link-card.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "type-system"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "type-system"
+                }
+              }
+            ],
+            "field": "tags"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 45,
+                        "line_col": {
+                          "end": {
+                            "col": 26,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/corpus-references/good/valid-link-card.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "note-target"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "note-target"
+                }
+              }
+            ],
+            "field": "target"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-references/good/valid-link-card.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

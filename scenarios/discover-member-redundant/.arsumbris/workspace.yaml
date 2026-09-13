@@ -1,0 +1,6 @@
+edit:
+  - discover-member-redundant
+  - app
+discover:
+  - shared
+type: au.engine.workspace::au-engine

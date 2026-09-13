@@ -1,0 +1,567 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 25,
+                        "line_col": {
+                          "end": {
+                            "col": 26,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/canvas-inline-nodes/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "canvas-inline-nodes"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "canvas-inline-nodes"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/canvas-inline-nodes/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "node",
+            "kind": "inline_code",
+            "span": {
+              "end": 313,
+              "line_col": {
+                "end": {
+                  "col": 58,
+                  "line": 21
+                },
+                "start": {
+                  "col": 52,
+                  "line": 21
+                }
+              },
+              "start": 307
+            }
+          }
+        ],
+        "claim": [
+          "canvas"
+        ],
+        "closure": [
+          "canvas"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "edges",
+            "origins": [
+              {
+                "name": "canvas",
+                "origin_path": "<root>/scenarios/canvas-inline-nodes/type/canvas.type.yaml",
+                "required": true,
+                "shape": "edge[]"
+              }
+            ],
+            "required": true,
+            "shape": "edge[]"
+          },
+          {
+            "divergent": false,
+            "field": "nodes",
+            "origins": [
+              {
+                "name": "canvas",
+                "origin_path": "<root>/scenarios/canvas-inline-nodes/type/canvas.type.yaml",
+                "required": true,
+                "shape": "node&[]"
+              }
+            ],
+            "required": true,
+            "shape": "node&[]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 235,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 18
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 15
+                          }
+                        },
+                        "start": 179
+                      },
+                      "file": "<root>/scenarios/canvas-inline-nodes/board.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "from",
+                          "values": [
+                            {
+                              "anchor": null,
+                              "block_id": {
+                                "id": "root",
+                                "referent": true
+                              },
+                              "kind": "reference",
+                              "target": ""
+                            }
+                          ]
+                        },
+                        {
+                          "field": "kind",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "tree"
+                            }
+                          ]
+                        },
+                        {
+                          "field": "to",
+                          "values": [
+                            {
+                              "anchor": null,
+                              "block_id": {
+                                "id": "child",
+                                "referent": true
+                              },
+                              "kind": "reference",
+                              "target": ""
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "from",
+                      "values": [
+                        {
+                          "anchor": null,
+                          "block_id": {
+                            "id": "root",
+                            "referent": true
+                          },
+                          "kind": "reference",
+                          "target": ""
+                        }
+                      ]
+                    },
+                    {
+                      "field": "kind",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "tree"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "to",
+                      "values": [
+                        {
+                          "anchor": null,
+                          "block_id": {
+                            "id": "child",
+                            "referent": true
+                          },
+                          "kind": "reference",
+                          "target": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "edges"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 92,
+                        "line_col": {
+                          "end": {
+                            "col": 3,
+                            "line": 9
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 4
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/canvas-inline-nodes/board.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "content",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "root"
+                            }
+                          ]
+                        },
+                        {
+                          "field": "position",
+                          "values": [
+                            {
+                              "fields": [
+                                {
+                                  "field": "x",
+                                  "values": [
+                                    {
+                                      "kind": "scalar",
+                                      "value": 0
+                                    }
+                                  ]
+                                },
+                                {
+                                  "field": "y",
+                                  "values": [
+                                    {
+                                      "kind": "scalar",
+                                      "value": 0
+                                    }
+                                  ]
+                                }
+                              ],
+                              "kind": "inline_record"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "content",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "root"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "position",
+                      "values": [
+                        {
+                          "fields": [
+                            {
+                              "field": "x",
+                              "values": [
+                                {
+                                  "kind": "scalar",
+                                  "value": 0
+                                }
+                              ]
+                            },
+                            {
+                              "field": "y",
+                              "values": [
+                                {
+                                  "kind": "scalar",
+                                  "value": 0
+                                }
+                              ]
+                            }
+                          ],
+                          "kind": "inline_record"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 168,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 14
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 9
+                          }
+                        },
+                        "start": 94
+                      },
+                      "file": "<root>/scenarios/canvas-inline-nodes/board.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "content",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "a child node"
+                            }
+                          ]
+                        },
+                        {
+                          "field": "position",
+                          "values": [
+                            {
+                              "fields": [
+                                {
+                                  "field": "x",
+                                  "values": [
+                                    {
+                                      "kind": "scalar",
+                                      "value": 120
+                                    }
+                                  ]
+                                },
+                                {
+                                  "field": "y",
+                                  "values": [
+                                    {
+                                      "kind": "scalar",
+                                      "value": 40
+                                    }
+                                  ]
+                                }
+                              ],
+                              "kind": "inline_record"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "content",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "a child node"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "position",
+                      "values": [
+                        {
+                          "fields": [
+                            {
+                              "field": "x",
+                              "values": [
+                                {
+                                  "kind": "scalar",
+                                  "value": 120
+                                }
+                              ]
+                            },
+                            {
+                              "field": "y",
+                              "values": [
+                                {
+                                  "kind": "scalar",
+                                  "value": 40
+                                }
+                              ]
+                            }
+                          ],
+                          "kind": "inline_record"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "nodes"
+          }
+        ],
+        "file": "<root>/scenarios/canvas-inline-nodes/board.md",
+        "record_block_ids": [
+          {
+            "claims": [
+              "node"
+            ],
+            "id": "child",
+            "span": {
+              "end": 102,
+              "line_col": {
+                "end": {
+                  "col": 13,
+                  "line": 9
+                },
+                "start": {
+                  "col": 8,
+                  "line": 9
+                }
+              },
+              "start": 97
+            }
+          },
+          {
+            "claims": [
+              "node"
+            ],
+            "id": "root",
+            "span": {
+              "end": 35,
+              "line_col": {
+                "end": {
+                  "col": 12,
+                  "line": 4
+                },
+                "start": {
+                  "col": 8,
+                  "line": 4
+                }
+              },
+              "start": 31
+            }
+          }
+        ],
+        "section_presence": null
+      }
+    ]
+  }
+}

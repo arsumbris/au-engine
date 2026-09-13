@@ -1,0 +1,5 @@
+# compound `&` — value may be an inline map satisfying any of the
+# branches (Union case here) or a `[[wikilink]]` to a file whose closure
+# satisfies the same.
+fields:
+  target: <rationale | thesis>&

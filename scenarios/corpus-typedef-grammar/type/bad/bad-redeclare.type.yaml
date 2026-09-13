@@ -1,0 +1,4 @@
+# intentional: redeclares `description` from note
+extends: note
+fields:
+  description: String

@@ -1,0 +1,516 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "reference-target-type-mismatch",
+      "message": "field 'to' references '[[^^s1]]' (claims: sticker) but its `type:` closure does not include 'node'",
+      "related": [
+        {
+          "file": "<root>/scenarios/inline-block-id-pinned-mismatch/type/edge.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 12,
+              "line": 3
+            },
+            "start": {
+              "col": 7,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 33,
+            "start": 28
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/inline-block-id-pinned-mismatch/board.md",
+        "line_col": {
+          "end": {
+            "col": 19,
+            "line": 11
+          },
+          "start": {
+            "col": 9,
+            "line": 11
+          }
+        },
+        "range": {
+          "end": 138,
+          "start": 128
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 37,
+                        "line_col": {
+                          "end": {
+                            "col": 38,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/inline-block-id-pinned-mismatch/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "inline-block-id-pinned-mismatch"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "inline-block-id-pinned-mismatch"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/inline-block-id-pinned-mismatch/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "sticker",
+            "kind": "inline_code",
+            "span": {
+              "end": 220,
+              "line_col": {
+                "end": {
+                  "col": 35,
+                  "line": 15
+                },
+                "start": {
+                  "col": 26,
+                  "line": 15
+                }
+              },
+              "start": 211
+            }
+          },
+          {
+            "content": "node",
+            "kind": "inline_code",
+            "span": {
+              "end": 245,
+              "line_col": {
+                "end": {
+                  "col": 60,
+                  "line": 15
+                },
+                "start": {
+                  "col": 54,
+                  "line": 15
+                }
+              },
+              "start": 239
+            }
+          }
+        ],
+        "claim": [
+          "canvas"
+        ],
+        "closure": [
+          "canvas"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "edges",
+            "origins": [
+              {
+                "name": "canvas",
+                "origin_path": "<root>/scenarios/inline-block-id-pinned-mismatch/type/canvas.type.yaml",
+                "required": true,
+                "shape": "edge[]"
+              }
+            ],
+            "required": true,
+            "shape": "edge[]"
+          },
+          {
+            "divergent": false,
+            "field": "nodes",
+            "origins": [
+              {
+                "name": "canvas",
+                "origin_path": "<root>/scenarios/inline-block-id-pinned-mismatch/type/canvas.type.yaml",
+                "required": true,
+                "shape": "node&[]"
+              }
+            ],
+            "required": true,
+            "shape": "node&[]"
+          },
+          {
+            "divergent": false,
+            "field": "stickers",
+            "origins": [
+              {
+                "name": "canvas",
+                "origin_path": "<root>/scenarios/inline-block-id-pinned-mismatch/type/canvas.type.yaml",
+                "required": false,
+                "shape": "sticker&[]"
+              }
+            ],
+            "required": false,
+            "shape": "sticker&[]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 139,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 12
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 10
+                          }
+                        },
+                        "start": 101
+                      },
+                      "file": "<root>/scenarios/inline-block-id-pinned-mismatch/board.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "from",
+                          "values": [
+                            {
+                              "anchor": null,
+                              "block_id": {
+                                "id": "root",
+                                "referent": true
+                              },
+                              "kind": "reference",
+                              "target": ""
+                            }
+                          ]
+                        },
+                        {
+                          "field": "to",
+                          "values": [
+                            {
+                              "anchor": null,
+                              "block_id": {
+                                "id": "s1",
+                                "referent": true
+                              },
+                              "kind": "reference",
+                              "target": ""
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "from",
+                      "values": [
+                        {
+                          "anchor": null,
+                          "block_id": {
+                            "id": "root",
+                            "referent": true
+                          },
+                          "kind": "reference",
+                          "target": ""
+                        }
+                      ]
+                    },
+                    {
+                      "field": "to",
+                      "values": [
+                        {
+                          "anchor": null,
+                          "block_id": {
+                            "id": "s1",
+                            "referent": true
+                          },
+                          "kind": "reference",
+                          "target": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "edges"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 54,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 4
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/inline-block-id-pinned-mismatch/board.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "content",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "root"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "content",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "root"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "nodes"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 90,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 9
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 7
+                          }
+                        },
+                        "start": 68
+                      },
+                      "file": "<root>/scenarios/inline-block-id-pinned-mismatch/board.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "emoji",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "star"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "emoji",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "star"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "stickers"
+          }
+        ],
+        "file": "<root>/scenarios/inline-block-id-pinned-mismatch/board.md",
+        "record_block_ids": [
+          {
+            "claims": [
+              "node"
+            ],
+            "id": "root",
+            "span": {
+              "end": 35,
+              "line_col": {
+                "end": {
+                  "col": 12,
+                  "line": 4
+                },
+                "start": {
+                  "col": 8,
+                  "line": 4
+                }
+              },
+              "start": 31
+            }
+          },
+          {
+            "claims": [
+              "sticker"
+            ],
+            "id": "s1",
+            "span": {
+              "end": 73,
+              "line_col": {
+                "end": {
+                  "col": 10,
+                  "line": 7
+                },
+                "start": {
+                  "col": 8,
+                  "line": 7
+                }
+              },
+              "start": 71
+            }
+          }
+        ],
+        "section_presence": null
+      }
+    ]
+  }
+}

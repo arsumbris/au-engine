@@ -1,0 +1,6 @@
+title: "Body wikilink `[[file^^id:field]]` for an untyped block fires block-id-not-typed"
+spec_ref: "[[type block-id::au-type-system]], [[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: block-id-not-typed, severity: error }

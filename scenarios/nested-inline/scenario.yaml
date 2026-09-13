@@ -1,0 +1,5 @@
+title: "Two-level nested inline values (record inside record)"
+spec_ref: "[[type-def shape record::au-type-system]]"
+command: validate
+expected:
+  clean: true

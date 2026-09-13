@@ -1,0 +1,5 @@
+title: "Cross-file [[session^^id]] into a nested YAML session log resolves cleanly"
+spec_ref: "[[type block-id::au-type-system]], [[type reference::au-type-system]]"
+command: validate
+expected:
+  clean: true

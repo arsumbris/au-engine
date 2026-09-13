@@ -1,0 +1,6 @@
+title: "An inline-record `^:` id colliding with a body `^id` marker fires block-id-duplicate"
+spec_ref: "[[type block-id::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: block-id-duplicate, severity: error }

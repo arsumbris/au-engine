@@ -1,0 +1,6 @@
+title: "Required sections present but reordered fires body-section-out-of-order"
+spec_ref: "[[type-def body section::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: body-section-out-of-order, severity: error }

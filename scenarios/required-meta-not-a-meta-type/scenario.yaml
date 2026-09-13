@@ -1,0 +1,6 @@
+title: "A required: naming a present non-meta type fires required-meta-not-a-meta-type"
+spec_ref: "[[spec - required subtype meta - a base obligates every concrete subtype to carry a named meta]], [[spec - meta type marker - the meta position admits only types that mix in the engine meta base]]"
+command: validate
+expected:
+  codes:
+    - { code: required-meta-not-a-meta-type, severity: error }

@@ -1,0 +1,6 @@
+title: "`<T[] | T[+]>` slot — wider branch subsumes narrower"
+spec_ref: "[[type-def shape compound::au-type-system]]"
+command: graph
+expected:
+  codes:
+    - { code: subsumption-in-slot-union, severity: warning }

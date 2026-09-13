@@ -1,0 +1,6 @@
+title: "Instance claims a type not in the type graph"
+spec_ref: "[[type-instance type::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: unknown-type-claim, severity: error }

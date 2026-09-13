@@ -1,0 +1,35 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "required-meta-not-a-meta-type",
+      "message": "type-def 'base' requires meta 'plain', which is not a meta type; it must mix in 'au.engine.meta::au-engine'",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/required-meta-not-a-meta-type/type/base.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 20,
+            "line": 3
+          },
+          "start": {
+            "col": 15,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 40,
+          "start": 35
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": true,
+    "count": 0,
+    "entries": []
+  }
+}

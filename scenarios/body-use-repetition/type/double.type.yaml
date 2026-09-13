@@ -1,0 +1,7 @@
+extends: parent
+fields:
+  tag: String
+body:
+  - use: parent
+  - section: Middle
+  - use: parent

@@ -1,0 +1,6 @@
+title: "Required nested sub-section absent from instance body"
+spec_ref: "[[type-def body section::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: body-section-missing, severity: error }

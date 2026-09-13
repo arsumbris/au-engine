@@ -1,0 +1,374 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 20,
+                        "line_col": {
+                          "end": {
+                            "col": 21,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/body-use-clean/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "body-use-clean"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "body-use-clean"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/body-use-clean/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 91,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 85
+            },
+            "text": "Why"
+          },
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 177,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 12
+                },
+                "start": {
+                  "col": 1,
+                  "line": 11
+                }
+              },
+              "start": 171
+            },
+            "text": "How"
+          },
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 267,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 16
+                },
+                "start": {
+                  "col": 1,
+                  "line": 15
+                }
+              },
+              "start": 257
+            },
+            "text": "Outcome"
+          }
+        ],
+        "claim": [
+          "decision.decided"
+        ],
+        "closure": [
+          "decision",
+          "decision.decided"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/body-use-clean/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "status",
+            "origins": [
+              {
+                "name": "decision.decided",
+                "origin_path": "<root>/scenarios/body-use-clean/type/decision.decided.type.yaml",
+                "required": true,
+                "shape": "[made, superseded]"
+              }
+            ],
+            "required": true,
+            "shape": "[made, superseded]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 66,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 40
+                      },
+                      "file": "<root>/scenarios/body-use-clean/migrate-sqlite.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 79,
+                        "line_col": {
+                          "end": {
+                            "col": 13,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 4
+                          }
+                        },
+                        "start": 75
+                      },
+                      "file": "<root>/scenarios/body-use-clean/migrate-sqlite.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "made"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "made"
+                }
+              }
+            ],
+            "field": "status"
+          }
+        ],
+        "file": "<root>/scenarios/body-use-clean/migrate-sqlite.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Why",
+            "optional": false,
+            "path": [
+              "Why"
+            ],
+            "present": true,
+            "span": {
+              "end": 91,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 85
+            }
+          },
+          {
+            "depth": 1,
+            "name": "How",
+            "optional": false,
+            "path": [
+              "How"
+            ],
+            "present": true,
+            "span": {
+              "end": 177,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 12
+                },
+                "start": {
+                  "col": 1,
+                  "line": 11
+                }
+              },
+              "start": 171
+            }
+          },
+          {
+            "depth": 1,
+            "name": "Outcome",
+            "optional": false,
+            "path": [
+              "Outcome"
+            ],
+            "present": true,
+            "span": {
+              "end": 267,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 16
+                },
+                "start": {
+                  "col": 1,
+                  "line": 15
+                }
+              },
+              "start": 257
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,465 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 4,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 16,
+                        "line_col": {
+                          "end": {
+                            "col": 17,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/amp-suffix/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "amp-suffix"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "amp-suffix"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/amp-suffix/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 109,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 74
+            },
+            "text": "A rationale (will be referenced)"
+          },
+          {
+            "content": "&",
+            "kind": "inline_code",
+            "span": {
+              "end": 140,
+              "line_col": {
+                "end": {
+                  "col": 31,
+                  "line": 8
+                },
+                "start": {
+                  "col": 28,
+                  "line": 8
+                }
+              },
+              "start": 137
+            }
+          }
+        ],
+        "claim": [
+          "rationale"
+        ],
+        "closure": [
+          "rationale"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "rationale",
+                "origin_path": "<root>/scenarios/amp-suffix/type/rationale.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 68,
+                        "line_col": {
+                          "end": {
+                            "col": 49,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 33
+                      },
+                      "file": "<root>/scenarios/amp-suffix/cost-savings.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Cost savings drive the migration."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Cost savings drive the migration."
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/amp-suffix/cost-savings.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 112,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 88
+            },
+            "text": "`&` slot: inline form"
+          },
+          {
+            "content": "target: rationale&",
+            "kind": "inline_code",
+            "span": {
+              "end": 133,
+              "line_col": {
+                "end": {
+                  "col": 21,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 9
+                }
+              },
+              "start": 113
+            }
+          }
+        ],
+        "claim": [
+          "amp-host"
+        ],
+        "closure": [
+          "amp-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "target",
+            "origins": [
+              {
+                "name": "amp-host",
+                "origin_path": "<root>/scenarios/amp-suffix/type/amp-host.type.yaml",
+                "required": true,
+                "shape": "rationale&"
+              }
+            ],
+            "required": true,
+            "shape": "rationale&"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 83,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 4
+                          }
+                        },
+                        "start": 29
+                      },
+                      "file": "<root>/scenarios/amp-suffix/inline-form.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "An inline rationale, no separate file."
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "An inline rationale, no separate file."
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "target"
+          }
+        ],
+        "file": "<root>/scenarios/amp-suffix/inline-form.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 78,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 51
+            },
+            "text": "`&` slot: reference form"
+          },
+          {
+            "content": "target: rationale&",
+            "kind": "inline_code",
+            "span": {
+              "end": 104,
+              "line_col": {
+                "end": {
+                  "col": 26,
+                  "line": 8
+                },
+                "start": {
+                  "col": 6,
+                  "line": 8
+                }
+              },
+              "start": 84
+            }
+          }
+        ],
+        "claim": [
+          "amp-host"
+        ],
+        "closure": [
+          "amp-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "target",
+            "origins": [
+              {
+                "name": "amp-host",
+                "origin_path": "<root>/scenarios/amp-suffix/type/amp-host.type.yaml",
+                "required": true,
+                "shape": "rationale&"
+              }
+            ],
+            "required": true,
+            "shape": "rationale&"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 45,
+                        "line_col": {
+                          "end": {
+                            "col": 27,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/amp-suffix/reference-form.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "cost-savings"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "cost-savings"
+                }
+              }
+            ],
+            "field": "target"
+          }
+        ],
+        "file": "<root>/scenarios/amp-suffix/reference-form.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

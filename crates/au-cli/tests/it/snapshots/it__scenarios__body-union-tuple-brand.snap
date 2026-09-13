@@ -1,0 +1,258 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 28,
+                        "line_col": {
+                          "end": {
+                            "col": 29,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/body-union-tuple-brand/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "body-union-tuple-brand"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "body-union-tuple-brand"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/body-union-tuple-brand/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "[:length] point(1, 2)",
+            "kind": "inline_code",
+            "span": {
+              "end": 72,
+              "line_col": {
+                "end": {
+                  "col": 38,
+                  "line": 6
+                },
+                "start": {
+                  "col": 15,
+                  "line": 6
+                }
+              },
+              "start": 49
+            }
+          },
+          {
+            "content": "point",
+            "kind": "inline_code",
+            "span": {
+              "end": 99,
+              "line_col": {
+                "end": {
+                  "col": 65,
+                  "line": 6
+                },
+                "start": {
+                  "col": 58,
+                  "line": 6
+                }
+              },
+              "start": 92
+            }
+          }
+        ],
+        "claim": [
+          "measurement"
+        ],
+        "closure": [
+          "measurement"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "length",
+            "origins": [
+              {
+                "name": "measurement",
+                "origin_path": "<root>/scenarios/body-union-tuple-brand/type/measurement.type.yaml",
+                "required": true,
+                "shape": "dimension"
+              }
+            ],
+            "required": true,
+            "shape": "dimension"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 72,
+                        "line_col": {
+                          "end": {
+                            "col": 38,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 15,
+                            "line": 6
+                          }
+                        },
+                        "start": 49
+                      },
+                      "file": "<root>/scenarios/body-union-tuple-brand/m.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "brand": "point",
+                      "elements": [
+                        {
+                          "value": {
+                            "kind": "scalar",
+                            "value": 1
+                          }
+                        },
+                        {
+                          "value": {
+                            "kind": "scalar",
+                            "value": 2
+                          }
+                        }
+                      ],
+                      "kind": "tuple"
+                    }
+                  }
+                ],
+                "value": {
+                  "brand": "point",
+                  "elements": [
+                    {
+                      "value": {
+                        "kind": "scalar",
+                        "value": 1
+                      }
+                    },
+                    {
+                      "value": {
+                        "kind": "scalar",
+                        "value": 2
+                      }
+                    }
+                  ],
+                  "kind": "tuple"
+                }
+              }
+            ],
+            "field": "length"
+          }
+        ],
+        "file": "<root>/scenarios/body-union-tuple-brand/m.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+title: "Body `[[file^^block-id:field]]` shape-checks against the block's `type:`, not the file's"
+spec_ref: "[[type block-id::au-type-system]], [[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  clean: true

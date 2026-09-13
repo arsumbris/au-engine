@@ -1,0 +1,9 @@
+extends: note
+fields:
+  decided_by: String
+sealed:
+  - decision.pending
+  - decision.decided
+meta:
+  - type: display-meta
+    tldr: "A decision made at a point in time"

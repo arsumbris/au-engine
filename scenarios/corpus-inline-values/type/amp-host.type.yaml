@@ -1,0 +1,4 @@
+# bare-name `&` — value may be an inline map or a
+# `[[wikilink]]` to a rationale-typed file.
+fields:
+  target: rationale&

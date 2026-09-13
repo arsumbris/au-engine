@@ -1,0 +1,5 @@
+title: "Prose documenting the syntax validates clean — quad-fence wraps a triple-fence, marker shown double-ticked"
+spec_ref: "[[type-instance body contribution::au-type-system]], [[type block-id::au-type-system]]"
+command: validate
+expected:
+  clean: true

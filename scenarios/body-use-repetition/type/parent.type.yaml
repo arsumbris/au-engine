@@ -1,0 +1,4 @@
+fields:
+  description: String
+body:
+  - section: Block

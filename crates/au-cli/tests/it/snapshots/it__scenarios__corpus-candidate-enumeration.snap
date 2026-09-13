@@ -1,0 +1,170 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "candidates": {
+    "aborted_at_load": false,
+    "files": [
+      {
+        "candidates": [],
+        "file": "<root>/scenarios/corpus-candidate-enumeration/.arsumbris/repo.yaml"
+      },
+      {
+        "candidates": [
+          {
+            "also_satisfied_optional": 0,
+            "satisfied_required": [
+              "kind",
+              "source"
+            ],
+            "scope": {
+              "file_path": "<root>/scenarios/corpus-candidate-enumeration/good/claimed-inline-at-pinned-slot.md",
+              "inline_path": "/evidence/0"
+            },
+            "supersedes": [],
+            "type_name": "evidence-with-source"
+          },
+          {
+            "also_satisfied_optional": 0,
+            "satisfied_required": [
+              "description"
+            ],
+            "scope": {
+              "file_path": "<root>/scenarios/corpus-candidate-enumeration/good/claimed-inline-at-pinned-slot.md",
+              "inline_path": ""
+            },
+            "supersedes": [],
+            "type_name": "note"
+          },
+          {
+            "also_satisfied_optional": 0,
+            "satisfied_required": [
+              "description"
+            ],
+            "scope": {
+              "file_path": "<root>/scenarios/corpus-candidate-enumeration/good/claimed-inline-at-pinned-slot.md",
+              "inline_path": ""
+            },
+            "supersedes": [],
+            "type_name": "summary"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-candidate-enumeration/good/claimed-inline-at-pinned-slot.md"
+      },
+      {
+        "candidates": [
+          {
+            "also_satisfied_optional": 0,
+            "satisfied_required": [
+              "audience",
+              "description"
+            ],
+            "scope": {
+              "file_path": "<root>/scenarios/corpus-candidate-enumeration/good/extras-satisfy-deliverable.md",
+              "inline_path": ""
+            },
+            "supersedes": [],
+            "type_name": "deliverable"
+          },
+          {
+            "also_satisfied_optional": 0,
+            "satisfied_required": [
+              "description"
+            ],
+            "scope": {
+              "file_path": "<root>/scenarios/corpus-candidate-enumeration/good/extras-satisfy-deliverable.md",
+              "inline_path": ""
+            },
+            "supersedes": [],
+            "type_name": "summary"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-candidate-enumeration/good/extras-satisfy-deliverable.md"
+      },
+      {
+        "candidates": [
+          {
+            "also_satisfied_optional": 0,
+            "satisfied_required": [
+              "kind",
+              "source"
+            ],
+            "scope": {
+              "file_path": "<root>/scenarios/corpus-candidate-enumeration/good/nested-inline-extras.md",
+              "inline_path": "/evidence/0"
+            },
+            "supersedes": [],
+            "type_name": "evidence-with-source"
+          },
+          {
+            "also_satisfied_optional": 0,
+            "satisfied_required": [
+              "description"
+            ],
+            "scope": {
+              "file_path": "<root>/scenarios/corpus-candidate-enumeration/good/nested-inline-extras.md",
+              "inline_path": ""
+            },
+            "supersedes": [],
+            "type_name": "note"
+          },
+          {
+            "also_satisfied_optional": 0,
+            "satisfied_required": [
+              "description"
+            ],
+            "scope": {
+              "file_path": "<root>/scenarios/corpus-candidate-enumeration/good/nested-inline-extras.md",
+              "inline_path": ""
+            },
+            "supersedes": [],
+            "type_name": "summary"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-candidate-enumeration/good/nested-inline-extras.md"
+      },
+      {
+        "candidates": [],
+        "file": "<root>/scenarios/corpus-candidate-enumeration/good/no-candidates.md"
+      },
+      {
+        "candidates": [
+          {
+            "also_satisfied_optional": 0,
+            "satisfied_required": [
+              "description"
+            ],
+            "scope": {
+              "file_path": "<root>/scenarios/corpus-candidate-enumeration/good/orthogonal-overlap-top-level.md",
+              "inline_path": ""
+            },
+            "supersedes": [],
+            "type_name": "summary"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-candidate-enumeration/good/orthogonal-overlap-top-level.md"
+      },
+      {
+        "candidates": [
+          {
+            "also_satisfied_optional": 0,
+            "satisfied_required": [
+              "summary"
+            ],
+            "scope": {
+              "file_path": "<root>/scenarios/corpus-candidate-enumeration/good/sealed-sibling-supersedes.md",
+              "inline_path": ""
+            },
+            "supersedes": [
+              "decision.pending"
+            ],
+            "type_name": "decision.decided"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-candidate-enumeration/good/sealed-sibling-supersedes.md"
+      }
+    ]
+  },
+  "diagnostics": []
+}

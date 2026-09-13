@@ -1,0 +1,6 @@
+#: `origin` demands a reference, so no inline content can fill it
+fields:
+  origin: point*
+body:
+  - section: Origin
+    fills: origin

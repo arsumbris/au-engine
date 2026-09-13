@@ -1,0 +1,6 @@
+extends: decision
+fields:
+  status: [made, superseded]
+body:
+  - use: decision
+  - section: Outcome

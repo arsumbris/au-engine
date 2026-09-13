@@ -1,0 +1,339 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "field-cardinality-exceeded",
+      "message": "field 'status' has 2 distinct ValueContainers but its shape is bare (cardinality 1)",
+      "related": [
+        {
+          "file": "<root>/scenarios/field-cardinality-exceeded-cross-surface/decision.md",
+          "line_col": {
+            "end": {
+              "col": 57,
+              "line": 7
+            },
+            "start": {
+              "col": 35,
+              "line": 7
+            }
+          },
+          "range": {
+            "end": 133,
+            "start": 111
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/field-cardinality-exceeded-cross-surface/decision.md",
+        "line_col": {
+          "end": {
+            "col": 13,
+            "line": 4
+          },
+          "start": {
+            "col": 9,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 71,
+          "start": 67
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 46,
+                        "line_col": {
+                          "end": {
+                            "col": 47,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/field-cardinality-exceeded-cross-surface/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "field-cardinality-exceeded-cross-surface"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "field-cardinality-exceeded-cross-surface"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/field-cardinality-exceeded-cross-surface/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "[:status] superseded",
+            "kind": "inline_code",
+            "span": {
+              "end": 133,
+              "line_col": {
+                "end": {
+                  "col": 57,
+                  "line": 7
+                },
+                "start": {
+                  "col": 35,
+                  "line": 7
+                }
+              },
+              "start": 111
+            }
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/field-cardinality-exceeded-cross-surface/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "status",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/field-cardinality-exceeded-cross-surface/type/decision.type.yaml",
+                "required": false,
+                "shape": "[made, superseded]"
+              }
+            ],
+            "required": false,
+            "shape": "[made, superseded]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/field-cardinality-exceeded-cross-surface/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 71,
+                        "line_col": {
+                          "end": {
+                            "col": 13,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 4
+                          }
+                        },
+                        "start": 67
+                      },
+                      "file": "<root>/scenarios/field-cardinality-exceeded-cross-surface/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "made"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "made"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 133,
+                        "line_col": {
+                          "end": {
+                            "col": 57,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 35,
+                            "line": 7
+                          }
+                        },
+                        "start": 111
+                      },
+                      "file": "<root>/scenarios/field-cardinality-exceeded-cross-surface/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "superseded"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "superseded"
+                }
+              }
+            ],
+            "field": "status"
+          }
+        ],
+        "file": "<root>/scenarios/field-cardinality-exceeded-cross-surface/decision.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

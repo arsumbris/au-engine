@@ -1,0 +1,7 @@
+title: "A divergent field inside an INLINE RECORD resolves the same way: a `field{type}` inline key attributes per-origin (clean), a bare inline key is a mixin-collision plus the unfilled required origins"
+spec_ref: "[[type-def fields collision - auto-unify and qualified field::au-type-system]], [[type-def shape record::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: mixin-collision, severity: error }
+    - { code: required-field-absent, severity: error }

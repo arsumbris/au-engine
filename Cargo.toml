@@ -1,0 +1,62 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/au-cli",
+    "crates/au-core",
+    "crates/au-engine",
+    "crates/au-parser",
+    "crates/au-grammar",
+    "crates/au-diagnostics",
+    "crates/au-references",
+    "crates/au-testkit",
+]
+
+[workspace.package]
+version = "0.0.5"
+edition = "2021"
+rust-version = "1.85"
+license = "UNLICENSED"
+publish = false
+
+[workspace.dependencies]
+au-cli = { path = "crates/au-cli" }
+au-core = { path = "crates/au-core" }
+au-engine = { path = "crates/au-engine" }
+au-parser = { path = "crates/au-parser" }
+au-grammar = { path = "crates/au-grammar" }
+au-diagnostics = { path = "crates/au-diagnostics" }
+au-references = { path = "crates/au-references" }
+au-testkit = { path = "crates/au-testkit" }
+
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+regex = "1"
+saphyr = "0.0.6"
+saphyr-parser = "0.0.6"
+clap = { version = "4", features = ["derive"] }
+proptest = "1"
+insta = { version = "1", features = ["yaml"] }
+tempfile = "3"
+notify = "6"
+fs4 = "0.12"
+hostname = "0.4"
+ignore = "0.4"
+rpds = "1.2.1"
+tokio = { version = "1", features = ["rt-multi-thread", "net", "io-util", "sync"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+tracing-chrome = "0.7"
+tracing-appender = "0.2"
+
+[profile.dev]
+opt-level = 0
+# `line-tables-only` keeps backtraces with file:line info but skips full DWARF
+# variable/scope/type info. Cuts link-time DWARF write volume — link is the
+# dominant variable cost on this codebase under memory pressure. Step-through
+# variable inspection is degraded; backtraces and panic messages still work.
+debug = "line-tables-only"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1

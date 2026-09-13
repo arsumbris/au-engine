@@ -1,0 +1,6 @@
+title: "Body brand mismatch — a foreign constructor at a nominal brand slot, contributed from the body, is caught like the frontmatter case"
+spec_ref: "[[spec - branded types - the shape key names a reusable scalar, enum, union, or tuple]]"
+command: validate
+expected:
+  codes:
+    - { code: brand-constructor-mismatch, severity: error }

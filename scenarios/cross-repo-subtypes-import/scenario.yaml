@@ -1,0 +1,6 @@
+title: "The workspace `subtypes` read spans the base owner's own subtype and a peer-extended subtype (`type: note::base`, no local copy) plus its transitive child, all reaching the one `note` identity across the repo boundary"
+spec_ref: "[[design - cross-repo type vocabulary - reference import and vendor as one spectrum over the repo qualifier]]"
+command: subtypes
+base: note
+expected:
+  clean: true

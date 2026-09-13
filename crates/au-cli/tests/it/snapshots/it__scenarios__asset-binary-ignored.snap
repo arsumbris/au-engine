@@ -1,0 +1,248 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 26,
+                        "line_col": {
+                          "end": {
+                            "col": 27,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/asset-binary-ignored/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "asset-binary-ignored"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "asset-binary-ignored"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/asset-binary-ignored/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "media/book.pdf",
+            "kind": "inline_code",
+            "span": {
+              "end": 125,
+              "line_col": {
+                "end": {
+                  "col": 35,
+                  "line": 6
+                },
+                "start": {
+                  "col": 19,
+                  "line": 6
+                }
+              },
+              "start": 109
+            }
+          },
+          {
+            "content": "RepoIndex",
+            "kind": "inline_code",
+            "span": {
+              "end": 162,
+              "line_col": {
+                "end": {
+                  "col": 72,
+                  "line": 6
+                },
+                "start": {
+                  "col": 61,
+                  "line": 6
+                }
+              },
+              "start": 151
+            }
+          },
+          {
+            "content": "file*",
+            "kind": "inline_code",
+            "span": {
+              "end": 182,
+              "line_col": {
+                "end": {
+                  "col": 20,
+                  "line": 7
+                },
+                "start": {
+                  "col": 13,
+                  "line": 7
+                }
+              },
+              "start": 175
+            }
+          }
+        ],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/asset-binary-ignored/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 85,
+                        "line_col": {
+                          "end": {
+                            "col": 71,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/asset-binary-ignored/note.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "A note that sits alongside a PDF binary in the same repo."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "A note that sits alongside a PDF binary in the same repo."
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/asset-binary-ignored/note.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

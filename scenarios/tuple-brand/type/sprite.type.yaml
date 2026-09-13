@@ -1,0 +1,3 @@
+fields:
+  pos: point
+  box: (Number, Number, Number, Number)

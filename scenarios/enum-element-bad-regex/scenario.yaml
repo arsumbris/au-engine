@@ -1,0 +1,6 @@
+title: "Enum element violating the type-name regex — load error surfaces at use site"
+spec_ref: "[[type-def legal names::au-type-system]], [[type-def shape enum::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: shape-syntax-error, severity: error }

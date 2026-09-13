@@ -1,0 +1,277 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 18,
+                        "line_col": {
+                          "end": {
+                            "col": 19,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/nested-tuple/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "nested-tuple"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "nested-tuple"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/nested-tuple/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "frame"
+        ],
+        "closure": [
+          "frame"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "bounds",
+            "origins": [
+              {
+                "name": "frame",
+                "origin_path": "<root>/scenarios/nested-tuple/type/frame.type.yaml",
+                "required": true,
+                "shape": "box"
+              }
+            ],
+            "required": true,
+            "shape": "box"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 56,
+                        "line_col": {
+                          "end": {
+                            "col": 41,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 24
+                      },
+                      "file": "<root>/scenarios/nested-tuple/viewport.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "brand": "box",
+                      "elements": [
+                        {
+                          "brand": "point",
+                          "value": {
+                            "elements": [
+                              {
+                                "value": {
+                                  "kind": "scalar",
+                                  "value": 0
+                                }
+                              },
+                              {
+                                "value": {
+                                  "kind": "scalar",
+                                  "value": 0
+                                }
+                              }
+                            ],
+                            "kind": "tuple"
+                          }
+                        },
+                        {
+                          "brand": "point",
+                          "value": {
+                            "elements": [
+                              {
+                                "value": {
+                                  "kind": "scalar",
+                                  "value": 100
+                                }
+                              },
+                              {
+                                "value": {
+                                  "kind": "scalar",
+                                  "value": 50
+                                }
+                              }
+                            ],
+                            "kind": "tuple"
+                          }
+                        }
+                      ],
+                      "kind": "tuple"
+                    }
+                  }
+                ],
+                "value": {
+                  "brand": "box",
+                  "elements": [
+                    {
+                      "brand": "point",
+                      "value": {
+                        "elements": [
+                          {
+                            "value": {
+                              "kind": "scalar",
+                              "value": 0
+                            }
+                          },
+                          {
+                            "value": {
+                              "kind": "scalar",
+                              "value": 0
+                            }
+                          }
+                        ],
+                        "kind": "tuple"
+                      }
+                    },
+                    {
+                      "brand": "point",
+                      "value": {
+                        "elements": [
+                          {
+                            "value": {
+                              "kind": "scalar",
+                              "value": 100
+                            }
+                          },
+                          {
+                            "value": {
+                              "kind": "scalar",
+                              "value": 50
+                            }
+                          }
+                        ],
+                        "kind": "tuple"
+                      }
+                    }
+                  ],
+                  "kind": "tuple"
+                }
+              }
+            ],
+            "field": "bounds"
+          }
+        ],
+        "file": "<root>/scenarios/nested-tuple/viewport.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

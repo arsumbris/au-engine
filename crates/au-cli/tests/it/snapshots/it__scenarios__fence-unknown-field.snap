@@ -1,0 +1,255 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "unknown-field-in-prose-contribution",
+      "message": "marked fence `[:sumary]` references a field absent from the instance's effective closure (advisory)",
+      "related": [
+        {
+          "file": "<root>/scenarios/fence-unknown-field/piece.md",
+          "line_col": {
+            "end": {
+              "col": 11,
+              "line": 2
+            },
+            "start": {
+              "col": 7,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 14,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/fence-unknown-field/piece.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 8
+          },
+          "start": {
+            "col": 1,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 81,
+          "start": 20
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 25,
+                        "line_col": {
+                          "end": {
+                            "col": 26,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/fence-unknown-field/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "fence-unknown-field"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "fence-unknown-field"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/fence-unknown-field/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "body": "a typo in the field name, previously silent\n",
+            "info": "[:sumary]",
+            "kind": "fenced_block",
+            "span": {
+              "end": 81,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 5
+                }
+              },
+              "start": 20
+            }
+          }
+        ],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "summary",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/fence-unknown-field/type/note.type.yaml",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 81,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 8
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 5
+                          }
+                        },
+                        "start": 20
+                      },
+                      "file": "<root>/scenarios/fence-unknown-field/piece.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_fence",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "a typo in the field name, previously silent"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "a typo in the field name, previously silent"
+                }
+              }
+            ],
+            "field": "sumary"
+          }
+        ],
+        "file": "<root>/scenarios/fence-unknown-field/piece.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

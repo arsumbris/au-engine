@@ -1,0 +1,383 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "inline-value-missing-type",
+      "message": "field 'choice': inline value at sealed-parent slot 'decision' must declare `type:` naming a concrete (claimable) descendant",
+      "related": [
+        {
+          "file": "<root>/scenarios/sealed-slot-needs-leaf/type/sealed-host.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 19,
+              "line": 2
+            },
+            "start": {
+              "col": 11,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 26,
+            "start": 18
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/sealed-slot-needs-leaf/missing-leaf.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 5
+          },
+          "start": {
+            "col": 3,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 75,
+          "start": 32
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 28,
+                        "line_col": {
+                          "end": {
+                            "col": 29,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/sealed-slot-needs-leaf/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "sealed-slot-needs-leaf"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "sealed-slot-needs-leaf"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/sealed-slot-needs-leaf/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 118,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 80
+            },
+            "text": "Sealed slot, missing inline `type:`"
+          },
+          {
+            "content": "choice: decision",
+            "kind": "inline_code",
+            "span": {
+              "end": 137,
+              "line_col": {
+                "end": {
+                  "col": 19,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 9
+                }
+              },
+              "start": 119
+            }
+          },
+          {
+            "content": "type:",
+            "kind": "inline_code",
+            "span": {
+              "end": 207,
+              "line_col": {
+                "end": {
+                  "col": 89,
+                  "line": 9
+                },
+                "start": {
+                  "col": 82,
+                  "line": 9
+                }
+              },
+              "start": 200
+            }
+          },
+          {
+            "content": "decision.pending",
+            "kind": "inline_code",
+            "span": {
+              "end": 264,
+              "line_col": {
+                "end": {
+                  "col": 146,
+                  "line": 9
+                },
+                "start": {
+                  "col": 128,
+                  "line": 9
+                }
+              },
+              "start": 246
+            }
+          },
+          {
+            "content": "decision.decided",
+            "kind": "inline_code",
+            "span": {
+              "end": 286,
+              "line_col": {
+                "end": {
+                  "col": 168,
+                  "line": 9
+                },
+                "start": {
+                  "col": 150,
+                  "line": 9
+                }
+              },
+              "start": 268
+            }
+          },
+          {
+            "content": "type:",
+            "kind": "inline_code",
+            "span": {
+              "end": 305,
+              "line_col": {
+                "end": {
+                  "col": 187,
+                  "line": 9
+                },
+                "start": {
+                  "col": 180,
+                  "line": 9
+                }
+              },
+              "start": 298
+            }
+          },
+          {
+            "content": "inline-value-missing-type",
+            "kind": "inline_code",
+            "span": {
+              "end": 344,
+              "line_col": {
+                "end": {
+                  "col": 226,
+                  "line": 9
+                },
+                "start": {
+                  "col": 199,
+                  "line": 9
+                }
+              },
+              "start": 317
+            }
+          }
+        ],
+        "claim": [
+          "sealed-host"
+        ],
+        "closure": [
+          "sealed-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "choice",
+            "origins": [
+              {
+                "name": "sealed-host",
+                "origin_path": "<root>/scenarios/sealed-slot-needs-leaf/type/sealed-host.type.yaml",
+                "required": true,
+                "shape": "decision"
+              }
+            ],
+            "required": true,
+            "shape": "decision"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 75,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 4
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/sealed-slot-needs-leaf/missing-leaf.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "summary",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "I forgot the inline type: claim"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "summary",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "I forgot the inline type: claim"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "choice"
+          }
+        ],
+        "file": "<root>/scenarios/sealed-slot-needs-leaf/missing-leaf.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

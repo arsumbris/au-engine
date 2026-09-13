@@ -1,0 +1,3 @@
+#: a release workflow, see [[gate-policy]]
+fields:
+  gate: String   #: reviewer confirms, see [[missing-policy]]

@@ -1,0 +1,5 @@
+title: "Sealed parent with two leaves (closed-world variant)"
+spec_ref: "[[type-def sealed::au-type-system]]"
+command: validate
+expected:
+  clean: true

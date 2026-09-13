@@ -1,0 +1,5 @@
+title: "Instance honoring a two-section body template"
+spec_ref: "[[type-def body::au-type-system]], [[type-def body section::au-type-system]]"
+command: validate
+expected:
+  clean: true

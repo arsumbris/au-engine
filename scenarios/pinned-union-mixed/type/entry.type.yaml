@@ -1,0 +1,3 @@
+#: an entry whose `ref` accepts either a live file or a pinned snapshot
+fields:
+  ref: "< file* | file*@ >"

@@ -1,0 +1,5 @@
+title: "Fenced ```yaml [:field] block contributes a typed inline record"
+spec_ref: "[[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  clean: true

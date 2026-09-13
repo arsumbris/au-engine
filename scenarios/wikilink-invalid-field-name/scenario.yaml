@@ -1,0 +1,6 @@
+title: "Wikilink `:field` value violating the field-name regex fires wikilink-invalid-field-name"
+spec_ref: "[[type reference::au-type-system]], [[type-def legal names::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: wikilink-invalid-field-name, severity: error }

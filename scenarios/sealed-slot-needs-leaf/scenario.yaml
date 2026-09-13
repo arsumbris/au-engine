@@ -1,0 +1,6 @@
+title: "Sealed-parent record slot — inline `type:` REQUIRED, must drill to a leaf"
+spec_ref: "[[type-def shape record::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: inline-value-missing-type, severity: error }

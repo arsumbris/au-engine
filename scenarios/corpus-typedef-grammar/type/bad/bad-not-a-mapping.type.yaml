@@ -1,0 +1,3 @@
+# intentional: top-level isn't a mapping → type-def-not-a-mapping
+- foo
+- bar

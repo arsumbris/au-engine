@@ -1,0 +1,5 @@
+title: "Top-level + sub-section template honored at nested depths"
+spec_ref: "[[type-def body section::au-type-system]]"
+command: validate
+expected:
+  clean: true

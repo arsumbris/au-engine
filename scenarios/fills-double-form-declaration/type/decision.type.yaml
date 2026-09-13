@@ -1,0 +1,7 @@
+fields:
+  description: String
+  rationale?: String
+body:
+  - section: Why
+    fills: rationale
+    fills!: rationale

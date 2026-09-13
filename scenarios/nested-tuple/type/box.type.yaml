@@ -1,0 +1,2 @@
+#: an axis-aligned box, a tuple of two corner points
+shape: (point, point)

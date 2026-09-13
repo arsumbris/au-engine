@@ -1,0 +1,347 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "multi-leaf-in-sealed-family",
+      "message": "instance claims multiple distinct leaves of sealed family 'decision': 'decision.decided', 'decision.pending' — a sealed family is a discriminated union",
+      "related": [
+        {
+          "file": "<root>/scenarios/multi-leaf-sealed-family/contradiction.md",
+          "line_col": {
+            "end": {
+              "col": 21,
+              "line": 4
+            },
+            "start": {
+              "col": 5,
+              "line": 4
+            }
+          },
+          "range": {
+            "end": 51,
+            "start": 35
+          }
+        },
+        {
+          "file": "<root>/scenarios/multi-leaf-sealed-family/contradiction.md",
+          "line_col": {
+            "end": {
+              "col": 21,
+              "line": 3
+            },
+            "start": {
+              "col": 5,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 30,
+            "start": 14
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/multi-leaf-sealed-family/contradiction.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 5
+          },
+          "start": {
+            "col": 3,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 52,
+          "start": 12
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 30,
+                        "line_col": {
+                          "end": {
+                            "col": 31,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/multi-leaf-sealed-family/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "multi-leaf-sealed-family"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "multi-leaf-sealed-family"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/multi-leaf-sealed-family/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 134,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 115
+            },
+            "text": "Multi-leaf claim"
+          },
+          {
+            "content": "decision",
+            "kind": "inline_code",
+            "span": {
+              "end": 145,
+              "line_col": {
+                "end": {
+                  "col": 11,
+                  "line": 10
+                },
+                "start": {
+                  "col": 1,
+                  "line": 10
+                }
+              },
+              "start": 135
+            }
+          },
+          {
+            "content": "decision.pending",
+            "kind": "inline_code",
+            "span": {
+              "end": 191,
+              "line_col": {
+                "end": {
+                  "col": 57,
+                  "line": 10
+                },
+                "start": {
+                  "col": 39,
+                  "line": 10
+                }
+              },
+              "start": 173
+            }
+          },
+          {
+            "content": "decision.decided",
+            "kind": "inline_code",
+            "span": {
+              "end": 211,
+              "line_col": {
+                "end": {
+                  "col": 77,
+                  "line": 10
+                },
+                "start": {
+                  "col": 59,
+                  "line": 10
+                }
+              },
+              "start": 193
+            }
+          },
+          {
+            "content": "multi-leaf-in-sealed-family",
+            "kind": "inline_code",
+            "span": {
+              "end": 346,
+              "line_col": {
+                "end": {
+                  "col": 212,
+                  "line": 10
+                },
+                "start": {
+                  "col": 183,
+                  "line": 10
+                }
+              },
+              "start": 317
+            }
+          }
+        ],
+        "claim": [
+          "decision.pending",
+          "decision.decided"
+        ],
+        "closure": [
+          "decision",
+          "decision.decided",
+          "decision.pending"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "summary",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/multi-leaf-sealed-family/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 109,
+                        "line_col": {
+                          "end": {
+                            "col": 58,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 10,
+                            "line": 5
+                          }
+                        },
+                        "start": 61
+                      },
+                      "file": "<root>/scenarios/multi-leaf-sealed-family/contradiction.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "A file claiming to be both pending AND decided"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "A file claiming to be both pending AND decided"
+                }
+              }
+            ],
+            "field": "summary"
+          }
+        ],
+        "file": "<root>/scenarios/multi-leaf-sealed-family/contradiction.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

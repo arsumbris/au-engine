@@ -1,0 +1,4 @@
+#: a unit of work that records the commits it produced
+fields:
+  produced?: any*
+  note?: String

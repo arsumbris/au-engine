@@ -1,0 +1,6 @@
+title: "[[target:field]] for a field absent from closure fires unbound-field-binding"
+spec_ref: "[[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: unbound-field-binding, severity: error }

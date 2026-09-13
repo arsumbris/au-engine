@@ -1,0 +1,865 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 4,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 29,
+                        "line_col": {
+                          "end": {
+                            "col": 30,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/corpus-body-typing-full/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "corpus-body-typing-full"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "corpus-body-typing-full"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-body-typing-full/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 106,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 11
+                },
+                "start": {
+                  "col": 1,
+                  "line": 10
+                }
+              },
+              "start": 100
+            },
+            "text": "Why"
+          },
+          {
+            "content": "[:causes] shared-volume contention",
+            "kind": "inline_code",
+            "span": {
+              "end": 171,
+              "line_col": {
+                "end": {
+                  "col": 65,
+                  "line": 12
+                },
+                "start": {
+                  "col": 29,
+                  "line": 12
+                }
+              },
+              "start": 135
+            }
+          },
+          {
+            "kind": "heading",
+            "level": 2,
+            "span": {
+              "end": 186,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 15
+                },
+                "start": {
+                  "col": 1,
+                  "line": 14
+                }
+              },
+              "start": 174
+            },
+            "text": "Decision"
+          },
+          {
+            "content": "[:status] made",
+            "kind": "inline_code",
+            "span": {
+              "end": 233,
+              "line_col": {
+                "end": {
+                  "col": 47,
+                  "line": 16
+                },
+                "start": {
+                  "col": 31,
+                  "line": 16
+                }
+              },
+              "start": 217
+            }
+          },
+          {
+            "body": "type: rationale\ndescription: \"SQLite removes the shared-volume bottleneck at dev volume\"\n",
+            "info": "yaml [:rationale]",
+            "kind": "fenced_block",
+            "span": {
+              "end": 350,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 22
+                },
+                "start": {
+                  "col": 1,
+                  "line": 18
+                }
+              },
+              "start": 236
+            }
+          },
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 361,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 24
+                },
+                "start": {
+                  "col": 1,
+                  "line": 23
+                }
+              },
+              "start": 351
+            },
+            "text": "Sources"
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": null,
+              "commit": null,
+              "field": "sources",
+              "repo": null,
+              "target": "paper-a"
+            },
+            "raw": "paper-a:sources",
+            "span": {
+              "end": 385,
+              "line_col": {
+                "end": {
+                  "col": 24,
+                  "line": 25
+                },
+                "start": {
+                  "col": 5,
+                  "line": 25
+                }
+              },
+              "start": 366
+            }
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": null,
+              "commit": null,
+              "field": "sources",
+              "repo": null,
+              "target": "paper-b"
+            },
+            "raw": "paper-b:sources",
+            "span": {
+              "end": 409,
+              "line_col": {
+                "end": {
+                  "col": 48,
+                  "line": 25
+                },
+                "start": {
+                  "col": 29,
+                  "line": 25
+                }
+              },
+              "start": 390
+            }
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "causes",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/corpus-body-typing-full/type/decision.type.yaml",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/corpus-body-typing-full/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "rationale",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/corpus-body-typing-full/type/decision.type.yaml",
+                "required": false,
+                "shape": "rationale&"
+              }
+            ],
+            "required": false,
+            "shape": "rationale&"
+          },
+          {
+            "divergent": false,
+            "field": "sources",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/corpus-body-typing-full/type/decision.type.yaml",
+                "required": false,
+                "shape": "source*[]"
+              }
+            ],
+            "required": false,
+            "shape": "source*[]"
+          },
+          {
+            "divergent": false,
+            "field": "status",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/corpus-body-typing-full/type/decision.type.yaml",
+                "required": false,
+                "shape": "[made, superseded]"
+              }
+            ],
+            "required": false,
+            "shape": "[made, superseded]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 171,
+                        "line_col": {
+                          "end": {
+                            "col": 65,
+                            "line": 12
+                          },
+                          "start": {
+                            "col": 29,
+                            "line": 12
+                          }
+                        },
+                        "start": 135
+                      },
+                      "file": "<root>/scenarios/corpus-body-typing-full/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Why"
+                      }
+                    ],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "shared-volume contention"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "shared-volume contention"
+                }
+              }
+            ],
+            "field": "causes"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/corpus-body-typing-full/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 350,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 22
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 18
+                          }
+                        },
+                        "start": 236
+                      },
+                      "file": "<root>/scenarios/corpus-body-typing-full/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Why"
+                      },
+                      {
+                        "index": 1,
+                        "text": "Decision"
+                      }
+                    ],
+                    "surface": "body_fence",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "SQLite removes the shared-volume bottleneck at dev volume"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "SQLite removes the shared-volume bottleneck at dev volume"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "rationale"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 385,
+                        "line_col": {
+                          "end": {
+                            "col": 24,
+                            "line": 25
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 25
+                          }
+                        },
+                        "start": 366
+                      },
+                      "file": "<root>/scenarios/corpus-body-typing-full/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 2,
+                        "text": "Sources"
+                      }
+                    ],
+                    "surface": "body_wikilink",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "paper-a"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "paper-a"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 409,
+                        "line_col": {
+                          "end": {
+                            "col": 48,
+                            "line": 25
+                          },
+                          "start": {
+                            "col": 29,
+                            "line": 25
+                          }
+                        },
+                        "start": 390
+                      },
+                      "file": "<root>/scenarios/corpus-body-typing-full/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 2,
+                        "text": "Sources"
+                      }
+                    ],
+                    "surface": "body_wikilink",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "paper-b"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "paper-b"
+                }
+              }
+            ],
+            "field": "sources"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 233,
+                        "line_col": {
+                          "end": {
+                            "col": 47,
+                            "line": 16
+                          },
+                          "start": {
+                            "col": 31,
+                            "line": 16
+                          }
+                        },
+                        "start": 217
+                      },
+                      "file": "<root>/scenarios/corpus-body-typing-full/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Why"
+                      },
+                      {
+                        "index": 1,
+                        "text": "Decision"
+                      }
+                    ],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "made"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "made"
+                }
+              }
+            ],
+            "field": "status"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-body-typing-full/decision.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Why",
+            "optional": false,
+            "path": [
+              "Why"
+            ],
+            "present": true,
+            "span": {
+              "end": 106,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 11
+                },
+                "start": {
+                  "col": 1,
+                  "line": 10
+                }
+              },
+              "start": 100
+            }
+          },
+          {
+            "depth": 2,
+            "name": "Decision",
+            "optional": false,
+            "path": [
+              "Why",
+              "Decision"
+            ],
+            "present": true,
+            "span": {
+              "end": 186,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 15
+                },
+                "start": {
+                  "col": 1,
+                  "line": 14
+                }
+              },
+              "start": 174
+            }
+          },
+          {
+            "depth": 1,
+            "name": "Sources",
+            "optional": false,
+            "path": [
+              "Sources"
+            ],
+            "present": true,
+            "span": {
+              "end": 361,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 24
+                },
+                "start": {
+                  "col": 1,
+                  "line": 23
+                }
+              },
+              "start": 351
+            }
+          }
+        ]
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "source"
+        ],
+        "closure": [
+          "source"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "source",
+                "origin_path": "<root>/scenarios/corpus-body-typing-full/type/source.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 66,
+                        "line_col": {
+                          "end": {
+                            "col": 50,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 30
+                      },
+                      "file": "<root>/scenarios/corpus-body-typing-full/paper-a.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Paper A — SQLite benchmark study"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Paper A — SQLite benchmark study"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-body-typing-full/paper-a.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "source"
+        ],
+        "closure": [
+          "source"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "source",
+                "origin_path": "<root>/scenarios/corpus-body-typing-full/type/source.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 77,
+                        "line_col": {
+                          "end": {
+                            "col": 61,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 30
+                      },
+                      "file": "<root>/scenarios/corpus-body-typing-full/paper-b.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Paper B — Shared-volume contention analysis"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Paper B — Shared-volume contention analysis"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-body-typing-full/paper-b.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

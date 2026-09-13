@@ -1,0 +1,2 @@
+#: a plain string or a label, overlapping on String so a bare value must name its branch
+shape: <String | label>

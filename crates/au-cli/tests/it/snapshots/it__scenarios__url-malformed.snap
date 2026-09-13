@@ -1,0 +1,309 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "field-shape-mismatch",
+      "message": "field 'source' value does not match declared shape Url",
+      "related": [
+        {
+          "file": "<root>/scenarios/url-malformed/type/citation.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 25,
+              "line": 2
+            },
+            "start": {
+              "col": 11,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 32,
+            "start": 18
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/url-malformed/malformed.md",
+        "line_col": {
+          "end": {
+            "col": 31,
+            "line": 3
+          },
+          "start": {
+            "col": 9,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 49,
+          "start": 27
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 19,
+                        "line_col": {
+                          "end": {
+                            "col": 20,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/url-malformed/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "url-malformed"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "url-malformed"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/url-malformed/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 71,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 55
+            },
+            "text": "Malformed URL"
+          },
+          {
+            "content": "^https?://",
+            "kind": "inline_code",
+            "span": {
+              "end": 84,
+              "line_col": {
+                "end": {
+                  "col": 13,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 72
+            }
+          },
+          {
+            "content": "Url",
+            "kind": "inline_code",
+            "span": {
+              "end": 127,
+              "line_col": {
+                "end": {
+                  "col": 56,
+                  "line": 8
+                },
+                "start": {
+                  "col": 51,
+                  "line": 8
+                }
+              },
+              "start": 122
+            }
+          },
+          {
+            "content": "String",
+            "kind": "inline_code",
+            "span": {
+              "end": 253,
+              "line_col": {
+                "end": {
+                  "col": 47,
+                  "line": 10
+                },
+                "start": {
+                  "col": 39,
+                  "line": 10
+                }
+              },
+              "start": 245
+            }
+          }
+        ],
+        "claim": [
+          "citation"
+        ],
+        "closure": [
+          "citation"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "source",
+            "origins": [
+              {
+                "name": "citation",
+                "origin_path": "<root>/scenarios/url-malformed/type/citation.type.yaml",
+                "required": true,
+                "shape": "<String | Url>"
+              }
+            ],
+            "required": true,
+            "shape": "<String | Url>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 49,
+                        "line_col": {
+                          "end": {
+                            "col": 31,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/url-malformed/malformed.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "https://exa mple.com"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "https://exa mple.com"
+                }
+              }
+            ],
+            "field": "source"
+          }
+        ],
+        "file": "<root>/scenarios/url-malformed/malformed.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+title: "An instance outside a `strict: true` location is a location-strict-violation error"
+spec_ref: "[[spec - location constraints - a name template and path predicate as an advisory placement meet]]"
+command: validate
+expected:
+  codes:
+    - { code: location-strict-violation, severity: error }

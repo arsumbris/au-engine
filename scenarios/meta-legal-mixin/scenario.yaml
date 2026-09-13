@@ -1,0 +1,5 @@
+title: "A meta block naming a type that mixes in au.engine.meta::au-engine validates clean"
+spec_ref: "[[spec - meta type marker - the meta position admits only types that mix in the engine meta base]]"
+command: validate
+expected:
+  clean: true

@@ -1,0 +1,3 @@
+#: an append-only log entry pinning the file it touched, deletion-stable
+fields:
+  touched: file*@

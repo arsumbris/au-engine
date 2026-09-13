@@ -1,0 +1,4 @@
+# `detail` is a record slot shaped by the `rationale` type-def; its value is an
+# inline YAML map validated against rationale's own shape.
+fields:
+  detail: rationale

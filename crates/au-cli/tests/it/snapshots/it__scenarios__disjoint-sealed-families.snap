@@ -1,0 +1,357 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 30,
+                        "line_col": {
+                          "end": {
+                            "col": 31,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/disjoint-sealed-families/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "disjoint-sealed-families"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "disjoint-sealed-families"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/disjoint-sealed-families/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 165,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 11
+                },
+                "start": {
+                  "col": 1,
+                  "line": 10
+                }
+              },
+              "start": 125
+            },
+            "text": "Mixin across disjoint sealed families"
+          },
+          {
+            "content": "decision",
+            "kind": "inline_code",
+            "span": {
+              "end": 190,
+              "line_col": {
+                "end": {
+                  "col": 25,
+                  "line": 12
+                },
+                "start": {
+                  "col": 15,
+                  "line": 12
+                }
+              },
+              "start": 180
+            }
+          },
+          {
+            "content": "source",
+            "kind": "inline_code",
+            "span": {
+              "end": 221,
+              "line_col": {
+                "end": {
+                  "col": 56,
+                  "line": 12
+                },
+                "start": {
+                  "col": 48,
+                  "line": 12
+                }
+              },
+              "start": 213
+            }
+          }
+        ],
+        "claim": [
+          "decision.decided",
+          "source.url"
+        ],
+        "closure": [
+          "decision",
+          "decision.decided",
+          "source",
+          "source.url"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "external_url",
+            "origins": [
+              {
+                "name": "source.url",
+                "origin_path": "<root>/scenarios/disjoint-sealed-families/type/source.url.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "summary",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/disjoint-sealed-families/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "title",
+            "origins": [
+              {
+                "name": "source",
+                "origin_path": "<root>/scenarios/disjoint-sealed-families/type/source.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 119,
+                        "line_col": {
+                          "end": {
+                            "col": 41,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 15,
+                            "line": 7
+                          }
+                        },
+                        "start": 93
+                      },
+                      "file": "<root>/scenarios/disjoint-sealed-families/cross-family-mixin.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "https://example.com/spec"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "https://example.com/spec"
+                }
+              }
+            ],
+            "field": "external_url"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 64,
+                        "line_col": {
+                          "end": {
+                            "col": 19,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 10,
+                            "line": 5
+                          }
+                        },
+                        "start": 55
+                      },
+                      "file": "<root>/scenarios/disjoint-sealed-families/cross-family-mixin.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "shipped"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "shipped"
+                }
+              }
+            ],
+            "field": "summary"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 78,
+                        "line_col": {
+                          "end": {
+                            "col": 14,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 6
+                          }
+                        },
+                        "start": 72
+                      },
+                      "file": "<root>/scenarios/disjoint-sealed-families/cross-family-mixin.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "spec"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "spec"
+                }
+              }
+            ],
+            "field": "title"
+          }
+        ],
+        "file": "<root>/scenarios/disjoint-sealed-families/cross-family-mixin.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

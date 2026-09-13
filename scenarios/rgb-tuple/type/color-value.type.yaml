@@ -1,0 +1,2 @@
+#: one colour channel, a 0-255 integer or a hex string
+shape: <Number{integer & >=0 & <=255} | String{/^#[0-9a-fA-F]+$/}>

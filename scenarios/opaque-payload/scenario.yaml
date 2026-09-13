@@ -1,0 +1,5 @@
+title: "An `opaque` slot holds an uninterpreted value — no shape, claim, or candidate interpretation"
+spec_ref: "[[type-def shape opaque::au-type-system]]"
+command: validate
+expected:
+  clean: true

@@ -1,0 +1,5 @@
+fields:
+  title: String
+sealed:
+  - source.url
+  - source.path

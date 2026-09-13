@@ -1,0 +1,259 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 21,
+                        "line_col": {
+                          "end": {
+                            "col": 22,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/docstring-clean/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "docstring-clean"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "docstring-clean"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/docstring-clean/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "region"
+        ],
+        "closure": [
+          "region"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "page-doc",
+            "origins": [
+              {
+                "name": "region",
+                "origin_path": "<root>/scenarios/docstring-clean/type/region.type.yaml",
+                "required": true,
+                "shape": "Number"
+              }
+            ],
+            "required": true,
+            "shape": "Number"
+          },
+          {
+            "divergent": false,
+            "field": "prefix",
+            "origins": [
+              {
+                "name": "region",
+                "origin_path": "<root>/scenarios/docstring-clean/type/region.type.yaml",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "quote",
+            "origins": [
+              {
+                "name": "region",
+                "origin_path": "<root>/scenarios/docstring-clean/type/region.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 29,
+                        "line_col": {
+                          "end": {
+                            "col": 13,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 11,
+                            "line": 3
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/docstring-clean/a-region.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": 12
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": 12
+                }
+              }
+            ],
+            "field": "page-doc"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 80,
+                        "line_col": {
+                          "end": {
+                            "col": 51,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 4
+                          }
+                        },
+                        "start": 37
+                      },
+                      "file": "<root>/scenarios/docstring-clean/a-region.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "the substrate is the material, not a tier"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "the substrate is the material, not a tier"
+                }
+              }
+            ],
+            "field": "quote"
+          }
+        ],
+        "file": "<root>/scenarios/docstring-clean/a-region.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

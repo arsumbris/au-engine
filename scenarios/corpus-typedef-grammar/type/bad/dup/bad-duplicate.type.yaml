@@ -1,0 +1,4 @@
+# intentional: same basename as `../bad-duplicate.type.yaml`, in a different
+# subdir. Names derive from the basename, not the path, so both files derive
+# `bad-duplicate` → duplicate-type-def.
+fields: {}

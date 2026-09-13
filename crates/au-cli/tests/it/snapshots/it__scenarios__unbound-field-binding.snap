@@ -1,0 +1,403 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "unbound-field-binding",
+      "message": "wikilink :field references 'rationale' which is not in the instance's effective closure",
+      "related": [
+        {
+          "file": "<root>/scenarios/unbound-field-binding/decision.md",
+          "line_col": {
+            "end": {
+              "col": 15,
+              "line": 2
+            },
+            "start": {
+              "col": 7,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 18,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/unbound-field-binding/decision.md",
+        "line_col": {
+          "end": {
+            "col": 47,
+            "line": 6
+          },
+          "start": {
+            "col": 21,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 110,
+          "start": 84
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 27,
+                        "line_col": {
+                          "end": {
+                            "col": 28,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/unbound-field-binding/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "unbound-field-binding"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "unbound-field-binding"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/unbound-field-binding/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": null,
+              "commit": null,
+              "field": "rationale",
+              "repo": null,
+              "target": "my-rationale"
+            },
+            "raw": "my-rationale:rationale",
+            "span": {
+              "end": 110,
+              "line_col": {
+                "end": {
+                  "col": 47,
+                  "line": 6
+                },
+                "start": {
+                  "col": 21,
+                  "line": 6
+                }
+              },
+              "start": 84
+            }
+          },
+          {
+            "content": "rationale",
+            "kind": "inline_code",
+            "span": {
+              "end": 130,
+              "line_col": {
+                "end": {
+                  "col": 67,
+                  "line": 6
+                },
+                "start": {
+                  "col": 56,
+                  "line": 6
+                }
+              },
+              "start": 119
+            }
+          },
+          {
+            "content": "decision",
+            "kind": "inline_code",
+            "span": {
+              "end": 159,
+              "line_col": {
+                "end": {
+                  "col": 26,
+                  "line": 7
+                },
+                "start": {
+                  "col": 16,
+                  "line": 7
+                }
+              },
+              "start": 149
+            }
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/unbound-field-binding/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/unbound-field-binding/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 110,
+                        "line_col": {
+                          "end": {
+                            "col": 47,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 21,
+                            "line": 6
+                          }
+                        },
+                        "start": 84
+                      },
+                      "file": "<root>/scenarios/unbound-field-binding/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_wikilink",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "my-rationale:rationale"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "my-rationale:rationale"
+                }
+              }
+            ],
+            "field": "rationale"
+          }
+        ],
+        "file": "<root>/scenarios/unbound-field-binding/decision.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "rationale"
+        ],
+        "closure": [
+          "rationale"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "rationale",
+                "origin_path": "<root>/scenarios/unbound-field-binding/type/rationale.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 69,
+                        "line_col": {
+                          "end": {
+                            "col": 50,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 33
+                      },
+                      "file": "<root>/scenarios/unbound-field-binding/my-rationale.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Shared-volume contention dominates"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Shared-volume contention dominates"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/unbound-field-binding/my-rationale.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

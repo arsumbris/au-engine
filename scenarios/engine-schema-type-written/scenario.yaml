@@ -1,0 +1,5 @@
+title: "A repo.yaml that writes its qualified `type:` self-describes and loads clean"
+spec_ref: "[[spec - engine-schema file claims - the kind assigns a floor, a written type self-describes and mixes in more]]"
+command: validate
+expected:
+  clean: true

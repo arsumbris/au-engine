@@ -1,0 +1,90 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "cycle-in-type-chain",
+      "message": "cycle in `type:` chain: loop -> loop",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/cycle-in-type-chain/type/loop.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 4
+          },
+          "start": {
+            "col": 1,
+            "line": 1
+          }
+        },
+        "range": {
+          "end": 44,
+          "start": 0
+        }
+      }
+    }
+  ],
+  "graph": {
+    "types": [
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 35,
+              "line_col": {
+                "end": {
+                  "col": 14,
+                  "line": 3
+                },
+                "start": {
+                  "col": 3,
+                  "line": 3
+                }
+              },
+              "start": 24
+            },
+            "name": "description",
+            "required": true,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          }
+        ],
+        "hash": "66f180b26e1b17f1",
+        "meta_blocks": null,
+        "name": "loop",
+        "parents": [
+          "loop"
+        ],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/cycle-in-type-chain/type/loop.type.yaml",
+          "span": {
+            "end": 44,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      }
+    ]
+  }
+}

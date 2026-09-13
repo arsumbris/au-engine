@@ -1,0 +1,4 @@
+---
+type: widget
+w: hi
+---

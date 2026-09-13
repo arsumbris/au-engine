@@ -1,0 +1,6 @@
+title: "A scalar contributed from the body is shape-checked against its slot, like a frontmatter value"
+spec_ref: "[[type-instance body contribution::au-type-system]], [[spec - diagnostic codes::au-type-system^field-shape-mismatch]]"
+command: validate
+expected:
+  codes:
+    - { code: field-shape-mismatch, severity: error }

@@ -1,0 +1,4 @@
+# intentional: meta block missing its `type:` discriminator → meta-block-bad-shape
+fields: {}
+meta:
+  - icon: x

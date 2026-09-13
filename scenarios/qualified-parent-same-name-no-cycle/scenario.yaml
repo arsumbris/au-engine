@@ -1,0 +1,5 @@
+title: "A local `note` mixing in the peer `note::base` is a legal same-name vendor, the per-repo cycle check does not follow the qualified parent by its bare name and report a phantom self-cycle"
+spec_ref: "[[spec - cross-repo resolution - in-repo identity and deps over a per-user repo registry]]"
+command: validate
+expected:
+  clean: true

@@ -1,0 +1,6 @@
+title: "A type-def outside a `type/` directory warns (advisory) but still classifies by its `.type.yaml` suffix"
+spec_ref: "[[type-def::au-type-system]], [[spec - diagnostic codes::au-type-system^type-def-outside-type-dir]]"
+command: validate
+expected:
+  codes:
+    - { code: type-def-outside-type-dir, severity: warning }

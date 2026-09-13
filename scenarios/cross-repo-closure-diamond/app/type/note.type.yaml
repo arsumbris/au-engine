@@ -1,0 +1,5 @@
+# app's OWN note, diverged from base's by an extra field, so the two carry
+# distinct closure hashes and stay distinct identities in a shared closure.
+fields:
+  detail?: any
+  extra?: String

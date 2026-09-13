@@ -1,0 +1,8 @@
+title: "A mixin reaching two distinct identities of one type name (own `note` beside peer `note::base`) with diverged field shapes is a mixin-collision, not a silent pick; the authored origin `note::base` distinguishes the identities"
+spec_ref: "[[type-def fields collision - auto-unify and qualified field::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: mixin-collision, severity: error }
+    # the bare `title` fills no origin, so both required origins also fire
+    - { code: required-field-absent, severity: error }

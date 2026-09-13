@@ -1,0 +1,4 @@
+fields:
+  title: String
+body:
+  - section: Reference

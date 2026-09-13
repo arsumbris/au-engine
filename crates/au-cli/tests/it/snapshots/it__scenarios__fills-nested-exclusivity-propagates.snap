@@ -1,0 +1,476 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "fills-contract-exceeded",
+      "message": "fills!: forbids field 'other' inside scope 1 Why — only 'rationale' permitted",
+      "related": [
+        {
+          "file": "<root>/scenarios/fills-nested-exclusivity-propagates/type/decision.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 22,
+              "line": 7
+            },
+            "start": {
+              "col": 13,
+              "line": 7
+            }
+          },
+          "range": {
+            "end": 112,
+            "start": 103
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/fills-nested-exclusivity-propagates/decision.md",
+        "line_col": {
+          "end": {
+            "col": 60,
+            "line": 14
+          },
+          "start": {
+            "col": 1,
+            "line": 14
+          }
+        },
+        "range": {
+          "end": 202,
+          "start": 143
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 41,
+                        "line_col": {
+                          "end": {
+                            "col": 42,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/fills-nested-exclusivity-propagates/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "fills-nested-exclusivity-propagates"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "fills-nested-exclusivity-propagates"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/fills-nested-exclusivity-propagates/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 88,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 82
+            },
+            "text": "Why"
+          },
+          {
+            "content": "[:rationale] SQLite removes contention.",
+            "kind": "inline_code",
+            "span": {
+              "end": 130,
+              "line_col": {
+                "end": {
+                  "col": 42,
+                  "line": 10
+                },
+                "start": {
+                  "col": 1,
+                  "line": 10
+                }
+              },
+              "start": 89
+            }
+          },
+          {
+            "kind": "heading",
+            "level": 2,
+            "span": {
+              "end": 142,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 13
+                },
+                "start": {
+                  "col": 1,
+                  "line": 12
+                }
+              },
+              "start": 132
+            },
+            "text": "Detail"
+          },
+          {
+            "content": "[:other] An unrelated note inside the nested sub-section.",
+            "kind": "inline_code",
+            "span": {
+              "end": 202,
+              "line_col": {
+                "end": {
+                  "col": 60,
+                  "line": 14
+                },
+                "start": {
+                  "col": 1,
+                  "line": 14
+                }
+              },
+              "start": 143
+            }
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/fills-nested-exclusivity-propagates/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "other",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/fills-nested-exclusivity-propagates/type/decision.type.yaml",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "rationale",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/fills-nested-exclusivity-propagates/type/decision.type.yaml",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/fills-nested-exclusivity-propagates/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 202,
+                        "line_col": {
+                          "end": {
+                            "col": 60,
+                            "line": 14
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 14
+                          }
+                        },
+                        "start": 143
+                      },
+                      "file": "<root>/scenarios/fills-nested-exclusivity-propagates/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Why"
+                      },
+                      {
+                        "index": 1,
+                        "text": "Detail"
+                      }
+                    ],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "An unrelated note inside the nested sub-section."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "An unrelated note inside the nested sub-section."
+                }
+              }
+            ],
+            "field": "other"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 130,
+                        "line_col": {
+                          "end": {
+                            "col": 42,
+                            "line": 10
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 10
+                          }
+                        },
+                        "start": 89
+                      },
+                      "file": "<root>/scenarios/fills-nested-exclusivity-propagates/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Why"
+                      }
+                    ],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "SQLite removes contention."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "SQLite removes contention."
+                }
+              }
+            ],
+            "field": "rationale"
+          }
+        ],
+        "file": "<root>/scenarios/fills-nested-exclusivity-propagates/decision.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Why",
+            "optional": false,
+            "path": [
+              "Why"
+            ],
+            "present": true,
+            "span": {
+              "end": 88,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 82
+            }
+          },
+          {
+            "depth": 2,
+            "name": "Detail",
+            "optional": false,
+            "path": [
+              "Why",
+              "Detail"
+            ],
+            "present": true,
+            "span": {
+              "end": 142,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 13
+                },
+                "start": {
+                  "col": 1,
+                  "line": 12
+                }
+              },
+              "start": 132
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+#: a tool the agent can call
+fields:
+  trigger?: String

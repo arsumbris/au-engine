@@ -1,0 +1,8 @@
+title: "A divergent field (own `c` inherits `title` as String from `a` and Number from `b`) is resolved per-origin: a bare use is a mixin-collision plus the unfilled required origins, qualifying every origin (`title{a}`/`title{b}`) is clean, and a descendant qualifier `title{c}` reaching both origins is rejected as ambiguous"
+spec_ref: "[[type-def fields collision - auto-unify and qualified field::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: mixin-collision, severity: error }
+    - { code: required-field-absent, severity: error }
+    - { code: qualifier-ambiguous, severity: error }

@@ -1,0 +1,5 @@
+edit:
+  - cross-repo-extends-parents
+  - base
+  - app
+type: au.engine.workspace::au-engine

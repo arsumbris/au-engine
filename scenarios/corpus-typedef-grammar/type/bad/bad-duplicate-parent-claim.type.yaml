@@ -1,0 +1,4 @@
+# intentional: repeated name in parent claim → duplicate-claim warning.
+extends:
+  - note
+  - note

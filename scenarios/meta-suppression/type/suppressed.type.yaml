@@ -1,0 +1,5 @@
+extends: note
+# `meta: []` is a stop signal for the canonical lookup_meta walk.
+# A walk starting at suppressed for display-meta returns None even though
+# the parent (note) declares display-meta.
+meta: []

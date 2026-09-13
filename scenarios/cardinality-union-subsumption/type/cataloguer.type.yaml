@@ -1,0 +1,5 @@
+# `<String[] | String[+]>` — String[+] is a strict subset of String[],
+# so the union adds nothing beyond String[]. The cardinality-refinement
+# subsumption check warns at graph load.
+fields:
+  tags: <String[] | String[+]>

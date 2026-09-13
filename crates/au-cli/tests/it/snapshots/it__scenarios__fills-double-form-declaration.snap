@@ -1,0 +1,137 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "fills-double-form-declaration",
+      "message": "scope carries both `fills:` and `fills!:` — pick one",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/fills-double-form-declaration/type/decision.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 8
+          },
+          "start": {
+            "col": 5,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 117,
+          "start": 61
+        }
+      }
+    }
+  ],
+  "graph": {
+    "types": [
+      {
+        "abstract": false,
+        "body": [
+          {
+            "body": null,
+            "fills": {
+              "exclusive": true,
+              "fields": [
+                "rationale"
+              ]
+            },
+            "kind": "section",
+            "name": "Why",
+            "optional": false
+          }
+        ],
+        "effective_body": [
+          {
+            "body": null,
+            "fills": {
+              "exclusive": true,
+              "fields": [
+                "rationale"
+              ]
+            },
+            "kind": "section",
+            "name": "Why",
+            "optional": false
+          }
+        ],
+        "fields": [
+          {
+            "key_span": {
+              "end": 21,
+              "line_col": {
+                "end": {
+                  "col": 14,
+                  "line": 2
+                },
+                "start": {
+                  "col": 3,
+                  "line": 2
+                }
+              },
+              "start": 10
+            },
+            "name": "description",
+            "required": true,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          },
+          {
+            "key_span": {
+              "end": 42,
+              "line_col": {
+                "end": {
+                  "col": 13,
+                  "line": 3
+                },
+                "start": {
+                  "col": 3,
+                  "line": 3
+                }
+              },
+              "start": 32
+            },
+            "name": "rationale",
+            "required": false,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          }
+        ],
+        "hash": "53b6a4ce0e319fde",
+        "meta_blocks": null,
+        "name": "decision",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/fills-double-form-declaration/type/decision.type.yaml",
+          "span": {
+            "end": 117,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 8
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      }
+    ]
+  }
+}

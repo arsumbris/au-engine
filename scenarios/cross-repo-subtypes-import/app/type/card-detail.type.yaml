@@ -1,0 +1,3 @@
+extends: card
+fields:
+  detail: String

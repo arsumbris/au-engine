@@ -1,0 +1,420 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "body-fence-read-as-record",
+      "fix": {
+        "description": "reword the content so it does not parse as a yaml mapping, or correct the record"
+      },
+      "message": "marked fence for 'detail' read as the record branch of its union slot, because the content parses as a mapping declaring `type: point`; if it was meant as text, reword it so the content does not parse as a yaml mapping",
+      "severity": "hint",
+      "span": {
+        "file": "<root>/scenarios/fence-read-as-record/note.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 13
+          },
+          "start": {
+            "col": 1,
+            "line": 8
+          }
+        },
+        "range": {
+          "end": 89,
+          "start": 41
+        }
+      }
+    },
+    {
+      "code": "field-shape-mismatch",
+      "message": "field 'x' value does not match declared shape Number",
+      "related": [
+        {
+          "file": "<root>/scenarios/fence-read-as-record/type/point.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 12,
+              "line": 2
+            },
+            "start": {
+              "col": 6,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 19,
+            "start": 13
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/fence-read-as-record/note.md",
+        "line_col": {
+          "end": {
+            "col": 14,
+            "line": 10
+          },
+          "start": {
+            "col": 4,
+            "line": 10
+          }
+        },
+        "range": {
+          "end": 79,
+          "start": 69
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 26,
+                        "line_col": {
+                          "end": {
+                            "col": 27,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/fence-read-as-record/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "fence-read-as-record"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "fence-read-as-record"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/fence-read-as-record/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 40,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 31
+            },
+            "text": "Detail"
+          },
+          {
+            "body": "type: point\nx: over there\ny: 4\n",
+            "info": "[:detail]",
+            "kind": "fenced_block",
+            "span": {
+              "end": 89,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 13
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 41
+            }
+          },
+          {
+            "content": "type:",
+            "kind": "inline_code",
+            "span": {
+              "end": 178,
+              "line_col": {
+                "end": {
+                  "col": 17,
+                  "line": 15
+                },
+                "start": {
+                  "col": 10,
+                  "line": 15
+                }
+              },
+              "start": 171
+            }
+          },
+          {
+            "content": "x",
+            "kind": "inline_code",
+            "span": {
+              "end": 221,
+              "line_col": {
+                "end": {
+                  "col": 60,
+                  "line": 15
+                },
+                "start": {
+                  "col": 57,
+                  "line": 15
+                }
+              },
+              "start": 218
+            }
+          },
+          {
+            "content": "Number",
+            "kind": "inline_code",
+            "span": {
+              "end": 236,
+              "line_col": {
+                "end": {
+                  "col": 75,
+                  "line": 15
+                },
+                "start": {
+                  "col": 67,
+                  "line": 15
+                }
+              },
+              "start": 228
+            }
+          }
+        ],
+        "claim": [
+          "capture"
+        ],
+        "closure": [
+          "capture"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "detail",
+            "origins": [
+              {
+                "name": "capture",
+                "origin_path": "<root>/scenarios/fence-read-as-record/type/capture.type.yaml",
+                "required": true,
+                "shape": "<String | point>"
+              }
+            ],
+            "required": true,
+            "shape": "<String | point>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 89,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 13
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 8
+                          }
+                        },
+                        "start": 41
+                      },
+                      "file": "<root>/scenarios/fence-read-as-record/note.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Detail"
+                      }
+                    ],
+                    "surface": "body_fence",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "x",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "over there"
+                            }
+                          ]
+                        },
+                        {
+                          "field": "y",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": 4
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "x",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "over there"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "y",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": 4
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "detail"
+          }
+        ],
+        "file": "<root>/scenarios/fence-read-as-record/note.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Detail",
+            "optional": false,
+            "path": [
+              "Detail"
+            ],
+            "present": true,
+            "span": {
+              "end": 40,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 31
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

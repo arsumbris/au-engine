@@ -1,0 +1,11 @@
+#: two same-shaped union slots, so each fence is a bare single value
+fields:
+  #: filled with a record, chosen by the inline `type:`
+  structured: <String | point>
+  #: filled with text, because the content is not a typed mapping
+  freeform: <String | point>
+body:
+  - section: Structured
+    fills: structured
+  - section: Freeform
+    fills: freeform

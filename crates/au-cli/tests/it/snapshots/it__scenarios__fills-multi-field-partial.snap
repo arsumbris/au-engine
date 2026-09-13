@@ -1,0 +1,408 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "fills-contract-unmet",
+      "message": "fills contract for 'effects' not satisfied — no body contribution found in scope 1 Reasoning; contributions are self-tagged (`[[target:effects]]`, `[:effects] value`, or a ```[:effects] fence`) — a bare `[[target]]` is navigational and does not count",
+      "related": [
+        {
+          "file": "<root>/scenarios/fills-multi-field-partial/type/decision.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 16,
+              "line": 9
+            },
+            "start": {
+              "col": 9,
+              "line": 9
+            }
+          },
+          "range": {
+            "end": 137,
+            "start": 130
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/fills-multi-field-partial/decision.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 8
+          },
+          "start": {
+            "col": 1,
+            "line": 7
+          }
+        },
+        "range": {
+          "end": 84,
+          "start": 72
+        }
+      }
+    },
+    {
+      "code": "malformed-attribution-marker",
+      "message": "inline code `[:effects]` starts with `[:` but does not match the `[:fieldName] value` form",
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/fills-multi-field-partial/decision.md",
+        "line_col": {
+          "end": {
+            "col": 13,
+            "line": 10
+          },
+          "start": {
+            "col": 1,
+            "line": 10
+          }
+        },
+        "range": {
+          "end": 164,
+          "start": 152
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 31,
+                        "line_col": {
+                          "end": {
+                            "col": 32,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/fills-multi-field-partial/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "fills-multi-field-partial"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "fills-multi-field-partial"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/fills-multi-field-partial/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 84,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 72
+            },
+            "text": "Reasoning"
+          },
+          {
+            "content": "[:causes] shared-volume contention dominated",
+            "kind": "inline_code",
+            "span": {
+              "end": 139,
+              "line_col": {
+                "end": {
+                  "col": 55,
+                  "line": 9
+                },
+                "start": {
+                  "col": 9,
+                  "line": 9
+                }
+              },
+              "start": 93
+            }
+          },
+          {
+            "content": "[:effects]",
+            "kind": "inline_code",
+            "span": {
+              "end": 164,
+              "line_col": {
+                "end": {
+                  "col": 13,
+                  "line": 10
+                },
+                "start": {
+                  "col": 1,
+                  "line": 10
+                }
+              },
+              "start": 152
+            }
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "causes",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/fills-multi-field-partial/type/decision.type.yaml",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/fills-multi-field-partial/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "effects",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/fills-multi-field-partial/type/decision.type.yaml",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 139,
+                        "line_col": {
+                          "end": {
+                            "col": 55,
+                            "line": 9
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 9
+                          }
+                        },
+                        "start": 93
+                      },
+                      "file": "<root>/scenarios/fills-multi-field-partial/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Reasoning"
+                      }
+                    ],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "shared-volume contention dominated"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "shared-volume contention dominated"
+                }
+              }
+            ],
+            "field": "causes"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/fills-multi-field-partial/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/fills-multi-field-partial/decision.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Reasoning",
+            "optional": false,
+            "path": [
+              "Reasoning"
+            ],
+            "present": true,
+            "span": {
+              "end": 84,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 72
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

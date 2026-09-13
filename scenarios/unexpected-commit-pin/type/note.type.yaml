@@ -1,0 +1,3 @@
+#: a note whose `rel` is a plain live reference, no pin allowed
+fields:
+  rel: file*

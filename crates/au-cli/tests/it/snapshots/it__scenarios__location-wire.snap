@@ -1,0 +1,70 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "types": [
+    {
+      "abstract": false,
+      "body": null,
+      "effective_body": null,
+      "fields": [
+        {
+          "key_span": {
+            "end": 14,
+            "line_col": {
+              "end": {
+                "col": 7,
+                "line": 2
+              },
+              "start": {
+                "col": 3,
+                "line": 2
+              }
+            },
+            "start": 10
+          },
+          "name": "slug",
+          "required": true,
+          "shape": "String",
+          "shape_ast": {
+            "kind": "primitive",
+            "name": "String"
+          }
+        }
+      ],
+      "hash": "d76210580dd86ed6",
+      "location": {
+        "file_type": "md",
+        "name": "${.type} - ${.slug}",
+        "path": "plans/",
+        "strict": true
+      },
+      "meta_blocks": null,
+      "name": "plan",
+      "parents": [],
+      "repo": "location-wire",
+      "required_meta": [],
+      "sealed": null,
+      "source": {
+        "file": "<root>/scenarios/location-wire/type/plan.type.yaml",
+        "span": {
+          "end": 110,
+          "line_col": {
+            "end": {
+              "col": 1,
+              "line": 8
+            },
+            "start": {
+              "col": 1,
+              "line": 1
+            }
+          },
+          "start": 0
+        }
+      },
+      "unmet_required_meta": []
+    }
+  ]
+}

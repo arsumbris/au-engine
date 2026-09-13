@@ -1,0 +1,5 @@
+fields:
+  x?: String
+meta:
+  - type: stamp
+    by: "[[acme::base]]"

@@ -1,0 +1,4 @@
+# sealed-parent record slot. Inline `type:` is REQUIRED
+# and must drill to a non-sealed leaf.
+fields:
+  choice: decision

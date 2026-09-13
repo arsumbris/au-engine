@@ -1,0 +1,6 @@
+title: "A bare prose wikilink resolving to two files is surfaced, not silently dropped"
+spec_ref: "[[type reference::au-type-system]], [[reference name resolution::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: navigational-target-ambiguous, severity: warning }

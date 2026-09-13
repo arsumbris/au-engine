@@ -1,0 +1,5 @@
+title: "Rich worked example: top-level + nested sections, multi-field fills, all three body contribution surfaces"
+spec_ref: "[[type-def body::au-type-system]], [[type-def body section::au-type-system]], [[type-def body fills::au-type-system]], [[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  clean: true

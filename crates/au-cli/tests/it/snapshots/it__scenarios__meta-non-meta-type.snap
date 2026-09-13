@@ -1,0 +1,35 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "non-meta-type-in-meta-position",
+      "message": "type-def 'plain-meta' is not a meta type; a meta sub-region's type must mix in 'au.engine.meta::au-engine'",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/meta-non-meta-type/type/host.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 21,
+            "line": 3
+          },
+          "start": {
+            "col": 11,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 37,
+          "start": 27
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": true,
+    "count": 0,
+    "entries": []
+  }
+}

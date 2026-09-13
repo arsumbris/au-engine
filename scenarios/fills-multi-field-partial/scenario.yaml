@@ -1,0 +1,7 @@
+title: "Section `fills: [a, b]` with only a filled fires fills-contract-unmet (for b)"
+spec_ref: "[[type-def body fills::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: fills-contract-unmet, severity: error }
+    - { code: malformed-attribution-marker, severity: warning }

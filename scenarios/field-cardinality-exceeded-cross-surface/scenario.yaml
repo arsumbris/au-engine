@@ -1,0 +1,6 @@
+title: "Bare `T` field with distinct values in frontmatter and body fires field-cardinality-exceeded"
+spec_ref: "[[type value container::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: field-cardinality-exceeded, severity: error }

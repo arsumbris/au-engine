@@ -1,0 +1,5 @@
+title: "A marked fence at a String slot carries a multi-line value verbatim"
+spec_ref: "[[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  clean: true

@@ -1,0 +1,5 @@
+title: "A commit-only reference `[[::@sha]]` names a commit, so it is never diagnosed as dangling"
+spec_ref: "[[spec - pinned references - a recorded resolved edge with an immutable past and an on-demand forward trace]], [[type reference::au-type-system]]"
+command: validate
+expected:
+  clean: true

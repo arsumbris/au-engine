@@ -1,0 +1,5 @@
+fields:
+  summary: String
+sealed:
+  - decision.pending
+  - decision.decided

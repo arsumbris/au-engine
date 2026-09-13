@@ -1,0 +1,10 @@
+title: "Inline values, `&` suffix, and primitive-or-reference disambiguation — inline-value corpus"
+spec_ref: "[[type-def shape record::au-type-system]], [[type reference::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: field-shape-mismatch,          severity: error }
+    - { code: inline-value-missing-type,     severity: error }
+    - { code: inline-value-type-not-compatible, severity: error }
+    - { code: reference-target-missing,      severity: warning }
+    - { code: sealed-parent-claimed,         severity: error }

@@ -1,0 +1,6 @@
+title: "Type-def uses type: for its parent instead of extends:"
+spec_ref: "[[type-def extends::au-type-system]]"
+command: graph
+expected:
+  codes:
+    - { code: type-key-on-type-def, severity: error }

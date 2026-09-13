@@ -1,0 +1,5 @@
+title: "Optional nested sub-section absent from instance is clean"
+spec_ref: "[[type-def body section::au-type-system]]"
+command: validate
+expected:
+  clean: true

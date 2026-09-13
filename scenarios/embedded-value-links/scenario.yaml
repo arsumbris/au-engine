@@ -1,0 +1,6 @@
+title: "A wikilink embedded in a String value is navigational: dangling warns, resolving is silent, the field stays a String"
+spec_ref: "[[type reference::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: navigational-target-not-found, severity: warning }

@@ -1,0 +1,6 @@
+title: "Reference resolves but target's closure doesn't include the slot's required type"
+spec_ref: "[[type reference::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: reference-target-type-mismatch, severity: error }

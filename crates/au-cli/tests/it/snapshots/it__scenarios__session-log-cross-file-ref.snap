@@ -1,0 +1,716 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 32,
+                        "line_col": {
+                          "end": {
+                            "col": 33,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/session-log-cross-file-ref/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "session-log-cross-file-ref"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "session-log-cross-file-ref"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/session-log-cross-file-ref/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": null,
+        "claim": [
+          "session-log"
+        ],
+        "closure": [
+          "session-log"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "events",
+            "origins": [
+              {
+                "name": "session-log",
+                "origin_path": "<root>/scenarios/session-log-cross-file-ref/type/session-log.type.yaml",
+                "required": false,
+                "shape": "sessionEvent[]"
+              }
+            ],
+            "required": false,
+            "shape": "sessionEvent[]"
+          },
+          {
+            "divergent": false,
+            "field": "session",
+            "origins": [
+              {
+                "name": "session-log",
+                "origin_path": "<root>/scenarios/session-log-cross-file-ref/type/session-log.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "started",
+            "origins": [
+              {
+                "name": "session-log",
+                "origin_path": "<root>/scenarios/session-log-cross-file-ref/type/session-log.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 201,
+                        "line_col": {
+                          "end": {
+                            "col": 3,
+                            "line": 9
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 5
+                          }
+                        },
+                        "start": 79
+                      },
+                      "file": "<root>/scenarios/session-log-cross-file-ref/operations/sessions/2026/s-001.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "at",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "2026-06-07T01:14:23Z"
+                            }
+                          ]
+                        },
+                        {
+                          "field": "prompt",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "did the capture plugin work?"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "at",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "2026-06-07T01:14:23Z"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "prompt",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "did the capture plugin work?"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 293,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 13
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 9
+                          }
+                        },
+                        "start": 203
+                      },
+                      "file": "<root>/scenarios/session-log-cross-file-ref/operations/sessions/2026/s-001.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "at",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "2026-06-07T01:14:29Z"
+                            }
+                          ]
+                        },
+                        {
+                          "field": "tool",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "Bash"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "at",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "2026-06-07T01:14:29Z"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "tool",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "Bash"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "events"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 34,
+                        "line_col": {
+                          "end": {
+                            "col": 17,
+                            "line": 2
+                          },
+                          "start": {
+                            "col": 10,
+                            "line": 2
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/session-log-cross-file-ref/operations/sessions/2026/s-001.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "s-001"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "s-001"
+                }
+              }
+            ],
+            "field": "session"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 66,
+                        "line_col": {
+                          "end": {
+                            "col": 32,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 10,
+                            "line": 3
+                          }
+                        },
+                        "start": 44
+                      },
+                      "file": "<root>/scenarios/session-log-cross-file-ref/operations/sessions/2026/s-001.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "2026-06-07T01:14:11Z"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "2026-06-07T01:14:11Z"
+                }
+              }
+            ],
+            "field": "started"
+          }
+        ],
+        "file": "<root>/scenarios/session-log-cross-file-ref/operations/sessions/2026/s-001.yaml",
+        "record_block_ids": [
+          {
+            "claims": [
+              "sessionEvent.userPrompt"
+            ],
+            "id": "e-prompt",
+            "span": {
+              "end": 90,
+              "line_col": {
+                "end": {
+                  "col": 16,
+                  "line": 5
+                },
+                "start": {
+                  "col": 8,
+                  "line": 5
+                }
+              },
+              "start": 82
+            }
+          },
+          {
+            "claims": [
+              "sessionEvent.toolCall"
+            ],
+            "id": "e-tool",
+            "span": {
+              "end": 212,
+              "line_col": {
+                "end": {
+                  "col": 14,
+                  "line": 9
+                },
+                "start": {
+                  "col": 8,
+                  "line": 9
+                }
+              },
+              "start": 206
+            }
+          }
+        ],
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 138,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 123
+            },
+            "text": "Capture flow"
+          },
+          {
+            "content": "operations/",
+            "kind": "inline_code",
+            "span": {
+              "end": 187,
+              "line_col": {
+                "end": {
+                  "col": 49,
+                  "line": 10
+                },
+                "start": {
+                  "col": 36,
+                  "line": 10
+                }
+              },
+              "start": 174
+            }
+          },
+          {
+            "content": "^:",
+            "kind": "inline_code",
+            "span": {
+              "end": 252,
+              "line_col": {
+                "end": {
+                  "col": 44,
+                  "line": 11
+                },
+                "start": {
+                  "col": 40,
+                  "line": 11
+                }
+              },
+              "start": 248
+            }
+          },
+          {
+            "content": "evidence",
+            "kind": "inline_code",
+            "span": {
+              "end": 272,
+              "line_col": {
+                "end": {
+                  "col": 15,
+                  "line": 12
+                },
+                "start": {
+                  "col": 5,
+                  "line": 12
+                }
+              },
+              "start": 262
+            }
+          },
+          {
+            "content": "sessionEvent.userPrompt",
+            "kind": "inline_code",
+            "span": {
+              "end": 419,
+              "line_col": {
+                "end": {
+                  "col": 27,
+                  "line": 14
+                },
+                "start": {
+                  "col": 2,
+                  "line": 14
+                }
+              },
+              "start": 394
+            }
+          },
+          {
+            "content": "sessionEvent&[]",
+            "kind": "inline_code",
+            "span": {
+              "end": 448,
+              "line_col": {
+                "end": {
+                  "col": 56,
+                  "line": 14
+                },
+                "start": {
+                  "col": 39,
+                  "line": 14
+                }
+              },
+              "start": 431
+            }
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": {
+                "id": "e-tool",
+                "referent": false
+              },
+              "commit": null,
+              "field": null,
+              "repo": null,
+              "target": "s-001"
+            },
+            "raw": "s-001^e-tool",
+            "span": {
+              "end": 503,
+              "line_col": {
+                "end": {
+                  "col": 43,
+                  "line": 15
+                },
+                "start": {
+                  "col": 27,
+                  "line": 15
+                }
+              },
+              "start": 487
+            }
+          }
+        ],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/session-log-cross-file-ref/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "evidence",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/session-log-cross-file-ref/type/note.type.yaml",
+                "required": false,
+                "shape": "sessionEvent&[]"
+              }
+            ],
+            "required": false,
+            "shape": "sessionEvent&[]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 81,
+                        "line_col": {
+                          "end": {
+                            "col": 67,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/session-log-cross-file-ref/summary.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "A content note referencing a captured session event"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "A content note referencing a captured session event"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 117,
+                        "line_col": {
+                          "end": {
+                            "col": 26,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 5
+                          }
+                        },
+                        "start": 96
+                      },
+                      "file": "<root>/scenarios/session-log-cross-file-ref/summary.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": {
+                        "id": "e-prompt",
+                        "referent": true
+                      },
+                      "kind": "reference",
+                      "target": "s-001"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": {
+                    "id": "e-prompt",
+                    "referent": true
+                  },
+                  "kind": "reference",
+                  "target": "s-001"
+                }
+              }
+            ],
+            "field": "evidence"
+          }
+        ],
+        "file": "<root>/scenarios/session-log-cross-file-ref/summary.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

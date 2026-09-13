@@ -1,0 +1,6 @@
+title: "A marked fence at a reference-only slot is rejected, the slot has no inline form"
+spec_ref: "[[spec - diagnostic codes::au-type-system^body-slot-shape-mismatch]]"
+command: validate
+expected:
+  codes:
+    - { code: body-slot-shape-mismatch, severity: error }

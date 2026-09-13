@@ -1,0 +1,15 @@
+{
+  "//": "Stop VSCode (and its extensions) from watching, searching, or scanning the build dir. The Rust target/ tree generates thousands of file events during a build; without these excludes, the editor's Renderer/Plugin processes spike to gigabytes of RSS and saturate cores reacting to events that aren't relevant to source.",
+
+  "files.watcherExclude": {
+    "**/target/**": true,
+    "**/.arsumbris/**": true
+  },
+  "search.exclude": {
+    "**/target": true,
+    "**/.arsumbris": true
+  },
+  "files.exclude": {
+    "**/target": false
+  }
+}

@@ -1,0 +1,5 @@
+title: "A tuple brand, inline tuple, and scalar brand inside a nested inline record all read resolved"
+spec_ref: "[[spec - value model - one typed value produced once in effective_values and consumed by validation and reads]], [[spec - branded types - the shape key names a reusable scalar, enum, union, or tuple]]"
+command: validate
+expected:
+  clean: true

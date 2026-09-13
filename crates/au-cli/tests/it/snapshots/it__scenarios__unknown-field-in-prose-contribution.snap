@@ -1,0 +1,328 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "unknown-field-in-prose-contribution",
+      "message": "inline `[:decided_at]` references a field absent from the instance's effective closure (advisory)",
+      "related": [
+        {
+          "file": "<root>/scenarios/unknown-field-in-prose-contribution/decision.md",
+          "line_col": {
+            "end": {
+              "col": 15,
+              "line": 2
+            },
+            "start": {
+              "col": 7,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 18,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/unknown-field-in-prose-contribution/decision.md",
+        "line_col": {
+          "end": {
+            "col": 38,
+            "line": 6
+          },
+          "start": {
+            "col": 12,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 101,
+          "start": 75
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 41,
+                        "line_col": {
+                          "end": {
+                            "col": 42,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/unknown-field-in-prose-contribution/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "unknown-field-in-prose-contribution"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "unknown-field-in-prose-contribution"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/unknown-field-in-prose-contribution/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "[:decided_at] 2026-04-15",
+            "kind": "inline_code",
+            "span": {
+              "end": 101,
+              "line_col": {
+                "end": {
+                  "col": 38,
+                  "line": 6
+                },
+                "start": {
+                  "col": 12,
+                  "line": 6
+                }
+              },
+              "start": 75
+            }
+          },
+          {
+            "content": "decided_at",
+            "kind": "inline_code",
+            "span": {
+              "end": 122,
+              "line_col": {
+                "end": {
+                  "col": 59,
+                  "line": 6
+                },
+                "start": {
+                  "col": 47,
+                  "line": 6
+                }
+              },
+              "start": 110
+            }
+          },
+          {
+            "content": "decision",
+            "kind": "inline_code",
+            "span": {
+              "end": 151,
+              "line_col": {
+                "end": {
+                  "col": 20,
+                  "line": 7
+                },
+                "start": {
+                  "col": 10,
+                  "line": 7
+                }
+              },
+              "start": 141
+            }
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/unknown-field-in-prose-contribution/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 101,
+                        "line_col": {
+                          "end": {
+                            "col": 38,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 12,
+                            "line": 6
+                          }
+                        },
+                        "start": 75
+                      },
+                      "file": "<root>/scenarios/unknown-field-in-prose-contribution/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "2026-04-15"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "2026-04-15"
+                }
+              }
+            ],
+            "field": "decided_at"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/unknown-field-in-prose-contribution/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/unknown-field-in-prose-contribution/decision.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

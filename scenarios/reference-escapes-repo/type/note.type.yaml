@@ -1,0 +1,6 @@
+#: a note pointing at another file
+fields:
+  sibling: file*
+  later?: file*
+  #: must be commit-pinned, the shape a provenance record uses
+  touched?: file*@

@@ -1,0 +1,559 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 25,
+                        "line_col": {
+                          "end": {
+                            "col": 26,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/any-body-fill-block/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "any-body-fill-block"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "any-body-fill-block"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/any-body-fill-block/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 96,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 85
+            },
+            "text": "Findings"
+          },
+          {
+            "body": "type: assumption\ndescription: \"Extractor protocol is stable through Q3\"\n",
+            "info": "yaml [:facts]",
+            "kind": "fenced_block",
+            "span": {
+              "end": 211,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 14
+                },
+                "start": {
+                  "col": 1,
+                  "line": 9
+                }
+              },
+              "start": 97
+            },
+            "trailing_block_id": "extractor-stability"
+          }
+        ],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/any-body-fill-block/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "facts",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/any-body-fill-block/type/note.type.yaml",
+                "required": false,
+                "shape": "assumption&[]"
+              }
+            ],
+            "required": false,
+            "shape": "assumption&[]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 72,
+                        "line_col": {
+                          "end": {
+                            "col": 58,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/any-body-fill-block/research-notes.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Research notes — carries one typed block"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Research notes — carries one typed block"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 211,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 14
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 9
+                          }
+                        },
+                        "start": 97
+                      },
+                      "file": "<root>/scenarios/any-body-fill-block/research-notes.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Findings"
+                      }
+                    ],
+                    "surface": "body_fence",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "Extractor protocol is stable through Q3"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "Extractor protocol is stable through Q3"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "facts"
+          }
+        ],
+        "file": "<root>/scenarios/any-body-fill-block/research-notes.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": {
+                "id": "extractor-stability",
+                "referent": true
+              },
+              "commit": null,
+              "field": "about",
+              "repo": null,
+              "target": "research-notes"
+            },
+            "raw": "research-notes^^extractor-stability:about",
+            "span": {
+              "end": 144,
+              "line_col": {
+                "end": {
+                  "col": 71,
+                  "line": 7
+                },
+                "start": {
+                  "col": 26,
+                  "line": 7
+                }
+              },
+              "start": 99
+            }
+          },
+          {
+            "content": "^^",
+            "kind": "inline_code",
+            "span": {
+              "end": 152,
+              "line_col": {
+                "end": {
+                  "col": 79,
+                  "line": 7
+                },
+                "start": {
+                  "col": 75,
+                  "line": 7
+                }
+              },
+              "start": 148
+            }
+          },
+          {
+            "content": "any*",
+            "kind": "inline_code",
+            "span": {
+              "end": 188,
+              "line_col": {
+                "end": {
+                  "col": 36,
+                  "line": 8
+                },
+                "start": {
+                  "col": 30,
+                  "line": 8
+                }
+              },
+              "start": 182
+            }
+          },
+          {
+            "content": "type:",
+            "kind": "inline_code",
+            "span": {
+              "end": 240,
+              "line_col": {
+                "end": {
+                  "col": 8,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 9
+                }
+              },
+              "start": 233
+            }
+          },
+          {
+            "content": "assumption",
+            "kind": "inline_code",
+            "span": {
+              "end": 254,
+              "line_col": {
+                "end": {
+                  "col": 22,
+                  "line": 9
+                },
+                "start": {
+                  "col": 10,
+                  "line": 9
+                }
+              },
+              "start": 242
+            }
+          },
+          {
+            "content": "any",
+            "kind": "inline_code",
+            "span": {
+              "end": 280,
+              "line_col": {
+                "end": {
+                  "col": 48,
+                  "line": 9
+                },
+                "start": {
+                  "col": 43,
+                  "line": 9
+                }
+              },
+              "start": 275
+            }
+          }
+        ],
+        "claim": [
+          "event"
+        ],
+        "closure": [
+          "event"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "about",
+            "origins": [
+              {
+                "name": "event",
+                "origin_path": "<root>/scenarios/any-body-fill-block/type/event.type.yaml",
+                "required": false,
+                "shape": "any*[]"
+              }
+            ],
+            "required": false,
+            "shape": "any*[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "event",
+                "origin_path": "<root>/scenarios/any-body-fill-block/type/event.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 144,
+                        "line_col": {
+                          "end": {
+                            "col": 71,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 26,
+                            "line": 7
+                          }
+                        },
+                        "start": 99
+                      },
+                      "file": "<root>/scenarios/any-body-fill-block/seed-round.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_wikilink",
+                    "value": {
+                      "anchor": null,
+                      "block_id": {
+                        "id": "extractor-stability",
+                        "referent": true
+                      },
+                      "kind": "reference",
+                      "target": "research-notes"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": {
+                    "id": "extractor-stability",
+                    "referent": true
+                  },
+                  "kind": "reference",
+                  "target": "research-notes"
+                }
+              }
+            ],
+            "field": "about"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 61,
+                        "line_col": {
+                          "end": {
+                            "col": 46,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 29
+                      },
+                      "file": "<root>/scenarios/any-body-fill-block/seed-round.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Acme AI closes its seed round."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Acme AI closes its seed round."
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/any-body-fill-block/seed-round.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

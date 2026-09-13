@@ -1,0 +1,5 @@
+title: "Three-level inheritance chain (note → decision → decision.committed)"
+spec_ref: "[[type subtyping width-only::au-type-system]], [[type closure::au-type-system]]"
+command: validate
+expected:
+  clean: true

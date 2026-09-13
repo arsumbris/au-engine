@@ -1,0 +1,3 @@
+fields:
+  images: file*[]
+  description: String

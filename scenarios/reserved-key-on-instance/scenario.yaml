@@ -1,0 +1,6 @@
+title: "Instance frontmatter uses `fields:` (a type-def-only key) — reserved-key error"
+spec_ref: "[[type-def::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: reserved-key-on-instance, severity: error }

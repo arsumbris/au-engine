@@ -1,0 +1,5 @@
+title: "A bare `[[file^id:field]]` body contribution contributes the FILE, `^id` a navigational anchor"
+spec_ref: "[[type block-id::au-type-system]], [[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  clean: true

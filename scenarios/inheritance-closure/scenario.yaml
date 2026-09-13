@@ -1,0 +1,5 @@
+title: "Two-level inheritance — closure walk visits child + parent"
+spec_ref: "[[type subtyping width-only::au-type-system]], [[type closure::au-type-system]]"
+command: validate
+expected:
+  clean: true

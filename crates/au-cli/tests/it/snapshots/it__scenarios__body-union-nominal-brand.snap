@@ -1,0 +1,286 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 30,
+                        "line_col": {
+                          "end": {
+                            "col": 31,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/body-union-nominal-brand/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "body-union-nominal-brand"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "body-union-nominal-brand"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/body-union-nominal-brand/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "[:length] meter(42)",
+            "kind": "inline_code",
+            "span": {
+              "end": 68,
+              "line_col": {
+                "end": {
+                  "col": 34,
+                  "line": 6
+                },
+                "start": {
+                  "col": 13,
+                  "line": 6
+                }
+              },
+              "start": 47
+            }
+          },
+          {
+            "content": "meter",
+            "kind": "inline_code",
+            "span": {
+              "end": 95,
+              "line_col": {
+                "end": {
+                  "col": 61,
+                  "line": 6
+                },
+                "start": {
+                  "col": 54,
+                  "line": 6
+                }
+              },
+              "start": 88
+            }
+          },
+          {
+            "content": "42",
+            "kind": "inline_code",
+            "span": {
+              "end": 131,
+              "line_col": {
+                "end": {
+                  "col": 18,
+                  "line": 7
+                },
+                "start": {
+                  "col": 14,
+                  "line": 7
+                }
+              },
+              "start": 127
+            }
+          },
+          {
+            "content": "brand-constructor-required",
+            "kind": "inline_code",
+            "span": {
+              "end": 169,
+              "line_col": {
+                "end": {
+                  "col": 56,
+                  "line": 7
+                },
+                "start": {
+                  "col": 28,
+                  "line": 7
+                }
+              },
+              "start": 141
+            }
+          },
+          {
+            "content": "second",
+            "kind": "inline_code",
+            "span": {
+              "end": 202,
+              "line_col": {
+                "end": {
+                  "col": 9,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 194
+            }
+          }
+        ],
+        "claim": [
+          "measurement"
+        ],
+        "closure": [
+          "measurement"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "length",
+            "origins": [
+              {
+                "name": "measurement",
+                "origin_path": "<root>/scenarios/body-union-nominal-brand/type/measurement.type.yaml",
+                "required": true,
+                "shape": "quantity"
+              }
+            ],
+            "required": true,
+            "shape": "quantity"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 68,
+                        "line_col": {
+                          "end": {
+                            "col": 34,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 13,
+                            "line": 6
+                          }
+                        },
+                        "start": 47
+                      },
+                      "file": "<root>/scenarios/body-union-nominal-brand/m.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "brand": "meter",
+                      "kind": "scalar",
+                      "value": 42
+                    }
+                  }
+                ],
+                "value": {
+                  "brand": "meter",
+                  "kind": "scalar",
+                  "value": 42
+                }
+              }
+            ],
+            "field": "length"
+          }
+        ],
+        "file": "<root>/scenarios/body-union-nominal-brand/m.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

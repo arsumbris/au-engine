@@ -1,0 +1,323 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "body-slot-shape-mismatch",
+      "fix": {
+        "description": "contribute a wikilink instead (`[[target:field]]`), or widen the slot to admit an inline value"
+      },
+      "message": "marked fence cannot fill slot 'point*' for field 'origin' — the slot admits only a reference, which has no inline form",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/fence-at-reference-slot/note.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 13
+          },
+          "start": {
+            "col": 1,
+            "line": 8
+          }
+        },
+        "range": {
+          "end": 80,
+          "start": 41
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 29,
+                        "line_col": {
+                          "end": {
+                            "col": 30,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/fence-at-reference-slot/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "fence-at-reference-slot"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "fence-at-reference-slot"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/fence-at-reference-slot/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 40,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 31
+            },
+            "text": "Origin"
+          },
+          {
+            "body": "type: point\nx: 1\ny: 2\n",
+            "info": "[:origin]",
+            "kind": "fenced_block",
+            "span": {
+              "end": 80,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 13
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 41
+            }
+          },
+          {
+            "content": "point*",
+            "kind": "inline_code",
+            "span": {
+              "end": 101,
+              "line_col": {
+                "end": {
+                  "col": 21,
+                  "line": 14
+                },
+                "start": {
+                  "col": 13,
+                  "line": 14
+                }
+              },
+              "start": 93
+            }
+          },
+          {
+            "content": "[[somePoint:origin]]",
+            "kind": "inline_code",
+            "span": {
+              "end": 233,
+              "line_col": {
+                "end": {
+                  "col": 78,
+                  "line": 15
+                },
+                "start": {
+                  "col": 56,
+                  "line": 15
+                }
+              },
+              "start": 211
+            }
+          }
+        ],
+        "claim": [
+          "capture"
+        ],
+        "closure": [
+          "capture"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "origin",
+            "origins": [
+              {
+                "name": "capture",
+                "origin_path": "<root>/scenarios/fence-at-reference-slot/type/capture.type.yaml",
+                "required": true,
+                "shape": "point*"
+              }
+            ],
+            "required": true,
+            "shape": "point*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 80,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 13
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 8
+                          }
+                        },
+                        "start": 41
+                      },
+                      "file": "<root>/scenarios/fence-at-reference-slot/note.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Origin"
+                      }
+                    ],
+                    "surface": "body_fence",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "type: point\nx: 1\ny: 2"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "type: point\nx: 1\ny: 2"
+                }
+              }
+            ],
+            "field": "origin"
+          }
+        ],
+        "file": "<root>/scenarios/fence-at-reference-slot/note.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Origin",
+            "optional": false,
+            "path": [
+              "Origin"
+            ],
+            "present": true,
+            "span": {
+              "end": 40,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 31
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

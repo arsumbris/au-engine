@@ -1,0 +1,8 @@
+title: "Dangling navigational prose links warn, all forms, resolvable ones stay silent"
+spec_ref: "[[type reference::au-type-system]], [[type block-id::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: navigational-target-not-found, severity: warning }
+    - { code: navigational-block-id-not-found, severity: warning }
+    - { code: anchor-not-found, severity: warning }

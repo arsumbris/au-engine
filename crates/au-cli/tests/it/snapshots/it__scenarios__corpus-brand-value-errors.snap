@@ -1,0 +1,556 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "brand-constructor-mismatch",
+      "message": "field 'len' constructor names brand 'second', but the slot demands 'meter'",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-brand-value-errors/type/host.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 14,
+              "line": 2
+            },
+            "start": {
+              "col": 9,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 21,
+            "start": 16
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-brand-value-errors/bad.md",
+        "line_col": {
+          "end": {
+            "col": 16,
+            "line": 3
+          },
+          "start": {
+            "col": 6,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 30,
+          "start": 20
+        }
+      }
+    },
+    {
+      "code": "brand-constructor-required",
+      "message": "field 'q' bare value is ambiguous at union brand 'quantity'; name the branch with a `Name(...)` constructor",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-brand-value-errors/type/host.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 15,
+              "line": 3
+            },
+            "start": {
+              "col": 7,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 36,
+            "start": 28
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-brand-value-errors/bad.md",
+        "line_col": {
+          "end": {
+            "col": 6,
+            "line": 4
+          },
+          "start": {
+            "col": 4,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 36,
+          "start": 34
+        }
+      }
+    },
+    {
+      "code": "tuple-arity-mismatch",
+      "message": "field 'pt' tuple has 3 element(s), but the declared shape has 2",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-brand-value-errors/type/host.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 13,
+              "line": 4
+            },
+            "start": {
+              "col": 8,
+              "line": 4
+            }
+          },
+          "range": {
+            "end": 49,
+            "start": 44
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-brand-value-errors/bad.md",
+        "line_col": {
+          "end": {
+            "col": 24,
+            "line": 5
+          },
+          "start": {
+            "col": 5,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 60,
+          "start": 41
+        }
+      }
+    },
+    {
+      "code": "malformed-constructor",
+      "message": "field 'raw' value looks like a `Name(...)` constructor but is malformed",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-brand-value-errors/type/host.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 14,
+              "line": 5
+            },
+            "start": {
+              "col": 9,
+              "line": 5
+            }
+          },
+          "range": {
+            "end": 63,
+            "start": 58
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/corpus-brand-value-errors/bad.md",
+        "line_col": {
+          "end": {
+            "col": 16,
+            "line": 6
+          },
+          "start": {
+            "col": 6,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 76,
+          "start": 66
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 31,
+                        "line_col": {
+                          "end": {
+                            "col": 32,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/corpus-brand-value-errors/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "corpus-brand-value-errors"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "corpus-brand-value-errors"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-brand-value-errors/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "host"
+        ],
+        "closure": [
+          "host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "len",
+            "origins": [
+              {
+                "name": "host",
+                "origin_path": "<root>/scenarios/corpus-brand-value-errors/type/host.type.yaml",
+                "required": false,
+                "shape": "meter"
+              }
+            ],
+            "required": false,
+            "shape": "meter"
+          },
+          {
+            "divergent": false,
+            "field": "pt",
+            "origins": [
+              {
+                "name": "host",
+                "origin_path": "<root>/scenarios/corpus-brand-value-errors/type/host.type.yaml",
+                "required": false,
+                "shape": "point"
+              }
+            ],
+            "required": false,
+            "shape": "point"
+          },
+          {
+            "divergent": false,
+            "field": "q",
+            "origins": [
+              {
+                "name": "host",
+                "origin_path": "<root>/scenarios/corpus-brand-value-errors/type/host.type.yaml",
+                "required": false,
+                "shape": "quantity"
+              }
+            ],
+            "required": false,
+            "shape": "quantity"
+          },
+          {
+            "divergent": false,
+            "field": "raw",
+            "origins": [
+              {
+                "name": "host",
+                "origin_path": "<root>/scenarios/corpus-brand-value-errors/type/host.type.yaml",
+                "required": false,
+                "shape": "meter"
+              }
+            ],
+            "required": false,
+            "shape": "meter"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 30,
+                        "line_col": {
+                          "end": {
+                            "col": 16,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 6,
+                            "line": 3
+                          }
+                        },
+                        "start": 20
+                      },
+                      "file": "<root>/scenarios/corpus-brand-value-errors/bad.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "brand": "second",
+                      "kind": "scalar",
+                      "value": 42
+                    }
+                  }
+                ],
+                "value": {
+                  "brand": "second",
+                  "kind": "scalar",
+                  "value": 42
+                }
+              }
+            ],
+            "field": "len"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 60,
+                        "line_col": {
+                          "end": {
+                            "col": 24,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 5
+                          }
+                        },
+                        "start": 41
+                      },
+                      "file": "<root>/scenarios/corpus-brand-value-errors/bad.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "brand": "point",
+                      "elements": [
+                        {
+                          "value": {
+                            "kind": "scalar",
+                            "value": 20
+                          }
+                        },
+                        {
+                          "value": {
+                            "kind": "scalar",
+                            "value": 30
+                          }
+                        },
+                        {
+                          "value": {
+                            "kind": "scalar",
+                            "value": 40
+                          }
+                        }
+                      ],
+                      "kind": "tuple"
+                    }
+                  }
+                ],
+                "value": {
+                  "brand": "point",
+                  "elements": [
+                    {
+                      "value": {
+                        "kind": "scalar",
+                        "value": 20
+                      }
+                    },
+                    {
+                      "value": {
+                        "kind": "scalar",
+                        "value": 30
+                      }
+                    },
+                    {
+                      "value": {
+                        "kind": "scalar",
+                        "value": 40
+                      }
+                    }
+                  ],
+                  "kind": "tuple"
+                }
+              }
+            ],
+            "field": "pt"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 36,
+                        "line_col": {
+                          "end": {
+                            "col": 6,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 4,
+                            "line": 4
+                          }
+                        },
+                        "start": 34
+                      },
+                      "file": "<root>/scenarios/corpus-brand-value-errors/bad.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": 42
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": 42
+                }
+              }
+            ],
+            "field": "q"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 76,
+                        "line_col": {
+                          "end": {
+                            "col": 16,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 6,
+                            "line": 6
+                          }
+                        },
+                        "start": 66
+                      },
+                      "file": "<root>/scenarios/corpus-brand-value-errors/bad.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "malformed_constructor",
+                      "raw": "meter(42"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "malformed_constructor",
+                  "raw": "meter(42"
+                }
+              }
+            ],
+            "field": "raw"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-brand-value-errors/bad.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

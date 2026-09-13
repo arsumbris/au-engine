@@ -1,0 +1,6 @@
+title: "A [[name::repo]] link resolves into a co-present peer; an unknown repo is diagnosed"
+spec_ref: "[[spec - cross-repo workspaces - per-repo type resolution over a declared registry, manifest, and location schema]]"
+command: validate
+expected:
+  codes:
+    - { code: reference-repo-unknown, severity: error }

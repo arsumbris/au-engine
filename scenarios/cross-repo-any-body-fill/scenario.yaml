@@ -1,0 +1,5 @@
+title: "A cross-repo `[[name::repo:field]]` body-fill into an `any*` slot binds by existence — no closure check across the boundary"
+spec_ref: "[[type-def shape any::au-type-system]], [[type repo qualifier::au-type-system]], [[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  clean: true

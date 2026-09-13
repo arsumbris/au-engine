@@ -1,0 +1,5 @@
+title: "Tuple of brands — a `segment` tuple over two `meter` elements, each element's written brand rides on the element (not duplicated onto its inner value)"
+spec_ref: "[[spec - value model - one typed value produced once in effective_values and consumed by validation and reads]]"
+command: validate
+expected:
+  clean: true

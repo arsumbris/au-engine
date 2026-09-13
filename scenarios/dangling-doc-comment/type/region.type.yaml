@@ -1,0 +1,4 @@
+fields:
+  a: String
+#: this documents nothing — no declaration follows
+meta: []

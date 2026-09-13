@@ -1,0 +1,5 @@
+title: "Branded scalar — a `meter` scalar brand reused across slots, a bare value coerces and an explicit `meter(...)` constructor validates"
+spec_ref: "[[spec - branded types - the shape key names a reusable scalar, enum, union, or tuple]]"
+command: validate
+expected:
+  clean: true

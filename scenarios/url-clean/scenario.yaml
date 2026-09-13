@@ -1,0 +1,5 @@
+title: "<String | Url> accepts both URL and plain string via prefix disambiguation"
+spec_ref: "[[type-def shape primitive::au-type-system]], [[type reference::au-type-system]]"
+command: validate
+expected:
+  clean: true

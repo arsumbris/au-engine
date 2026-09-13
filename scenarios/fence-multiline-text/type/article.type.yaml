@@ -1,0 +1,8 @@
+#: a piece of writing whose body carries its own prose fields
+fields:
+  title: String
+  #: many paragraphs, so it cannot ride the one-line inline marker
+  summary: String
+body:
+  - section: Summary
+    fills: summary

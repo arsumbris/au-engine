@@ -1,0 +1,5 @@
+title: "A concrete type-def extends an abstract parent — loads clean, the parent is open"
+spec_ref: "[[spec - abstract type-defs - a non-claimable open type-def, sealed is abstract plus closed]]"
+command: validate
+expected:
+  clean: true

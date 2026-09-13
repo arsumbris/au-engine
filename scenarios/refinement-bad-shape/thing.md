@@ -1,0 +1,4 @@
+---
+type: thing
+bad: "x"
+---

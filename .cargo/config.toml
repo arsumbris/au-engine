@@ -1,0 +1,31 @@
+# Optional: use LLVM's `lld` for linking instead of the system default linker.
+# Cuts cold rebuild times by ~20-40%, mostly because each integration test is its own
+# binary so the workspace pays the link cost many times.
+#
+# OPT-IN so a fresh clone builds with no extra tools: the default system linker (via the
+# platform C toolchain — on macOS the Xcode Command Line Tools) works everywhere.
+#
+# To enable the faster linker:
+#   macOS:  brew install llvm lld
+#   Linux:  apt install lld  /  pacman -S lld
+# then uncomment the four target blocks below.
+#
+# `linker = "clang"` keeps the C compiler driver in charge of sysroot, libc, and
+# Mach-O / ELF startup files; `-fuse-ld=lld` swaps in the lld backend. clang resolves
+# `lld` → `ld64.lld` on macOS, `ld.lld` on Linux automatically.
+
+# [target.aarch64-apple-darwin]
+# linker = "clang"
+# rustflags = ["-C", "link-arg=-fuse-ld=lld"]
+#
+# [target.x86_64-apple-darwin]
+# linker = "clang"
+# rustflags = ["-C", "link-arg=-fuse-ld=lld"]
+#
+# [target.aarch64-unknown-linux-gnu]
+# linker = "clang"
+# rustflags = ["-C", "link-arg=-fuse-ld=lld"]
+#
+# [target.x86_64-unknown-linux-gnu]
+# linker = "clang"
+# rustflags = ["-C", "link-arg=-fuse-ld=lld"]

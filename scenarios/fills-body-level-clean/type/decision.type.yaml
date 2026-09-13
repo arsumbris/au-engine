@@ -1,0 +1,6 @@
+fields:
+  description: String
+  notes?: String
+body:
+  - fills: notes
+  - section: Why

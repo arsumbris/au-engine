@@ -1,0 +1,5 @@
+#: A repo def named like a hardwired engine type. It coexists with
+#: au.engine.repo::au-engine as a distinct (name, hash) identity; the engine
+#: only NOTES the shared name (engine-name-live-shadow), never annihilates it.
+fields:
+  x: String

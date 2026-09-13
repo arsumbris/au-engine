@@ -1,0 +1,6 @@
+title: "Optional + required sections in swapped body order fires body-section-out-of-order, not body-section-missing"
+spec_ref: "[[type-def body section::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: body-section-out-of-order, severity: error }

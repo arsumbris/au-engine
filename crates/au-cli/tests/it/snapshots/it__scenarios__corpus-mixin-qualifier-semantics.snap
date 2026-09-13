@@ -1,0 +1,1767 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "mixed-bare-and-qualified-field",
+      "message": "field 'description' has both bare and qualified entries on this instance — must be either all bare (auto-unify) or all qualified (explicit per-origin distinction)",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-mixed-bare-and-qualified.md",
+          "line_col": {
+            "end": {
+              "col": 18,
+              "line": 7
+            },
+            "start": {
+              "col": 1,
+              "line": 7
+            }
+          },
+          "range": {
+            "end": 234,
+            "start": 217
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-mixed-bare-and-qualified.md",
+        "line_col": {
+          "end": {
+            "col": 12,
+            "line": 6
+          },
+          "start": {
+            "col": 1,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 202,
+          "start": 191
+        }
+      }
+    },
+    {
+      "code": "mixin-collision",
+      "message": "field 'priority' is declared with non-token-equal shapes across mixin origins: 'tag-loose' ([low, moderate, high]), 'tag-strict' ([low, high]) — a bare use is ambiguous; qualify each use as `priority{type}`",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/tag-loose.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 34,
+              "line": 2
+            },
+            "start": {
+              "col": 13,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 41,
+            "start": 20
+          }
+        },
+        {
+          "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/tag-strict.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 24,
+              "line": 2
+            },
+            "start": {
+              "col": 13,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 31,
+            "start": 20
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-mixin-collision.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 7
+          },
+          "start": {
+            "col": 3,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 175,
+          "start": 148
+        }
+      }
+    },
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'priority' (declared on 'tag-loose') — qualify it as 'priority{tag-loose}'",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/tag-loose.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 11,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 18,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-mixin-collision.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 7
+          },
+          "start": {
+            "col": 3,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 175,
+          "start": 148
+        }
+      }
+    },
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'priority' (declared on 'tag-strict') — qualify it as 'priority{tag-strict}'",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/tag-strict.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 11,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 18,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-mixin-collision.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 7
+          },
+          "start": {
+            "col": 3,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 175,
+          "start": 148
+        }
+      }
+    },
+    {
+      "code": "qualifier-does-not-declare-field",
+      "message": "qualifier 'decision' (and its closure) does not declare field 'audience' — no type-def in the qualifier's chain has it in `fields:`",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-does-not-declare.md",
+        "line_col": {
+          "end": {
+            "col": 19,
+            "line": 8
+          },
+          "start": {
+            "col": 1,
+            "line": 8
+          }
+        },
+        "range": {
+          "end": 310,
+          "start": 292
+        }
+      }
+    },
+    {
+      "code": "malformed-qualifier-key",
+      "message": "field key 'description{}' uses qualifier syntax (`field{type}`) but is malformed: qualifier inside `{}` is empty",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-malformed.md",
+        "line_col": {
+          "end": {
+            "col": 14,
+            "line": 6
+          },
+          "start": {
+            "col": 1,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 166,
+          "start": 153
+        }
+      }
+    },
+    {
+      "code": "qualifier-not-in-closure",
+      "message": "qualifier 'decision' is not in the instance's closure — a valid qualifier must be a claimed type or one of its ancestors",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-not-in-closure.md",
+        "line_col": {
+          "end": {
+            "col": 22,
+            "line": 10
+          },
+          "start": {
+            "col": 1,
+            "line": 10
+          }
+        },
+        "range": {
+          "end": 398,
+          "start": 377
+        }
+      }
+    },
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'title' (declared on 'headlined')",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/headlined.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 8,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 15,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-partial-fill.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 10
+          },
+          "start": {
+            "col": 3,
+            "line": 8
+          }
+        },
+        "range": {
+          "end": 347,
+          "start": 317
+        }
+      }
+    },
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'audience' (declared on 'deliverable')",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/deliverable.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 11,
+              "line": 3
+            },
+            "start": {
+              "col": 3,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 40,
+            "start": 32
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-required-via-mixin.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 8
+          },
+          "start": {
+            "col": 3,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 239,
+          "start": 216
+        }
+      }
+    },
+    {
+      "code": "duplicate-claim",
+      "message": "claim 'note' is repeated",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/warn/warn-duplicate-claim.md",
+          "line_col": {
+            "end": {
+              "col": 9,
+              "line": 5
+            },
+            "start": {
+              "col": 5,
+              "line": 5
+            }
+          },
+          "range": {
+            "end": 157,
+            "start": 153
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/warn/warn-duplicate-claim.md",
+        "line_col": {
+          "end": {
+            "col": 9,
+            "line": 6
+          },
+          "start": {
+            "col": 5,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 166,
+          "start": 162
+        }
+      }
+    },
+    {
+      "code": "subsumption-in-mixin",
+      "message": "claim 'decision' is implied by 'decision.decided' and is redundant",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/warn/warn-subsumption.md",
+          "line_col": {
+            "end": {
+              "col": 21,
+              "line": 7
+            },
+            "start": {
+              "col": 5,
+              "line": 7
+            }
+          },
+          "range": {
+            "end": 222,
+            "start": 206
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/warn/warn-subsumption.md",
+        "line_col": {
+          "end": {
+            "col": 13,
+            "line": 6
+          },
+          "start": {
+            "col": 5,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 201,
+          "start": 193
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 14,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 38,
+                        "line_col": {
+                          "end": {
+                            "col": 39,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "corpus-mixin-qualifier-semantics"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "corpus-mixin-qualifier-semantics"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 216,
+                        "line_col": {
+                          "end": {
+                            "col": 26,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 6
+                          }
+                        },
+                        "start": 204
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-mixed-bare-and-qualified.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "bare value"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "bare value"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 253,
+                        "line_col": {
+                          "end": {
+                            "col": 37,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 20,
+                            "line": 7
+                          }
+                        },
+                        "start": 236
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-mixed-bare-and-qualified.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "qualified value"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "qualified value"
+                }
+              }
+            ],
+            "field": "description{note}"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-mixed-bare-and-qualified.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "tag-strict",
+          "tag-loose"
+        ],
+        "closure": [
+          "tag-loose",
+          "tag-strict"
+        ],
+        "effective_shape": [
+          {
+            "divergent": true,
+            "field": "priority",
+            "origins": [
+              {
+                "name": "tag-loose",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/tag-loose.type.yaml",
+                "required": true,
+                "shape": "[low, moderate, high]"
+              },
+              {
+                "name": "tag-strict",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/tag-strict.type.yaml",
+                "required": true,
+                "shape": "[low, high]"
+              }
+            ],
+            "required": true,
+            "shape": "[low, moderate, high]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 188,
+                        "line_col": {
+                          "end": {
+                            "col": 14,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 11,
+                            "line": 7
+                          }
+                        },
+                        "start": 185
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-mixin-collision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "low"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "low"
+                }
+              }
+            ],
+            "field": "priority"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-mixin-collision.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "decision.decided"
+        ],
+        "closure": [
+          "decision",
+          "decision.decided",
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 315,
+                        "line_col": {
+                          "end": {
+                            "col": 24,
+                            "line": 8
+                          },
+                          "start": {
+                            "col": 21,
+                            "line": 8
+                          }
+                        },
+                        "start": 312
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-does-not-declare.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "y"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "y"
+                }
+              }
+            ],
+            "field": "audience{decision}"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 291,
+                        "line_col": {
+                          "end": {
+                            "col": 17,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 7
+                          }
+                        },
+                        "start": 288
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-does-not-declare.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "x"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "x"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-does-not-declare.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 152,
+                        "line_col": {
+                          "end": {
+                            "col": 17,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 5
+                          }
+                        },
+                        "start": 149
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-malformed.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "x"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "x"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 171,
+                        "line_col": {
+                          "end": {
+                            "col": 19,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 16,
+                            "line": 6
+                          }
+                        },
+                        "start": 168
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-malformed.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "y"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "y"
+                }
+              }
+            ],
+            "field": "description{}"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-malformed.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "journal-entry"
+        ],
+        "closure": [
+          "journal-entry"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "title",
+            "origins": [
+              {
+                "name": "journal-entry",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/journal-entry.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 403,
+                        "line_col": {
+                          "end": {
+                            "col": 27,
+                            "line": 10
+                          },
+                          "start": {
+                            "col": 24,
+                            "line": 10
+                          }
+                        },
+                        "start": 400
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-not-in-closure.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "y"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "y"
+                }
+              }
+            ],
+            "field": "description{decision}"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 376,
+                        "line_col": {
+                          "end": {
+                            "col": 11,
+                            "line": 9
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 9
+                          }
+                        },
+                        "start": 373
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-not-in-closure.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "x"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "x"
+                }
+              }
+            ],
+            "field": "title"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-not-in-closure.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "journal-entry",
+          "headlined"
+        ],
+        "closure": [
+          "headlined",
+          "journal-entry"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "title",
+            "origins": [
+              {
+                "name": "headlined",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/headlined.type.yaml",
+                "required": true,
+                "shape": "String"
+              },
+              {
+                "name": "journal-entry",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/journal-entry.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 372,
+                        "line_col": {
+                          "end": {
+                            "col": 26,
+                            "line": 10
+                          },
+                          "start": {
+                            "col": 23,
+                            "line": 10
+                          }
+                        },
+                        "start": 369
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-partial-fill.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "x"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "x"
+                }
+              }
+            ],
+            "field": "title{journal-entry}"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-qualifier-partial-fill.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note",
+          "deliverable"
+        ],
+        "closure": [
+          "deliverable",
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "audience",
+            "origins": [
+              {
+                "name": "deliverable",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/deliverable.type.yaml",
+                "required": true,
+                "shape": "[internal, external]"
+              }
+            ],
+            "required": true,
+            "shape": "[internal, external]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "deliverable",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/deliverable.type.yaml",
+                "required": true,
+                "shape": "String"
+              },
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 255,
+                        "line_col": {
+                          "end": {
+                            "col": 17,
+                            "line": 8
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 8
+                          }
+                        },
+                        "start": 252
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-required-via-mixin.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "x"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "x"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/bad/bad-required-via-mixin.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note",
+          "deliverable"
+        ],
+        "closure": [
+          "deliverable",
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "audience",
+            "origins": [
+              {
+                "name": "deliverable",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/deliverable.type.yaml",
+                "required": true,
+                "shape": "[internal, external]"
+              }
+            ],
+            "required": true,
+            "shape": "[internal, external]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "deliverable",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/deliverable.type.yaml",
+                "required": true,
+                "shape": "String"
+              },
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 118,
+                        "line_col": {
+                          "end": {
+                            "col": 19,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 11,
+                            "line": 6
+                          }
+                        },
+                        "start": 110
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/good/mixin-auto-unify.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "external"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "external"
+                }
+              }
+            ],
+            "field": "audience"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 99,
+                        "line_col": {
+                          "end": {
+                            "col": 65,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 5
+                          }
+                        },
+                        "start": 48
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/good/mixin-auto-unify.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "shared via auto-unify (token-equal String shapes)"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "shared via auto-unify (token-equal String shapes)"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/good/mixin-auto-unify.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note",
+          "journal-entry"
+        ],
+        "closure": [
+          "journal-entry",
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "title",
+            "origins": [
+              {
+                "name": "journal-entry",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/journal-entry.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 67,
+                        "line_col": {
+                          "end": {
+                            "col": 31,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 5
+                          }
+                        },
+                        "start": 50
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/good/mixin-disjoint.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "the description"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "the description"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 86,
+                        "line_col": {
+                          "end": {
+                            "col": 19,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 6
+                          }
+                        },
+                        "start": 75
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/good/mixin-disjoint.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "the title"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "the title"
+                }
+              }
+            ],
+            "field": "title"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/good/mixin-disjoint.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "journal-entry",
+          "headlined"
+        ],
+        "closure": [
+          "headlined",
+          "journal-entry"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "title",
+            "origins": [
+              {
+                "name": "headlined",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/headlined.type.yaml",
+                "required": true,
+                "shape": "String"
+              },
+              {
+                "name": "journal-entry",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/journal-entry.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 320,
+                        "line_col": {
+                          "end": {
+                            "col": 35,
+                            "line": 9
+                          },
+                          "start": {
+                            "col": 19,
+                            "line": 9
+                          }
+                        },
+                        "start": 304
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/good/qualifier-distinguished.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "article banner"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "article banner"
+                }
+              }
+            ],
+            "field": "title{headlined}"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 285,
+                        "line_col": {
+                          "end": {
+                            "col": 34,
+                            "line": 8
+                          },
+                          "start": {
+                            "col": 23,
+                            "line": 8
+                          }
+                        },
+                        "start": 274
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/good/qualifier-distinguished.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "log entry"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "log entry"
+                }
+              }
+            ],
+            "field": "title{journal-entry}"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/good/qualifier-distinguished.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "decision.decided"
+        ],
+        "closure": [
+          "decision",
+          "decision.decided",
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 212,
+                        "line_col": {
+                          "end": {
+                            "col": 51,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 20,
+                            "line": 5
+                          }
+                        },
+                        "start": 181
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/good/qualifier-stable.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "stable across leaf migrations"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "stable across leaf migrations"
+                }
+              }
+            ],
+            "field": "description{note}"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/good/qualifier-stable.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note",
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 183,
+                        "line_col": {
+                          "end": {
+                            "col": 17,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 7
+                          }
+                        },
+                        "start": 180
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/warn/warn-duplicate-claim.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "x"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "x"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/warn/warn-duplicate-claim.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "decision",
+          "decision.decided"
+        ],
+        "closure": [
+          "decision",
+          "decision.decided",
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/corpus-mixin-qualifier-semantics/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 239,
+                        "line_col": {
+                          "end": {
+                            "col": 17,
+                            "line": 8
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 8
+                          }
+                        },
+                        "start": 236
+                      },
+                      "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/warn/warn-subsumption.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "x"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "x"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-mixin-qualifier-semantics/warn/warn-subsumption.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

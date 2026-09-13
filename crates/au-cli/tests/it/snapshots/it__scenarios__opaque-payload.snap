@@ -1,0 +1,431 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 20,
+                        "line_col": {
+                          "end": {
+                            "col": 21,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/opaque-payload/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "opaque-payload"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "opaque-payload"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/opaque-payload/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "event"
+        ],
+        "closure": [
+          "event"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "log",
+            "origins": [
+              {
+                "name": "event",
+                "origin_path": "<root>/scenarios/opaque-payload/type/event.type.yaml",
+                "required": true,
+                "shape": "opaque[]"
+              }
+            ],
+            "required": true,
+            "shape": "opaque[]"
+          },
+          {
+            "divergent": false,
+            "field": "payload",
+            "origins": [
+              {
+                "name": "event",
+                "origin_path": "<root>/scenarios/opaque-payload/type/event.type.yaml",
+                "required": true,
+                "shape": "opaque"
+              }
+            ],
+            "required": true,
+            "shape": "opaque"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 166,
+                        "line_col": {
+                          "end": {
+                            "col": 29,
+                            "line": 10
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 10
+                          }
+                        },
+                        "start": 142
+                      },
+                      "file": "<root>/scenarios/opaque-payload/session.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "first [[also-missing]]"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "first [[also-missing]]"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 201,
+                        "line_col": {
+                          "end": {
+                            "col": 3,
+                            "line": 13
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 11
+                          }
+                        },
+                        "start": 171
+                      },
+                      "file": "<root>/scenarios/opaque-payload/session.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "args",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": [
+                                "a",
+                                "b"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "field": "kind",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "tool"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "args",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": [
+                            "a",
+                            "b"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "field": "kind",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "tool"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              },
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 204,
+                        "line_col": {
+                          "end": {
+                            "col": 6,
+                            "line": 13
+                          },
+                          "start": {
+                            "col": 5,
+                            "line": 13
+                          }
+                        },
+                        "start": 203
+                      },
+                      "file": "<root>/scenarios/opaque-payload/session.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": 7
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": 7
+                }
+              }
+            ],
+            "field": "log"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 133,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 9
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 4
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/opaque-payload/session.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "count",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": 42
+                            }
+                          ]
+                        },
+                        {
+                          "field": "nested",
+                          "values": [
+                            {
+                              "fields": [
+                                {
+                                  "field": "deeper",
+                                  "values": [
+                                    {
+                                      "kind": "scalar",
+                                      "value": true
+                                    }
+                                  ]
+                                }
+                              ],
+                              "kind": "inline_record"
+                            }
+                          ]
+                        },
+                        {
+                          "field": "note",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "see [[nonexistent-target]] for details"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "count",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": 42
+                        }
+                      ]
+                    },
+                    {
+                      "field": "nested",
+                      "values": [
+                        {
+                          "fields": [
+                            {
+                              "field": "deeper",
+                              "values": [
+                                {
+                                  "kind": "scalar",
+                                  "value": true
+                                }
+                              ]
+                            }
+                          ],
+                          "kind": "inline_record"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "note",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "see [[nonexistent-target]] for details"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "payload"
+          }
+        ],
+        "file": "<root>/scenarios/opaque-payload/session.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

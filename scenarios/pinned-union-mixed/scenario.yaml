@@ -1,0 +1,5 @@
+title: "A `< file* | file*@ >` union accepts both a live reference and a pinned snapshot"
+spec_ref: "[[type-def shape suffixes::au-type-system]]"
+command: validate
+expected:
+  codes: []

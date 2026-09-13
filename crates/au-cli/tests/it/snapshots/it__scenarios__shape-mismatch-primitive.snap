@@ -1,0 +1,361 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "field-shape-mismatch",
+      "message": "field 'count' value does not match declared shape Number",
+      "related": [
+        {
+          "file": "<root>/scenarios/shape-mismatch-primitive/type/note.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 16,
+              "line": 3
+            },
+            "start": {
+              "col": 10,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 45,
+            "start": 39
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/shape-mismatch-primitive/wrong-count.md",
+        "line_col": {
+          "end": {
+            "col": 22,
+            "line": 4
+          },
+          "start": {
+            "col": 8,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 93,
+          "start": 79
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 30,
+                        "line_col": {
+                          "end": {
+                            "col": 31,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/shape-mismatch-primitive/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "shape-mismatch-primitive"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "shape-mismatch-primitive"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/shape-mismatch-primitive/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 123,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 99
+            },
+            "text": "Wrong primitive shape"
+          },
+          {
+            "content": "count",
+            "kind": "inline_code",
+            "span": {
+              "end": 131,
+              "line_col": {
+                "end": {
+                  "col": 8,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 9
+                }
+              },
+              "start": 124
+            }
+          },
+          {
+            "content": "Number",
+            "kind": "inline_code",
+            "span": {
+              "end": 152,
+              "line_col": {
+                "end": {
+                  "col": 29,
+                  "line": 9
+                },
+                "start": {
+                  "col": 21,
+                  "line": 9
+                }
+              },
+              "start": 144
+            }
+          },
+          {
+            "content": "note",
+            "kind": "inline_code",
+            "span": {
+              "end": 162,
+              "line_col": {
+                "end": {
+                  "col": 39,
+                  "line": 9
+                },
+                "start": {
+                  "col": 33,
+                  "line": 9
+                }
+              },
+              "start": 156
+            }
+          }
+        ],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "count",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/shape-mismatch-primitive/type/note.type.yaml",
+                "required": true,
+                "shape": "Number"
+              }
+            ],
+            "required": true,
+            "shape": "Number"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/shape-mismatch-primitive/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 93,
+                        "line_col": {
+                          "end": {
+                            "col": 22,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 4
+                          }
+                        },
+                        "start": 79
+                      },
+                      "file": "<root>/scenarios/shape-mismatch-primitive/wrong-count.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "not a number"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "not a number"
+                }
+              }
+            ],
+            "field": "count"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 71,
+                        "line_col": {
+                          "end": {
+                            "col": 57,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/shape-mismatch-primitive/wrong-count.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Count holds a string instead of a Number."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Count holds a string instead of a Number."
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/shape-mismatch-primitive/wrong-count.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+title: "`T[+]` slot accepts a non-empty list"
+spec_ref: "[[type-def shape suffixes::au-type-system]]"
+command: validate
+expected:
+  clean: true

@@ -1,0 +1,6 @@
+title: "<String | Url> commits prefix-shaped values to Url — malformed URL fires field-shape-mismatch"
+spec_ref: "[[type-def shape primitive::au-type-system]], [[type reference::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: field-shape-mismatch, severity: error }

@@ -1,0 +1,6 @@
+title: "Scope carrying both `fills:` and `fills!:` is rejected at load (fills-double-form-declaration)"
+spec_ref: "[[type-def body fills::au-type-system]]"
+command: graph
+expected:
+  codes:
+    - { code: fills-double-form-declaration, severity: error }

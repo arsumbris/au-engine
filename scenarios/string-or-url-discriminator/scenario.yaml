@@ -1,0 +1,5 @@
+title: "`<String | Url>` discriminator — `^https?://` selects Url branch, others fall through to String"
+spec_ref: "[[type-def shape primitive::au-type-system]], [[type reference::au-type-system]]"
+command: validate
+expected:
+  clean: true

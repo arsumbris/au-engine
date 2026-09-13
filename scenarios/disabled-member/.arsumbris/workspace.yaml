@@ -1,0 +1,6 @@
+edit:
+  - disabled-member
+  - app
+disabled:
+  - app
+type: au.engine.workspace::au-engine

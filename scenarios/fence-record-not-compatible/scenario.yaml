@@ -1,0 +1,6 @@
+title: "A fence record must satisfy the slot, not merely its own claimed type"
+spec_ref: "[[type-def shape record::au-type-system]], [[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: inline-value-type-not-compatible, severity: error }

@@ -1,0 +1,4 @@
+# Filename derives the type-def name `Url` — a reserved primitive shape
+# name. The engine refuses to register it as a user
+# type-def and emits `reserved-type-name`.
+fields: {}

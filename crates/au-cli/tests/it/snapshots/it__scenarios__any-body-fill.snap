@@ -1,0 +1,397 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 19,
+                        "line_col": {
+                          "end": {
+                            "col": 20,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/any-body-fill/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "any-body-fill"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "any-body-fill"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/any-body-fill/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": null,
+              "commit": null,
+              "field": "about",
+              "repo": null,
+              "target": "the-transformer"
+            },
+            "raw": "the-transformer:about",
+            "span": {
+              "end": 151,
+              "line_col": {
+                "end": {
+                  "col": 78,
+                  "line": 7
+                },
+                "start": {
+                  "col": 53,
+                  "line": 7
+                }
+              },
+              "start": 126
+            }
+          },
+          {
+            "content": "any*",
+            "kind": "inline_code",
+            "span": {
+              "end": 159,
+              "line_col": {
+                "end": {
+                  "col": 7,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 153
+            }
+          },
+          {
+            "content": "thing",
+            "kind": "inline_code",
+            "span": {
+              "end": 238,
+              "line_col": {
+                "end": {
+                  "col": 8,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 9
+                }
+              },
+              "start": 231
+            }
+          },
+          {
+            "content": "any",
+            "kind": "inline_code",
+            "span": {
+              "end": 263,
+              "line_col": {
+                "end": {
+                  "col": 33,
+                  "line": 9
+                },
+                "start": {
+                  "col": 28,
+                  "line": 9
+                }
+              },
+              "start": 258
+            }
+          }
+        ],
+        "claim": [
+          "event"
+        ],
+        "closure": [
+          "event"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "about",
+            "origins": [
+              {
+                "name": "event",
+                "origin_path": "<root>/scenarios/any-body-fill/type/event.type.yaml",
+                "required": false,
+                "shape": "any*[]"
+              }
+            ],
+            "required": false,
+            "shape": "any*[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "event",
+                "origin_path": "<root>/scenarios/any-body-fill/type/event.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 151,
+                        "line_col": {
+                          "end": {
+                            "col": 78,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 53,
+                            "line": 7
+                          }
+                        },
+                        "start": 126
+                      },
+                      "file": "<root>/scenarios/any-body-fill/seed-round.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_wikilink",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "the-transformer"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "the-transformer"
+                }
+              }
+            ],
+            "field": "about"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 61,
+                        "line_col": {
+                          "end": {
+                            "col": 46,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 29
+                      },
+                      "file": "<root>/scenarios/any-body-fill/seed-round.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Acme AI closes its seed round."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Acme AI closes its seed round."
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/any-body-fill/seed-round.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "thing"
+        ],
+        "closure": [
+          "thing"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "thing",
+                "origin_path": "<root>/scenarios/any-body-fill/type/thing.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 37,
+                        "line_col": {
+                          "end": {
+                            "col": 22,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 3
+                          }
+                        },
+                        "start": 22
+                      },
+                      "file": "<root>/scenarios/any-body-fill/the-transformer.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "The Transformer"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "The Transformer"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/any-body-fill/the-transformer.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

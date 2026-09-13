@@ -1,0 +1,3 @@
+location:
+  path: "config/"
+  strict: true

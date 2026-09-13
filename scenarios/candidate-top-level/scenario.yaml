@@ -1,0 +1,7 @@
+title: "Implicit identity candidate — instance's top-level extras match `deliverable`"
+spec_ref: "[[type candidate scan::au-type-system]]"
+command: candidates
+expected:
+  candidates:
+    - { type_name: deliverable }
+    - { type_name: summary }

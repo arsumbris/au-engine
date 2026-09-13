@@ -1,0 +1,610 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "block-id-not-typed",
+      "message": "field 'val' wikilink `[[notes^^obs]]` — block `obs` exists but isn't typed (no `[:field]` fence)",
+      "related": [
+        {
+          "file": "<root>/scenarios/block-id-mode-contrast/type/card.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 19,
+              "line": 3
+            },
+            "start": {
+              "col": 8,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 45,
+            "start": 34
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/block-id-mode-contrast/card.md",
+        "line_col": {
+          "end": {
+            "col": 22,
+            "line": 4
+          },
+          "start": {
+            "col": 6,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 57,
+          "start": 41
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 28,
+                        "line_col": {
+                          "end": {
+                            "col": 29,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/block-id-mode-contrast/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "block-id-mode-contrast"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "block-id-mode-contrast"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/block-id-mode-contrast/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "^obs",
+            "kind": "inline_code",
+            "span": {
+              "end": 101,
+              "line_col": {
+                "end": {
+                  "col": 39,
+                  "line": 7
+                },
+                "start": {
+                  "col": 33,
+                  "line": 7
+                }
+              },
+              "start": 95
+            }
+          },
+          {
+            "content": "nav",
+            "kind": "inline_code",
+            "span": {
+              "end": 121,
+              "line_col": {
+                "end": {
+                  "col": 6,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 9
+                }
+              },
+              "start": 116
+            }
+          },
+          {
+            "content": "^obs",
+            "kind": "inline_code",
+            "span": {
+              "end": 140,
+              "line_col": {
+                "end": {
+                  "col": 25,
+                  "line": 9
+                },
+                "start": {
+                  "col": 19,
+                  "line": 9
+                }
+              },
+              "start": 134
+            }
+          },
+          {
+            "content": "notes",
+            "kind": "inline_code",
+            "span": {
+              "end": 175,
+              "line_col": {
+                "end": {
+                  "col": 60,
+                  "line": 9
+                },
+                "start": {
+                  "col": 53,
+                  "line": 9
+                }
+              },
+              "start": 168
+            }
+          },
+          {
+            "content": "notes",
+            "kind": "inline_code",
+            "span": {
+              "end": 200,
+              "line_col": {
+                "end": {
+                  "col": 8,
+                  "line": 10
+                },
+                "start": {
+                  "col": 1,
+                  "line": 10
+                }
+              },
+              "start": 193
+            }
+          },
+          {
+            "content": "assumption",
+            "kind": "inline_code",
+            "span": {
+              "end": 219,
+              "line_col": {
+                "end": {
+                  "col": 27,
+                  "line": 10
+                },
+                "start": {
+                  "col": 15,
+                  "line": 10
+                }
+              },
+              "start": 207
+            }
+          },
+          {
+            "content": "assumption*",
+            "kind": "inline_code",
+            "span": {
+              "end": 250,
+              "line_col": {
+                "end": {
+                  "col": 58,
+                  "line": 10
+                },
+                "start": {
+                  "col": 45,
+                  "line": 10
+                }
+              },
+              "start": 237
+            }
+          },
+          {
+            "content": "^obs",
+            "kind": "inline_code",
+            "span": {
+              "end": 262,
+              "line_col": {
+                "end": {
+                  "col": 70,
+                  "line": 10
+                },
+                "start": {
+                  "col": 64,
+                  "line": 10
+                }
+              },
+              "start": 256
+            }
+          },
+          {
+            "content": "val",
+            "kind": "inline_code",
+            "span": {
+              "end": 308,
+              "line_col": {
+                "end": {
+                  "col": 6,
+                  "line": 13
+                },
+                "start": {
+                  "col": 1,
+                  "line": 13
+                }
+              },
+              "start": 303
+            }
+          },
+          {
+            "content": "^^obs",
+            "kind": "inline_code",
+            "span": {
+              "end": 321,
+              "line_col": {
+                "end": {
+                  "col": 19,
+                  "line": 13
+                },
+                "start": {
+                  "col": 12,
+                  "line": 13
+                }
+              },
+              "start": 314
+            }
+          },
+          {
+            "content": "obs",
+            "kind": "inline_code",
+            "span": {
+              "end": 382,
+              "line_col": {
+                "end": {
+                  "col": 80,
+                  "line": 13
+                },
+                "start": {
+                  "col": 75,
+                  "line": 13
+                }
+              },
+              "start": 377
+            }
+          },
+          {
+            "content": "block-id-not-typed",
+            "kind": "inline_code",
+            "span": {
+              "end": 478,
+              "line_col": {
+                "end": {
+                  "col": 21,
+                  "line": 15
+                },
+                "start": {
+                  "col": 1,
+                  "line": 15
+                }
+              },
+              "start": 458
+            }
+          }
+        ],
+        "claim": [
+          "card"
+        ],
+        "closure": [
+          "card"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "nav",
+            "origins": [
+              {
+                "name": "card",
+                "origin_path": "<root>/scenarios/block-id-mode-contrast/type/card.type.yaml",
+                "required": true,
+                "shape": "assumption*"
+              }
+            ],
+            "required": true,
+            "shape": "assumption*"
+          },
+          {
+            "divergent": false,
+            "field": "val",
+            "origins": [
+              {
+                "name": "card",
+                "origin_path": "<root>/scenarios/block-id-mode-contrast/type/card.type.yaml",
+                "required": true,
+                "shape": "assumption*"
+              }
+            ],
+            "required": true,
+            "shape": "assumption*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 35,
+                        "line_col": {
+                          "end": {
+                            "col": 21,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 6,
+                            "line": 3
+                          }
+                        },
+                        "start": 20
+                      },
+                      "file": "<root>/scenarios/block-id-mode-contrast/card.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": {
+                        "id": "obs",
+                        "referent": false
+                      },
+                      "kind": "reference",
+                      "target": "notes"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": {
+                    "id": "obs",
+                    "referent": false
+                  },
+                  "kind": "reference",
+                  "target": "notes"
+                }
+              }
+            ],
+            "field": "nav"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 57,
+                        "line_col": {
+                          "end": {
+                            "col": 22,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 6,
+                            "line": 4
+                          }
+                        },
+                        "start": 41
+                      },
+                      "file": "<root>/scenarios/block-id-mode-contrast/card.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": {
+                        "id": "obs",
+                        "referent": true
+                      },
+                      "kind": "reference",
+                      "target": "notes"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": {
+                    "id": "obs",
+                    "referent": true
+                  },
+                  "kind": "reference",
+                  "target": "notes"
+                }
+              }
+            ],
+            "field": "val"
+          }
+        ],
+        "file": "<root>/scenarios/block-id-mode-contrast/card.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "id": "obs",
+            "kind": "block_id_marker",
+            "span": {
+              "end": 167,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 162
+            }
+          }
+        ],
+        "claim": [
+          "assumption"
+        ],
+        "closure": [
+          "assumption"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "assumption",
+                "origin_path": "<root>/scenarios/block-id-mode-contrast/type/assumption.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 100,
+                        "line_col": {
+                          "end": {
+                            "col": 80,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 34
+                      },
+                      "file": "<root>/scenarios/block-id-mode-contrast/notes.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "The host file is an assumption; the passage below is plain prose"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "The host file is an assumption; the passage below is plain prose"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/block-id-mode-contrast/notes.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

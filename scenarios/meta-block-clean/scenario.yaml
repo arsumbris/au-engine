@@ -1,0 +1,5 @@
+title: "Type-def with valid meta block — display-meta on note"
+spec_ref: "[[type-def meta::au-type-system]]"
+command: validate
+expected:
+  clean: true

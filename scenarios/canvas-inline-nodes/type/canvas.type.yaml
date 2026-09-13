@@ -1,0 +1,3 @@
+fields:
+  nodes: node&[]
+  edges: edge[]

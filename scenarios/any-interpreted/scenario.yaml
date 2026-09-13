@@ -1,0 +1,6 @@
+title: "An `any` slot is the interpreted top — a nested `type:` is an inline claim, so a bogus claim fires unknown-type-claim"
+spec_ref: "[[type-def shape any::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: unknown-type-claim, severity: error }

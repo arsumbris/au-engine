@@ -1,0 +1,5 @@
+title: "Same value contributed from frontmatter and body collapses to one ValueContainer (clean)"
+spec_ref: "[[type value container::au-type-system]]"
+command: validate
+expected:
+  clean: true

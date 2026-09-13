@@ -1,0 +1,5 @@
+title: "Yaml block carrying ^block-id is cross-file addressable via [[file^^id]]"
+spec_ref: "[[type block-id::au-type-system]], [[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  clean: true

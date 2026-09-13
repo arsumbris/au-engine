@@ -1,0 +1,5 @@
+#: A repo def in the reserved au.engine.* namespace the engine does not
+#: hardwire. The namespace is reserved forward, so this carries the
+#: engine-name-forward-reserved hint; the def still resolves normally.
+fields:
+  x: String

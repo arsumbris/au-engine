@@ -1,0 +1,5 @@
+title: "Mixin of leaves from disjoint sealed families — clean (multi-leaf rule is per-family)"
+spec_ref: "[[type-def sealed::au-type-system]], [[type-instance type::au-type-system]]"
+command: validate
+expected:
+  clean: true

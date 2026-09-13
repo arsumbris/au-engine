@@ -1,0 +1,5 @@
+# intentional: meta block claims a sealed meta-type-def directly (not one of
+# its leaves) → sealed-parent-claimed (universal rule, meta-site fire
+# surface — Phase 9 extension)
+meta:
+  - type: sealed-meta

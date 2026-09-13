@@ -1,0 +1,6 @@
+title: "A `discover:` member that is also a declared dep resolves to the higher role and the discover listing is redundant: discover-member-is-a-dependency"
+spec_ref: "[[spec - workspace as a folder-repo - an optional workspace.yaml composes edit and discover members]]"
+command: validate
+expected:
+  codes:
+    - { code: discover-member-is-a-dependency, severity: hint }

@@ -1,0 +1,4 @@
+name: app
+deps:
+  - name: shared
+type: au.engine.repo::au-engine

@@ -1,0 +1,9 @@
+# Good case: declares runtime-meta whose validator wikilink resolves
+# to a real repo file (this directory's README). Locks the meta-body
+# reference path end-to-end — meta-body validation walks
+# `check_value_against_shape` for the validator field, which resolves
+# the wikilink through `repo_index`.
+meta:
+  - type: runtime-meta
+    version: 1
+    validator: "[[README]]"

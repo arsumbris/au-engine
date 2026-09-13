@@ -1,0 +1,5 @@
+title: "Inline `[:field] value` code contributes a primitive value"
+spec_ref: "[[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  clean: true

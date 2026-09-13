@@ -1,0 +1,2 @@
+# intentional: `fields:` is not a map (a scalar) → fields-not-a-map
+fields: oops

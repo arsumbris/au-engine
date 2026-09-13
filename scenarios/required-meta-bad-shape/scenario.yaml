@@ -1,0 +1,6 @@
+title: "A required: value that is neither a name nor a list of names fires required-meta-bad-shape"
+spec_ref: "[[spec - required subtype meta - a base obligates every concrete subtype to carry a named meta]]"
+command: validate
+expected:
+  codes:
+    - { code: required-meta-bad-shape, severity: error }

@@ -1,0 +1,514 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "fills-contract-exceeded",
+      "message": "fills!: forbids field 'rationale' inside scope 2 Outcome > 1 Result — only 'status' permitted",
+      "related": [
+        {
+          "file": "<root>/scenarios/fills-nested-exclusivity-after-absent-optional/type/decision.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 23,
+              "line": 10
+            },
+            "start": {
+              "col": 17,
+              "line": 10
+            }
+          },
+          "range": {
+            "end": 181,
+            "start": 175
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/fills-nested-exclusivity-after-absent-optional/decision.md",
+        "line_col": {
+          "end": {
+            "col": 112,
+            "line": 14
+          },
+          "start": {
+            "col": 1,
+            "line": 14
+          }
+        },
+        "range": {
+          "end": 239,
+          "start": 128
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 52,
+                        "line_col": {
+                          "end": {
+                            "col": 53,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/fills-nested-exclusivity-after-absent-optional/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "fills-nested-exclusivity-after-absent-optional"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "fills-nested-exclusivity-after-absent-optional"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/fills-nested-exclusivity-after-absent-optional/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 98,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 88
+            },
+            "text": "Outcome"
+          },
+          {
+            "kind": "heading",
+            "level": 2,
+            "span": {
+              "end": 109,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 11
+                },
+                "start": {
+                  "col": 1,
+                  "line": 10
+                }
+              },
+              "start": 99
+            },
+            "text": "Result"
+          },
+          {
+            "content": "[:status] made",
+            "kind": "inline_code",
+            "span": {
+              "end": 126,
+              "line_col": {
+                "end": {
+                  "col": 17,
+                  "line": 12
+                },
+                "start": {
+                  "col": 1,
+                  "line": 12
+                }
+              },
+              "start": 110
+            }
+          },
+          {
+            "content": "[:rationale] this contribution to a non-status field inside an exclusive scope fires fills-contract-exceeded.",
+            "kind": "inline_code",
+            "span": {
+              "end": 239,
+              "line_col": {
+                "end": {
+                  "col": 112,
+                  "line": 14
+                },
+                "start": {
+                  "col": 1,
+                  "line": 14
+                }
+              },
+              "start": 128
+            }
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/fills-nested-exclusivity-after-absent-optional/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "rationale",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/fills-nested-exclusivity-after-absent-optional/type/decision.type.yaml",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "status",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/fills-nested-exclusivity-after-absent-optional/type/decision.type.yaml",
+                "required": true,
+                "shape": "[made, superseded]"
+              }
+            ],
+            "required": true,
+            "shape": "[made, superseded]"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/fills-nested-exclusivity-after-absent-optional/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 239,
+                        "line_col": {
+                          "end": {
+                            "col": 112,
+                            "line": 14
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 14
+                          }
+                        },
+                        "start": 128
+                      },
+                      "file": "<root>/scenarios/fills-nested-exclusivity-after-absent-optional/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Outcome"
+                      },
+                      {
+                        "index": 1,
+                        "text": "Result"
+                      }
+                    ],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "this contribution to a non-status field inside an exclusive scope fires fills-contract-exceeded."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "this contribution to a non-status field inside an exclusive scope fires fills-contract-exceeded."
+                }
+              }
+            ],
+            "field": "rationale"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 71,
+                        "line_col": {
+                          "end": {
+                            "col": 13,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 4
+                          }
+                        },
+                        "start": 67
+                      },
+                      "file": "<root>/scenarios/fills-nested-exclusivity-after-absent-optional/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "made"
+                    }
+                  },
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 126,
+                        "line_col": {
+                          "end": {
+                            "col": 17,
+                            "line": 12
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 12
+                          }
+                        },
+                        "start": 110
+                      },
+                      "file": "<root>/scenarios/fills-nested-exclusivity-after-absent-optional/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Outcome"
+                      },
+                      {
+                        "index": 1,
+                        "text": "Result"
+                      }
+                    ],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "made"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "made"
+                }
+              }
+            ],
+            "field": "status"
+          }
+        ],
+        "file": "<root>/scenarios/fills-nested-exclusivity-after-absent-optional/decision.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Why",
+            "optional": true,
+            "path": [
+              "Why"
+            ],
+            "present": false
+          },
+          {
+            "depth": 1,
+            "name": "Outcome",
+            "optional": false,
+            "path": [
+              "Outcome"
+            ],
+            "present": true,
+            "span": {
+              "end": 98,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 9
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 88
+            }
+          },
+          {
+            "depth": 2,
+            "name": "Result",
+            "optional": false,
+            "path": [
+              "Outcome",
+              "Result"
+            ],
+            "present": true,
+            "span": {
+              "end": 109,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 11
+                },
+                "start": {
+                  "col": 1,
+                  "line": 10
+                }
+              },
+              "start": 99
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

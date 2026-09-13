@@ -1,0 +1,6 @@
+title: "`T[+]` slot rejects an empty list with field-shape-mismatch"
+spec_ref: "[[type-def shape suffixes::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: field-shape-mismatch, severity: error }

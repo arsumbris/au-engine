@@ -1,0 +1,6 @@
+title: "An instance outside its type's soft `path` glob is a location-mismatch warning"
+spec_ref: "[[spec - location constraints - a name template and path predicate as an advisory placement meet]]"
+command: validate
+expected:
+  codes:
+    - { code: location-mismatch, severity: warning }

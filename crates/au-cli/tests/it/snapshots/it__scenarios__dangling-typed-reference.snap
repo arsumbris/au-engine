@@ -1,0 +1,367 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "reference-target-missing",
+      "message": "field 'supports' references 'future-claim' which does not exist in the repo",
+      "related": [
+        {
+          "file": "<root>/scenarios/dangling-typed-reference/type/claim.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 20,
+              "line": 2
+            },
+            "start": {
+              "col": 14,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 27,
+            "start": 21
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/dangling-typed-reference/citing-claim.md",
+        "line_col": {
+          "end": {
+            "col": 29,
+            "line": 3
+          },
+          "start": {
+            "col": 11,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 44,
+          "start": 26
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 30,
+                        "line_col": {
+                          "end": {
+                            "col": 31,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/dangling-typed-reference/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "dangling-typed-reference"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "dangling-typed-reference"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/dangling-typed-reference/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 95,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 50
+            },
+            "text": "A claim that cites a not-yet-written claim"
+          },
+          {
+            "content": "supports",
+            "kind": "inline_code",
+            "span": {
+              "end": 106,
+              "line_col": {
+                "end": {
+                  "col": 11,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 96
+            }
+          },
+          {
+            "content": "claim*",
+            "kind": "inline_code",
+            "span": {
+              "end": 127,
+              "line_col": {
+                "end": {
+                  "col": 32,
+                  "line": 8
+                },
+                "start": {
+                  "col": 24,
+                  "line": 8
+                }
+              },
+              "start": 119
+            }
+          },
+          {
+            "content": "[[future-claim]]",
+            "kind": "inline_code",
+            "span": {
+              "end": 177,
+              "line_col": {
+                "end": {
+                  "col": 82,
+                  "line": 8
+                },
+                "start": {
+                  "col": 64,
+                  "line": 8
+                }
+              },
+              "start": 159
+            }
+          },
+          {
+            "content": "reference-target-missing",
+            "kind": "inline_code",
+            "span": {
+              "end": 331,
+              "line_col": {
+                "end": {
+                  "col": 121,
+                  "line": 10
+                },
+                "start": {
+                  "col": 95,
+                  "line": 10
+                }
+              },
+              "start": 305
+            }
+          },
+          {
+            "content": "warning",
+            "kind": "inline_code",
+            "span": {
+              "end": 344,
+              "line_col": {
+                "end": {
+                  "col": 134,
+                  "line": 10
+                },
+                "start": {
+                  "col": 125,
+                  "line": 10
+                }
+              },
+              "start": 335
+            }
+          },
+          {
+            "content": "error",
+            "kind": "inline_code",
+            "span": {
+              "end": 357,
+              "line_col": {
+                "end": {
+                  "col": 147,
+                  "line": 10
+                },
+                "start": {
+                  "col": 140,
+                  "line": 10
+                }
+              },
+              "start": 350
+            }
+          }
+        ],
+        "claim": [
+          "claim"
+        ],
+        "closure": [
+          "claim"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "supports",
+            "origins": [
+              {
+                "name": "claim",
+                "origin_path": "<root>/scenarios/dangling-typed-reference/type/claim.type.yaml",
+                "required": false,
+                "shape": "claim*"
+              }
+            ],
+            "required": false,
+            "shape": "claim*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 44,
+                        "line_col": {
+                          "end": {
+                            "col": 29,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 11,
+                            "line": 3
+                          }
+                        },
+                        "start": 26
+                      },
+                      "file": "<root>/scenarios/dangling-typed-reference/citing-claim.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "future-claim"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "future-claim"
+                }
+              }
+            ],
+            "field": "supports"
+          }
+        ],
+        "file": "<root>/scenarios/dangling-typed-reference/citing-claim.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

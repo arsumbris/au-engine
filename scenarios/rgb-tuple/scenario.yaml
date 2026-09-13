@@ -1,0 +1,5 @@
+title: "RGB tuple — a `color-value` union of a refined 0-255 `Number` or a hex `String`, and an `rgb` tuple of three of them, validate a channel by either branch"
+spec_ref: "[[spec - branded types - the shape key names a reusable scalar, enum, union, or tuple]]"
+command: validate
+expected:
+  clean: true

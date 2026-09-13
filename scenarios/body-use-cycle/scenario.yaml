@@ -1,0 +1,6 @@
+title: "body: [use: self] forms a 1-cycle in the splice graph"
+spec_ref: "[[type-def body use::au-type-system]]"
+command: graph
+expected:
+  codes:
+    - { code: body-use-cycle, severity: error }

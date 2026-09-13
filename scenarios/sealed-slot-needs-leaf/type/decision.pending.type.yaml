@@ -1,0 +1,3 @@
+extends: decision
+fields:
+  opened_at: DateTime

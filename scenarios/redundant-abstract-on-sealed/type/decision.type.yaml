@@ -1,0 +1,5 @@
+abstract: true
+fields:
+  summary: String
+sealed:
+  - decision.pending

@@ -1,0 +1,2099 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "field-shape-mismatch",
+      "message": "field 'target' value is neither an inline record nor a wikilink — declared shape 'rationale&' expects a YAML map or '[[target]]' string",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-inline-values/type/amp-host.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 21,
+              "line": 4
+            },
+            "start": {
+              "col": 11,
+              "line": 4
+            }
+          },
+          "range": {
+            "end": 124,
+            "start": 114
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-inline-values/bad/bad-amp-bad-shape.md",
+        "line_col": {
+          "end": {
+            "col": 11,
+            "line": 5
+          },
+          "start": {
+            "col": 9,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 139,
+          "start": 137
+        }
+      }
+    },
+    {
+      "code": "inline-value-missing-type",
+      "message": "field 'joint': inline value at intersection slot '<rationale & thesis>' must declare `type:` identifying a type whose closure satisfies all branches",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-inline-values/type/intersection-host.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 30,
+              "line": 4
+            },
+            "start": {
+              "col": 10,
+              "line": 4
+            }
+          },
+          "range": {
+            "end": 161,
+            "start": 141
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-inline-values/bad/bad-intersection-missing-type.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 8
+          },
+          "start": {
+            "col": 3,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 170,
+          "start": 126
+        }
+      }
+    },
+    {
+      "code": "inline-value-type-not-compatible",
+      "message": "field 'joint': inline value claims 'rationale' but its closure does not satisfy intersection slot '<rationale & thesis>' — missing: thesis",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-inline-values/type/intersection-host.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 30,
+              "line": 4
+            },
+            "start": {
+              "col": 10,
+              "line": 4
+            }
+          },
+          "range": {
+            "end": 161,
+            "start": 141
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-inline-values/bad/bad-intersection-not-satisfying.md",
+        "line_col": {
+          "end": {
+            "col": 18,
+            "line": 6
+          },
+          "start": {
+            "col": 9,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 166,
+          "start": 157
+        }
+      }
+    },
+    {
+      "code": "reference-target-missing",
+      "message": "field 'src' references 'unknown-rationale' which does not exist in the repo",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-inline-values/type/prim-or-ref.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 29,
+              "line": 5
+            },
+            "start": {
+              "col": 8,
+              "line": 5
+            }
+          },
+          "range": {
+            "end": 192,
+            "start": 171
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/corpus-inline-values/bad/bad-prim-or-ref-broken-link.md",
+        "line_col": {
+          "end": {
+            "col": 29,
+            "line": 7
+          },
+          "start": {
+            "col": 6,
+            "line": 7
+          }
+        },
+        "range": {
+          "end": 275,
+          "start": 252
+        }
+      }
+    },
+    {
+      "code": "inline-value-missing-type",
+      "message": "field 'choice': inline value at sealed-parent slot 'decision' must declare `type:` naming a concrete (claimable) descendant",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-inline-values/type/sealed-host.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 19,
+              "line": 4
+            },
+            "start": {
+              "col": 11,
+              "line": 4
+            }
+          },
+          "range": {
+            "end": 121,
+            "start": 113
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-inline-values/bad/bad-sealed-missing-type.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 7
+          },
+          "start": {
+            "col": 3,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 135,
+          "start": 122
+        }
+      }
+    },
+    {
+      "code": "sealed-parent-claimed",
+      "message": "type-def 'decision' is sealed; claims must drill to a non-sealed descendant",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-inline-values/bad/bad-sealed-parent-direct.md",
+        "line_col": {
+          "end": {
+            "col": 17,
+            "line": 5
+          },
+          "start": {
+            "col": 9,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 113,
+          "start": 105
+        }
+      }
+    },
+    {
+      "code": "inline-value-missing-type",
+      "message": "field 'claim': inline value at union slot '<rationale | thesis>' must declare `type:` identifying which branch the value satisfies",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-inline-values/type/union-host.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 30,
+              "line": 4
+            },
+            "start": {
+              "col": 10,
+              "line": 4
+            }
+          },
+          "range": {
+            "end": 132,
+            "start": 112
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-inline-values/bad/bad-union-missing-type.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 7
+          },
+          "start": {
+            "col": 3,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 136,
+          "start": 112
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 21,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 26,
+                        "line_col": {
+                          "end": {
+                            "col": 27,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "corpus-inline-values"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "corpus-inline-values"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "amp-host"
+        ],
+        "closure": [
+          "amp-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "target",
+            "origins": [
+              {
+                "name": "amp-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/amp-host.type.yaml",
+                "required": true,
+                "shape": "rationale&"
+              }
+            ],
+            "required": true,
+            "shape": "rationale&"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 139,
+                        "line_col": {
+                          "end": {
+                            "col": 11,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 5
+                          }
+                        },
+                        "start": 137
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/bad/bad-amp-bad-shape.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": 42
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": 42
+                }
+              }
+            ],
+            "field": "target"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/bad/bad-amp-bad-shape.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "intersection-host"
+        ],
+        "closure": [
+          "intersection-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "joint",
+            "origins": [
+              {
+                "name": "intersection-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/intersection-host.type.yaml",
+                "required": true,
+                "shape": "<rationale & thesis>"
+              }
+            ],
+            "required": true,
+            "shape": "<rationale & thesis>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 170,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 8
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 6
+                          }
+                        },
+                        "start": 126
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/bad/bad-intersection-missing-type.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "claim",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "no type:"
+                            }
+                          ]
+                        },
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "no type:"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "claim",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "no type:"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "no type:"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "joint"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/bad/bad-intersection-missing-type.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "intersection-host"
+        ],
+        "closure": [
+          "intersection-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "joint",
+            "origins": [
+              {
+                "name": "intersection-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/intersection-host.type.yaml",
+                "required": true,
+                "shape": "<rationale & thesis>"
+              }
+            ],
+            "required": true,
+            "shape": "<rationale & thesis>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 218,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 8
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 6
+                          }
+                        },
+                        "start": 151
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/bad/bad-intersection-not-satisfying.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "rationale only — thesis missing"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "rationale only — thesis missing"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "joint"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/bad/bad-intersection-not-satisfying.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "prim-or-ref"
+        ],
+        "closure": [
+          "prim-or-ref"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "src",
+            "origins": [
+              {
+                "name": "prim-or-ref",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/prim-or-ref.type.yaml",
+                "required": true,
+                "shape": "<String | rationale*>"
+              }
+            ],
+            "required": true,
+            "shape": "<String | rationale*>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 275,
+                        "line_col": {
+                          "end": {
+                            "col": 29,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 6,
+                            "line": 7
+                          }
+                        },
+                        "start": 252
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/bad/bad-prim-or-ref-broken-link.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "unknown-rationale"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "unknown-rationale"
+                }
+              }
+            ],
+            "field": "src"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/bad/bad-prim-or-ref-broken-link.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "sealed-host"
+        ],
+        "closure": [
+          "sealed-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "choice",
+            "origins": [
+              {
+                "name": "sealed-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/sealed-host.type.yaml",
+                "required": true,
+                "shape": "decision"
+              }
+            ],
+            "required": true,
+            "shape": "decision"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 135,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 6
+                          }
+                        },
+                        "start": 122
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/bad/bad-sealed-missing-type.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "summary",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "x"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "summary",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "x"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "choice"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/bad/bad-sealed-missing-type.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "sealed-host"
+        ],
+        "closure": [
+          "sealed-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "choice",
+            "origins": [
+              {
+                "name": "sealed-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/sealed-host.type.yaml",
+                "required": true,
+                "shape": "decision"
+              }
+            ],
+            "required": true,
+            "shape": "decision"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 129,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 5
+                          }
+                        },
+                        "start": 99
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/bad/bad-sealed-parent-direct.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "summary",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "x"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "summary",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "x"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "choice"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/bad/bad-sealed-parent-direct.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "union-host"
+        ],
+        "closure": [
+          "union-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "claim",
+            "origins": [
+              {
+                "name": "union-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/union-host.type.yaml",
+                "required": true,
+                "shape": "<rationale | thesis>"
+              }
+            ],
+            "required": true,
+            "shape": "<rationale | thesis>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 136,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 6
+                          }
+                        },
+                        "start": 112
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/bad/bad-union-missing-type.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "no type:"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "no type:"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "claim"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/bad/bad-union-missing-type.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "amp-host"
+        ],
+        "closure": [
+          "amp-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "target",
+            "origins": [
+              {
+                "name": "amp-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/amp-host.type.yaml",
+                "required": true,
+                "shape": "rationale&"
+              }
+            ],
+            "required": true,
+            "shape": "rationale&"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 79,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 4
+                          }
+                        },
+                        "start": 29
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/good/amp-inline.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "inline form at a `rationale&` slot"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "inline form at a `rationale&` slot"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "target"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/good/amp-inline.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "amp-host"
+        ],
+        "closure": [
+          "amp-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "target",
+            "origins": [
+              {
+                "name": "amp-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/amp-host.type.yaml",
+                "required": true,
+                "shape": "rationale&"
+              }
+            ],
+            "required": true,
+            "shape": "rationale&"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 36,
+                        "line_col": {
+                          "end": {
+                            "col": 18,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/good/amp-reference.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "rat"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "rat"
+                }
+              }
+            ],
+            "field": "target"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/good/amp-reference.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "compound-amp-host"
+        ],
+        "closure": [
+          "compound-amp-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "target",
+            "origins": [
+              {
+                "name": "compound-amp-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/compound-amp-host.type.yaml",
+                "required": true,
+                "shape": "<rationale* | thesis*>&"
+              }
+            ],
+            "required": true,
+            "shape": "<rationale* | thesis*>&"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 118,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 4
+                          }
+                        },
+                        "start": 38
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/good/compound-amp-inline-rationale.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "inline value at a `<rationale | thesis>&` slot"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "inline value at a `<rationale | thesis>&` slot"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "target"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/good/compound-amp-inline-rationale.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "compound-amp-host"
+        ],
+        "closure": [
+          "compound-amp-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "target",
+            "origins": [
+              {
+                "name": "compound-amp-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/compound-amp-host.type.yaml",
+                "required": true,
+                "shape": "<rationale* | thesis*>&"
+              }
+            ],
+            "required": true,
+            "shape": "<rationale* | thesis*>&"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 45,
+                        "line_col": {
+                          "end": {
+                            "col": 18,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 3
+                          }
+                        },
+                        "start": 36
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/good/compound-amp-reference.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "rat"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "rat"
+                }
+              }
+            ],
+            "field": "target"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/good/compound-amp-reference.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "inline-host"
+        ],
+        "closure": [
+          "inline-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "rationale",
+            "origins": [
+              {
+                "name": "inline-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/inline-host.type.yaml",
+                "required": true,
+                "shape": "rationale"
+              }
+            ],
+            "required": true,
+            "shape": "rationale"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 124,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 4
+                          }
+                        },
+                        "start": 35
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/good/inline-declare-type.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "redundant but allowed — declared matches slot exactly"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "redundant but allowed — declared matches slot exactly"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "rationale"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/good/inline-declare-type.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "inline-host"
+        ],
+        "closure": [
+          "inline-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "rationale",
+            "origins": [
+              {
+                "name": "inline-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/inline-host.type.yaml",
+                "required": true,
+                "shape": "rationale"
+              }
+            ],
+            "required": true,
+            "shape": "rationale"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 112,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 4
+                          }
+                        },
+                        "start": 35
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/good/inline-omit-type.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "no inline type: claim — defaults to slot demand 'rationale'"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "no inline type: claim — defaults to slot demand 'rationale'"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "rationale"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/good/inline-omit-type.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "intersection-host"
+        ],
+        "closure": [
+          "intersection-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "joint",
+            "origins": [
+              {
+                "name": "intersection-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/intersection-host.type.yaml",
+                "required": true,
+                "shape": "<rationale & thesis>"
+              }
+            ],
+            "required": true,
+            "shape": "<rationale & thesis>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 153,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 9
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 4
+                          }
+                        },
+                        "start": 37
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/good/intersection-mixin.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "claim",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "covers the thesis branch"
+                            }
+                          ]
+                        },
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "covers the rationale branch"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "claim",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "covers the thesis branch"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "covers the rationale branch"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "joint"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/good/intersection-mixin.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "inline-host"
+        ],
+        "closure": [
+          "inline-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "rationale",
+            "origins": [
+              {
+                "name": "inline-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/inline-host.type.yaml",
+                "required": true,
+                "shape": "rationale"
+              }
+            ],
+            "required": true,
+            "shape": "rationale"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 129,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 4
+                          }
+                        },
+                        "start": 35
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/good/nested-inline.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "outer rationale"
+                            }
+                          ]
+                        },
+                        {
+                          "field": "evidence",
+                          "values": [
+                            {
+                              "fields": [
+                                {
+                                  "field": "source",
+                                  "values": [
+                                    {
+                                      "kind": "scalar",
+                                      "value": "nested inline value, two levels deep"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "kind": "inline_record"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "outer rationale"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "evidence",
+                      "values": [
+                        {
+                          "fields": [
+                            {
+                              "field": "source",
+                              "values": [
+                                {
+                                  "kind": "scalar",
+                                  "value": "nested inline value, two levels deep"
+                                }
+                              ]
+                            }
+                          ],
+                          "kind": "inline_record"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "rationale"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/good/nested-inline.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "prim-or-ref"
+        ],
+        "closure": [
+          "prim-or-ref"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "src",
+            "origins": [
+              {
+                "name": "prim-or-ref",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/prim-or-ref.type.yaml",
+                "required": true,
+                "shape": "<String | rationale*>"
+              }
+            ],
+            "required": true,
+            "shape": "<String | rationale*>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 49,
+                        "line_col": {
+                          "end": {
+                            "col": 28,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 6,
+                            "line": 3
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/good/prim-or-ref-string.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "plain free-form text"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "plain free-form text"
+                }
+              }
+            ],
+            "field": "src"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/good/prim-or-ref-string.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "prim-or-ref"
+        ],
+        "closure": [
+          "prim-or-ref"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "src",
+            "origins": [
+              {
+                "name": "prim-or-ref",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/prim-or-ref.type.yaml",
+                "required": true,
+                "shape": "<String | rationale*>"
+              }
+            ],
+            "required": true,
+            "shape": "<String | rationale*>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 36,
+                        "line_col": {
+                          "end": {
+                            "col": 15,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 6,
+                            "line": 3
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/good/prim-or-ref-wikilink.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "rat"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "rat"
+                }
+              }
+            ],
+            "field": "src"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/good/prim-or-ref-wikilink.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "rationale"
+        ],
+        "closure": [
+          "rationale"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "rationale",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/rationale.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "evidence",
+            "origins": [
+              {
+                "name": "rationale",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/rationale.type.yaml",
+                "required": false,
+                "shape": "evidence-item"
+              }
+            ],
+            "required": false,
+            "shape": "evidence-item"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 93,
+                        "line_col": {
+                          "end": {
+                            "col": 74,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 33
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/good/rat.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "wikilink target for amp-reference and prim-or-ref-wikilink"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "wikilink target for amp-reference and prim-or-ref-wikilink"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/good/rat.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "sealed-host"
+        ],
+        "closure": [
+          "sealed-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "choice",
+            "origins": [
+              {
+                "name": "sealed-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/sealed-host.type.yaml",
+                "required": true,
+                "shape": "decision"
+              }
+            ],
+            "required": true,
+            "shape": "decision"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 110,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 4
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/good/sealed-leaf.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "summary",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "leaf reached — no sealed-parent-claimed"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "summary",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "leaf reached — no sealed-parent-claimed"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "choice"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/good/sealed-leaf.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "union-host"
+        ],
+        "closure": [
+          "union-host"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "claim",
+            "origins": [
+              {
+                "name": "union-host",
+                "origin_path": "<root>/scenarios/corpus-inline-values/type/union-host.type.yaml",
+                "required": true,
+                "shape": "<rationale | thesis>"
+              }
+            ],
+            "required": true,
+            "shape": "<rationale | thesis>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 116,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 4
+                          }
+                        },
+                        "start": 30
+                      },
+                      "file": "<root>/scenarios/corpus-inline-values/good/union-rationale.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "description",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": "matches the rationale branch of <rationale | thesis>"
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "description",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": "matches the rationale branch of <rationale | thesis>"
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "claim"
+          }
+        ],
+        "file": "<root>/scenarios/corpus-inline-values/good/union-rationale.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

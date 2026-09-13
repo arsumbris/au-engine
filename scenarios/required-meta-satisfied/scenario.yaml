@@ -1,0 +1,5 @@
+title: "Concrete subtypes carrying the required meta, or a subtype of it, satisfy the obligation by closure"
+spec_ref: "[[spec - required subtype meta - a base obligates every concrete subtype to carry a named meta]]"
+command: validate
+expected:
+  clean: true

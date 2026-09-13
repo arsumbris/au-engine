@@ -1,0 +1,6 @@
+title: "A commit-pin in a plain `file*` slot is rejected, `@` requires a `*@` slot"
+spec_ref: "[[spec - diagnostic codes::au-type-system^unexpected-commit-pin]]"
+command: validate
+expected:
+  codes:
+    - { code: unexpected-commit-pin, severity: error }

@@ -1,0 +1,6 @@
+title: "An instance claiming a peer type (`note::base`) is placement-checked against the peer type's location, relative to its own repo root"
+spec_ref: "[[spec - location constraints - a name template and path predicate as an advisory placement meet]]"
+command: validate
+expected:
+  codes:
+    - { code: location-mismatch, severity: warning }

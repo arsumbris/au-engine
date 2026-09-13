@@ -1,0 +1,6 @@
+title: "Fenced code block with no closing fence fires body-unterminated-fence and recovers"
+spec_ref: "[[type-instance body contribution::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: body-unterminated-fence, severity: warning }

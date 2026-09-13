@@ -1,0 +1,5 @@
+title: "Optional `section?:` with `fills:` doesn't fire fills-contract-unmet when the section is absent from the body"
+spec_ref: "[[type-def body fills::au-type-system]]"
+command: validate
+expected:
+  clean: true

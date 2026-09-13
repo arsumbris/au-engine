@@ -1,0 +1,6 @@
+title: "A meta block naming a plain record (no au.engine.meta mixin) fires non-meta-type-in-meta-position"
+spec_ref: "[[spec - meta type marker - the meta position admits only types that mix in the engine meta base]]"
+command: validate
+expected:
+  codes:
+    - { code: non-meta-type-in-meta-position, severity: error }

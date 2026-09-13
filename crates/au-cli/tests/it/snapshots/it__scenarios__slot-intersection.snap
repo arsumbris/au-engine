@@ -1,0 +1,466 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 23,
+                        "line_col": {
+                          "end": {
+                            "col": 24,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/slot-intersection/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "slot-intersection"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "slot-intersection"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/slot-intersection/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 118,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 10
+                },
+                "start": {
+                  "col": 1,
+                  "line": 9
+                }
+              },
+              "start": 101
+            },
+            "text": "A mixin target"
+          },
+          {
+            "content": "note",
+            "kind": "inline_code",
+            "span": {
+              "end": 140,
+              "line_col": {
+                "end": {
+                  "col": 22,
+                  "line": 11
+                },
+                "start": {
+                  "col": 16,
+                  "line": 11
+                }
+              },
+              "start": 134
+            }
+          },
+          {
+            "content": "tagged",
+            "kind": "inline_code",
+            "span": {
+              "end": 153,
+              "line_col": {
+                "end": {
+                  "col": 35,
+                  "line": 11
+                },
+                "start": {
+                  "col": 27,
+                  "line": 11
+                }
+              },
+              "start": 145
+            }
+          },
+          {
+            "content": "<note* & tagged*>",
+            "kind": "inline_code",
+            "span": {
+              "end": 188,
+              "line_col": {
+                "end": {
+                  "col": 70,
+                  "line": 11
+                },
+                "start": {
+                  "col": 51,
+                  "line": 11
+                }
+              },
+              "start": 169
+            }
+          }
+        ],
+        "claim": [
+          "note",
+          "tagged"
+        ],
+        "closure": [
+          "note",
+          "tagged"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/slot-intersection/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "tag",
+            "origins": [
+              {
+                "name": "tagged",
+                "origin_path": "<root>/scenarios/slot-intersection/type/tagged.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 82,
+                        "line_col": {
+                          "end": {
+                            "col": 53,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 5
+                          }
+                        },
+                        "start": 43
+                      },
+                      "file": "<root>/scenarios/slot-intersection/dual-target.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "A file claiming both note and tagged."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "A file claiming both note and tagged."
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 95,
+                        "line_col": {
+                          "end": {
+                            "col": 13,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 6,
+                            "line": 6
+                          }
+                        },
+                        "start": 88
+                      },
+                      "file": "<root>/scenarios/slot-intersection/dual-target.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "alpha"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "alpha"
+                }
+              }
+            ],
+            "field": "tag"
+          }
+        ],
+        "file": "<root>/scenarios/slot-intersection/dual-target.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 63,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 46
+            },
+            "text": "A combo holder"
+          },
+          {
+            "content": "joint: <note* & tagged*>",
+            "kind": "inline_code",
+            "span": {
+              "end": 90,
+              "line_col": {
+                "end": {
+                  "col": 27,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 8
+                }
+              },
+              "start": 64
+            }
+          },
+          {
+            "content": "note",
+            "kind": "inline_code",
+            "span": {
+              "end": 150,
+              "line_col": {
+                "end": {
+                  "col": 87,
+                  "line": 8
+                },
+                "start": {
+                  "col": 81,
+                  "line": 8
+                }
+              },
+              "start": 144
+            }
+          },
+          {
+            "content": "tagged",
+            "kind": "inline_code",
+            "span": {
+              "end": 163,
+              "line_col": {
+                "end": {
+                  "col": 100,
+                  "line": 8
+                },
+                "start": {
+                  "col": 92,
+                  "line": 8
+                }
+              },
+              "start": 155
+            }
+          }
+        ],
+        "claim": [
+          "combo"
+        ],
+        "closure": [
+          "combo"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "joint",
+            "origins": [
+              {
+                "name": "combo",
+                "origin_path": "<root>/scenarios/slot-intersection/type/combo.type.yaml",
+                "required": true,
+                "shape": "<note* & tagged*>"
+              }
+            ],
+            "required": true,
+            "shape": "<note* & tagged*>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 40,
+                        "line_col": {
+                          "end": {
+                            "col": 25,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 3
+                          }
+                        },
+                        "start": 23
+                      },
+                      "file": "<root>/scenarios/slot-intersection/holder.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "dual-target"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "dual-target"
+                }
+              }
+            ],
+            "field": "joint"
+          }
+        ],
+        "file": "<root>/scenarios/slot-intersection/holder.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+title: "A `&` union brand slot resolves a whole-value wikilink to a record member (inline-or-reference)"
+spec_ref: "[[spec - branded types - the shape key names a reusable scalar, enum, union, or tuple]], [[spec - value model - one typed value produced once in effective_values and consumed by validation and reads]]"
+command: validate
+expected:
+  clean: true

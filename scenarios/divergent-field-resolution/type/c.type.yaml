@@ -1,0 +1,5 @@
+# c inherits a divergent `title` from a (String) and b (Number).
+# Legal at the type-def; the collision surfaces only per-instance.
+extends:
+  - a
+  - b

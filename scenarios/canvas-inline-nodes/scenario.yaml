@@ -1,0 +1,5 @@
+title: "Canvas with `^:`-addressed inline nodes and `[[^^id]]` edges validates cleanly"
+spec_ref: "[[type block-id::au-type-system]], [[type-def shape record::au-type-system]]"
+command: validate
+expected:
+  clean: true

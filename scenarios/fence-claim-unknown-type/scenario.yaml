@@ -1,0 +1,7 @@
+title: "A fence claiming a type that does not exist errors, and the read-as-record hint rides alongside"
+spec_ref: "[[spec - diagnostic codes::au-type-system^body-fence-read-as-record]]"
+command: validate
+expected:
+  codes:
+    - { code: unknown-type-claim, severity: error }
+    - { code: body-fence-read-as-record, severity: hint }

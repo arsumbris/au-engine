@@ -1,0 +1,493 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "reference-path-escapes-repo",
+      "fix": {
+        "description": "name the target in its own repo with the `::repo` qualifier, `[[name::repo]]`, rather than reaching across with a relative path"
+      },
+      "message": "field 'sibling' references '../peer-repo/notes/x.md', a path that leaves this repo; a wikilink is repo-scoped, so it can never resolve",
+      "related": [
+        {
+          "file": "<root>/scenarios/reference-escapes-repo/type/note.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 17,
+              "line": 3
+            },
+            "start": {
+              "col": 12,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 59,
+            "start": 54
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/reference-escapes-repo/a-note.md",
+        "line_col": {
+          "end": {
+            "col": 39,
+            "line": 5
+          },
+          "start": {
+            "col": 10,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 191,
+          "start": 162
+        }
+      }
+    },
+    {
+      "code": "reference-target-missing",
+      "message": "field 'later' references 'not-written-yet' which does not exist in the repo",
+      "related": [
+        {
+          "file": "<root>/scenarios/reference-escapes-repo/type/note.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 16,
+              "line": 4
+            },
+            "start": {
+              "col": 11,
+              "line": 4
+            }
+          },
+          "range": {
+            "end": 75,
+            "start": 70
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/reference-escapes-repo/a-note.md",
+        "line_col": {
+          "end": {
+            "col": 29,
+            "line": 7
+          },
+          "start": {
+            "col": 8,
+            "line": 7
+          }
+        },
+        "range": {
+          "end": 278,
+          "start": 257
+        }
+      }
+    },
+    {
+      "code": "reference-path-escapes-repo",
+      "fix": {
+        "description": "name the target in its own repo with the `::repo` qualifier, `[[name::repo]]`, rather than reaching across with a relative path"
+      },
+      "message": "field 'touched' references '../peer-repo/notes/x.md', a path that leaves this repo; a wikilink is repo-scoped, so it can never resolve",
+      "related": [
+        {
+          "file": "<root>/scenarios/reference-escapes-repo/type/note.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 19,
+              "line": 6
+            },
+            "start": {
+              "col": 13,
+              "line": 6
+            }
+          },
+          "range": {
+            "end": 157,
+            "start": 151
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/reference-escapes-repo/a-note.md",
+        "line_col": {
+          "end": {
+            "col": 82,
+            "line": 12
+          },
+          "start": {
+            "col": 10,
+            "line": 12
+          }
+        },
+        "range": {
+          "end": 667,
+          "start": 595
+        }
+      }
+    },
+    {
+      "code": "reference-path-escapes-repo",
+      "fix": {
+        "description": "name the target in its own repo with the `::repo` qualifier, `[[name::repo]]`, rather than reaching across with a relative path"
+      },
+      "message": "wikilink `[[../peer-repo/notes/x.md]]` names a path that leaves this repo; a wikilink is repo-scoped, so it can never resolve",
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/reference-escapes-repo/a-note.md",
+        "line_col": {
+          "end": {
+            "col": 89,
+            "line": 15
+          },
+          "start": {
+            "col": 62,
+            "line": 15
+          }
+        },
+        "range": {
+          "end": 761,
+          "start": 734
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 28,
+                        "line_col": {
+                          "end": {
+                            "col": 29,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/reference-escapes-repo/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "reference-escapes-repo"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "reference-escapes-repo"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/reference-escapes-repo/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": null,
+              "commit": null,
+              "field": null,
+              "repo": null,
+              "target": "../peer-repo/notes/x.md"
+            },
+            "raw": "../peer-repo/notes/x.md",
+            "span": {
+              "end": 761,
+              "line_col": {
+                "end": {
+                  "col": 89,
+                  "line": 15
+                },
+                "start": {
+                  "col": 62,
+                  "line": 15
+                }
+              },
+              "start": 734
+            }
+          }
+        ],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "later",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/reference-escapes-repo/type/note.type.yaml",
+                "required": false,
+                "shape": "file*"
+              }
+            ],
+            "required": false,
+            "shape": "file*"
+          },
+          {
+            "divergent": false,
+            "field": "sibling",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/reference-escapes-repo/type/note.type.yaml",
+                "required": true,
+                "shape": "file*"
+              }
+            ],
+            "required": true,
+            "shape": "file*"
+          },
+          {
+            "divergent": false,
+            "field": "touched",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/reference-escapes-repo/type/note.type.yaml",
+                "required": false,
+                "shape": "file*@"
+              }
+            ],
+            "required": false,
+            "shape": "file*@"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 278,
+                        "line_col": {
+                          "end": {
+                            "col": 29,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 7
+                          }
+                        },
+                        "start": 257
+                      },
+                      "file": "<root>/scenarios/reference-escapes-repo/a-note.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "not-written-yet"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "not-written-yet"
+                }
+              }
+            ],
+            "field": "later"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 191,
+                        "line_col": {
+                          "end": {
+                            "col": 39,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 10,
+                            "line": 5
+                          }
+                        },
+                        "start": 162
+                      },
+                      "file": "<root>/scenarios/reference-escapes-repo/a-note.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "../peer-repo/notes/x.md"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "../peer-repo/notes/x.md"
+                }
+              }
+            ],
+            "field": "sibling"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 667,
+                        "line_col": {
+                          "end": {
+                            "col": 82,
+                            "line": 12
+                          },
+                          "start": {
+                            "col": 10,
+                            "line": 12
+                          }
+                        },
+                        "start": 595
+                      },
+                      "file": "<root>/scenarios/reference-escapes-repo/a-note.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "commit": "0f1e2d3c4b5a69788796a5b4c3d2e1f00f1e2d3c",
+                      "kind": "reference",
+                      "target": "../peer-repo/notes/x.md"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "commit": "0f1e2d3c4b5a69788796a5b4c3d2e1f00f1e2d3c",
+                  "kind": "reference",
+                  "target": "../peer-repo/notes/x.md"
+                }
+              }
+            ],
+            "field": "touched"
+          }
+        ],
+        "file": "<root>/scenarios/reference-escapes-repo/a-note.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,497 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "block-id-not-found",
+      "message": "wikilink `[[research-notes^^missing-id]]` — block-id `missing-id` not found in research-notes",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/body-block-id-not-found/decision.md",
+        "line_col": {
+          "end": {
+            "col": 65,
+            "line": 10
+          },
+          "start": {
+            "col": 23,
+            "line": 10
+          }
+        },
+        "range": {
+          "end": 224,
+          "start": 182
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 29,
+                        "line_col": {
+                          "end": {
+                            "col": 30,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/body-block-id-not-found/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "body-block-id-not-found"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "body-block-id-not-found"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/body-block-id-not-found/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 83,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 77
+            },
+            "text": "Why"
+          },
+          {
+            "content": "^missing-id",
+            "kind": "inline_code",
+            "span": {
+              "end": 110,
+              "line_col": {
+                "end": {
+                  "col": 27,
+                  "line": 9
+                },
+                "start": {
+                  "col": 14,
+                  "line": 9
+                }
+              },
+              "start": 97
+            }
+          },
+          {
+            "content": "research-notes.md",
+            "kind": "inline_code",
+            "span": {
+              "end": 158,
+              "line_col": {
+                "end": {
+                  "col": 75,
+                  "line": 9
+                },
+                "start": {
+                  "col": 56,
+                  "line": 9
+                }
+              },
+              "start": 139
+            }
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": {
+                "id": "missing-id",
+                "referent": true
+              },
+              "commit": null,
+              "field": "assumptions",
+              "repo": null,
+              "target": "research-notes"
+            },
+            "raw": "research-notes^^missing-id:assumptions",
+            "span": {
+              "end": 224,
+              "line_col": {
+                "end": {
+                  "col": 65,
+                  "line": 10
+                },
+                "start": {
+                  "col": 23,
+                  "line": 10
+                }
+              },
+              "start": 182
+            }
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "assumptions",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/body-block-id-not-found/type/decision.type.yaml",
+                "required": false,
+                "shape": "assumption&[+]"
+              }
+            ],
+            "required": false,
+            "shape": "assumption&[+]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/body-block-id-not-found/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 224,
+                        "line_col": {
+                          "end": {
+                            "col": 65,
+                            "line": 10
+                          },
+                          "start": {
+                            "col": 23,
+                            "line": 10
+                          }
+                        },
+                        "start": 182
+                      },
+                      "file": "<root>/scenarios/body-block-id-not-found/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Why"
+                      }
+                    ],
+                    "surface": "body_wikilink",
+                    "value": {
+                      "anchor": null,
+                      "block_id": {
+                        "id": "missing-id",
+                        "referent": true
+                      },
+                      "kind": "reference",
+                      "target": "research-notes"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": {
+                    "id": "missing-id",
+                    "referent": true
+                  },
+                  "kind": "reference",
+                  "target": "research-notes"
+                }
+              }
+            ],
+            "field": "assumptions"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/body-block-id-not-found/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/body-block-id-not-found/decision.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Why",
+            "optional": false,
+            "path": [
+              "Why"
+            ],
+            "present": true,
+            "span": {
+              "end": 83,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 77
+            }
+          }
+        ]
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 89,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 78
+            },
+            "text": "Findings"
+          },
+          {
+            "content": "^id",
+            "kind": "inline_code",
+            "span": {
+              "end": 115,
+              "line_col": {
+                "end": {
+                  "col": 26,
+                  "line": 8
+                },
+                "start": {
+                  "col": 21,
+                  "line": 8
+                }
+              },
+              "start": 110
+            }
+          }
+        ],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/body-block-id-not-found/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 72,
+                        "line_col": {
+                          "end": {
+                            "col": 58,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/body-block-id-not-found/research-notes.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Notes file without the referenced block-id"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Notes file without the referenced block-id"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/body-block-id-not-found/research-notes.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

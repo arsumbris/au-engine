@@ -1,0 +1,71 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "required-field-absent",
+      "message": "meta sub-region 'display-meta' on type-def 'note' is missing required field 'tldr' (declared on 'display-meta') — did you mean 'tldrr'?",
+      "related": [
+        {
+          "file": "<root>/scenarios/meta-required-field-near-miss/type/display-meta.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 7,
+              "line": 3
+            },
+            "start": {
+              "col": 3,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 49,
+            "start": 45
+          }
+        },
+        {
+          "file": "<root>/scenarios/meta-required-field-near-miss/type/note.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 10,
+              "line": 7
+            },
+            "start": {
+              "col": 5,
+              "line": 7
+            }
+          },
+          "range": {
+            "end": 210,
+            "start": 205
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/meta-required-field-near-miss/type/note.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 8
+          },
+          "start": {
+            "col": 5,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 227,
+          "start": 182
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": true,
+    "count": 0,
+    "entries": []
+  }
+}

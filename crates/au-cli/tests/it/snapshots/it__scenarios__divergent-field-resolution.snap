@@ -1,0 +1,857 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'title' (declared on 'a') — qualify it as 'title{a}'",
+      "related": [
+        {
+          "file": "<root>/scenarios/divergent-field-resolution/type/a.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 8,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 15,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/divergent-field-resolution/ambiguous-anchor-plus-body.md",
+        "line_col": {
+          "end": {
+            "col": 8,
+            "line": 7
+          },
+          "start": {
+            "col": 7,
+            "line": 7
+          }
+        },
+        "range": {
+          "end": 393,
+          "start": 392
+        }
+      }
+    },
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'title' (declared on 'b') — qualify it as 'title{b}'",
+      "related": [
+        {
+          "file": "<root>/scenarios/divergent-field-resolution/type/b.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 8,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 15,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/divergent-field-resolution/ambiguous-anchor-plus-body.md",
+        "line_col": {
+          "end": {
+            "col": 8,
+            "line": 7
+          },
+          "start": {
+            "col": 7,
+            "line": 7
+          }
+        },
+        "range": {
+          "end": 393,
+          "start": 392
+        }
+      }
+    },
+    {
+      "code": "qualifier-ambiguous",
+      "message": "qualifier 'c' reaches divergent field 'title' at more than one origin — name a declaring origin directly (title{a}, title{b})",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/divergent-field-resolution/ambiguous-anchor-plus-body.md",
+        "line_col": {
+          "end": {
+            "col": 9,
+            "line": 8
+          },
+          "start": {
+            "col": 1,
+            "line": 8
+          }
+        },
+        "range": {
+          "end": 402,
+          "start": 394
+        }
+      }
+    },
+    {
+      "code": "qualifier-ambiguous",
+      "message": "qualifier 'c' reaches divergent field 'title' at more than one origin — name a declaring origin directly (title{a}, title{b})",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/divergent-field-resolution/ambiguous-anchor-plus-body.md",
+        "line_col": {
+          "end": {
+            "col": 20,
+            "line": 11
+          },
+          "start": {
+            "col": 1,
+            "line": 11
+          }
+        },
+        "range": {
+          "end": 428,
+          "start": 409
+        }
+      }
+    },
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'title' (declared on 'a') — qualify it as 'title{a}'",
+      "related": [
+        {
+          "file": "<root>/scenarios/divergent-field-resolution/type/a.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 8,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 15,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/divergent-field-resolution/ambiguous-descendant.md",
+        "line_col": {
+          "end": {
+            "col": 8,
+            "line": 6
+          },
+          "start": {
+            "col": 7,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 325,
+          "start": 324
+        }
+      }
+    },
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'title' (declared on 'b') — qualify it as 'title{b}'",
+      "related": [
+        {
+          "file": "<root>/scenarios/divergent-field-resolution/type/b.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 8,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 15,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/divergent-field-resolution/ambiguous-descendant.md",
+        "line_col": {
+          "end": {
+            "col": 8,
+            "line": 6
+          },
+          "start": {
+            "col": 7,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 325,
+          "start": 324
+        }
+      }
+    },
+    {
+      "code": "qualifier-ambiguous",
+      "message": "qualifier 'c' reaches divergent field 'title' at more than one origin — name a declaring origin directly (title{a}, title{b})",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/divergent-field-resolution/ambiguous-descendant.md",
+        "line_col": {
+          "end": {
+            "col": 9,
+            "line": 7
+          },
+          "start": {
+            "col": 1,
+            "line": 7
+          }
+        },
+        "range": {
+          "end": 334,
+          "start": 326
+        }
+      }
+    },
+    {
+      "code": "mixin-collision",
+      "message": "field 'title' is declared with non-token-equal shapes across mixin origins: 'a' (String), 'b' (Number) — a bare use is ambiguous; qualify each use as `title{type}`",
+      "related": [
+        {
+          "file": "<root>/scenarios/divergent-field-resolution/type/a.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 16,
+              "line": 2
+            },
+            "start": {
+              "col": 10,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 23,
+            "start": 17
+          }
+        },
+        {
+          "file": "<root>/scenarios/divergent-field-resolution/type/b.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 16,
+              "line": 2
+            },
+            "start": {
+              "col": 10,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 23,
+            "start": 17
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/divergent-field-resolution/bare.md",
+        "line_col": {
+          "end": {
+            "col": 8,
+            "line": 4
+          },
+          "start": {
+            "col": 7,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 160,
+          "start": 159
+        }
+      }
+    },
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'title' (declared on 'a') — qualify it as 'title{a}'",
+      "related": [
+        {
+          "file": "<root>/scenarios/divergent-field-resolution/type/a.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 8,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 15,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/divergent-field-resolution/bare.md",
+        "line_col": {
+          "end": {
+            "col": 8,
+            "line": 4
+          },
+          "start": {
+            "col": 7,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 160,
+          "start": 159
+        }
+      }
+    },
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'title' (declared on 'b') — qualify it as 'title{b}'",
+      "related": [
+        {
+          "file": "<root>/scenarios/divergent-field-resolution/type/b.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 8,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 15,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/divergent-field-resolution/bare.md",
+        "line_col": {
+          "end": {
+            "col": 8,
+            "line": 4
+          },
+          "start": {
+            "col": 7,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 160,
+          "start": 159
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 5,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 32,
+                        "line_col": {
+                          "end": {
+                            "col": 33,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/divergent-field-resolution/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "divergent-field-resolution"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "divergent-field-resolution"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/divergent-field-resolution/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "[:title{c}] hello",
+            "kind": "inline_code",
+            "span": {
+              "end": 428,
+              "line_col": {
+                "end": {
+                  "col": 20,
+                  "line": 11
+                },
+                "start": {
+                  "col": 1,
+                  "line": 11
+                }
+              },
+              "start": 409
+            }
+          }
+        ],
+        "claim": [
+          "c"
+        ],
+        "closure": [
+          "a",
+          "b",
+          "c"
+        ],
+        "effective_shape": [
+          {
+            "divergent": true,
+            "field": "title",
+            "origins": [
+              {
+                "name": "a",
+                "origin_path": "<root>/scenarios/divergent-field-resolution/type/a.type.yaml",
+                "required": true,
+                "shape": "String"
+              },
+              {
+                "name": "b",
+                "origin_path": "<root>/scenarios/divergent-field-resolution/type/b.type.yaml",
+                "required": true,
+                "shape": "Number"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 428,
+                        "line_col": {
+                          "end": {
+                            "col": 20,
+                            "line": 11
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 11
+                          }
+                        },
+                        "start": 409
+                      },
+                      "file": "<root>/scenarios/divergent-field-resolution/ambiguous-anchor-plus-body.md"
+                    },
+                    "qualifier": {
+                      "type_name": "c"
+                    },
+                    "section_path": [],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "hello"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "hello"
+                }
+              }
+            ],
+            "field": "title"
+          }
+        ],
+        "file": "<root>/scenarios/divergent-field-resolution/ambiguous-anchor-plus-body.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "c"
+        ],
+        "closure": [
+          "a",
+          "b",
+          "c"
+        ],
+        "effective_shape": [
+          {
+            "divergent": true,
+            "field": "title",
+            "origins": [
+              {
+                "name": "a",
+                "origin_path": "<root>/scenarios/divergent-field-resolution/type/a.type.yaml",
+                "required": true,
+                "shape": "String"
+              },
+              {
+                "name": "b",
+                "origin_path": "<root>/scenarios/divergent-field-resolution/type/b.type.yaml",
+                "required": true,
+                "shape": "Number"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 339,
+                        "line_col": {
+                          "end": {
+                            "col": 14,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 11,
+                            "line": 7
+                          }
+                        },
+                        "start": 336
+                      },
+                      "file": "<root>/scenarios/divergent-field-resolution/ambiguous-descendant.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "x"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "x"
+                }
+              }
+            ],
+            "field": "title{c}"
+          }
+        ],
+        "file": "<root>/scenarios/divergent-field-resolution/ambiguous-descendant.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "c"
+        ],
+        "closure": [
+          "a",
+          "b",
+          "c"
+        ],
+        "effective_shape": [
+          {
+            "divergent": true,
+            "field": "title",
+            "origins": [
+              {
+                "name": "a",
+                "origin_path": "<root>/scenarios/divergent-field-resolution/type/a.type.yaml",
+                "required": true,
+                "shape": "String"
+              },
+              {
+                "name": "b",
+                "origin_path": "<root>/scenarios/divergent-field-resolution/type/b.type.yaml",
+                "required": true,
+                "shape": "Number"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 177,
+                        "line_col": {
+                          "end": {
+                            "col": 17,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 5
+                          }
+                        },
+                        "start": 168
+                      },
+                      "file": "<root>/scenarios/divergent-field-resolution/bare.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "ambiguous"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "ambiguous"
+                }
+              }
+            ],
+            "field": "title"
+          }
+        ],
+        "file": "<root>/scenarios/divergent-field-resolution/bare.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "c"
+        ],
+        "closure": [
+          "a",
+          "b",
+          "c"
+        ],
+        "effective_shape": [
+          {
+            "divergent": true,
+            "field": "title",
+            "origins": [
+              {
+                "name": "a",
+                "origin_path": "<root>/scenarios/divergent-field-resolution/type/a.type.yaml",
+                "required": true,
+                "shape": "String"
+              },
+              {
+                "name": "b",
+                "origin_path": "<root>/scenarios/divergent-field-resolution/type/b.type.yaml",
+                "required": true,
+                "shape": "Number"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 168,
+                        "line_col": {
+                          "end": {
+                            "col": 21,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 11,
+                            "line": 5
+                          }
+                        },
+                        "start": 158
+                      },
+                      "file": "<root>/scenarios/divergent-field-resolution/resolved.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "a string"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "a string"
+                }
+              }
+            ],
+            "field": "title{a}"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 181,
+                        "line_col": {
+                          "end": {
+                            "col": 13,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 11,
+                            "line": 6
+                          }
+                        },
+                        "start": 179
+                      },
+                      "file": "<root>/scenarios/divergent-field-resolution/resolved.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": 42
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": 42
+                }
+              }
+            ],
+            "field": "title{b}"
+          }
+        ],
+        "file": "<root>/scenarios/divergent-field-resolution/resolved.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

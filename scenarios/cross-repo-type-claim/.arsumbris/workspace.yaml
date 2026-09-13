@@ -1,0 +1,5 @@
+edit:
+  - cross-repo-type-claim
+  - base
+  - app
+type: au.engine.workspace::au-engine

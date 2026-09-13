@@ -1,0 +1,7 @@
+fields:
+  slug: String
+location:
+  name: "${.type} - ${.slug}"
+  path: "plans/"
+  fileType: md
+  strict: true

@@ -1,0 +1,5 @@
+title: "An inline-code body marker carrying a wikilink at a typed-reference slot resolves as a reference"
+spec_ref: "[[spec - value model - one typed value produced once in effective_values and consumed by validation and reads]], [[type reference::au-type-system]]"
+command: validate
+expected:
+  codes: []

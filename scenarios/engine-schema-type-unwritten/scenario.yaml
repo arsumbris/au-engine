@@ -1,0 +1,6 @@
+title: "An engine-schema file with no written `type:` drifts, the kind still assigns the floor"
+spec_ref: "[[spec - engine-schema file claims - the kind assigns a floor, a written type self-describes and mixes in more]]"
+command: validate
+expected:
+  codes:
+    - { code: engine-schema-type-unwritten, severity: drift }

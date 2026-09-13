@@ -1,0 +1,12 @@
+type: session-log
+session: "s-001"
+started: "2026-06-07T01:14:11Z"
+events:
+  - ^: e-prompt
+    type: sessionEvent.userPrompt
+    at: "2026-06-07T01:14:23Z"
+    prompt: "did the capture plugin work?"
+  - ^: e-tool
+    type: sessionEvent.toolCall
+    at: "2026-06-07T01:14:29Z"
+    tool: "Bash"

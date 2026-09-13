@@ -1,0 +1,5 @@
+title: "Section `fills: [a, b]` satisfied by contributions to both fields"
+spec_ref: "[[type-def body fills::au-type-system]]"
+command: validate
+expected:
+  clean: true

@@ -1,0 +1,5 @@
+title: "Body tuple — an inline `(a, b)` tuple contributed from the body validates and reads as a tuple"
+spec_ref: "[[spec - value model - one typed value produced once in effective_values and consumed by validation and reads]]"
+command: validate
+expected:
+  clean: true

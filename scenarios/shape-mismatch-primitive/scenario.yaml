@@ -1,0 +1,6 @@
+title: "Field value violates declared primitive shape"
+spec_ref: "[[type-def shape primitive::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: field-shape-mismatch, severity: error }

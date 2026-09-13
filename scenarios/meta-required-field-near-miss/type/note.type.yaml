@@ -1,0 +1,7 @@
+# The meta sub-region omits required `tldr`; `tldrr` is a near-miss of it, so
+# required-field-absent carries a "did you mean 'tldrr'?" hint.
+fields:
+  description: String
+meta:
+  - type: display-meta
+    tldrr: "typo of tldr"

@@ -1,0 +1,5 @@
+title: "A well-formed `location:` block (name template, path glob, fileType) loads clean"
+spec_ref: "[[spec - location constraints - a name template and path predicate as an advisory placement meet]]"
+command: validate
+expected:
+  clean: true

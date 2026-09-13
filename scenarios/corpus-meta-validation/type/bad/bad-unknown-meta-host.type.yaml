@@ -1,0 +1,5 @@
+# intentional: meta block names a type-def that doesn't exist in the graph
+# → unknown-type-claim at the sub-region's `type:` claim span
+meta:
+  - type: nonexistent-meta
+    tldr: "would-be content"

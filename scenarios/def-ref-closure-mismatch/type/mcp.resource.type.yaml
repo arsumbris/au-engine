@@ -1,0 +1,3 @@
+#: a resource the agent can read, unrelated to mcp.tool
+fields:
+  uri?: String

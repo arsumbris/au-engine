@@ -1,0 +1,7 @@
+fields:
+  #: a tuple brand
+  pt: point
+  #: an inline tuple slot
+  region: (Number, Number, Number, Number)
+  #: a scalar brand
+  len: meter

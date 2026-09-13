@@ -1,0 +1,6 @@
+title: "Instance claims a sealed parent directly — must drill to a non-sealed descendant"
+spec_ref: "[[type-def sealed::au-type-system]], [[type-instance type::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: sealed-parent-claimed, severity: error }

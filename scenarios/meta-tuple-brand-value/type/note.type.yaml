@@ -1,0 +1,6 @@
+fields:
+  description: String
+meta:
+  - type: display-meta
+    dim: point(4, 3)
+    len: meter(7)

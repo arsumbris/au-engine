@@ -1,0 +1,7 @@
+fields:
+  title: String
+  #: numeric, so body-contributed prose must not satisfy it
+  pages: Number
+body:
+  - section: Pages
+    fills: pages

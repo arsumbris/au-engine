@@ -1,0 +1,290 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "field-shape-mismatch",
+      "message": "field 'ref' value 'bad(x' is not a wikilink — typed reference shape 'note*' needs a '[[target]]' value",
+      "related": [
+        {
+          "file": "<root>/scenarios/body-nonbrand-malformed-constructor/type/holder.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 13,
+              "line": 2
+            },
+            "start": {
+              "col": 8,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 20,
+            "start": 15
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/body-nonbrand-malformed-constructor/card.md",
+        "line_col": {
+          "end": {
+            "col": 42,
+            "line": 7
+          },
+          "start": {
+            "col": 28,
+            "line": 7
+          }
+        },
+        "range": {
+          "end": 140,
+          "start": 126
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 41,
+                        "line_col": {
+                          "end": {
+                            "col": 42,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/body-nonbrand-malformed-constructor/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "body-nonbrand-malformed-constructor"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "body-nonbrand-malformed-constructor"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/body-nonbrand-malformed-constructor/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "[:ref] bad(x",
+            "kind": "inline_code",
+            "span": {
+              "end": 140,
+              "line_col": {
+                "end": {
+                  "col": 42,
+                  "line": 7
+                },
+                "start": {
+                  "col": 28,
+                  "line": 7
+                }
+              },
+              "start": 126
+            }
+          },
+          {
+            "content": "note*",
+            "kind": "inline_code",
+            "span": {
+              "end": 156,
+              "line_col": {
+                "end": {
+                  "col": 14,
+                  "line": 9
+                },
+                "start": {
+                  "col": 7,
+                  "line": 9
+                }
+              },
+              "start": 149
+            }
+          },
+          {
+            "content": "malformed-constructor",
+            "kind": "inline_code",
+            "span": {
+              "end": 317,
+              "line_col": {
+                "end": {
+                  "col": 24,
+                  "line": 11
+                },
+                "start": {
+                  "col": 1,
+                  "line": 11
+                }
+              },
+              "start": 294
+            }
+          }
+        ],
+        "claim": [
+          "holder"
+        ],
+        "closure": [
+          "holder"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "ref",
+            "origins": [
+              {
+                "name": "holder",
+                "origin_path": "<root>/scenarios/body-nonbrand-malformed-constructor/type/holder.type.yaml",
+                "required": true,
+                "shape": "note*"
+              }
+            ],
+            "required": true,
+            "shape": "note*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 140,
+                        "line_col": {
+                          "end": {
+                            "col": 42,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 28,
+                            "line": 7
+                          }
+                        },
+                        "start": 126
+                      },
+                      "file": "<root>/scenarios/body-nonbrand-malformed-constructor/card.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "malformed_constructor",
+                      "raw": "bad(x"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "malformed_constructor",
+                  "raw": "bad(x"
+                }
+              }
+            ],
+            "field": "ref"
+          }
+        ],
+        "file": "<root>/scenarios/body-nonbrand-malformed-constructor/card.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

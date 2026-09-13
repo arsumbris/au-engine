@@ -1,0 +1,3 @@
+extends: decision
+fields:
+  decided_at: Date

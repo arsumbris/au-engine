@@ -1,0 +1,5 @@
+title: "A workspace member in `disabled:` is declared but intentionally not mounted: its types are absent from the graph and it fires no diagnostic, distinct from the *-member-unmounted family"
+spec_ref: "[[spec - workspace as a folder-repo - an optional workspace.yaml composes edit and discover members]]"
+command: graph
+expected:
+  codes: []

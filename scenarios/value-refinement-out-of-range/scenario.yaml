@@ -1,0 +1,6 @@
+title: "A value below a Number{>=0} refinement fires value-out-of-refinement"
+spec_ref: "[[spec - field-level refinement - value predicates and range cardinality as meets on a primitive slot]]"
+command: validate
+expected:
+  codes:
+    - { code: value-out-of-refinement, severity: error }

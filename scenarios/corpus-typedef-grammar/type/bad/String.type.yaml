@@ -1,0 +1,5 @@
+# intentional: filename derives the type name `String` — a reserved primitive
+# shape name → reserved-type-name.
+# Naming exception to the `bad-` prefix rule: the filename IS the bug. A
+# `bad-` prefix would change the derived name and suppress the test.
+fields: {}

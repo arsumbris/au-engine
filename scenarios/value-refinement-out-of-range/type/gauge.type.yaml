@@ -1,0 +1,2 @@
+fields:
+  depth: "Number{>=0 & integer}"

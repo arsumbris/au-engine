@@ -1,0 +1,7 @@
+fields:
+  createdAt: Date
+  slug: String
+location:
+  name: "${.type} - ${.createdAt} - ${.slug}"
+  path: "**/plan/"
+  fileType: md

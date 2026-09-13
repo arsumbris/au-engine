@@ -1,0 +1,311 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "inline-value-type-not-compatible",
+      "message": "field 'detail': inline value claims 'unrelated' but no branch of union slot '<point>' is in its closure",
+      "related": [
+        {
+          "file": "<root>/scenarios/fence-record-not-compatible/type/capture.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 27,
+              "line": 2
+            },
+            "start": {
+              "col": 11,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 34,
+            "start": 18
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/fence-record-not-compatible/note.md",
+        "line_col": {
+          "end": {
+            "col": 16,
+            "line": 7
+          },
+          "start": {
+            "col": 7,
+            "line": 7
+          }
+        },
+        "range": {
+          "end": 59,
+          "start": 50
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 33,
+                        "line_col": {
+                          "end": {
+                            "col": 34,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/fence-record-not-compatible/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "fence-record-not-compatible"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "fence-record-not-compatible"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/fence-record-not-compatible/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "body": "type: unrelated\nz: 1\n",
+            "info": "[:detail]",
+            "kind": "fenced_block",
+            "span": {
+              "end": 69,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 10
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 31
+            }
+          },
+          {
+            "content": "unrelated",
+            "kind": "inline_code",
+            "span": {
+              "end": 99,
+              "line_col": {
+                "end": {
+                  "col": 30,
+                  "line": 11
+                },
+                "start": {
+                  "col": 19,
+                  "line": 11
+                }
+              },
+              "start": 88
+            }
+          },
+          {
+            "content": "point",
+            "kind": "inline_code",
+            "span": {
+              "end": 142,
+              "line_col": {
+                "end": {
+                  "col": 73,
+                  "line": 11
+                },
+                "start": {
+                  "col": 66,
+                  "line": 11
+                }
+              },
+              "start": 135
+            }
+          }
+        ],
+        "claim": [
+          "capture"
+        ],
+        "closure": [
+          "capture"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "detail",
+            "origins": [
+              {
+                "name": "capture",
+                "origin_path": "<root>/scenarios/fence-record-not-compatible/type/capture.type.yaml",
+                "required": true,
+                "shape": "<String | point>"
+              }
+            ],
+            "required": true,
+            "shape": "<String | point>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 69,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 10
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 6
+                          }
+                        },
+                        "start": 31
+                      },
+                      "file": "<root>/scenarios/fence-record-not-compatible/note.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_fence",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "z",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "z",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "detail"
+          }
+        ],
+        "file": "<root>/scenarios/fence-record-not-compatible/note.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

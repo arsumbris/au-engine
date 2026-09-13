@@ -1,0 +1,6 @@
+title: "A type-def's `location:` block is carried on the type-graph wire — name template, path glob, fileType, strict"
+spec_ref: "[[spec - location constraints - a name template and path predicate as an advisory placement meet]]"
+command: types
+repo: location-wire
+expected:
+  clean: true

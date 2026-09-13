@@ -1,0 +1,6 @@
+fields:
+  description: String
+  assumptions?: assumption&[+]
+body:
+  - section: Why
+    fills: assumptions

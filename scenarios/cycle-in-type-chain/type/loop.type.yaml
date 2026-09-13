@@ -1,0 +1,3 @@
+extends: loop
+fields:
+  description: String

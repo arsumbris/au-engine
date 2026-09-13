@@ -1,0 +1,6 @@
+title: "`file*` references a whole file — a `^block-id` fragment is rejected, use `any*` for blocks"
+spec_ref: "[[type-def shape file::au-type-system]], [[type-def shape any::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: field-shape-mismatch, severity: error }

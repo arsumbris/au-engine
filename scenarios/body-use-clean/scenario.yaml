@@ -1,0 +1,5 @@
+title: "Child splices parent body via use: and adds a section after"
+spec_ref: "[[type-def body use::au-type-system]]"
+command: validate
+expected:
+  clean: true

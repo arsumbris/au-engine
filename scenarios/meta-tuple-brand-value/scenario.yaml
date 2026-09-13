@@ -1,0 +1,5 @@
+title: "A tuple brand and scalar brand in a meta sub-region validate through the value model"
+spec_ref: "[[spec - value model - one typed value produced once in effective_values and consumed by validation and reads]], [[type-def meta::au-type-system]]"
+command: validate
+expected:
+  clean: true

@@ -1,0 +1,5 @@
+title: "A root README self-declaring au.engine.readme with all sections validates clean"
+spec_ref: "[[spec - repo readme - an engine-owned self-declaring node at the repo root with a required body template]]"
+command: validate
+expected:
+  clean: true

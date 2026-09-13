@@ -1,0 +1,5 @@
+edit:
+  - meta-wrapper-over-peer
+  - base
+  - app
+type: au.engine.workspace::au-engine

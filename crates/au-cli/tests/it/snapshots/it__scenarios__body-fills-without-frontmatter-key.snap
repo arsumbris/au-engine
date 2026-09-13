@@ -1,0 +1,327 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "body-fills-without-frontmatter-key",
+      "fix": {
+        "description": "add `notes:` to the frontmatter; an empty value (`notes: `) is fine — it marks the key as filled by the body"
+      },
+      "message": "body contributes to 'notes' but frontmatter is missing the `notes:` key",
+      "related": [
+        {
+          "file": "<root>/scenarios/body-fills-without-frontmatter-key/type/decision.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 9,
+              "line": 3
+            },
+            "start": {
+              "col": 3,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 38,
+            "start": 32
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/body-fills-without-frontmatter-key/decision.md",
+        "line_col": {
+          "end": {
+            "col": 54,
+            "line": 6
+          },
+          "start": {
+            "col": 18,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 117,
+          "start": 81
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 40,
+                        "line_col": {
+                          "end": {
+                            "col": 41,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/body-fills-without-frontmatter-key/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "body-fills-without-frontmatter-key"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "body-fills-without-frontmatter-key"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/body-fills-without-frontmatter-key/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "[:notes] something worth recording",
+            "kind": "inline_code",
+            "span": {
+              "end": 117,
+              "line_col": {
+                "end": {
+                  "col": 54,
+                  "line": 6
+                },
+                "start": {
+                  "col": 18,
+                  "line": 6
+                }
+              },
+              "start": 81
+            }
+          },
+          {
+            "content": "notes:",
+            "kind": "inline_code",
+            "span": {
+              "end": 155,
+              "line_col": {
+                "end": {
+                  "col": 29,
+                  "line": 7
+                },
+                "start": {
+                  "col": 21,
+                  "line": 7
+                }
+              },
+              "start": 147
+            }
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/body-fills-without-frontmatter-key/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "notes",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/body-fills-without-frontmatter-key/type/decision.type.yaml",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/body-fills-without-frontmatter-key/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 117,
+                        "line_col": {
+                          "end": {
+                            "col": 54,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 18,
+                            "line": 6
+                          }
+                        },
+                        "start": 81
+                      },
+                      "file": "<root>/scenarios/body-fills-without-frontmatter-key/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_inline_code",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "something worth recording"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "something worth recording"
+                }
+              }
+            ],
+            "field": "notes"
+          }
+        ],
+        "file": "<root>/scenarios/body-fills-without-frontmatter-key/decision.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

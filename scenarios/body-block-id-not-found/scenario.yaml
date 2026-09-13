@@ -1,0 +1,6 @@
+title: "Body wikilink `[[file^^id:field]]` for an absent block-id fires block-id-not-found"
+spec_ref: "[[type block-id::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: block-id-not-found, severity: error }

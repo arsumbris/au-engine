@@ -1,0 +1,6 @@
+title: "A cross-repo [[name::repo:field]] body slot pointed at the wrong type fires body-slot-shape-mismatch"
+spec_ref: "[[spec - cross-repo workspaces - per-repo type resolution over a declared registry, manifest, and location schema]]"
+command: validate
+expected:
+  codes:
+    - { code: body-slot-shape-mismatch, severity: error }

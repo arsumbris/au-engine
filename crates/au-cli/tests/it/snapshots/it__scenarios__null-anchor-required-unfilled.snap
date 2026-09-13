@@ -1,0 +1,234 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'priority' (declared on 'task')",
+      "related": [
+        {
+          "file": "<root>/scenarios/null-anchor-required-unfilled/type/task.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 11,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 18,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/null-anchor-required-unfilled/task.md",
+        "line_col": {
+          "end": {
+            "col": 9,
+            "line": 3
+          },
+          "start": {
+            "col": 1,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 23,
+          "start": 15
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 35,
+                        "line_col": {
+                          "end": {
+                            "col": 36,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/null-anchor-required-unfilled/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "null-anchor-required-unfilled"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "null-anchor-required-unfilled"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/null-anchor-required-unfilled/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 38,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 30
+            },
+            "text": "Notes"
+          },
+          {
+            "content": "priority:",
+            "kind": "inline_code",
+            "span": {
+              "end": 54,
+              "line_col": {
+                "end": {
+                  "col": 16,
+                  "line": 8
+                },
+                "start": {
+                  "col": 5,
+                  "line": 8
+                }
+              },
+              "start": 43
+            }
+          }
+        ],
+        "claim": [
+          "task"
+        ],
+        "closure": [
+          "task"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "priority",
+            "origins": [
+              {
+                "name": "task",
+                "origin_path": "<root>/scenarios/null-anchor-required-unfilled/type/task.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [],
+        "file": "<root>/scenarios/null-anchor-required-unfilled/task.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

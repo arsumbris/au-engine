@@ -1,0 +1,6 @@
+title: "A root README with no self-declared type fires readme-type-undeclared"
+spec_ref: "[[spec - repo readme - an engine-owned self-declaring node at the repo root with a required body template]]"
+command: validate
+expected:
+  codes:
+    - { code: readme-type-undeclared, severity: warning }

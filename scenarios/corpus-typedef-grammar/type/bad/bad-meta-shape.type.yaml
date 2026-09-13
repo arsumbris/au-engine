@@ -1,0 +1,3 @@
+# intentional: `meta:` isn't a list → meta-not-a-list
+fields: {}
+meta: oops

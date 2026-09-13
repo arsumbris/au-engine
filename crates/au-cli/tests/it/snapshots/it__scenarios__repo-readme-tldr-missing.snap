@@ -1,0 +1,360 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "required-field-absent",
+      "message": "instance is missing required field 'tldr' (declared on 'au.engine.readme')",
+      "related": [
+        {
+          "file": "<au-engine-builtin>/au.engine.readme.type.yaml",
+          "range": {
+            "end": 404,
+            "start": 400
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/repo-readme-tldr-missing/README.md",
+        "line_col": {
+          "end": {
+            "col": 34,
+            "line": 2
+          },
+          "start": {
+            "col": 7,
+            "line": 2
+          }
+        },
+        "range": {
+          "end": 37,
+          "start": 10
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 30,
+                        "line_col": {
+                          "end": {
+                            "col": 31,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/repo-readme-tldr-missing/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "repo-readme-tldr-missing"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "repo-readme-tldr-missing"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/repo-readme-tldr-missing/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 59,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 6
+                },
+                "start": {
+                  "col": 1,
+                  "line": 5
+                }
+              },
+              "start": 43
+            },
+            "text": "Repo Overview"
+          },
+          {
+            "kind": "heading",
+            "level": 2,
+            "span": {
+              "end": 76,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 60
+            },
+            "text": "What this is"
+          },
+          {
+            "kind": "heading",
+            "level": 2,
+            "span": {
+              "end": 162,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 12
+                },
+                "start": {
+                  "col": 1,
+                  "line": 11
+                }
+              },
+              "start": 143
+            },
+            "text": "How to use this"
+          },
+          {
+            "kind": "heading",
+            "level": 2,
+            "span": {
+              "end": 214,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 16
+                },
+                "start": {
+                  "col": 1,
+                  "line": 15
+                }
+              },
+              "start": 192
+            },
+            "text": "How to extend this"
+          }
+        ],
+        "claim": [
+          "au.engine.readme::au-engine"
+        ],
+        "closure": [
+          "au.engine.readme::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "tldr",
+            "origins": [
+              {
+                "name": "au.engine.readme",
+                "origin_path": "<au-engine-builtin>/au.engine.readme.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [],
+        "file": "<root>/scenarios/repo-readme-tldr-missing/README.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Repo Overview",
+            "optional": false,
+            "path": [
+              "Repo Overview"
+            ],
+            "present": true,
+            "span": {
+              "end": 59,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 6
+                },
+                "start": {
+                  "col": 1,
+                  "line": 5
+                }
+              },
+              "start": 43
+            }
+          },
+          {
+            "depth": 2,
+            "name": "What this is",
+            "optional": false,
+            "path": [
+              "Repo Overview",
+              "What this is"
+            ],
+            "present": true,
+            "span": {
+              "end": 76,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 60
+            }
+          },
+          {
+            "depth": 2,
+            "name": "How to use this",
+            "optional": false,
+            "path": [
+              "Repo Overview",
+              "How to use this"
+            ],
+            "present": true,
+            "span": {
+              "end": 162,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 12
+                },
+                "start": {
+                  "col": 1,
+                  "line": 11
+                }
+              },
+              "start": 143
+            }
+          },
+          {
+            "depth": 2,
+            "name": "How to extend this",
+            "optional": false,
+            "path": [
+              "Repo Overview",
+              "How to extend this"
+            ],
+            "present": true,
+            "span": {
+              "end": 214,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 16
+                },
+                "start": {
+                  "col": 1,
+                  "line": 15
+                }
+              },
+              "start": 192
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

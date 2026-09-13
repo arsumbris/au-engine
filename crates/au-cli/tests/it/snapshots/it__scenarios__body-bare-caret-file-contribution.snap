@@ -1,0 +1,509 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 39,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/body-bare-caret-file-contribution/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "body-bare-caret-file-contribution"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "body-bare-caret-file-contribution"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/body-bare-caret-file-contribution/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 83,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 77
+            },
+            "text": "Why"
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": {
+                "id": "passage",
+                "referent": false
+              },
+              "commit": null,
+              "field": "assumptions",
+              "repo": null,
+              "target": "research-notes"
+            },
+            "raw": "research-notes^passage:assumptions",
+            "span": {
+              "end": 138,
+              "line_col": {
+                "end": {
+                  "col": 55,
+                  "line": 9
+                },
+                "start": {
+                  "col": 17,
+                  "line": 9
+                }
+              },
+              "start": 100
+            }
+          },
+          {
+            "content": "^passage",
+            "kind": "inline_code",
+            "span": {
+              "end": 171,
+              "line_col": {
+                "end": {
+                  "col": 20,
+                  "line": 10
+                },
+                "start": {
+                  "col": 10,
+                  "line": 10
+                }
+              },
+              "start": 161
+            }
+          },
+          {
+            "content": "research-notes",
+            "kind": "inline_code",
+            "span": {
+              "end": 217,
+              "line_col": {
+                "end": {
+                  "col": 66,
+                  "line": 10
+                },
+                "start": {
+                  "col": 50,
+                  "line": 10
+                }
+              },
+              "start": 201
+            }
+          },
+          {
+            "content": "assumption",
+            "kind": "inline_code",
+            "span": {
+              "end": 268,
+              "line_col": {
+                "end": {
+                  "col": 44,
+                  "line": 11
+                },
+                "start": {
+                  "col": 32,
+                  "line": 11
+                }
+              },
+              "start": 256
+            }
+          },
+          {
+            "content": "assumption&[+]",
+            "kind": "inline_code",
+            "span": {
+              "end": 302,
+              "line_col": {
+                "end": {
+                  "col": 78,
+                  "line": 11
+                },
+                "start": {
+                  "col": 62,
+                  "line": 11
+                }
+              },
+              "start": 286
+            }
+          },
+          {
+            "content": "^passage",
+            "kind": "inline_code",
+            "span": {
+              "end": 321,
+              "line_col": {
+                "end": {
+                  "col": 15,
+                  "line": 12
+                },
+                "start": {
+                  "col": 5,
+                  "line": 12
+                }
+              },
+              "start": 311
+            }
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "assumptions",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/body-bare-caret-file-contribution/type/decision.type.yaml",
+                "required": false,
+                "shape": "assumption&[+]"
+              }
+            ],
+            "required": false,
+            "shape": "assumption&[+]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/body-bare-caret-file-contribution/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 138,
+                        "line_col": {
+                          "end": {
+                            "col": 55,
+                            "line": 9
+                          },
+                          "start": {
+                            "col": 17,
+                            "line": 9
+                          }
+                        },
+                        "start": 100
+                      },
+                      "file": "<root>/scenarios/body-bare-caret-file-contribution/decision.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Why"
+                      }
+                    ],
+                    "surface": "body_wikilink",
+                    "value": {
+                      "anchor": null,
+                      "block_id": {
+                        "id": "passage",
+                        "referent": false
+                      },
+                      "kind": "reference",
+                      "target": "research-notes"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": {
+                    "id": "passage",
+                    "referent": false
+                  },
+                  "kind": "reference",
+                  "target": "research-notes"
+                }
+              }
+            ],
+            "field": "assumptions"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/body-bare-caret-file-contribution/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/body-bare-caret-file-contribution/decision.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Why",
+            "optional": false,
+            "path": [
+              "Why"
+            ],
+            "present": true,
+            "span": {
+              "end": 83,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 77
+            }
+          }
+        ]
+      },
+      {
+        "body_events": [
+          {
+            "id": "passage",
+            "kind": "block_id_marker",
+            "span": {
+              "end": 173,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 164
+            }
+          }
+        ],
+        "claim": [
+          "assumption"
+        ],
+        "closure": [
+          "assumption"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "assumption",
+                "origin_path": "<root>/scenarios/body-bare-caret-file-contribution/type/assumption.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 106,
+                        "line_col": {
+                          "end": {
+                            "col": 86,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 34
+                      },
+                      "file": "<root>/scenarios/body-bare-caret-file-contribution/research-notes.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "The whole file is an assumption; the passage below is a plain landmark"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "The whole file is an assumption; the passage below is a plain landmark"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/body-bare-caret-file-contribution/research-notes.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

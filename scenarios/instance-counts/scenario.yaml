@@ -1,0 +1,5 @@
+title: "instance_counts summarizes instances per type — closure-inclusive, so an article counts toward note too"
+spec_ref: "[[spec - instances-of read - flat match records tagged by identity and claimed-or-inherited]]"
+command: instance_counts
+expected:
+  clean: true

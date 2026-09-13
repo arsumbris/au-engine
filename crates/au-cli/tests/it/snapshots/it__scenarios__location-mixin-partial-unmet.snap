@@ -1,0 +1,219 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "location-partial-unmet",
+      "message": "file matches another claimed location but not 'note's (expected path `notes/`)",
+      "severity": "hint",
+      "span": {
+        "file": "<root>/scenarios/location-mixin-partial-unmet/specs/thing.md",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 1
+          },
+          "start": {
+            "col": 1,
+            "line": 1
+          }
+        },
+        "range": {
+          "end": 0,
+          "start": 0
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 34,
+                        "line_col": {
+                          "end": {
+                            "col": 35,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/location-mixin-partial-unmet/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "location-mixin-partial-unmet"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "location-mixin-partial-unmet"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/location-mixin-partial-unmet/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "specs/",
+            "kind": "inline_code",
+            "span": {
+              "end": 49,
+              "line_col": {
+                "end": {
+                  "col": 17,
+                  "line": 7
+                },
+                "start": {
+                  "col": 9,
+                  "line": 7
+                }
+              },
+              "start": 41
+            }
+          },
+          {
+            "content": "spec",
+            "kind": "inline_code",
+            "span": {
+              "end": 71,
+              "line_col": {
+                "end": {
+                  "col": 39,
+                  "line": 7
+                },
+                "start": {
+                  "col": 33,
+                  "line": 7
+                }
+              },
+              "start": 65
+            }
+          },
+          {
+            "content": "note",
+            "kind": "inline_code",
+            "span": {
+              "end": 97,
+              "line_col": {
+                "end": {
+                  "col": 65,
+                  "line": 7
+                },
+                "start": {
+                  "col": 59,
+                  "line": 7
+                }
+              },
+              "start": 91
+            }
+          }
+        ],
+        "claim": [
+          "spec",
+          "note"
+        ],
+        "closure": [
+          "note",
+          "spec"
+        ],
+        "effective_shape": [],
+        "effective_values": [],
+        "file": "<root>/scenarios/location-mixin-partial-unmet/specs/thing.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

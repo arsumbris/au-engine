@@ -1,0 +1,9 @@
+fields:
+  description: String
+  causes?: String
+  effects?: String
+body:
+  - section: Reasoning
+    fills:
+      - causes
+      - effects

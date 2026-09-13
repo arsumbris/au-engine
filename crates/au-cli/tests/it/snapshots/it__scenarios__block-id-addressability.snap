@@ -1,0 +1,749 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "field-shape-mismatch",
+      "message": "field 'count' value does not match declared shape Number",
+      "related": [
+        {
+          "file": "<root>/scenarios/block-id-addressability/type/card.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 17,
+              "line": 3
+            },
+            "start": {
+              "col": 11,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 40,
+            "start": 34
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/block-id-addressability/card.md",
+        "line_col": {
+          "end": {
+            "col": 23,
+            "line": 4
+          },
+          "start": {
+            "col": 8,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 60,
+          "start": 45
+        }
+      }
+    },
+    {
+      "code": "navigational-block-id-not-found",
+      "message": "field 'source' wikilink `[[notes^missing]]` — block-id `missing` not found in notes",
+      "related": [
+        {
+          "file": "<root>/scenarios/block-id-addressability/type/card.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 23,
+              "line": 5
+            },
+            "start": {
+              "col": 12,
+              "line": 5
+            }
+          },
+          "range": {
+            "end": 90,
+            "start": 79
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/block-id-addressability/card.md",
+        "line_col": {
+          "end": {
+            "col": 28,
+            "line": 6
+          },
+          "start": {
+            "col": 9,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 116,
+          "start": 97
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 29,
+                        "line_col": {
+                          "end": {
+                            "col": 30,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/block-id-addressability/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "block-id-addressability"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "block-id-addressability"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/block-id-addressability/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "title",
+            "kind": "inline_code",
+            "span": {
+              "end": 163,
+              "line_col": {
+                "end": {
+                  "col": 10,
+                  "line": 10
+                },
+                "start": {
+                  "col": 3,
+                  "line": 10
+                }
+              },
+              "start": 156
+            }
+          },
+          {
+            "content": "count",
+            "kind": "inline_code",
+            "span": {
+              "end": 240,
+              "line_col": {
+                "end": {
+                  "col": 10,
+                  "line": 11
+                },
+                "start": {
+                  "col": 3,
+                  "line": 11
+                }
+              },
+              "start": 233
+            }
+          },
+          {
+            "content": "assumption",
+            "kind": "inline_code",
+            "span": {
+              "end": 321,
+              "line_col": {
+                "end": {
+                  "col": 15,
+                  "line": 12
+                },
+                "start": {
+                  "col": 3,
+                  "line": 12
+                }
+              },
+              "start": 309
+            }
+          },
+          {
+            "content": "^obs",
+            "kind": "inline_code",
+            "span": {
+              "end": 348,
+              "line_col": {
+                "end": {
+                  "col": 42,
+                  "line": 12
+                },
+                "start": {
+                  "col": 36,
+                  "line": 12
+                }
+              },
+              "start": 342
+            }
+          },
+          {
+            "content": "notes",
+            "kind": "inline_code",
+            "span": {
+              "end": 406,
+              "line_col": {
+                "end": {
+                  "col": 100,
+                  "line": 12
+                },
+                "start": {
+                  "col": 93,
+                  "line": 12
+                }
+              },
+              "start": 399
+            }
+          },
+          {
+            "content": "assumption",
+            "kind": "inline_code",
+            "span": {
+              "end": 432,
+              "line_col": {
+                "end": {
+                  "col": 126,
+                  "line": 12
+                },
+                "start": {
+                  "col": 114,
+                  "line": 12
+                }
+              },
+              "start": 420
+            }
+          },
+          {
+            "content": "^obs",
+            "kind": "inline_code",
+            "span": {
+              "end": 470,
+              "line_col": {
+                "end": {
+                  "col": 164,
+                  "line": 12
+                },
+                "start": {
+                  "col": 158,
+                  "line": 12
+                }
+              },
+              "start": 464
+            }
+          },
+          {
+            "content": "source",
+            "kind": "inline_code",
+            "span": {
+              "end": 521,
+              "line_col": {
+                "end": {
+                  "col": 11,
+                  "line": 13
+                },
+                "start": {
+                  "col": 3,
+                  "line": 13
+                }
+              },
+              "start": 513
+            }
+          },
+          {
+            "content": "^missing",
+            "kind": "inline_code",
+            "span": {
+              "end": 552,
+              "line_col": {
+                "end": {
+                  "col": 42,
+                  "line": 13
+                },
+                "start": {
+                  "col": 32,
+                  "line": 13
+                }
+              },
+              "start": 542
+            }
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": {
+                "id": "obs",
+                "referent": false
+              },
+              "commit": null,
+              "field": null,
+              "repo": null,
+              "target": "notes"
+            },
+            "raw": "notes^obs",
+            "span": {
+              "end": 722,
+              "line_col": {
+                "end": {
+                  "col": 38,
+                  "line": 15
+                },
+                "start": {
+                  "col": 25,
+                  "line": 15
+                }
+              },
+              "start": 709
+            }
+          }
+        ],
+        "claim": [
+          "card"
+        ],
+        "closure": [
+          "card"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "assumption",
+            "origins": [
+              {
+                "name": "card",
+                "origin_path": "<root>/scenarios/block-id-addressability/type/card.type.yaml",
+                "required": false,
+                "shape": "assumption&"
+              }
+            ],
+            "required": false,
+            "shape": "assumption&"
+          },
+          {
+            "divergent": false,
+            "field": "count",
+            "origins": [
+              {
+                "name": "card",
+                "origin_path": "<root>/scenarios/block-id-addressability/type/card.type.yaml",
+                "required": false,
+                "shape": "Number"
+              }
+            ],
+            "required": false,
+            "shape": "Number"
+          },
+          {
+            "divergent": false,
+            "field": "source",
+            "origins": [
+              {
+                "name": "card",
+                "origin_path": "<root>/scenarios/block-id-addressability/type/card.type.yaml",
+                "required": false,
+                "shape": "assumption&"
+              }
+            ],
+            "required": false,
+            "shape": "assumption&"
+          },
+          {
+            "divergent": false,
+            "field": "title",
+            "origins": [
+              {
+                "name": "card",
+                "origin_path": "<root>/scenarios/block-id-addressability/type/card.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 88,
+                        "line_col": {
+                          "end": {
+                            "col": 28,
+                            "line": 5
+                          },
+                          "start": {
+                            "col": 13,
+                            "line": 5
+                          }
+                        },
+                        "start": 73
+                      },
+                      "file": "<root>/scenarios/block-id-addressability/card.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": {
+                        "id": "obs",
+                        "referent": false
+                      },
+                      "kind": "reference",
+                      "target": "notes"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": {
+                    "id": "obs",
+                    "referent": false
+                  },
+                  "kind": "reference",
+                  "target": "notes"
+                }
+              }
+            ],
+            "field": "assumption"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 60,
+                        "line_col": {
+                          "end": {
+                            "col": 23,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 4
+                          }
+                        },
+                        "start": 45
+                      },
+                      "file": "<root>/scenarios/block-id-addressability/card.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "[[notes^obs]]"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "[[notes^obs]]"
+                }
+              }
+            ],
+            "field": "count"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 116,
+                        "line_col": {
+                          "end": {
+                            "col": 28,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 9,
+                            "line": 6
+                          }
+                        },
+                        "start": 97
+                      },
+                      "file": "<root>/scenarios/block-id-addressability/card.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": {
+                        "id": "missing",
+                        "referent": false
+                      },
+                      "kind": "reference",
+                      "target": "notes"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": {
+                    "id": "missing",
+                    "referent": false
+                  },
+                  "kind": "reference",
+                  "target": "notes"
+                }
+              }
+            ],
+            "field": "source"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 37,
+                        "line_col": {
+                          "end": {
+                            "col": 23,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 8,
+                            "line": 3
+                          }
+                        },
+                        "start": 22
+                      },
+                      "file": "<root>/scenarios/block-id-addressability/card.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "[[notes^obs]]"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "[[notes^obs]]"
+                }
+              }
+            ],
+            "field": "title"
+          }
+        ],
+        "file": "<root>/scenarios/block-id-addressability/card.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 109,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 6
+                }
+              },
+              "start": 98
+            },
+            "text": "Findings"
+          },
+          {
+            "id": "obs",
+            "kind": "block_id_marker",
+            "span": {
+              "end": 160,
+              "line_col": {
+                "end": {
+                  "col": 51,
+                  "line": 8
+                },
+                "start": {
+                  "col": 47,
+                  "line": 8
+                }
+              },
+              "start": 156
+            }
+          }
+        ],
+        "claim": [
+          "assumption"
+        ],
+        "closure": [
+          "assumption"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "assumption",
+                "origin_path": "<root>/scenarios/block-id-addressability/type/assumption.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 92,
+                        "line_col": {
+                          "end": {
+                            "col": 72,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 34
+                      },
+                      "file": "<root>/scenarios/block-id-addressability/notes.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Target file, itself an assumption, with one plain marker"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Target file, itself an assumption, with one plain marker"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/block-id-addressability/notes.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

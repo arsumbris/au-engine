@@ -1,0 +1,272 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "navigational-target-ambiguous",
+      "fix": {
+        "description": "resolve by explicit extension, explicit path, or rename"
+      },
+      "message": "wikilink `[[topic]]` resolves ambiguously to 2 repo files",
+      "related": [
+        {
+          "file": "<root>/scenarios/navigational-ambiguous/topics/first/topic.md",
+          "line_col": {
+            "end": {
+              "col": 1,
+              "line": 1
+            },
+            "start": {
+              "col": 1,
+              "line": 1
+            }
+          },
+          "range": {
+            "end": 0,
+            "start": 0
+          }
+        },
+        {
+          "file": "<root>/scenarios/navigational-ambiguous/topics/second/topic.md",
+          "line_col": {
+            "end": {
+              "col": 1,
+              "line": 1
+            },
+            "start": {
+              "col": 1,
+              "line": 1
+            }
+          },
+          "range": {
+            "end": 0,
+            "start": 0
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/navigational-ambiguous/pointer.md",
+        "line_col": {
+          "end": {
+            "col": 38,
+            "line": 5
+          },
+          "start": {
+            "col": 29,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 57,
+          "start": 48
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 4,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 28,
+                        "line_col": {
+                          "end": {
+                            "col": 29,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/navigational-ambiguous/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "navigational-ambiguous"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "navigational-ambiguous"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/navigational-ambiguous/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": null,
+              "commit": null,
+              "field": null,
+              "repo": null,
+              "target": "topic"
+            },
+            "raw": "topic",
+            "span": {
+              "end": 57,
+              "line_col": {
+                "end": {
+                  "col": 38,
+                  "line": 5
+                },
+                "start": {
+                  "col": 29,
+                  "line": 5
+                }
+              },
+              "start": 48
+            }
+          },
+          {
+            "content": "[[topics/first/topic]]",
+            "kind": "inline_code",
+            "span": {
+              "end": 196,
+              "line_col": {
+                "end": {
+                  "col": 25,
+                  "line": 7
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 172
+            }
+          }
+        ],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [],
+        "effective_values": [],
+        "file": "<root>/scenarios/navigational-ambiguous/pointer.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [],
+        "effective_values": [],
+        "file": "<root>/scenarios/navigational-ambiguous/topics/first/topic.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [],
+        "effective_values": [],
+        "file": "<root>/scenarios/navigational-ambiguous/topics/second/topic.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

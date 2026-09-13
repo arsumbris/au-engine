@@ -1,0 +1,8 @@
+fields:
+  description: String
+body:
+  - section: Why
+    body:
+      - section: Background
+      - section: Decision
+  - section: Outcome

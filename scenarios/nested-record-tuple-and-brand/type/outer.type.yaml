@@ -1,0 +1,3 @@
+fields:
+  #: a nested inline-record slot
+  box: inner

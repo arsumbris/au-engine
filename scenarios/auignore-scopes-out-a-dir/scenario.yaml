@@ -1,0 +1,5 @@
+title: "An `.arsumbris/.auignore` scopes a directory out of the graph entirely"
+spec_ref: "[[spec - file scoping - a per-repo auignore file over a hard floor]]"
+command: validate
+expected:
+  clean: true

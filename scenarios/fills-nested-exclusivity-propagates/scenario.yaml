@@ -1,0 +1,6 @@
+title: "Parent `fills!: f` forbids contributions to other fields anywhere within, including nested sub-sections"
+spec_ref: "[[type-def body fills::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: fills-contract-exceeded, severity: error }

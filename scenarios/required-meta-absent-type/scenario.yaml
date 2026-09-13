@@ -1,0 +1,6 @@
+title: "A required: naming a type absent from the graph fires required-meta-absent-type"
+spec_ref: "[[spec - required subtype meta - a base obligates every concrete subtype to carry a named meta]]"
+command: validate
+expected:
+  codes:
+    - { code: required-meta-absent-type, severity: error }

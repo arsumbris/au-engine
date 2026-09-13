@@ -1,0 +1,6 @@
+extends: au.engine.meta::au-engine
+fields:
+  #: a tuple brand in a meta field
+  dim: point
+  #: a scalar brand in a meta field
+  len: meter

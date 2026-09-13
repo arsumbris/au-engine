@@ -1,0 +1,6 @@
+title: "Instance claims an abstract type directly — must claim a concrete subtype"
+spec_ref: "[[spec - abstract type-defs - a non-claimable open type-def, sealed is abstract plus closed]], [[type-instance type::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: abstract-type-claimed, severity: error }

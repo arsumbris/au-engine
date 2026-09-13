@@ -1,0 +1,2 @@
+#: a red/green/blue triple, each channel a color-value
+shape: (color-value, color-value, color-value)

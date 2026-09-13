@@ -1,0 +1,364 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "unknown-type-claim",
+      "message": "field 'payload': inline value claims type-def 'session-log' which is not present in the type graph",
+      "related": [
+        {
+          "file": "<root>/scenarios/any-interpreted/type/event.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 15,
+              "line": 2
+            },
+            "start": {
+              "col": 12,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 22,
+            "start": 19
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/any-interpreted/session.md",
+        "line_col": {
+          "end": {
+            "col": 20,
+            "line": 4
+          },
+          "start": {
+            "col": 9,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 44,
+          "start": 33
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 21,
+                        "line_col": {
+                          "end": {
+                            "col": 22,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/any-interpreted/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "any-interpreted"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "any-interpreted"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/any-interpreted/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "content": "payload",
+            "kind": "inline_code",
+            "span": {
+              "end": 75,
+              "line_col": {
+                "end": {
+                  "col": 14,
+                  "line": 8
+                },
+                "start": {
+                  "col": 5,
+                  "line": 8
+                }
+              },
+              "start": 66
+            }
+          },
+          {
+            "content": "any",
+            "kind": "inline_code",
+            "span": {
+              "end": 89,
+              "line_col": {
+                "end": {
+                  "col": 28,
+                  "line": 8
+                },
+                "start": {
+                  "col": 23,
+                  "line": 8
+                }
+              },
+              "start": 84
+            }
+          },
+          {
+            "content": "type: session-log",
+            "kind": "inline_code",
+            "span": {
+              "end": 170,
+              "line_col": {
+                "end": {
+                  "col": 31,
+                  "line": 9
+                },
+                "start": {
+                  "col": 12,
+                  "line": 9
+                }
+              },
+              "start": 151
+            }
+          },
+          {
+            "content": "unknown-type-claim",
+            "kind": "inline_code",
+            "span": {
+              "end": 264,
+              "line_col": {
+                "end": {
+                  "col": 49,
+                  "line": 10
+                },
+                "start": {
+                  "col": 29,
+                  "line": 10
+                }
+              },
+              "start": 244
+            }
+          },
+          {
+            "content": "opaque-payload",
+            "kind": "inline_code",
+            "span": {
+              "end": 295,
+              "line_col": {
+                "end": {
+                  "col": 80,
+                  "line": 10
+                },
+                "start": {
+                  "col": 64,
+                  "line": 10
+                }
+              },
+              "start": 279
+            }
+          },
+          {
+            "content": "type:",
+            "kind": "inline_code",
+            "span": {
+              "end": 335,
+              "line_col": {
+                "end": {
+                  "col": 40,
+                  "line": 11
+                },
+                "start": {
+                  "col": 33,
+                  "line": 11
+                }
+              },
+              "start": 328
+            }
+          }
+        ],
+        "claim": [
+          "event"
+        ],
+        "closure": [
+          "event"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "payload",
+            "origins": [
+              {
+                "name": "event",
+                "origin_path": "<root>/scenarios/any-interpreted/type/event.type.yaml",
+                "required": true,
+                "shape": "any"
+              }
+            ],
+            "required": true,
+            "shape": "any"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 57,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 6
+                          },
+                          "start": {
+                            "col": 3,
+                            "line": 4
+                          }
+                        },
+                        "start": 27
+                      },
+                      "file": "<root>/scenarios/any-interpreted/session.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "count",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": 42
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "count",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": 42
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "payload"
+          }
+        ],
+        "file": "<root>/scenarios/any-interpreted/session.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

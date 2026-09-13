@@ -1,0 +1,5 @@
+# intentional: a valid type-def placed at the repo ROOT, not under `type/`.
+# The `.type.yaml` suffix still classifies it, so it is a real type-def; the
+# missing `type/` directory is an advisory `type-def-outside-type-dir` warning.
+fields:
+  label: String

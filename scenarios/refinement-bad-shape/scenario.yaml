@@ -1,0 +1,6 @@
+title: "A comparison on a String base is a refinement-bad-shape"
+spec_ref: "[[spec - field-level refinement - value predicates and range cardinality as meets on a primitive slot]]"
+command: validate
+expected:
+  codes:
+    - { code: refinement-bad-shape, severity: error }

@@ -1,0 +1,10 @@
+fields:
+  description: String
+  status: [made, superseded]
+  rationale?: String
+body:
+  - section?: Why
+  - section: Outcome
+    body:
+      - section: Result
+        fills!: status

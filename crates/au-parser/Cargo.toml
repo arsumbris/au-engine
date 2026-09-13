@@ -1,0 +1,16 @@
+[package]
+name = "au-parser"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+au-diagnostics = { workspace = true }
+saphyr = { workspace = true }
+saphyr-parser = { workspace = true }
+ignore = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }

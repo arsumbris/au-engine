@@ -1,0 +1,10 @@
+fields:
+  description: String
+  rationale?: String
+  causes?: String
+body:
+  - section: Why
+    fills!: rationale
+    body:
+      - section: Detail
+        fills: causes

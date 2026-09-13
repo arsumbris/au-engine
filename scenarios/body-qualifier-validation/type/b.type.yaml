@@ -1,0 +1,4 @@
+# b declares desc with the SAME shape as a (token-equal), so `desc` auto-unifies
+# in c's closure. Optional, so the scenario isolates the body qualifier check.
+fields:
+  desc?: String

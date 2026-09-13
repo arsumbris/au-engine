@@ -1,0 +1,6 @@
+# `<String[] & String[+]>` — String[+] is the stricter constraint, so
+# the intersection collapses to String[+] and the wider String[] adds
+# nothing. The cardinality-refinement subsumption check warns at graph
+# load.
+fields:
+  tags: <String[] & String[+]>

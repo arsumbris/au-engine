@@ -1,0 +1,5 @@
+title: "`any*` references any node with no closure check — an untyped asset and a typed note both resolve"
+spec_ref: "[[type-def shape any::au-type-system]], [[type reference::au-type-system]]"
+command: validate
+expected:
+  clean: true

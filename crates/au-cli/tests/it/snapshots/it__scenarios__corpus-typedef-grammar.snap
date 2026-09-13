@@ -1,0 +1,1739 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "reserved-type-name",
+      "message": "type-def name 'Date' is reserved by the engine (primitive shape)",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/Date.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 6
+          },
+          "start": {
+            "col": 1,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 268,
+          "start": 257
+        }
+      }
+    },
+    {
+      "code": "reserved-type-name",
+      "message": "type-def name 'String' is reserved by the engine (primitive shape)",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/String.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 6
+          },
+          "start": {
+            "col": 1,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 270,
+          "start": 259
+        }
+      }
+    },
+    {
+      "code": "cycle-in-type-chain",
+      "message": "cycle in `type:` chain: bad-cycle-self -> bad-cycle-self",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-cycle-self.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 4
+          },
+          "start": {
+            "col": 1,
+            "line": 2
+          }
+        },
+        "range": {
+          "end": 101,
+          "start": 66
+        }
+      }
+    },
+    {
+      "code": "duplicate-meta-block",
+      "message": "duplicate `meta:` sub-region for 'display-meta' on type-def 'bad-duplicate-meta'",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-duplicate-meta.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 3,
+              "line": 6
+            },
+            "start": {
+              "col": 5,
+              "line": 4
+            }
+          },
+          "range": {
+            "end": 148,
+            "start": 109
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-duplicate-meta.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 8
+          },
+          "start": {
+            "col": 5,
+            "line": 6
+          }
+        },
+        "range": {
+          "end": 213,
+          "start": 150
+        }
+      }
+    },
+    {
+      "code": "duplicate-claim",
+      "message": "claim 'note' is repeated",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-duplicate-parent-claim.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 9,
+              "line": 3
+            },
+            "start": {
+              "col": 5,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 91,
+            "start": 87
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-duplicate-parent-claim.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 9,
+            "line": 4
+          },
+          "start": {
+            "col": 5,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 100,
+          "start": 96
+        }
+      }
+    },
+    {
+      "code": "field-decl-bad-shape",
+      "message": "field name '1bad' is not a valid identifier (must match [A-Za-z][A-Za-z0-9_-]*)",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-field-decl.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 7,
+            "line": 3
+          },
+          "start": {
+            "col": 3,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 91,
+          "start": 87
+        }
+      }
+    },
+    {
+      "code": "fields-not-a-map",
+      "message": "`fields:` must be a map keyed by field name",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-fields-shape.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 13,
+            "line": 2
+          },
+          "start": {
+            "col": 9,
+            "line": 2
+          }
+        },
+        "range": {
+          "end": 82,
+          "start": 78
+        }
+      }
+    },
+    {
+      "code": "meta-block-bad-shape",
+      "message": "meta block missing `type:` discriminator",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-meta-block-shape.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 5
+          },
+          "start": {
+            "col": 5,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 114,
+          "start": 106
+        }
+      }
+    },
+    {
+      "code": "meta-mixin-not-supported",
+      "message": "meta sub-region `type:` must be a single name; list forms (`type: [a, b]` or `type: []`) are not supported",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-meta-mixin.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 38,
+            "line": 5
+          },
+          "start": {
+            "col": 11,
+            "line": 5
+          }
+        },
+        "range": {
+          "end": 176,
+          "start": 149
+        }
+      }
+    },
+    {
+      "code": "meta-not-a-list",
+      "message": "`meta:` must be a list of typed sub-regions",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-meta-shape.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 11,
+            "line": 3
+          },
+          "start": {
+            "col": 7,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 77,
+          "start": 73
+        }
+      }
+    },
+    {
+      "code": "type-name-violates-regex",
+      "message": "parent type name 'foo*bar' violates the type-name regex",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-name-regex.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 17,
+            "line": 2
+          },
+          "start": {
+            "col": 10,
+            "line": 2
+          }
+        },
+        "range": {
+          "end": 108,
+          "start": 101
+        }
+      }
+    },
+    {
+      "code": "type-def-not-a-mapping",
+      "message": "type-def must be a YAML mapping at the top level",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-not-a-mapping.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 4
+          },
+          "start": {
+            "col": 1,
+            "line": 2
+          }
+        },
+        "range": {
+          "end": 80,
+          "start": 68
+        }
+      }
+    },
+    {
+      "code": "parent-claim-bad-shape",
+      "message": "`extends:` must be a string or list of strings",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-parent-claim-shape.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 12,
+            "line": 2
+          },
+          "start": {
+            "col": 10,
+            "line": 2
+          }
+        },
+        "range": {
+          "end": 105,
+          "start": 103
+        }
+      }
+    },
+    {
+      "code": "field-redeclaration",
+      "message": "subtype 'bad-redeclare' redeclares field 'description' inherited from 'note'",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/note.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 14,
+              "line": 2
+            },
+            "start": {
+              "col": 3,
+              "line": 2
+            }
+          },
+          "range": {
+            "end": 21,
+            "start": 10
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-redeclare.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 14,
+            "line": 4
+          },
+          "start": {
+            "col": 3,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 85,
+          "start": 74
+        }
+      }
+    },
+    {
+      "code": "sealed-no-surprise-children",
+      "message": "type-def 'bad-sealed-orphan' crosses sealed parent 'source' without going through any of its listed branches",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/source.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 1,
+              "line": 6
+            },
+            "start": {
+              "col": 1,
+              "line": 1
+            }
+          },
+          "range": {
+            "end": 63,
+            "start": 0
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-sealed-orphan.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 5
+          },
+          "start": {
+            "col": 1,
+            "line": 2
+          }
+        },
+        "range": {
+          "end": 119,
+          "start": 75
+        }
+      }
+    },
+    {
+      "code": "sealed-bad-shape",
+      "message": "`sealed:` must be a list of type names",
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-sealed-shape.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 13,
+            "line": 3
+          },
+          "start": {
+            "col": 9,
+            "line": 3
+          }
+        },
+        "range": {
+          "end": 82,
+          "start": 78
+        }
+      }
+    },
+    {
+      "code": "subsumption-in-mixin",
+      "message": "claim 'wide' is implied by 'narrow' and is redundant",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-subsumed-parent-claim.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 11,
+              "line": 5
+            },
+            "start": {
+              "col": 5,
+              "line": 5
+            }
+          },
+          "range": {
+            "end": 163,
+            "start": 157
+          }
+        }
+      ],
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-subsumed-parent-claim.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 9,
+            "line": 4
+          },
+          "start": {
+            "col": 5,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 152,
+          "start": 148
+        }
+      }
+    },
+    {
+      "code": "duplicate-type-def",
+      "message": "type-def 'bad-duplicate' is declared in multiple files",
+      "related": [
+        {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-duplicate.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 1,
+              "line": 4
+            },
+            "start": {
+              "col": 1,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 171,
+            "start": 160
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/dup/bad-duplicate.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 1,
+            "line": 5
+          },
+          "start": {
+            "col": 1,
+            "line": 4
+          }
+        },
+        "range": {
+          "end": 207,
+          "start": 196
+        }
+      }
+    }
+  ],
+  "graph": {
+    "types": [
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "3c88c72fe8662b1b",
+        "meta_blocks": null,
+        "name": "Date",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/Date.type.yaml",
+          "span": {
+            "end": 268,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 6
+              },
+              "start": {
+                "col": 1,
+                "line": 5
+              }
+            },
+            "start": 257
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "6c89d4b3a10629a8",
+        "meta_blocks": null,
+        "name": "String",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/String.type.yaml",
+          "span": {
+            "end": 270,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 6
+              },
+              "start": {
+                "col": 1,
+                "line": 5
+              }
+            },
+            "start": 259
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "0e1732cbd840c018",
+        "meta_blocks": null,
+        "name": "bad-cycle-self",
+        "parents": [
+          "bad-cycle-self"
+        ],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-cycle-self.type.yaml",
+          "span": {
+            "end": 101,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 2
+              }
+            },
+            "start": 66
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "62b1cc44765c9dcc",
+        "meta_blocks": null,
+        "name": "bad-duplicate",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-duplicate.type.yaml",
+          "span": {
+            "end": 171,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 3
+              }
+            },
+            "start": 160
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "4f9982d8789c6945",
+        "meta_blocks": [
+          {
+            "body": [
+              {
+                "name": "tldr",
+                "value": "first"
+              }
+            ],
+            "source": {
+              "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-duplicate-meta.type.yaml",
+              "span": {
+                "end": 148,
+                "line_col": {
+                  "end": {
+                    "col": 3,
+                    "line": 6
+                  },
+                  "start": {
+                    "col": 5,
+                    "line": 4
+                  }
+                },
+                "start": 109
+              }
+            },
+            "type_name": "display-meta"
+          },
+          {
+            "body": [
+              {
+                "name": "tldr",
+                "value": "duplicate — should be flagged"
+              }
+            ],
+            "source": {
+              "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-duplicate-meta.type.yaml",
+              "span": {
+                "end": 213,
+                "line_col": {
+                  "end": {
+                    "col": 1,
+                    "line": 8
+                  },
+                  "start": {
+                    "col": 5,
+                    "line": 6
+                  }
+                },
+                "start": 150
+              }
+            },
+            "type_name": "display-meta"
+          }
+        ],
+        "name": "bad-duplicate-meta",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-duplicate-meta.type.yaml",
+          "span": {
+            "end": 213,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 8
+              },
+              "start": {
+                "col": 1,
+                "line": 2
+              }
+            },
+            "start": 88
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "3107179a91fd020f",
+        "meta_blocks": null,
+        "name": "bad-duplicate-parent-claim",
+        "parents": [
+          "note",
+          "note"
+        ],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-duplicate-parent-claim.type.yaml",
+          "span": {
+            "end": 101,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 5
+              },
+              "start": {
+                "col": 1,
+                "line": 2
+              }
+            },
+            "start": 74
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "9bbfed16be0800cf",
+        "meta_blocks": null,
+        "name": "bad-field-decl",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-field-decl.type.yaml",
+          "span": {
+            "end": 100,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 2
+              }
+            },
+            "start": 77
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "1a8e3d7604cc35c3",
+        "meta_blocks": null,
+        "name": "bad-fields-shape",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-fields-shape.type.yaml",
+          "span": {
+            "end": 83,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 3
+              },
+              "start": {
+                "col": 1,
+                "line": 2
+              }
+            },
+            "start": 70
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "59d6cea4a73daf30",
+        "meta_blocks": null,
+        "name": "bad-meta-block-shape",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-meta-block-shape.type.yaml",
+          "span": {
+            "end": 114,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 5
+              },
+              "start": {
+                "col": 1,
+                "line": 2
+              }
+            },
+            "start": 85
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "29dee1c817cce0a9",
+        "meta_blocks": null,
+        "name": "bad-meta-mixin",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-meta-mixin.type.yaml",
+          "span": {
+            "end": 178,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 6
+              },
+              "start": {
+                "col": 1,
+                "line": 3
+              }
+            },
+            "start": 122
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "c208ab5536f5b265",
+        "meta_blocks": null,
+        "name": "bad-meta-shape",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-meta-shape.type.yaml",
+          "span": {
+            "end": 78,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 2
+              }
+            },
+            "start": 56
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "ff05bf9f2c63ca55",
+        "meta_blocks": null,
+        "name": "bad-name-regex",
+        "parents": [
+          "foo*bar"
+        ],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-name-regex.type.yaml",
+          "span": {
+            "end": 120,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 2
+              }
+            },
+            "start": 92
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "0a52c0075e8281c2",
+        "meta_blocks": null,
+        "name": "bad-parent-claim-shape",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-parent-claim-shape.type.yaml",
+          "span": {
+            "end": 117,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 2
+              }
+            },
+            "start": 94
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 85,
+              "line_col": {
+                "end": {
+                  "col": 14,
+                  "line": 4
+                },
+                "start": {
+                  "col": 3,
+                  "line": 4
+                }
+              },
+              "start": 74
+            },
+            "name": "description",
+            "required": true,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          }
+        ],
+        "hash": "016020be56efa9a7",
+        "meta_blocks": null,
+        "name": "bad-redeclare",
+        "parents": [
+          "note"
+        ],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-redeclare.type.yaml",
+          "span": {
+            "end": 94,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 5
+              },
+              "start": {
+                "col": 1,
+                "line": 2
+              }
+            },
+            "start": 50
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 110,
+              "line_col": {
+                "end": {
+                  "col": 12,
+                  "line": 4
+                },
+                "start": {
+                  "col": 3,
+                  "line": 4
+                }
+              },
+              "start": 101
+            },
+            "name": "bad_field",
+            "required": true,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          }
+        ],
+        "hash": "4474af0f3a0429be",
+        "meta_blocks": null,
+        "name": "bad-sealed-orphan",
+        "parents": [
+          "source"
+        ],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-sealed-orphan.type.yaml",
+          "span": {
+            "end": 119,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 5
+              },
+              "start": {
+                "col": 1,
+                "line": 2
+              }
+            },
+            "start": 75
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "950a27916cb1a026",
+        "meta_blocks": null,
+        "name": "bad-sealed-shape",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-sealed-shape.type.yaml",
+          "span": {
+            "end": 83,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 2
+              }
+            },
+            "start": 59
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "f8eb61a287f9f3de",
+        "meta_blocks": null,
+        "name": "bad-subsumed-parent-claim",
+        "parents": [
+          "wide",
+          "narrow"
+        ],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/bad-subsumed-parent-claim.type.yaml",
+          "span": {
+            "end": 164,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 6
+              },
+              "start": {
+                "col": 1,
+                "line": 3
+              }
+            },
+            "start": 135
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 34,
+              "line_col": {
+                "end": {
+                  "col": 13,
+                  "line": 3
+                },
+                "start": {
+                  "col": 3,
+                  "line": 3
+                }
+              },
+              "start": 24
+            },
+            "name": "decided_by",
+            "required": true,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          }
+        ],
+        "hash": "c5d3768663b80afb",
+        "meta_blocks": [
+          {
+            "body": [
+              {
+                "name": "tldr",
+                "value": "A decision made at a point in time"
+              }
+            ],
+            "source": {
+              "file": "<root>/scenarios/corpus-typedef-grammar/type/decision.type.yaml",
+              "span": {
+                "end": 169,
+                "line_col": {
+                  "end": {
+                    "col": 1,
+                    "line": 10
+                  },
+                  "start": {
+                    "col": 5,
+                    "line": 8
+                  }
+                },
+                "start": 103
+              }
+            },
+            "type_name": "display-meta"
+          }
+        ],
+        "name": "decision",
+        "parents": [
+          "note"
+        ],
+        "required_meta": [],
+        "sealed": [
+          "decision.pending",
+          "decision.decided"
+        ],
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/decision.type.yaml",
+          "span": {
+            "end": 169,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 10
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 38,
+              "line_col": {
+                "end": {
+                  "col": 13,
+                  "line": 3
+                },
+                "start": {
+                  "col": 3,
+                  "line": 3
+                }
+              },
+              "start": 28
+            },
+            "name": "decided_at",
+            "required": true,
+            "shape": "Date",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "Date"
+            }
+          }
+        ],
+        "hash": "19f1e9f35c28a924",
+        "meta_blocks": null,
+        "name": "decision.decided",
+        "parents": [
+          "decision"
+        ],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/decision.decided.type.yaml",
+          "span": {
+            "end": 45,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 37,
+              "line_col": {
+                "end": {
+                  "col": 12,
+                  "line": 3
+                },
+                "start": {
+                  "col": 3,
+                  "line": 3
+                }
+              },
+              "start": 28
+            },
+            "name": "opened_at",
+            "required": true,
+            "shape": "Date",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "Date"
+            }
+          }
+        ],
+        "hash": "e2b39810e867e19c",
+        "meta_blocks": null,
+        "name": "decision.pending",
+        "parents": [
+          "decision"
+        ],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/decision.pending.type.yaml",
+          "span": {
+            "end": 44,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 218,
+              "line_col": {
+                "end": {
+                  "col": 7,
+                  "line": 6
+                },
+                "start": {
+                  "col": 3,
+                  "line": 6
+                }
+              },
+              "start": 214
+            },
+            "name": "tldr",
+            "required": true,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          },
+          {
+            "key_span": {
+              "end": 234,
+              "line_col": {
+                "end": {
+                  "col": 8,
+                  "line": 7
+                },
+                "start": {
+                  "col": 3,
+                  "line": 7
+                }
+              },
+              "start": 229
+            },
+            "name": "icon",
+            "required": false,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          }
+        ],
+        "hash": "feea6f73cccde533",
+        "meta_blocks": null,
+        "name": "display-meta",
+        "parents": [
+          "au.engine.meta::au-engine"
+        ],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/meta/display-meta.type.yaml",
+          "span": {
+            "end": 243,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 8
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "9cfb70e051604a25",
+        "meta_blocks": null,
+        "name": "narrow",
+        "parents": [
+          "wide"
+        ],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/narrow.type.yaml",
+          "span": {
+            "end": 146,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 3
+              }
+            },
+            "start": 132
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 21,
+              "line_col": {
+                "end": {
+                  "col": 14,
+                  "line": 2
+                },
+                "start": {
+                  "col": 3,
+                  "line": 2
+                }
+              },
+              "start": 10
+            },
+            "name": "description",
+            "required": true,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          }
+        ],
+        "hash": "5051c8d294215a4f",
+        "meta_blocks": null,
+        "name": "note",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/note.type.yaml",
+          "span": {
+            "end": 30,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 3
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 15,
+              "line_col": {
+                "end": {
+                  "col": 8,
+                  "line": 2
+                },
+                "start": {
+                  "col": 3,
+                  "line": 2
+                }
+              },
+              "start": 10
+            },
+            "name": "title",
+            "required": true,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          }
+        ],
+        "hash": "8f3d73f04cfacaf5",
+        "meta_blocks": null,
+        "name": "source",
+        "parents": [],
+        "required_meta": [],
+        "sealed": [
+          "source.url",
+          "source.path"
+        ],
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/source.type.yaml",
+          "span": {
+            "end": 63,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 6
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 39,
+              "line_col": {
+                "end": {
+                  "col": 16,
+                  "line": 3
+                },
+                "start": {
+                  "col": 3,
+                  "line": 3
+                }
+              },
+              "start": 26
+            },
+            "name": "internal_path",
+            "required": true,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          }
+        ],
+        "hash": "5a443201e32ea9b2",
+        "meta_blocks": null,
+        "name": "source.path",
+        "parents": [
+          "source"
+        ],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/source.path.type.yaml",
+          "span": {
+            "end": 48,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 38,
+              "line_col": {
+                "end": {
+                  "col": 15,
+                  "line": 3
+                },
+                "start": {
+                  "col": 3,
+                  "line": 3
+                }
+              },
+              "start": 26
+            },
+            "name": "external_url",
+            "required": true,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          }
+        ],
+        "hash": "defe172d238957f7",
+        "meta_blocks": null,
+        "name": "source.url",
+        "parents": [
+          "source"
+        ],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/source.url.type.yaml",
+          "span": {
+            "end": 47,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "b4692c9ce860024c",
+        "meta_blocks": null,
+        "name": "tag-type",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/tag-type.type.yaml",
+          "span": {
+            "end": 57,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 3
+              },
+              "start": {
+                "col": 1,
+                "line": 2
+              }
+            },
+            "start": 46
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [],
+        "hash": "08ea97c6d50aedc0",
+        "meta_blocks": null,
+        "name": "wide",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/corpus-typedef-grammar/type/bad/wide.type.yaml",
+          "span": {
+            "end": 173,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 5
+              },
+              "start": {
+                "col": 1,
+                "line": 4
+              }
+            },
+            "start": 162
+          }
+        },
+        "unmet_required_meta": []
+      }
+    ]
+  }
+}

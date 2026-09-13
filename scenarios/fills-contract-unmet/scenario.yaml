@@ -1,0 +1,7 @@
+title: "Section `fills: f` with no contribution to f fires fills-contract-unmet"
+spec_ref: "[[type-def body fills::au-type-system]]"
+command: validate
+expected:
+  codes:
+    - { code: fills-contract-unmet, severity: error }
+    - { code: malformed-attribution-marker, severity: warning }

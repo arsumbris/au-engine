@@ -1,0 +1,8 @@
+/target
+.DS_Store
+
+# Daemon runtime state under a repo's `.arsumbris/`, regenerable. The
+# committed registry and workspace manifest also live in `.arsumbris/` and ARE
+# tracked, see `memory/decision - 2606122243 - ...`, so ignore only the runtime
+# sockets, never the whole directory.
+.arsumbris/*.sock

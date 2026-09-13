@@ -1,0 +1,6 @@
+title: "A dangling typed reference is a warning, not an error (open-world growth)"
+spec_ref: "[[type reference::au-type-system]], [[spec - diagnostic codes::au-type-system^reference-target-missing]]"
+command: validate
+expected:
+  codes:
+    - { code: reference-target-missing, severity: warning }

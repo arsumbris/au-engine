@@ -1,0 +1,5 @@
+title: "Cross-repo brand — `app` uses `sdk`'s nominal `icon-role` enum by bare member and `sdk`'s structural `evidence-kind` union by inline `type:`, both validate across the repo boundary"
+spec_ref: "[[spec - branded types - the shape key names a reusable scalar, enum, union, or tuple]]"
+command: validate
+expected:
+  clean: true

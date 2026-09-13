@@ -1,0 +1,4 @@
+fields:
+  nodes: node&[]
+  stickers?: sticker&[]
+  edges: edge[]

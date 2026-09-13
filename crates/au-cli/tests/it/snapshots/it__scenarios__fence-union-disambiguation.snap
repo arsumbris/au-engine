@@ -1,0 +1,417 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 32,
+                        "line_col": {
+                          "end": {
+                            "col": 33,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/fence-union-disambiguation/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "fence-union-disambiguation"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "fence-union-disambiguation"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/fence-union-disambiguation/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 58,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 45
+            },
+            "text": "Structured"
+          },
+          {
+            "body": "type: point\nx: 3\ny: 4\n",
+            "info": "[:structured]",
+            "kind": "fenced_block",
+            "span": {
+              "end": 102,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 14
+                },
+                "start": {
+                  "col": 1,
+                  "line": 9
+                }
+              },
+              "start": 59
+            }
+          },
+          {
+            "kind": "heading",
+            "level": 1,
+            "span": {
+              "end": 114,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 16
+                },
+                "start": {
+                  "col": 1,
+                  "line": 15
+                }
+              },
+              "start": 103
+            },
+            "text": "Freeform"
+          },
+          {
+            "body": "Not a typed mapping, so this takes the text branch.\n\nIt stays exactly as written.\n",
+            "info": "[:freeform]",
+            "kind": "fenced_block",
+            "span": {
+              "end": 216,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 22
+                },
+                "start": {
+                  "col": 1,
+                  "line": 17
+                }
+              },
+              "start": 115
+            }
+          }
+        ],
+        "claim": [
+          "capture"
+        ],
+        "closure": [
+          "capture"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "freeform",
+            "origins": [
+              {
+                "name": "capture",
+                "origin_path": "<root>/scenarios/fence-union-disambiguation/type/capture.type.yaml",
+                "required": true,
+                "shape": "<String | point>"
+              }
+            ],
+            "required": true,
+            "shape": "<String | point>"
+          },
+          {
+            "divergent": false,
+            "field": "structured",
+            "origins": [
+              {
+                "name": "capture",
+                "origin_path": "<root>/scenarios/fence-union-disambiguation/type/capture.type.yaml",
+                "required": true,
+                "shape": "<String | point>"
+              }
+            ],
+            "required": true,
+            "shape": "<String | point>"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 216,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 22
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 17
+                          }
+                        },
+                        "start": 115
+                      },
+                      "file": "<root>/scenarios/fence-union-disambiguation/reading.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 2,
+                        "text": "Freeform"
+                      }
+                    ],
+                    "surface": "body_fence",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Not a typed mapping, so this takes the text branch.\n\nIt stays exactly as written."
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Not a typed mapping, so this takes the text branch.\n\nIt stays exactly as written."
+                }
+              }
+            ],
+            "field": "freeform"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 102,
+                        "line_col": {
+                          "end": {
+                            "col": 1,
+                            "line": 14
+                          },
+                          "start": {
+                            "col": 1,
+                            "line": 9
+                          }
+                        },
+                        "start": 59
+                      },
+                      "file": "<root>/scenarios/fence-union-disambiguation/reading.md"
+                    },
+                    "section_path": [
+                      {
+                        "index": 1,
+                        "text": "Structured"
+                      }
+                    ],
+                    "surface": "body_fence",
+                    "value": {
+                      "fields": [
+                        {
+                          "field": "x",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": 3
+                            }
+                          ]
+                        },
+                        {
+                          "field": "y",
+                          "values": [
+                            {
+                              "kind": "scalar",
+                              "value": 4
+                            }
+                          ]
+                        }
+                      ],
+                      "kind": "inline_record"
+                    }
+                  }
+                ],
+                "value": {
+                  "fields": [
+                    {
+                      "field": "x",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": 3
+                        }
+                      ]
+                    },
+                    {
+                      "field": "y",
+                      "values": [
+                        {
+                          "kind": "scalar",
+                          "value": 4
+                        }
+                      ]
+                    }
+                  ],
+                  "kind": "inline_record"
+                }
+              }
+            ],
+            "field": "structured"
+          }
+        ],
+        "file": "<root>/scenarios/fence-union-disambiguation/reading.md",
+        "section_presence": [
+          {
+            "depth": 1,
+            "name": "Structured",
+            "optional": false,
+            "path": [
+              "Structured"
+            ],
+            "present": true,
+            "span": {
+              "end": 58,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 8
+                },
+                "start": {
+                  "col": 1,
+                  "line": 7
+                }
+              },
+              "start": 45
+            }
+          },
+          {
+            "depth": 1,
+            "name": "Freeform",
+            "optional": false,
+            "path": [
+              "Freeform"
+            ],
+            "present": true,
+            "span": {
+              "end": 114,
+              "line_col": {
+                "end": {
+                  "col": 1,
+                  "line": 16
+                },
+                "start": {
+                  "col": 1,
+                  "line": 15
+                }
+              },
+              "start": 103
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

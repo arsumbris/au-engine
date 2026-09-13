@@ -1,0 +1,304 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 2,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 27,
+                        "line_col": {
+                          "end": {
+                            "col": 28,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/commit-referent-clean/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "commit-referent-clean"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "commit-referent-clean"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/commit-referent-clean/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": null,
+              "commit": "a1b2c3d",
+              "field": null,
+              "repo": null,
+              "target": ""
+            },
+            "raw": "::@a1b2c3d",
+            "span": {
+              "end": 134,
+              "line_col": {
+                "end": {
+                  "col": 47,
+                  "line": 7
+                },
+                "start": {
+                  "col": 33,
+                  "line": 7
+                }
+              },
+              "start": 120
+            }
+          },
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": null,
+              "commit": "a1b2c3d",
+              "field": null,
+              "repo": "peer",
+              "target": ""
+            },
+            "raw": "::peer@a1b2c3d",
+            "span": {
+              "end": 157,
+              "line_col": {
+                "end": {
+                  "col": 70,
+                  "line": 7
+                },
+                "start": {
+                  "col": 52,
+                  "line": 7
+                }
+              },
+              "start": 139
+            }
+          }
+        ],
+        "claim": [
+          "span"
+        ],
+        "closure": [
+          "span"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "note",
+            "origins": [
+              {
+                "name": "span",
+                "origin_path": "<root>/scenarios/commit-referent-clean/type/span.type.yaml",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "produced",
+            "origins": [
+              {
+                "name": "span",
+                "origin_path": "<root>/scenarios/commit-referent-clean/type/span.type.yaml",
+                "required": false,
+                "shape": "any*"
+              }
+            ],
+            "required": false,
+            "shape": "any*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 82,
+                        "line_col": {
+                          "end": {
+                            "col": 41,
+                            "line": 4
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 4
+                          }
+                        },
+                        "start": 48
+                      },
+                      "file": "<root>/scenarios/commit-referent-clean/span.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "also produced [[::peer@a1b2c3d]]"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "also produced [[::peer@a1b2c3d]]"
+                }
+              }
+            ],
+            "field": "note"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 41,
+                        "line_col": {
+                          "end": {
+                            "col": 27,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 11,
+                            "line": 3
+                          }
+                        },
+                        "start": 25
+                      },
+                      "file": "<root>/scenarios/commit-referent-clean/span.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "commit": "a1b2c3d",
+                      "kind": "reference",
+                      "target": ""
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "commit": "a1b2c3d",
+                  "kind": "reference",
+                  "target": ""
+                }
+              }
+            ],
+            "field": "produced"
+          }
+        ],
+        "file": "<root>/scenarios/commit-referent-clean/span.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

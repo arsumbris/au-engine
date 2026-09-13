@@ -1,0 +1,5 @@
+title: "A `file*@` pin whose target is gone is inert, no diagnostic"
+spec_ref: "[[spec - pinned references - a recorded resolved edge with an immutable past and an on-demand forward trace]]"
+command: validate
+expected:
+  codes: []

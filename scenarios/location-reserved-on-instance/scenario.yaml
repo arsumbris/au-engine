@@ -1,0 +1,6 @@
+title: "A `location:` key on an instance is reserved-key-on-instance — location is type-def-only"
+spec_ref: "[[spec - location constraints - a name template and path predicate as an advisory placement meet]]"
+command: validate
+expected:
+  codes:
+    - { code: reserved-key-on-instance, severity: error }

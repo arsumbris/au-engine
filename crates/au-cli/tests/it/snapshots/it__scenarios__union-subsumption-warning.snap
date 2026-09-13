@@ -1,0 +1,210 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "subsumption-in-slot-union",
+      "message": "field 'bad' on type-def 'subsumed': slot-union branch 'decision' adds nothing — 'note' is wider and accepts every 'decision' value",
+      "severity": "warning",
+      "span": {
+        "file": "<root>/scenarios/union-subsumption-warning/type/subsumed.type.yaml",
+        "line_col": {
+          "end": {
+            "col": 27,
+            "line": 2
+          },
+          "start": {
+            "col": 8,
+            "line": 2
+          }
+        },
+        "range": {
+          "end": 34,
+          "start": 15
+        }
+      }
+    }
+  ],
+  "graph": {
+    "types": [
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 30,
+              "line_col": {
+                "end": {
+                  "col": 9,
+                  "line": 3
+                },
+                "start": {
+                  "col": 3,
+                  "line": 3
+                }
+              },
+              "start": 24
+            },
+            "name": "status",
+            "required": true,
+            "shape": "[pending, made]",
+            "shape_ast": {
+              "kind": "enum",
+              "members": [
+                "pending",
+                "made"
+              ]
+            }
+          }
+        ],
+        "hash": "42588e988e45f4e2",
+        "meta_blocks": null,
+        "name": "decision",
+        "parents": [
+          "note"
+        ],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/union-subsumption-warning/type/decision.type.yaml",
+          "span": {
+            "end": 48,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 4
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 21,
+              "line_col": {
+                "end": {
+                  "col": 14,
+                  "line": 2
+                },
+                "start": {
+                  "col": 3,
+                  "line": 2
+                }
+              },
+              "start": 10
+            },
+            "name": "description",
+            "required": true,
+            "shape": "String",
+            "shape_ast": {
+              "kind": "primitive",
+              "name": "String"
+            }
+          }
+        ],
+        "hash": "5051c8d294215a4f",
+        "meta_blocks": null,
+        "name": "note",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/union-subsumption-warning/type/note.type.yaml",
+          "span": {
+            "end": 30,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 3
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      },
+      {
+        "abstract": false,
+        "body": null,
+        "effective_body": null,
+        "fields": [
+          {
+            "key_span": {
+              "end": 13,
+              "line_col": {
+                "end": {
+                  "col": 6,
+                  "line": 2
+                },
+                "start": {
+                  "col": 3,
+                  "line": 2
+                }
+              },
+              "start": 10
+            },
+            "name": "bad",
+            "required": true,
+            "shape": "<note* | decision*>",
+            "shape_ast": {
+              "branches": [
+                {
+                  "kind": "reference",
+                  "name": "note"
+                },
+                {
+                  "kind": "reference",
+                  "name": "decision"
+                }
+              ],
+              "kind": "union"
+            }
+          }
+        ],
+        "hash": "d5d9d84876018704",
+        "meta_blocks": null,
+        "name": "subsumed",
+        "parents": [],
+        "required_meta": [],
+        "sealed": null,
+        "source": {
+          "file": "<root>/scenarios/union-subsumption-warning/type/subsumed.type.yaml",
+          "span": {
+            "end": 35,
+            "line_col": {
+              "end": {
+                "col": 1,
+                "line": 3
+              },
+              "start": {
+                "col": 1,
+                "line": 1
+              }
+            },
+            "start": 0
+          }
+        },
+        "unmet_required_meta": []
+      }
+    ]
+  }
+}

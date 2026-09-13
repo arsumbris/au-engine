@@ -1,0 +1,6 @@
+#: a union admitting both a record and text, so the content disambiguates
+fields:
+  detail: <String | point>
+body:
+  - section: Detail
+    fills: detail

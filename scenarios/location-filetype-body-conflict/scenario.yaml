@@ -1,0 +1,6 @@
+title: "`fileType: yaml` beside a non-empty `body:` is unsatisfiable — a body forces markdown"
+spec_ref: "[[spec - location constraints - a name template and path predicate as an advisory placement meet]]"
+command: validate
+expected:
+  codes:
+    - { code: location-filetype-body-conflict, severity: error }

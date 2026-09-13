@@ -1,0 +1,6 @@
+#: an atomic text region in a PDF
+fields:
+  page-doc: Number   #: page in the file
+  #: verbatim text of this region
+  quote: String
+  prefix?: String    #: fuzzy-reattachment context before the quote

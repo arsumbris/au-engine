@@ -1,0 +1,5 @@
+fields:
+  description: String
+meta:
+  - type: display-meta
+    tldr: "A piece of content"

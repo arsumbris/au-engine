@@ -1,0 +1,439 @@
+---
+source: crates/au-cli/tests/it/scenarios.rs
+expression: rendered
+---
+{
+  "diagnostics": [
+    {
+      "code": "body-slot-shape-mismatch",
+      "message": "wikilink target 'my-note' does not satisfy slot 'rationale*' for field 'rationale'",
+      "related": [
+        {
+          "file": "<root>/scenarios/body-slot-shape-mismatch/type/decision.type.yaml",
+          "line_col": {
+            "end": {
+              "col": 25,
+              "line": 3
+            },
+            "start": {
+              "col": 15,
+              "line": 3
+            }
+          },
+          "range": {
+            "end": 54,
+            "start": 44
+          }
+        }
+      ],
+      "severity": "error",
+      "span": {
+        "file": "<root>/scenarios/body-slot-shape-mismatch/decision.md",
+        "line_col": {
+          "end": {
+            "col": 27,
+            "line": 7
+          },
+          "start": {
+            "col": 6,
+            "line": 7
+          }
+        },
+        "range": {
+          "end": 101,
+          "start": 80
+        }
+      }
+    }
+  ],
+  "instances": {
+    "aborted_at_load": false,
+    "count": 3,
+    "entries": [
+      {
+        "body_events": null,
+        "claim": [
+          "au.engine.repo::au-engine"
+        ],
+        "closure": [
+          "au.engine.repo::au-engine"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "deps",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "au.engine.dep::au-engine[]"
+              }
+            ],
+            "required": false,
+            "shape": "au.engine.dep::au-engine[]"
+          },
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "name",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "remote",
+            "origins": [
+              {
+                "name": "au.engine.repo",
+                "origin_path": "<au-engine-builtin>/au.engine.repo.type.yaml",
+                "repo": "au-engine",
+                "required": false,
+                "shape": "String"
+              }
+            ],
+            "required": false,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 30,
+                        "line_col": {
+                          "end": {
+                            "col": 31,
+                            "line": 1
+                          },
+                          "start": {
+                            "col": 7,
+                            "line": 1
+                          }
+                        },
+                        "start": 6
+                      },
+                      "file": "<root>/scenarios/body-slot-shape-mismatch/.arsumbris/repo.yaml"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "body-slot-shape-mismatch"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "body-slot-shape-mismatch"
+                }
+              }
+            ],
+            "field": "name"
+          }
+        ],
+        "file": "<root>/scenarios/body-slot-shape-mismatch/.arsumbris/repo.yaml",
+        "section_presence": null
+      },
+      {
+        "body_events": [
+          {
+            "kind": "wikilink",
+            "parsed": {
+              "anchor": null,
+              "block_id": null,
+              "commit": null,
+              "field": "rationale",
+              "repo": null,
+              "target": "my-note"
+            },
+            "raw": "my-note:rationale",
+            "span": {
+              "end": 101,
+              "line_col": {
+                "end": {
+                  "col": 27,
+                  "line": 7
+                },
+                "start": {
+                  "col": 6,
+                  "line": 7
+                }
+              },
+              "start": 80
+            }
+          },
+          {
+            "content": "my-note",
+            "kind": "inline_code",
+            "span": {
+              "end": 119,
+              "line_col": {
+                "end": {
+                  "col": 45,
+                  "line": 7
+                },
+                "start": {
+                  "col": 36,
+                  "line": 7
+                }
+              },
+              "start": 110
+            }
+          },
+          {
+            "content": "type: note",
+            "kind": "inline_code",
+            "span": {
+              "end": 139,
+              "line_col": {
+                "end": {
+                  "col": 65,
+                  "line": 7
+                },
+                "start": {
+                  "col": 53,
+                  "line": 7
+                }
+              },
+              "start": 127
+            }
+          },
+          {
+            "content": "rationale",
+            "kind": "inline_code",
+            "span": {
+              "end": 183,
+              "line_col": {
+                "end": {
+                  "col": 37,
+                  "line": 8
+                },
+                "start": {
+                  "col": 26,
+                  "line": 8
+                }
+              },
+              "start": 172
+            }
+          }
+        ],
+        "claim": [
+          "decision"
+        ],
+        "closure": [
+          "decision"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/body-slot-shape-mismatch/type/decision.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          },
+          {
+            "divergent": false,
+            "field": "rationale",
+            "origins": [
+              {
+                "name": "decision",
+                "origin_path": "<root>/scenarios/body-slot-shape-mismatch/type/decision.type.yaml",
+                "required": false,
+                "shape": "rationale*"
+              }
+            ],
+            "required": false,
+            "shape": "rationale*"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 58,
+                        "line_col": {
+                          "end": {
+                            "col": 40,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 32
+                      },
+                      "file": "<root>/scenarios/body-slot-shape-mismatch/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "Migrate dev DB to SQLite"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "Migrate dev DB to SQLite"
+                }
+              }
+            ],
+            "field": "description"
+          },
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 101,
+                        "line_col": {
+                          "end": {
+                            "col": 27,
+                            "line": 7
+                          },
+                          "start": {
+                            "col": 6,
+                            "line": 7
+                          }
+                        },
+                        "start": 80
+                      },
+                      "file": "<root>/scenarios/body-slot-shape-mismatch/decision.md"
+                    },
+                    "section_path": [],
+                    "surface": "body_wikilink",
+                    "value": {
+                      "anchor": null,
+                      "block_id": null,
+                      "kind": "reference",
+                      "target": "my-note"
+                    }
+                  }
+                ],
+                "value": {
+                  "anchor": null,
+                  "block_id": null,
+                  "kind": "reference",
+                  "target": "my-note"
+                }
+              }
+            ],
+            "field": "rationale"
+          }
+        ],
+        "file": "<root>/scenarios/body-slot-shape-mismatch/decision.md",
+        "section_presence": null
+      },
+      {
+        "body_events": [],
+        "claim": [
+          "note"
+        ],
+        "closure": [
+          "note"
+        ],
+        "effective_shape": [
+          {
+            "divergent": false,
+            "field": "description",
+            "origins": [
+              {
+                "name": "note",
+                "origin_path": "<root>/scenarios/body-slot-shape-mismatch/type/note.type.yaml",
+                "required": true,
+                "shape": "String"
+              }
+            ],
+            "required": true,
+            "shape": "String"
+          }
+        ],
+        "effective_values": [
+          {
+            "containers": [
+              {
+                "contributions": [
+                  {
+                    "location": {
+                      "byte_range": {
+                        "end": 59,
+                        "line_col": {
+                          "end": {
+                            "col": 45,
+                            "line": 3
+                          },
+                          "start": {
+                            "col": 14,
+                            "line": 3
+                          }
+                        },
+                        "start": 28
+                      },
+                      "file": "<root>/scenarios/body-slot-shape-mismatch/my-note.md"
+                    },
+                    "section_path": [],
+                    "surface": "frontmatter",
+                    "value": {
+                      "kind": "scalar",
+                      "value": "A plain note, not a rationale"
+                    }
+                  }
+                ],
+                "value": {
+                  "kind": "scalar",
+                  "value": "A plain note, not a rationale"
+                }
+              }
+            ],
+            "field": "description"
+          }
+        ],
+        "file": "<root>/scenarios/body-slot-shape-mismatch/my-note.md",
+        "section_presence": null
+      }
+    ]
+  }
+}

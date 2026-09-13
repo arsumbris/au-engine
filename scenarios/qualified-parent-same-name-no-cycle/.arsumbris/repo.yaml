@@ -1,0 +1,2 @@
+name: qualified-parent-same-name-no-cycle
+type: au.engine.repo::au-engine

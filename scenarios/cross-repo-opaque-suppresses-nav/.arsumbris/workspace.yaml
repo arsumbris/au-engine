@@ -1,0 +1,5 @@
+edit:
+  - cross-repo-opaque-suppresses-nav
+  - base
+  - app
+type: au.engine.workspace::au-engine

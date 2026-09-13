@@ -1,0 +1,6 @@
+title: "A fence at a record slot whose content is not a mapping is rejected"
+spec_ref: "[[spec - diagnostic codes::au-type-system^body-slot-shape-mismatch]]"
+command: validate
+expected:
+  codes:
+    - { code: body-slot-shape-mismatch, severity: error }
